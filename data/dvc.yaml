@@ -1,0 +1,13 @@
+---
+
+stages:
+  fetch_lodes_by_state:
+    matrix:
+      year: ${input.year}
+      state: ${input.state}
+      part: ${input.part}
+    cmd: "python ./src/fetch_lodes.py --part ${item.part}
+      --year ${item.year} --state ${item.state}"
+    outs:
+      - ./input/lodes/year=${item.year}/part=${item.part}/state=${item.state}/${item.state}.zip:
+          persist: true

@@ -1,0 +1,76 @@
+---
+
+input:
+  # Years to collect input data. Each year will download
+  # LODES data
+  year:
+    - '2022'
+
+  part:
+    - 'aux'
+    - 'main'
+  state:
+    - 'al'
+    # - 'ak'
+    - 'az'
+    - 'ar'
+    - 'ca'
+    - 'co'
+    - 'ct'
+    - 'dc'
+    - 'de'
+    - 'fl'
+    - 'ga'
+    - 'hi'
+    - 'id'
+    - 'il'
+    - 'in'
+    - 'ia'
+    - 'ks'
+    - 'ky'
+    - 'la'
+    - 'me'
+    - 'md'
+    - 'ma'
+    # - 'mi'
+    - 'mn'
+    # - 'ms'
+    - 'mo'
+    - 'mt'
+    - 'ne'
+    - 'nv'
+    - 'nh'
+    - 'nj'
+    - 'nm'
+    - 'ny'
+    - 'nc'
+    - 'nd'
+    - 'oh'
+    - 'ok'
+    - 'or'
+    - 'pa'
+    - 'ri'
+    - 'sc'
+    - 'sd'
+    - 'tn'
+    - 'tx'
+    - 'ut'
+    - 'vt'
+    - 'va'
+    - 'wa'
+    - 'wv'
+    - 'wi'
+    - 'wy'
+
+output:
+  # Compression type and level to use for final output Parquet files
+  compression:
+    type: zstd
+    level: 12
+
+  # List of OpenTimes table names
+  dataset:
+    - jobs
+    # - points
+    # - missing_pairs
+    # - metadata

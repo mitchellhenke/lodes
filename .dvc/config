@@ -1,2 +1,8 @@
 [core]
     analytics = false
+    remote = cloudflare
+['remote "cloudflare"']
+    url = s3://lodes-dvc
+    endpointurl = https://f8de4764a973ce6156967ec64aab41f3.r2.cloudflarestorage.com
+    profile = cloudflare
+    version_aware = false

@@ -1,0 +1,37 @@
+---
+
+name: Fetch location data
+description: Fetch/cache origin and destination point data from DVC
+
+runs:
+  using: composite
+  steps:
+    # Assumes actions/checkout and setup-cloudflare-s3 have already been run
+    - name: Cache restore lodes input data
+      id: cache-restore-lodes-input
+      uses: actions/cache/restore@v4
+      with:
+        path: |
+          ./data/input/lodes
+        key: location-${{ hashFiles('./data/dvc.lock') }}
+
+    - name: Install DVC
+      if: steps.cache-restore-location-input.outputs.cache-hit != 'true'
+      uses: ./.github/actions/setup-dvc
+
+    - name: Pull DVC objects
+      if: steps.cache-restore-location-input.outputs.cache-hit != 'true'
+      shell: bash
+      working-directory: 'data'
+      run: |
+        uv run dvc pull
+        uv run dvc exp run dvc.yaml
+
+    - name: Cache save location input data
+      if: steps.cache-restore-location-input.outputs.cache-hit != 'true'
+      id: cache-save-location-input
+      uses: actions/cache/save@v4
+      with:
+        path: |
+          ./data/input/lodes
+        key: location-${{ hashFiles('./data/dvc.lock') }}

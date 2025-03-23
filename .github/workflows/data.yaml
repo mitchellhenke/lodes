@@ -1,0 +1,34 @@
+---
+
+name: data
+
+on:
+  workflow_dispatch:
+
+env:
+  AWS_DEFAULT_REGION: us-east-1
+  # See: https://github.com/aws/aws-cli/issues/5262#issuecomment-705832151
+  AWS_EC2_METADATA_DISABLED: true
+  PYTHONUNBUFFERED: "1"
+
+jobs:
+  run-job:
+    runs-on: ubuntu-24.04
+    strategy:
+      # Don't fail all chunks if one fails
+      fail-fast: false
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Cloudflare credentials
+        uses: ./.github/actions/setup-cloudflare-s3
+        with:
+          CLOUDFLARE_S3_API_ACCESS_KEY_ID: ${{ secrets.CLOUDFLARE_S3_API_ACCESS_KEY_ID }}
+          CLOUDFLARE_S3_API_SECRET_ACCESS_KEY: ${{ secrets.CLOUDFLARE_S3_API_SECRET_ACCESS_KEY }}
+
+      - name: Install DVC
+        uses: ./.github/actions/setup-dvc
+
+      - name: Fetch lodes data
+        uses: ./.github/actions/fetch-lodes

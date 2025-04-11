@@ -2,6 +2,10 @@ if(!require(dplyr)){
   install.packages("dplyr")
   library(dplyr)
 }
+if(!require(stringr)){
+  install.packages("stringr")
+  library(stringr)
+}
 if(!require(nanoparquet)){
   install.packages("nanoparquet")
 }

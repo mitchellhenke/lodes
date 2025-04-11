@@ -23,8 +23,9 @@ aggregate_lodes <- function(year, state, aggregate_to = "tract", save = T){
       mutate(w_tract = str_sub(w_geocode, 1, 11),
              h_tract = str_sub(h_geocode, 1, 11)) |>
       group_by(w_tract, h_tract) |>
-      summarise(across(.cols = where(is.numeric), .fns = sum),
-                .groups = "drop")
+      summarise(across(.cols = starts_with("S", ignore.case = F), .fns = sum),
+                .groups = "drop") |>
+      mutate(across(where(is.numeric), as.integer))
   }
   
   if(save == T){

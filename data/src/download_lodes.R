@@ -30,4 +30,3 @@ download_lodes <- function(year, state, save = T){
 }
 
 x <- download_lodes(year, state)
-quit(status=0)

@@ -8,6 +8,7 @@ args <- commandArgs(trailingOnly=T)
 
 year <- args[1]
 state <- args[2]
+options(timeout = 1000)
 
 # download the main and aux files, appending them
 download_lodes <- function(year, state, save = T){
@@ -20,12 +21,13 @@ download_lodes <- function(year, state, save = T){
   df <- rbind(aux.df, main.df)
   if(save == T){
 
-    dir.create(path = paste0("data/input/lodes/year=", year, "/state=", state),
+    dir.create(path = paste0("input/lodes/year=", year, "/state=", state),
                showWarnings = F, recursive = T)
-    readr::write_csv(df, paste0("data/input/lodes/year=", year, "/state=", state,
+    readr::write_csv(df, paste0("input/lodes/year=", year, "/state=", state,
                                 "/", state, ".csv.gz"))
   }
   df
 }
 
-download_lodes(year, state)
+x <- download_lodes(year, state)
+quit(status=0)

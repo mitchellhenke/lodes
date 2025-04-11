@@ -5,7 +5,7 @@ stages:
     matrix:
       year: ${input.year}
       state: ${input.state}
-    cmd: "Rscript ./src/fetch_lodes.R ${item.year} ${item.state}"
+    cmd: "Rscript ./src/download_lodes.R ${item.year} ${item.state}"
     outs:
       - ./input/lodes/year=${item.year}/state=${item.state}/${item.state}.csv.gz:
           persist: true

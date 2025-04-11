@@ -1,1003 +1,338 @@
 schema: '2.0'
 stages:
   fetch_lodes_by_state@2022-al:
-    cmd: python ./src/fetch_lodes.py --year 2022 --state al
+    cmd: Rscript ./src/download_lodes.R 2022 al
     outs:
-    - path: ./input/lodes/year=2022/state=al/al.zip
+    - path: ./input/lodes/year=2022/state=al/al.csv.gz
       hash: md5
-      md5: 796d5b1135184dd1f2badce75990d055
-      size: 10353921
+      md5: 11f33b136a7dcb5df94dd681c40618e5
+      size: 11050220
   fetch_lodes_by_state@2022-az:
-    cmd: python ./src/fetch_lodes.py --year 2022 --state az
+    cmd: Rscript ./src/download_lodes.R 2022 az
     outs:
-    - path: ./input/lodes/year=2022/state=az/az.zip
+    - path: ./input/lodes/year=2022/state=az/az.csv.gz
       hash: md5
-      md5: e7c06e70c404c1f670df93e3aba9c6ff
-      size: 15585373
+      md5: 5bed06081e8989ecfcac13ab409e1caf
+      size: 15999100
   fetch_lodes_by_state@2022-ar:
-    cmd: python ./src/fetch_lodes.py --year 2022 --state ar
+    cmd: Rscript ./src/download_lodes.R 2022 ar
     outs:
-    - path: ./input/lodes/year=2022/state=ar/ar.zip
+    - path: ./input/lodes/year=2022/state=ar/ar.csv.gz
       hash: md5
-      md5: 49a73c8219dc70eb14cccd6d3c41955f
-      size: 5994378
-  fetch_lodes_by_state@2022-ca:
-    cmd: python ./src/fetch_lodes.py --year 2022 --state ca
-    outs:
-    - path: ./input/lodes/year=2022/state=ca/ca.zip
-      hash: md5
-      md5: c8f72d974ccfdd70cbee960f89c3634e
-      size: 96433089
+      md5: 4d095e6d29243953e784c0fe6ae97e91
+      size: 6579296
   fetch_lodes_by_state@2022-co:
-    cmd: python ./src/fetch_lodes.py --year 2022 --state co
+    cmd: Rscript ./src/download_lodes.R 2022 co
     outs:
-    - path: ./input/lodes/year=2022/state=co/co.zip
+    - path: ./input/lodes/year=2022/state=co/co.csv.gz
       hash: md5
-      md5: c5b2becbb72afb4773f6c1b25f0de6b6
-      size: 14464820
+      md5: 410d6c243b6010c194e34b0b7ea09849
+      size: 14921788
   fetch_lodes_by_state@2022-ct:
-    cmd: python ./src/fetch_lodes.py --year 2022 --state ct
+    cmd: Rscript ./src/download_lodes.R 2022 ct
     outs:
-    - path: ./input/lodes/year=2022/state=ct/ct.zip
+    - path: ./input/lodes/year=2022/state=ct/ct.csv.gz
       hash: md5
-      md5: 3b08f6f0f026b799327c52f1ba306c37
-      size: 7555788
+      md5: 26ccff17eaf182b9c2fd28bdf090eecd
+      size: 8532274
+  fetch_lodes_by_state@2022-dc:
+    cmd: Rscript ./src/download_lodes.R 2022 dc
+    outs:
+    - path: ./input/lodes/year=2022/state=dc/dc.csv.gz
+      hash: md5
+      md5: 085b3c697856a332e295fd95a39ae332
+      size: 3241098
   fetch_lodes_by_state@2022-de:
-    cmd: python ./src/fetch_lodes.py --year 2022 --state de
+    cmd: Rscript ./src/download_lodes.R 2022 de
     outs:
-    - path: ./input/lodes/year=2022/state=de/de.zip
+    - path: ./input/lodes/year=2022/state=de/de.csv.gz
       hash: md5
-      md5: 8f9192d43a3449727adc5a308046d1a6
-      size: 1702429
+      md5: 015854795622fd8831499ced57c46f42
+      size: 2275900
   fetch_lodes_by_state@2022-fl:
-    cmd: python ./src/fetch_lodes.py --year 2022 --state fl
+    cmd: Rscript ./src/download_lodes.R 2022 fl
     outs:
-    - path: ./input/lodes/year=2022/state=fl/fl.zip
+    - path: ./input/lodes/year=2022/state=fl/fl.csv.gz
       hash: md5
-      md5: 22d48f0c3c3a5144cf24b482248da4ed
-      size: 49576480
+      md5: 5312351ec6c2ffaf28884650c1589931
+      size: 50644267
   fetch_lodes_by_state@2022-ga:
-    cmd: python ./src/fetch_lodes.py --year 2022 --state ga
+    cmd: Rscript ./src/download_lodes.R 2022 ga
     outs:
-    - path: ./input/lodes/year=2022/state=ga/ga.zip
+    - path: ./input/lodes/year=2022/state=ga/ga.csv.gz
       hash: md5
-      md5: d588e451203a348fca0f15115fa5acc1
-      size: 23362635
+      md5: 0d5a890fab89c8165eff86392835807c
+      size: 24787693
   fetch_lodes_by_state@2022-hi:
-    cmd: python ./src/fetch_lodes.py --year 2022 --state hi
+    cmd: Rscript ./src/download_lodes.R 2022 hi
     outs:
-    - path: ./input/lodes/year=2022/state=hi/hi.zip
+    - path: ./input/lodes/year=2022/state=hi/hi.csv.gz
       hash: md5
-      md5: 61e32b997625152dfef53b59f55c5d27
-      size: 2233430
+      md5: 9443e78891eb9f2c19c634eb905b5ac2
+      size: 2376147
   fetch_lodes_by_state@2022-id:
-    cmd: python ./src/fetch_lodes.py --year 2022 --state id
+    cmd: Rscript ./src/download_lodes.R 2022 id
     outs:
-    - path: ./input/lodes/year=2022/state=id/id.zip
+    - path: ./input/lodes/year=2022/state=id/id.csv.gz
       hash: md5
-      md5: b6fa08031b734cba2cd76af7882d5123
-      size: 3930060
+      md5: d656228b4e8f8d2c97626ede3ebc52fb
+      size: 4293245
   fetch_lodes_by_state@2022-il:
-    cmd: python ./src/fetch_lodes.py --year 2022 --state il
+    cmd: Rscript ./src/download_lodes.R 2022 il
     outs:
-    - path: ./input/lodes/year=2022/state=il/il.zip
+    - path: ./input/lodes/year=2022/state=il/il.csv.gz
       hash: md5
-      md5: 355ebc038e68dd84af75e0ad08d367a2
-      size: 30568830
+      md5: 56bba605dc41073b0df7bd109dad83f7
+      size: 32787254
   fetch_lodes_by_state@2022-in:
-    cmd: python ./src/fetch_lodes.py --year 2022 --state in
+    cmd: Rscript ./src/download_lodes.R 2022 in
     outs:
-    - path: ./input/lodes/year=2022/state=in/in.zip
+    - path: ./input/lodes/year=2022/state=in/in.csv.gz
       hash: md5
-      md5: 236fe807c3148cc9f9ff61ddd251209f
-      size: 15432719
+      md5: c0970b054577b4decd67c4c6b489a78b
+      size: 16857945
   fetch_lodes_by_state@2022-ia:
-    cmd: python ./src/fetch_lodes.py --year 2022 --state ia
+    cmd: Rscript ./src/download_lodes.R 2022 ia
     outs:
-    - path: ./input/lodes/year=2022/state=ia/ia.zip
+    - path: ./input/lodes/year=2022/state=ia/ia.csv.gz
       hash: md5
-      md5: f826694f69156a5cb6bdb3700d37845a
-      size: 7534671
+      md5: 07fc1abe8a2fb45df2a37d800bfd92b0
+      size: 8301625
   fetch_lodes_by_state@2022-ks:
-    cmd: python ./src/fetch_lodes.py --year 2022 --state ks
+    cmd: Rscript ./src/download_lodes.R 2022 ks
     outs:
-    - path: ./input/lodes/year=2022/state=ks/ks.zip
+    - path: ./input/lodes/year=2022/state=ks/ks.csv.gz
       hash: md5
-      md5: 11b932f794a6454a34327696485fe004
-      size: 6422504
+      md5: 55b607a97d1fefd10b8dbc236261a87e
+      size: 7496316
   fetch_lodes_by_state@2022-ky:
-    cmd: python ./src/fetch_lodes.py --year 2022 --state ky
+    cmd: Rscript ./src/download_lodes.R 2022 ky
     outs:
-    - path: ./input/lodes/year=2022/state=ky/ky.zip
+    - path: ./input/lodes/year=2022/state=ky/ky.csv.gz
       hash: md5
-      md5: 949b4439f8d46f85ea045f90e56f434a
-      size: 8798707
+      md5: 19bb61cf19ad1fecb79b2d956c3202c8
+      size: 10002565
   fetch_lodes_by_state@2022-la:
-    cmd: python ./src/fetch_lodes.py --year 2022 --state la
+    cmd: Rscript ./src/download_lodes.R 2022 la
     outs:
-    - path: ./input/lodes/year=2022/state=la/la.zip
+    - path: ./input/lodes/year=2022/state=la/la.csv.gz
       hash: md5
-      md5: 0c9b985e64ce49dfb51ee76a2b2123a0
-      size: 9515669
+      md5: bb7818b6cc397ad48ece719c655b2cb7
+      size: 10155799
   fetch_lodes_by_state@2022-me:
-    cmd: python ./src/fetch_lodes.py --year 2022 --state me
+    cmd: Rscript ./src/download_lodes.R 2022 me
     outs:
-    - path: ./input/lodes/year=2022/state=me/me.zip
+    - path: ./input/lodes/year=2022/state=me/me.csv.gz
       hash: md5
-      md5: 7f0649c0f844065c4bdaf50d3367c44d
-      size: 2996076
+      md5: b21b84e5b883256efe028dc689a7c1db
+      size: 3165866
   fetch_lodes_by_state@2022-md:
-    cmd: python ./src/fetch_lodes.py --year 2022 --state md
+    cmd: Rscript ./src/download_lodes.R 2022 md
     outs:
-    - path: ./input/lodes/year=2022/state=md/md.zip
+    - path: ./input/lodes/year=2022/state=md/md.csv.gz
       hash: md5
-      md5: 260ccd4f4f7c7ec435784698df9dce5f
-      size: 11556588
+      md5: 4c721621b8a99a918b64d3dae02abda6
+      size: 13692003
   fetch_lodes_by_state@2022-ma:
-    cmd: python ./src/fetch_lodes.py --year 2022 --state ma
+    cmd: Rscript ./src/download_lodes.R 2022 ma
     outs:
-    - path: ./input/lodes/year=2022/state=ma/ma.zip
+    - path: ./input/lodes/year=2022/state=ma/ma.csv.gz
       hash: md5
-      md5: fbc9d1a0c10794ac8a2e6918d8b4adac
-      size: 17182741
+      md5: 966025a737a87482c66b47e49d87c380
+      size: 19333160
   fetch_lodes_by_state@2022-mn:
-    cmd: python ./src/fetch_lodes.py --year 2022 --state mn
+    cmd: Rscript ./src/download_lodes.R 2022 mn
     outs:
-    - path: ./input/lodes/year=2022/state=mn/mn.zip
+    - path: ./input/lodes/year=2022/state=mn/mn.csv.gz
       hash: md5
-      md5: 3a993dce821927d2e9385c051e7cfaaf
-      size: 13949743
+      md5: 63cdca9f92db82b3e7b257735ea41345
+      size: 14743561
   fetch_lodes_by_state@2022-mo:
-    cmd: python ./src/fetch_lodes.py --year 2022 --state mo
+    cmd: Rscript ./src/download_lodes.R 2022 mo
     outs:
-    - path: ./input/lodes/year=2022/state=mo/mo.zip
+    - path: ./input/lodes/year=2022/state=mo/mo.csv.gz
       hash: md5
-      md5: ac8e1181176ae5a934463537bd4f05cf
-      size: 14048310
+      md5: 59acaa8c7d9283dac673f5f170bc7a02
+      size: 15685872
   fetch_lodes_by_state@2022-mt:
-    cmd: python ./src/fetch_lodes.py --year 2022 --state mt
+    cmd: Rscript ./src/download_lodes.R 2022 mt
     outs:
-    - path: ./input/lodes/year=2022/state=mt/mt.zip
+    - path: ./input/lodes/year=2022/state=mt/mt.csv.gz
       hash: md5
-      md5: 38e47ffff0948babcfac7591888b1947
-      size: 2472509
+      md5: 8397ad2b5cb566e90b03fb27d141dfc5
+      size: 2617061
   fetch_lodes_by_state@2022-ne:
-    cmd: python ./src/fetch_lodes.py --year 2022 --state ne
+    cmd: Rscript ./src/download_lodes.R 2022 ne
     outs:
-    - path: ./input/lodes/year=2022/state=ne/ne.zip
+    - path: ./input/lodes/year=2022/state=ne/ne.csv.gz
       hash: md5
-      md5: 4d107f0d73eba0f53323a8555c5b3661
-      size: 4741680
+      md5: 60ae3e6bd6eb677d1821b89608474d99
+      size: 5228870
   fetch_lodes_by_state@2022-nv:
-    cmd: python ./src/fetch_lodes.py --year 2022 --state nv
+    cmd: Rscript ./src/download_lodes.R 2022 nv
     outs:
-    - path: ./input/lodes/year=2022/state=nv/nv.zip
+    - path: ./input/lodes/year=2022/state=nv/nv.csv.gz
       hash: md5
-      md5: 80726fa77faa45fd96af13f4a4e38aff
-      size: 6269571
+      md5: 36f312f8189fdf86d1a21a8bb68f333d
+      size: 6822055
   fetch_lodes_by_state@2022-nh:
-    cmd: python ./src/fetch_lodes.py --year 2022 --state nh
+    cmd: Rscript ./src/download_lodes.R 2022 nh
     outs:
-    - path: ./input/lodes/year=2022/state=nh/nh.zip
+    - path: ./input/lodes/year=2022/state=nh/nh.csv.gz
       hash: md5
-      md5: 96da33a6ee2f9e72eee997044c03952f
-      size: 2885225
+      md5: 1cf2c318670949aa762eee2cac7ad453
+      size: 3512083
   fetch_lodes_by_state@2022-nj:
-    cmd: python ./src/fetch_lodes.py --year 2022 --state nj
+    cmd: Rscript ./src/download_lodes.R 2022 nj
     outs:
-    - path: ./input/lodes/year=2022/state=nj/nj.zip
+    - path: ./input/lodes/year=2022/state=nj/nj.csv.gz
       hash: md5
-      md5: f884f797a70d09aaab7d546777fe8d42
-      size: 20204792
+      md5: 3e611a7a7a80d6206755f79490cb3db5
+      size: 23231990
   fetch_lodes_by_state@2022-nm:
-    cmd: python ./src/fetch_lodes.py --year 2022 --state nm
+    cmd: Rscript ./src/download_lodes.R 2022 nm
     outs:
-    - path: ./input/lodes/year=2022/state=nm/nm.zip
+    - path: ./input/lodes/year=2022/state=nm/nm.csv.gz
       hash: md5
-      md5: 1550971ed13fd178366873ff91332e1f
-      size: 3934845
+      md5: c0109bac519b3faefd5a19234cac1ffd
+      size: 4284893
   fetch_lodes_by_state@2022-ny:
-    cmd: python ./src/fetch_lodes.py --year 2022 --state ny
+    cmd: Rscript ./src/download_lodes.R 2022 ny
     outs:
-    - path: ./input/lodes/year=2022/state=ny/ny.zip
+    - path: ./input/lodes/year=2022/state=ny/ny.csv.gz
       hash: md5
-      md5: 24aeae13da45f1624a78e00ff5f96b77
-      size: 44232716
+      md5: ddbed8be17d99e882d12b544ed736e5b
+      size: 49751937
   fetch_lodes_by_state@2022-nc:
-    cmd: python ./src/fetch_lodes.py --year 2022 --state nc
+    cmd: Rscript ./src/download_lodes.R 2022 nc
     outs:
-    - path: ./input/lodes/year=2022/state=nc/nc.zip
+    - path: ./input/lodes/year=2022/state=nc/nc.csv.gz
       hash: md5
-      md5: 07efdb2c5968d1826ab374f694e13aad
-      size: 23962207
+      md5: d5d822655afd9a1d14f4b238d021e87a
+      size: 25620723
   fetch_lodes_by_state@2022-nd:
-    cmd: python ./src/fetch_lodes.py --year 2022 --state nd
+    cmd: Rscript ./src/download_lodes.R 2022 nd
     outs:
-    - path: ./input/lodes/year=2022/state=nd/nd.zip
+    - path: ./input/lodes/year=2022/state=nd/nd.csv.gz
       hash: md5
-      md5: bbc8b35554606e2d7bab372dc4b38f47
-      size: 1769156
+      md5: 638b72c2f2a3933d448ef713615588a9
+      size: 2119188
   fetch_lodes_by_state@2022-oh:
-    cmd: python ./src/fetch_lodes.py --year 2022 --state oh
+    cmd: Rscript ./src/download_lodes.R 2022 oh
     outs:
-    - path: ./input/lodes/year=2022/state=oh/oh.zip
+    - path: ./input/lodes/year=2022/state=oh/oh.csv.gz
       hash: md5
-      md5: 2a822ff68f3d96119e7faccd8fec47a0
-      size: 27705349
+      md5: 224ae2dd515a056bbc9fd384d01d6399
+      size: 29305222
   fetch_lodes_by_state@2022-ok:
-    cmd: python ./src/fetch_lodes.py --year 2022 --state ok
+    cmd: Rscript ./src/download_lodes.R 2022 ok
     outs:
-    - path: ./input/lodes/year=2022/state=ok/ok.zip
+    - path: ./input/lodes/year=2022/state=ok/ok.csv.gz
       hash: md5
-      md5: dd74402184c394f18b6b03522947de6a
-      size: 8474567
+      md5: ab3ab3c68ba9e79a0937c0553600caf3
+      size: 8903642
   fetch_lodes_by_state@2022-or:
-    cmd: python ./src/fetch_lodes.py --year 2022 --state or
+    cmd: Rscript ./src/download_lodes.R 2022 or
     outs:
-    - path: ./input/lodes/year=2022/state=or/or.zip
+    - path: ./input/lodes/year=2022/state=or/or.csv.gz
       hash: md5
-      md5: 02e5213ec033b418e136a329e3c56d22
-      size: 9683435
+      md5: 18de01ed79d3d2a689fa59bd75f27a5b
+      size: 10612522
   fetch_lodes_by_state@2022-pa:
-    cmd: python ./src/fetch_lodes.py --year 2022 --state pa
+    cmd: Rscript ./src/download_lodes.R 2022 pa
     outs:
-    - path: ./input/lodes/year=2022/state=pa/pa.zip
+    - path: ./input/lodes/year=2022/state=pa/pa.csv.gz
       hash: md5
-      md5: 68afa714f7cb0cff548c06c8cbeb6483
-      size: 30172058
+      md5: 7ed97f3517c43808fb8f22f8c1087888
+      size: 32799462
   fetch_lodes_by_state@2022-ri:
-    cmd: python ./src/fetch_lodes.py --year 2022 --state ri
+    cmd: Rscript ./src/download_lodes.R 2022 ri
     outs:
-    - path: ./input/lodes/year=2022/state=ri/ri.zip
+    - path: ./input/lodes/year=2022/state=ri/ri.csv.gz
       hash: md5
-      md5: e79f8814bc82193da8fedd7a82f54f8b
-      size: 2136112
+      md5: dbbc1b0926607fc25a9dc874c5ddafc8
+      size: 2615842
   fetch_lodes_by_state@2022-sc:
-    cmd: python ./src/fetch_lodes.py --year 2022 --state sc
+    cmd: Rscript ./src/download_lodes.R 2022 sc
     outs:
-    - path: ./input/lodes/year=2022/state=sc/sc.zip
+    - path: ./input/lodes/year=2022/state=sc/sc.csv.gz
       hash: md5
-      md5: 89ca75d6056f3431904f079052ff4d30
-      size: 10780815
+      md5: ad6f6022d310d33ad80e2c054029ca30
+      size: 11699902
   fetch_lodes_by_state@2022-sd:
-    cmd: python ./src/fetch_lodes.py --year 2022 --state sd
+    cmd: Rscript ./src/download_lodes.R 2022 sd
     outs:
-    - path: ./input/lodes/year=2022/state=sd/sd.zip
+    - path: ./input/lodes/year=2022/state=sd/sd.csv.gz
       hash: md5
-      md5: 0199ee87d5c1954061f5658197bc4393
-      size: 2008268
+      md5: 8a505a7e93f26bea3eb908c39e87ddd4
+      size: 2240714
   fetch_lodes_by_state@2022-tn:
-    cmd: python ./src/fetch_lodes.py --year 2022 --state tn
+    cmd: Rscript ./src/download_lodes.R 2022 tn
     outs:
-    - path: ./input/lodes/year=2022/state=tn/tn.zip
+    - path: ./input/lodes/year=2022/state=tn/tn.csv.gz
       hash: md5
-      md5: f160db9385df07dd6d037f34ccd66cc1
-      size: 14859784
-  fetch_lodes_by_state@2022-tx:
-    cmd: python ./src/fetch_lodes.py --year 2022 --state tx
-    outs:
-    - path: ./input/lodes/year=2022/state=tx/tx.zip
-      hash: md5
-      md5: 9ece4f40f6ae86ab3432e1bf5dac9f1c
-      size: 70318662
+      md5: 3130ee86114dd22767132daed8484bcb
+      size: 16485437
   fetch_lodes_by_state@2022-ut:
-    cmd: python ./src/fetch_lodes.py --year 2022 --state ut
+    cmd: Rscript ./src/download_lodes.R 2022 ut
     outs:
-    - path: ./input/lodes/year=2022/state=ut/ut.zip
+    - path: ./input/lodes/year=2022/state=ut/ut.csv.gz
       hash: md5
-      md5: 3c3b232641e464385978b0f23fb93e47
-      size: 8214922
+      md5: e69c59dbc84d1542cb441b7934e25951
+      size: 8621702
   fetch_lodes_by_state@2022-vt:
-    cmd: python ./src/fetch_lodes.py --year 2022 --state vt
+    cmd: Rscript ./src/download_lodes.R 2022 vt
     outs:
-    - path: ./input/lodes/year=2022/state=vt/vt.zip
+    - path: ./input/lodes/year=2022/state=vt/vt.csv.gz
       hash: md5
-      md5: bd9b1e0627e5feb5d507043e3484e621
-      size: 1276968
+      md5: a79f8f013e514c57aa1feee98a0fb7bd
+      size: 1508643
   fetch_lodes_by_state@2022-va:
-    cmd: python ./src/fetch_lodes.py --year 2022 --state va
+    cmd: Rscript ./src/download_lodes.R 2022 va
     outs:
-    - path: ./input/lodes/year=2022/state=va/va.zip
+    - path: ./input/lodes/year=2022/state=va/va.csv.gz
       hash: md5
-      md5: e929fc81be5b520bd94f2b0f66e686a4
-      size: 17853396
+      md5: c1ba90a7b5d095bb5c4b123930b21286
+      size: 20220856
   fetch_lodes_by_state@2022-wa:
-    cmd: python ./src/fetch_lodes.py --year 2022 --state wa
+    cmd: Rscript ./src/download_lodes.R 2022 wa
     outs:
-    - path: ./input/lodes/year=2022/state=wa/wa.zip
+    - path: ./input/lodes/year=2022/state=wa/wa.csv.gz
       hash: md5
-      md5: f542bc8df69b9e4b1a7942adde252f39
-      size: 16978734
+      md5: 29af658704f8f79605943aca366962db
+      size: 17836838
   fetch_lodes_by_state@2022-wv:
-    cmd: python ./src/fetch_lodes.py --year 2022 --state wv
+    cmd: Rscript ./src/download_lodes.R 2022 wv
     outs:
-    - path: ./input/lodes/year=2022/state=wv/wv.zip
+    - path: ./input/lodes/year=2022/state=wv/wv.csv.gz
       hash: md5
-      md5: 8f5c91d304e02b1a00e20694f11e5632
-      size: 3013686
+      md5: 967dfa9151954ff27b2f602451216d4f
+      size: 3613600
   fetch_lodes_by_state@2022-wi:
-    cmd: python ./src/fetch_lodes.py --year 2022 --state wi
+    cmd: Rscript ./src/download_lodes.R 2022 wi
     outs:
-    - path: ./input/lodes/year=2022/state=wi/wi.zip
+    - path: ./input/lodes/year=2022/state=wi/wi.csv.gz
       hash: md5
-      md5: d70e170a7d91fb57cf5640631928c1ec
-      size: 14752248
+      md5: 7e0f1a075c577481b554b0fea43676a6
+      size: 15655204
   fetch_lodes_by_state@2022-wy:
-    cmd: python ./src/fetch_lodes.py --year 2022 --state wy
+    cmd: Rscript ./src/download_lodes.R 2022 wy
     outs:
-    - path: ./input/lodes/year=2022/state=wy/wy.zip
+    - path: ./input/lodes/year=2022/state=wy/wy.csv.gz
       hash: md5
-      md5: 09cb430799e05a4c5eefe2638433c927
-      size: 1187941
-  fetch_lodes_by_state@2022-al-aux:
-    cmd: python ./src/fetch_lodes.py --part aux --year 2022 --state al
+      md5: 69f704c88b4731aba1490d878662afcb
+      size: 1383758
+  fetch_lodes_by_state@2022-ca:
+    cmd: Rscript ./src/download_lodes.R 2022 ca
     outs:
-    - path: ./input/lodes/year=2022/part=aux/state=al/al.zip
+    - path: ./input/lodes/year=2022/state=ca/ca.csv.gz
       hash: md5
-      md5: c914322d6847cb9286585339ab330bc7
-      size: 695656
-  fetch_lodes_by_state@2022-al-main:
-    cmd: python ./src/fetch_lodes.py --part main --year 2022 --state al
+      md5: f197ea4eb56666eecfdd92c0e203e600
+      size: 98337840
+  fetch_lodes_by_state@2022-tx:
+    cmd: Rscript ./src/download_lodes.R 2022 tx
     outs:
-    - path: ./input/lodes/year=2022/part=main/state=al/al.zip
+    - path: ./input/lodes/year=2022/state=tx/tx.csv.gz
       hash: md5
-      md5: 796d5b1135184dd1f2badce75990d055
-      size: 10353921
-  fetch_lodes_by_state@2022-az-aux:
-    cmd: python ./src/fetch_lodes.py --part aux --year 2022 --state az
-    outs:
-    - path: ./input/lodes/year=2022/part=aux/state=az/az.zip
-      hash: md5
-      md5: fdd0d83e491ddf45a21b3626a6e8a6d0
-      size: 414855
-  fetch_lodes_by_state@2022-az-main:
-    cmd: python ./src/fetch_lodes.py --part main --year 2022 --state az
-    outs:
-    - path: ./input/lodes/year=2022/part=main/state=az/az.zip
-      hash: md5
-      md5: e7c06e70c404c1f670df93e3aba9c6ff
-      size: 15585373
-  fetch_lodes_by_state@2022-ar-aux:
-    cmd: python ./src/fetch_lodes.py --part aux --year 2022 --state ar
-    outs:
-    - path: ./input/lodes/year=2022/part=aux/state=ar/ar.zip
-      hash: md5
-      md5: c478aabd6318c81e7bffb0a07bb12706
-      size: 585659
-  fetch_lodes_by_state@2022-ar-main:
-    cmd: python ./src/fetch_lodes.py --part main --year 2022 --state ar
-    outs:
-    - path: ./input/lodes/year=2022/part=main/state=ar/ar.zip
-      hash: md5
-      md5: 49a73c8219dc70eb14cccd6d3c41955f
-      size: 5994378
-  fetch_lodes_by_state@2022-ca-aux:
-    cmd: python ./src/fetch_lodes.py --part aux --year 2022 --state ca
-    outs:
-    - path: ./input/lodes/year=2022/part=aux/state=ca/ca.zip
-      hash: md5
-      md5: 72188c7d3d266264dc82bcb457d6586c
-      size: 1905059
-  fetch_lodes_by_state@2022-ca-main:
-    cmd: python ./src/fetch_lodes.py --part main --year 2022 --state ca
-    outs:
-    - path: ./input/lodes/year=2022/part=main/state=ca/ca.zip
-      hash: md5
-      md5: c8f72d974ccfdd70cbee960f89c3634e
-      size: 96433089
-  fetch_lodes_by_state@2022-co-aux:
-    cmd: python ./src/fetch_lodes.py --part aux --year 2022 --state co
-    outs:
-    - path: ./input/lodes/year=2022/part=aux/state=co/co.zip
-      hash: md5
-      md5: f856cc04db0ba818bd873fe2a8123828
-      size: 455859
-  fetch_lodes_by_state@2022-co-main:
-    cmd: python ./src/fetch_lodes.py --part main --year 2022 --state co
-    outs:
-    - path: ./input/lodes/year=2022/part=main/state=co/co.zip
-      hash: md5
-      md5: c5b2becbb72afb4773f6c1b25f0de6b6
-      size: 14464820
-  fetch_lodes_by_state@2022-ct-aux:
-    cmd: python ./src/fetch_lodes.py --part aux --year 2022 --state ct
-    outs:
-    - path: ./input/lodes/year=2022/part=aux/state=ct/ct.zip
-      hash: md5
-      md5: 95423d46a71a3245f116b506d0273391
-      size: 977433
-  fetch_lodes_by_state@2022-ct-main:
-    cmd: python ./src/fetch_lodes.py --part main --year 2022 --state ct
-    outs:
-    - path: ./input/lodes/year=2022/part=main/state=ct/ct.zip
-      hash: md5
-      md5: 3b08f6f0f026b799327c52f1ba306c37
-      size: 7555788
-  fetch_lodes_by_state@2022-de-aux:
-    cmd: python ./src/fetch_lodes.py --part aux --year 2022 --state de
-    outs:
-    - path: ./input/lodes/year=2022/part=aux/state=de/de.zip
-      hash: md5
-      md5: 6ca1f355bf7516d17998585783a87aae
-      size: 573296
-  fetch_lodes_by_state@2022-de-main:
-    cmd: python ./src/fetch_lodes.py --part main --year 2022 --state de
-    outs:
-    - path: ./input/lodes/year=2022/part=main/state=de/de.zip
-      hash: md5
-      md5: 8f9192d43a3449727adc5a308046d1a6
-      size: 1702429
-  fetch_lodes_by_state@2022-fl-aux:
-    cmd: python ./src/fetch_lodes.py --part aux --year 2022 --state fl
-    outs:
-    - path: ./input/lodes/year=2022/part=aux/state=fl/fl.zip
-      hash: md5
-      md5: 2327d5248e9202a6886e820f2cf82aec
-      size: 1069753
-  fetch_lodes_by_state@2022-fl-main:
-    cmd: python ./src/fetch_lodes.py --part main --year 2022 --state fl
-    outs:
-    - path: ./input/lodes/year=2022/part=main/state=fl/fl.zip
-      hash: md5
-      md5: 22d48f0c3c3a5144cf24b482248da4ed
-      size: 49576480
-  fetch_lodes_by_state@2022-ga-aux:
-    cmd: python ./src/fetch_lodes.py --part aux --year 2022 --state ga
-    outs:
-    - path: ./input/lodes/year=2022/part=aux/state=ga/ga.zip
-      hash: md5
-      md5: e578d28013ed1d007ee8120e04817d16
-      size: 1424926
-  fetch_lodes_by_state@2022-ga-main:
-    cmd: python ./src/fetch_lodes.py --part main --year 2022 --state ga
-    outs:
-    - path: ./input/lodes/year=2022/part=main/state=ga/ga.zip
-      hash: md5
-      md5: d588e451203a348fca0f15115fa5acc1
-      size: 23362635
-  fetch_lodes_by_state@2022-hi-aux:
-    cmd: python ./src/fetch_lodes.py --part aux --year 2022 --state hi
-    outs:
-    - path: ./input/lodes/year=2022/part=aux/state=hi/hi.zip
-      hash: md5
-      md5: 520b64b212bf5591a1362a63d4119942
-      size: 142862
-  fetch_lodes_by_state@2022-hi-main:
-    cmd: python ./src/fetch_lodes.py --part main --year 2022 --state hi
-    outs:
-    - path: ./input/lodes/year=2022/part=main/state=hi/hi.zip
-      hash: md5
-      md5: 61e32b997625152dfef53b59f55c5d27
-      size: 2233430
-  fetch_lodes_by_state@2022-id-aux:
-    cmd: python ./src/fetch_lodes.py --part aux --year 2022 --state id
-    outs:
-    - path: ./input/lodes/year=2022/part=aux/state=id/id.zip
-      hash: md5
-      md5: 3eb2bcba54e442adf9046ef6a93c97df
-      size: 363230
-  fetch_lodes_by_state@2022-id-main:
-    cmd: python ./src/fetch_lodes.py --part main --year 2022 --state id
-    outs:
-    - path: ./input/lodes/year=2022/part=main/state=id/id.zip
-      hash: md5
-      md5: b6fa08031b734cba2cd76af7882d5123
-      size: 3930060
-  fetch_lodes_by_state@2022-il-aux:
-    cmd: python ./src/fetch_lodes.py --part aux --year 2022 --state il
-    outs:
-    - path: ./input/lodes/year=2022/part=aux/state=il/il.zip
-      hash: md5
-      md5: cfe745afb09aadbf748cdffb8cc24891
-      size: 2218906
-  fetch_lodes_by_state@2022-il-main:
-    cmd: python ./src/fetch_lodes.py --part main --year 2022 --state il
-    outs:
-    - path: ./input/lodes/year=2022/part=main/state=il/il.zip
-      hash: md5
-      md5: 355ebc038e68dd84af75e0ad08d367a2
-      size: 30568830
-  fetch_lodes_by_state@2022-in-aux:
-    cmd: python ./src/fetch_lodes.py --part aux --year 2022 --state in
-    outs:
-    - path: ./input/lodes/year=2022/part=aux/state=in/in.zip
-      hash: md5
-      md5: 307711d068fd5c679069a8d056ed0744
-      size: 1425254
-  fetch_lodes_by_state@2022-in-main:
-    cmd: python ./src/fetch_lodes.py --part main --year 2022 --state in
-    outs:
-    - path: ./input/lodes/year=2022/part=main/state=in/in.zip
-      hash: md5
-      md5: 236fe807c3148cc9f9ff61ddd251209f
-      size: 15432719
-  fetch_lodes_by_state@2022-ia-aux:
-    cmd: python ./src/fetch_lodes.py --part aux --year 2022 --state ia
-    outs:
-    - path: ./input/lodes/year=2022/part=aux/state=ia/ia.zip
-      hash: md5
-      md5: c9e3f64a71d17ef9a9d7564137503dfd
-      size: 767597
-  fetch_lodes_by_state@2022-ia-main:
-    cmd: python ./src/fetch_lodes.py --part main --year 2022 --state ia
-    outs:
-    - path: ./input/lodes/year=2022/part=main/state=ia/ia.zip
-      hash: md5
-      md5: f826694f69156a5cb6bdb3700d37845a
-      size: 7534671
-  fetch_lodes_by_state@2022-ks-aux:
-    cmd: python ./src/fetch_lodes.py --part aux --year 2022 --state ks
-    outs:
-    - path: ./input/lodes/year=2022/part=aux/state=ks/ks.zip
-      hash: md5
-      md5: b1e29c953a716d0d6e99ff602f8368e1
-      size: 1074599
-  fetch_lodes_by_state@2022-ks-main:
-    cmd: python ./src/fetch_lodes.py --part main --year 2022 --state ks
-    outs:
-    - path: ./input/lodes/year=2022/part=main/state=ks/ks.zip
-      hash: md5
-      md5: 11b932f794a6454a34327696485fe004
-      size: 6422504
-  fetch_lodes_by_state@2022-ky-aux:
-    cmd: python ./src/fetch_lodes.py --part aux --year 2022 --state ky
-    outs:
-    - path: ./input/lodes/year=2022/part=aux/state=ky/ky.zip
-      hash: md5
-      md5: 6fc42727339e68cb87be0ef6fc8b2226
-      size: 1204313
-  fetch_lodes_by_state@2022-ky-main:
-    cmd: python ./src/fetch_lodes.py --part main --year 2022 --state ky
-    outs:
-    - path: ./input/lodes/year=2022/part=main/state=ky/ky.zip
-      hash: md5
-      md5: 949b4439f8d46f85ea045f90e56f434a
-      size: 8798707
-  fetch_lodes_by_state@2022-la-aux:
-    cmd: python ./src/fetch_lodes.py --part aux --year 2022 --state la
-    outs:
-    - path: ./input/lodes/year=2022/part=aux/state=la/la.zip
-      hash: md5
-      md5: 81bda47318e028a2bce762d5de5b3317
-      size: 640415
-  fetch_lodes_by_state@2022-la-main:
-    cmd: python ./src/fetch_lodes.py --part main --year 2022 --state la
-    outs:
-    - path: ./input/lodes/year=2022/part=main/state=la/la.zip
-      hash: md5
-      md5: 0c9b985e64ce49dfb51ee76a2b2123a0
-      size: 9515669
-  fetch_lodes_by_state@2022-me-aux:
-    cmd: python ./src/fetch_lodes.py --part aux --year 2022 --state me
-    outs:
-    - path: ./input/lodes/year=2022/part=aux/state=me/me.zip
-      hash: md5
-      md5: b99f70aad81ee19cb4994525c0ee54fc
-      size: 169476
-  fetch_lodes_by_state@2022-me-main:
-    cmd: python ./src/fetch_lodes.py --part main --year 2022 --state me
-    outs:
-    - path: ./input/lodes/year=2022/part=main/state=me/me.zip
-      hash: md5
-      md5: 7f0649c0f844065c4bdaf50d3367c44d
-      size: 2996076
-  fetch_lodes_by_state@2022-md-aux:
-    cmd: python ./src/fetch_lodes.py --part aux --year 2022 --state md
-    outs:
-    - path: ./input/lodes/year=2022/part=aux/state=md/md.zip
-      hash: md5
-      md5: 5c56d3688d9eaf2acd36cce205358003
-      size: 2134741
-  fetch_lodes_by_state@2022-md-main:
-    cmd: python ./src/fetch_lodes.py --part main --year 2022 --state md
-    outs:
-    - path: ./input/lodes/year=2022/part=main/state=md/md.zip
-      hash: md5
-      md5: 260ccd4f4f7c7ec435784698df9dce5f
-      size: 11556588
-  fetch_lodes_by_state@2022-ma-aux:
-    cmd: python ./src/fetch_lodes.py --part aux --year 2022 --state ma
-    outs:
-    - path: ./input/lodes/year=2022/part=aux/state=ma/ma.zip
-      hash: md5
-      md5: 330e6585102581250b73f8f5d733e8e2
-      size: 2150136
-  fetch_lodes_by_state@2022-ma-main:
-    cmd: python ./src/fetch_lodes.py --part main --year 2022 --state ma
-    outs:
-    - path: ./input/lodes/year=2022/part=main/state=ma/ma.zip
-      hash: md5
-      md5: fbc9d1a0c10794ac8a2e6918d8b4adac
-      size: 17182741
-  fetch_lodes_by_state@2022-mn-aux:
-    cmd: python ./src/fetch_lodes.py --part aux --year 2022 --state mn
-    outs:
-    - path: ./input/lodes/year=2022/part=aux/state=mn/mn.zip
-      hash: md5
-      md5: 962a79ceac234ff1006874efd45f42fc
-      size: 793576
-  fetch_lodes_by_state@2022-mn-main:
-    cmd: python ./src/fetch_lodes.py --part main --year 2022 --state mn
-    outs:
-    - path: ./input/lodes/year=2022/part=main/state=mn/mn.zip
-      hash: md5
-      md5: 3a993dce821927d2e9385c051e7cfaaf
-      size: 13949743
-  fetch_lodes_by_state@2022-mo-aux:
-    cmd: python ./src/fetch_lodes.py --part aux --year 2022 --state mo
-    outs:
-    - path: ./input/lodes/year=2022/part=aux/state=mo/mo.zip
-      hash: md5
-      md5: 42cf8c6a23c626f245ab03dfbea3c976
-      size: 1637892
-  fetch_lodes_by_state@2022-mo-main:
-    cmd: python ./src/fetch_lodes.py --part main --year 2022 --state mo
-    outs:
-    - path: ./input/lodes/year=2022/part=main/state=mo/mo.zip
-      hash: md5
-      md5: ac8e1181176ae5a934463537bd4f05cf
-      size: 14048310
-  fetch_lodes_by_state@2022-mt-aux:
-    cmd: python ./src/fetch_lodes.py --part aux --year 2022 --state mt
-    outs:
-    - path: ./input/lodes/year=2022/part=aux/state=mt/mt.zip
-      hash: md5
-      md5: 83791a2afdf680bfaee9222c4d6a470d
-      size: 144318
-  fetch_lodes_by_state@2022-mt-main:
-    cmd: python ./src/fetch_lodes.py --part main --year 2022 --state mt
-    outs:
-    - path: ./input/lodes/year=2022/part=main/state=mt/mt.zip
-      hash: md5
-      md5: 38e47ffff0948babcfac7591888b1947
-      size: 2472509
-  fetch_lodes_by_state@2022-ne-aux:
-    cmd: python ./src/fetch_lodes.py --part aux --year 2022 --state ne
-    outs:
-    - path: ./input/lodes/year=2022/part=aux/state=ne/ne.zip
-      hash: md5
-      md5: 644159497c684f2492616ed538cb73b7
-      size: 487632
-  fetch_lodes_by_state@2022-ne-main:
-    cmd: python ./src/fetch_lodes.py --part main --year 2022 --state ne
-    outs:
-    - path: ./input/lodes/year=2022/part=main/state=ne/ne.zip
-      hash: md5
-      md5: 4d107f0d73eba0f53323a8555c5b3661
-      size: 4741680
-  fetch_lodes_by_state@2022-nv-aux:
-    cmd: python ./src/fetch_lodes.py --part aux --year 2022 --state nv
-    outs:
-    - path: ./input/lodes/year=2022/part=aux/state=nv/nv.zip
-      hash: md5
-      md5: e3fd7b099f3008c2da3843107eca4439
-      size: 552732
-  fetch_lodes_by_state@2022-nv-main:
-    cmd: python ./src/fetch_lodes.py --part main --year 2022 --state nv
-    outs:
-    - path: ./input/lodes/year=2022/part=main/state=nv/nv.zip
-      hash: md5
-      md5: 80726fa77faa45fd96af13f4a4e38aff
-      size: 6269571
-  fetch_lodes_by_state@2022-nh-aux:
-    cmd: python ./src/fetch_lodes.py --part aux --year 2022 --state nh
-    outs:
-    - path: ./input/lodes/year=2022/part=aux/state=nh/nh.zip
-      hash: md5
-      md5: e0ae8011b5fbec1cb4763650050d7b3c
-      size: 627149
-  fetch_lodes_by_state@2022-nh-main:
-    cmd: python ./src/fetch_lodes.py --part main --year 2022 --state nh
-    outs:
-    - path: ./input/lodes/year=2022/part=main/state=nh/nh.zip
-      hash: md5
-      md5: 96da33a6ee2f9e72eee997044c03952f
-      size: 2885225
-  fetch_lodes_by_state@2022-nj-aux:
-    cmd: python ./src/fetch_lodes.py --part aux --year 2022 --state nj
-    outs:
-    - path: ./input/lodes/year=2022/part=aux/state=nj/nj.zip
-      hash: md5
-      md5: 0ee7890170aa8bacacf9716870ac5a4c
-      size: 3025922
-  fetch_lodes_by_state@2022-nj-main:
-    cmd: python ./src/fetch_lodes.py --part main --year 2022 --state nj
-    outs:
-    - path: ./input/lodes/year=2022/part=main/state=nj/nj.zip
-      hash: md5
-      md5: f884f797a70d09aaab7d546777fe8d42
-      size: 20204792
-  fetch_lodes_by_state@2022-nm-aux:
-    cmd: python ./src/fetch_lodes.py --part aux --year 2022 --state nm
-    outs:
-    - path: ./input/lodes/year=2022/part=aux/state=nm/nm.zip
-      hash: md5
-      md5: c1fbbac8c5a84582587321f353851d86
-      size: 349171
-  fetch_lodes_by_state@2022-nm-main:
-    cmd: python ./src/fetch_lodes.py --part main --year 2022 --state nm
-    outs:
-    - path: ./input/lodes/year=2022/part=main/state=nm/nm.zip
-      hash: md5
-      md5: 1550971ed13fd178366873ff91332e1f
-      size: 3934845
-  fetch_lodes_by_state@2022-ny-aux:
-    cmd: python ./src/fetch_lodes.py --part aux --year 2022 --state ny
-    outs:
-    - path: ./input/lodes/year=2022/part=aux/state=ny/ny.zip
-      hash: md5
-      md5: cdbcbb0dd57be4435a43d6299ed5673c
-      size: 5519381
-  fetch_lodes_by_state@2022-ny-main:
-    cmd: python ./src/fetch_lodes.py --part main --year 2022 --state ny
-    outs:
-    - path: ./input/lodes/year=2022/part=main/state=ny/ny.zip
-      hash: md5
-      md5: 24aeae13da45f1624a78e00ff5f96b77
-      size: 44232716
-  fetch_lodes_by_state@2022-nc-aux:
-    cmd: python ./src/fetch_lodes.py --part aux --year 2022 --state nc
-    outs:
-    - path: ./input/lodes/year=2022/part=aux/state=nc/nc.zip
-      hash: md5
-      md5: d77980aa9574447a35cd6abfd98c6363
-      size: 1657589
-  fetch_lodes_by_state@2022-nc-main:
-    cmd: python ./src/fetch_lodes.py --part main --year 2022 --state nc
-    outs:
-    - path: ./input/lodes/year=2022/part=main/state=nc/nc.zip
-      hash: md5
-      md5: 07efdb2c5968d1826ab374f694e13aad
-      size: 23962207
-  fetch_lodes_by_state@2022-nd-aux:
-    cmd: python ./src/fetch_lodes.py --part aux --year 2022 --state nd
-    outs:
-    - path: ./input/lodes/year=2022/part=aux/state=nd/nd.zip
-      hash: md5
-      md5: 94914e4f1e7fc836525e316e2fa754ce
-      size: 349967
-  fetch_lodes_by_state@2022-nd-main:
-    cmd: python ./src/fetch_lodes.py --part main --year 2022 --state nd
-    outs:
-    - path: ./input/lodes/year=2022/part=main/state=nd/nd.zip
-      hash: md5
-      md5: bbc8b35554606e2d7bab372dc4b38f47
-      size: 1769156
-  fetch_lodes_by_state@2022-oh-aux:
-    cmd: python ./src/fetch_lodes.py --part aux --year 2022 --state oh
-    outs:
-    - path: ./input/lodes/year=2022/part=aux/state=oh/oh.zip
-      hash: md5
-      md5: ea3e318eba6a8af8a46a5d6bbcbb3400
-      size: 1600572
-  fetch_lodes_by_state@2022-oh-main:
-    cmd: python ./src/fetch_lodes.py --part main --year 2022 --state oh
-    outs:
-    - path: ./input/lodes/year=2022/part=main/state=oh/oh.zip
-      hash: md5
-      md5: 2a822ff68f3d96119e7faccd8fec47a0
-      size: 27705349
-  fetch_lodes_by_state@2022-ok-aux:
-    cmd: python ./src/fetch_lodes.py --part aux --year 2022 --state ok
-    outs:
-    - path: ./input/lodes/year=2022/part=aux/state=ok/ok.zip
-      hash: md5
-      md5: bc4b1eb14414d58591c3dea5da596c9c
-      size: 429264
-  fetch_lodes_by_state@2022-ok-main:
-    cmd: python ./src/fetch_lodes.py --part main --year 2022 --state ok
-    outs:
-    - path: ./input/lodes/year=2022/part=main/state=ok/ok.zip
-      hash: md5
-      md5: dd74402184c394f18b6b03522947de6a
-      size: 8474567
-  fetch_lodes_by_state@2022-or-aux:
-    cmd: python ./src/fetch_lodes.py --part aux --year 2022 --state or
-    outs:
-    - path: ./input/lodes/year=2022/part=aux/state=or/or.zip
-      hash: md5
-      md5: 0caeae1bacef8eff2468610e37e67f3d
-      size: 930091
-  fetch_lodes_by_state@2022-or-main:
-    cmd: python ./src/fetch_lodes.py --part main --year 2022 --state or
-    outs:
-    - path: ./input/lodes/year=2022/part=main/state=or/or.zip
-      hash: md5
-      md5: 02e5213ec033b418e136a329e3c56d22
-      size: 9683435
-  fetch_lodes_by_state@2022-pa-aux:
-    cmd: python ./src/fetch_lodes.py --part aux --year 2022 --state pa
-    outs:
-    - path: ./input/lodes/year=2022/part=aux/state=pa/pa.zip
-      hash: md5
-      md5: 07d3a43301d06e56ceea617332b1ee5b
-      size: 2626137
-  fetch_lodes_by_state@2022-pa-main:
-    cmd: python ./src/fetch_lodes.py --part main --year 2022 --state pa
-    outs:
-    - path: ./input/lodes/year=2022/part=main/state=pa/pa.zip
-      hash: md5
-      md5: 68afa714f7cb0cff548c06c8cbeb6483
-      size: 30172058
-  fetch_lodes_by_state@2022-ri-aux:
-    cmd: python ./src/fetch_lodes.py --part aux --year 2022 --state ri
-    outs:
-    - path: ./input/lodes/year=2022/part=aux/state=ri/ri.zip
-      hash: md5
-      md5: 6d3f80d389392906cbe8fbe47e67d85d
-      size: 480048
-  fetch_lodes_by_state@2022-ri-main:
-    cmd: python ./src/fetch_lodes.py --part main --year 2022 --state ri
-    outs:
-    - path: ./input/lodes/year=2022/part=main/state=ri/ri.zip
-      hash: md5
-      md5: e79f8814bc82193da8fedd7a82f54f8b
-      size: 2136112
-  fetch_lodes_by_state@2022-sc-aux:
-    cmd: python ./src/fetch_lodes.py --part aux --year 2022 --state sc
-    outs:
-    - path: ./input/lodes/year=2022/part=aux/state=sc/sc.zip
-      hash: md5
-      md5: d44921083d8afcac23fb3648dee0318c
-      size: 918529
-  fetch_lodes_by_state@2022-sc-main:
-    cmd: python ./src/fetch_lodes.py --part main --year 2022 --state sc
-    outs:
-    - path: ./input/lodes/year=2022/part=main/state=sc/sc.zip
-      hash: md5
-      md5: 89ca75d6056f3431904f079052ff4d30
-      size: 10780815
-  fetch_lodes_by_state@2022-sd-aux:
-    cmd: python ./src/fetch_lodes.py --part aux --year 2022 --state sd
-    outs:
-    - path: ./input/lodes/year=2022/part=aux/state=sd/sd.zip
-      hash: md5
-      md5: d0d455a849a38df73f922f9f091f4767
-      size: 232645
-  fetch_lodes_by_state@2022-sd-main:
-    cmd: python ./src/fetch_lodes.py --part main --year 2022 --state sd
-    outs:
-    - path: ./input/lodes/year=2022/part=main/state=sd/sd.zip
-      hash: md5
-      md5: 0199ee87d5c1954061f5658197bc4393
-      size: 2008268
-  fetch_lodes_by_state@2022-tn-aux:
-    cmd: python ./src/fetch_lodes.py --part aux --year 2022 --state tn
-    outs:
-    - path: ./input/lodes/year=2022/part=aux/state=tn/tn.zip
-      hash: md5
-      md5: 2d04468ca39fede5bfc3b374a371f2c8
-      size: 1625486
-  fetch_lodes_by_state@2022-tn-main:
-    cmd: python ./src/fetch_lodes.py --part main --year 2022 --state tn
-    outs:
-    - path: ./input/lodes/year=2022/part=main/state=tn/tn.zip
-      hash: md5
-      md5: f160db9385df07dd6d037f34ccd66cc1
-      size: 14859784
-  fetch_lodes_by_state@2022-tx-aux:
-    cmd: python ./src/fetch_lodes.py --part aux --year 2022 --state tx
-    outs:
-    - path: ./input/lodes/year=2022/part=aux/state=tx/tx.zip
-      hash: md5
-      md5: 7a9bbc95c74e5a390e4ce0618b116d6a
-      size: 1717097
-  fetch_lodes_by_state@2022-tx-main:
-    cmd: python ./src/fetch_lodes.py --part main --year 2022 --state tx
-    outs:
-    - path: ./input/lodes/year=2022/part=main/state=tx/tx.zip
-      hash: md5
-      md5: 9ece4f40f6ae86ab3432e1bf5dac9f1c
-      size: 70318662
-  fetch_lodes_by_state@2022-ut-aux:
-    cmd: python ./src/fetch_lodes.py --part aux --year 2022 --state ut
-    outs:
-    - path: ./input/lodes/year=2022/part=aux/state=ut/ut.zip
-      hash: md5
-      md5: 10f752f4eca40d8ea6d9fe379af08669
-      size: 406864
-  fetch_lodes_by_state@2022-ut-main:
-    cmd: python ./src/fetch_lodes.py --part main --year 2022 --state ut
-    outs:
-    - path: ./input/lodes/year=2022/part=main/state=ut/ut.zip
-      hash: md5
-      md5: 3c3b232641e464385978b0f23fb93e47
-      size: 8214922
-  fetch_lodes_by_state@2022-vt-aux:
-    cmd: python ./src/fetch_lodes.py --part aux --year 2022 --state vt
-    outs:
-    - path: ./input/lodes/year=2022/part=aux/state=vt/vt.zip
-      hash: md5
-      md5: 950d6bb8acfa2059a1eaaff9efb7cf7f
-      size: 231700
-  fetch_lodes_by_state@2022-vt-main:
-    cmd: python ./src/fetch_lodes.py --part main --year 2022 --state vt
-    outs:
-    - path: ./input/lodes/year=2022/part=main/state=vt/vt.zip
-      hash: md5
-      md5: bd9b1e0627e5feb5d507043e3484e621
-      size: 1276968
-  fetch_lodes_by_state@2022-va-aux:
-    cmd: python ./src/fetch_lodes.py --part aux --year 2022 --state va
-    outs:
-    - path: ./input/lodes/year=2022/part=aux/state=va/va.zip
-      hash: md5
-      md5: 19502c8558ff6794981d8d7787aa0d75
-      size: 2368062
-  fetch_lodes_by_state@2022-va-main:
-    cmd: python ./src/fetch_lodes.py --part main --year 2022 --state va
-    outs:
-    - path: ./input/lodes/year=2022/part=main/state=va/va.zip
-      hash: md5
-      md5: e929fc81be5b520bd94f2b0f66e686a4
-      size: 17853396
-  fetch_lodes_by_state@2022-wa-aux:
-    cmd: python ./src/fetch_lodes.py --part aux --year 2022 --state wa
-    outs:
-    - path: ./input/lodes/year=2022/part=aux/state=wa/wa.zip
-      hash: md5
-      md5: 4b34cb990ef27cbe15f4e7e360dcffa0
-      size: 857737
-  fetch_lodes_by_state@2022-wa-main:
-    cmd: python ./src/fetch_lodes.py --part main --year 2022 --state wa
-    outs:
-    - path: ./input/lodes/year=2022/part=main/state=wa/wa.zip
-      hash: md5
-      md5: f542bc8df69b9e4b1a7942adde252f39
-      size: 16978734
-  fetch_lodes_by_state@2022-wv-aux:
-    cmd: python ./src/fetch_lodes.py --part aux --year 2022 --state wv
-    outs:
-    - path: ./input/lodes/year=2022/part=aux/state=wv/wv.zip
-      hash: md5
-      md5: 03a0643c5fcf300b10e12b622efda17b
-      size: 600234
-  fetch_lodes_by_state@2022-wv-main:
-    cmd: python ./src/fetch_lodes.py --part main --year 2022 --state wv
-    outs:
-    - path: ./input/lodes/year=2022/part=main/state=wv/wv.zip
-      hash: md5
-      md5: 8f5c91d304e02b1a00e20694f11e5632
-      size: 3013686
-  fetch_lodes_by_state@2022-wi-aux:
-    cmd: python ./src/fetch_lodes.py --part aux --year 2022 --state wi
-    outs:
-    - path: ./input/lodes/year=2022/part=aux/state=wi/wi.zip
-      hash: md5
-      md5: 7d729c2d6a62e11307b73a03c6558bf1
-      size: 902715
-  fetch_lodes_by_state@2022-wi-main:
-    cmd: python ./src/fetch_lodes.py --part main --year 2022 --state wi
-    outs:
-    - path: ./input/lodes/year=2022/part=main/state=wi/wi.zip
-      hash: md5
-      md5: d70e170a7d91fb57cf5640631928c1ec
-      size: 14752248
-  fetch_lodes_by_state@2022-wy-aux:
-    cmd: python ./src/fetch_lodes.py --part aux --year 2022 --state wy
-    outs:
-    - path: ./input/lodes/year=2022/part=aux/state=wy/wy.zip
-      hash: md5
-      md5: 5bc4febc84e06c7d09d13be0d74bf9c6
-      size: 196067
-  fetch_lodes_by_state@2022-wy-main:
-    cmd: python ./src/fetch_lodes.py --part main --year 2022 --state wy
-    outs:
-    - path: ./input/lodes/year=2022/part=main/state=wy/wy.zip
-      hash: md5
-      md5: 09cb430799e05a4c5eefe2638433c927
-      size: 1187941
-  fetch_lodes_by_state@2022-dc-aux:
-    cmd: python ./src/fetch_lodes.py --part aux --year 2022 --state dc
-    outs:
-    - path: ./input/lodes/year=2022/part=aux/state=dc/dc.zip
-      hash: md5
-      md5: e66ba6eb67f17e42c95386f2d9b88a7b
-      size: 2359463
-  fetch_lodes_by_state@2022-dc-main:
-    cmd: python ./src/fetch_lodes.py --part main --year 2022 --state dc
-    outs:
-    - path: ./input/lodes/year=2022/part=main/state=dc/dc.zip
-      hash: md5
-      md5: 5c9d3af3a2a8804361fe078c0187a578
-      size: 881968
+      md5: fbb6a5c5b75756f80732ed7efe0a0966
+      size: 72041100

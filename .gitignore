@@ -17,6 +17,7 @@ rosm.cache/
 venv/
 *.bak
 *.csv
+*.csv.gz
 *.dat
 *.duckdb
 *.egg-info/

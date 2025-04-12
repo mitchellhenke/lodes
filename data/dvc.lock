@@ -919,3 +919,10 @@ stages:
       hash: md5
       md5: 50c10186bdf4aa5fc89173bce9ab64b8
       size: 130682978
+  fetch_cb@2023-block_group:
+    cmd: python ./src/fetch_cb.py --year 2023 --geography block_group
+    outs:
+    - path: ./input/cb/year=2023/geography=block_group/block_group.geojson
+      hash: md5
+      md5: 35f43269b9ab6a376a7a3393b0297a05
+      size: 224163146

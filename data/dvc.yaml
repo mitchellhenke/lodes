@@ -13,7 +13,7 @@ stages:
   fetch_cb:
     matrix:
       year: ['2023']
-      geography: ['tract']
+      geography: ['tract', 'block_group']
     cmd: "python ./src/fetch_cb.py --year ${item.year} --geography ${item.geography}"
     outs:
       - ./input/cb/year=${item.year}/geography=${item.geography}/${item.geography}.geojson:

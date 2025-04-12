@@ -14,17 +14,17 @@ args <- commandArgs(trailingOnly=T)
 
 year <- args[1]
 state <- args[2]
-aggregate_to <- args[3]
+geography <- args[3]
 
 # aggregate the supplied LODES data (created by download_lodes) to the
 #   specified aggregation level (currently only tract supported)
-aggregate_lodes <- function(year, state, aggregate_to = "tract", save = T){
-  stopifnot(aggregate_to %in% c("tract"))
+aggregate_lodes <- function(year, state, geography = "tract", save = T){
+  stopifnot(geography %in% c("tract"))
 
   lodes <- readr::read_csv(paste0("input/lodes/year=", year, "/state=", state,
                                   "/", state, ".csv.gz"))
 
-  if(aggregate_to == "tract"){
+  if(geography == "tract"){
     lodes.agg <- lodes |>
       mutate(w_tract = str_sub(w_geocode, 1, 11),
              h_tract = str_sub(h_geocode, 1, 11)) |>
@@ -35,13 +35,13 @@ aggregate_lodes <- function(year, state, aggregate_to = "tract", save = T){
   }
 
   if(save == T){
-    dir.create(path = paste0("intermediate/od_tract/year=", year, "/state=", state),
+    dir.create(path = paste0("intermediate/od_lodes/year=", year, "/geography=", geography, "/state=", state),
                showWarnings = F, recursive = T)
 
     nanoparquet::write_parquet(lodes.agg,
-                               paste0("intermediate/od_", aggregate_to, "/year=",
-                                      year, "/state=", state, "/", state, ".parquet"))
+                               paste0("intermediate/od_lodes/year=", year, "/geography=", geography, "/state=", state,
+                                      "/", state, ".parquet"))
   }
 }
 
-x <- aggregate_lodes(year, state, aggregate_to)
+x <- aggregate_lodes(year, state, geography)

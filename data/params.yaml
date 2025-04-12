@@ -1,4 +1,10 @@
 ---
+s3:
+  profile: 'cloudflare'
+  data_bucket: 'lodes-data'
+  public_bucket: 'lodes-public'
+  endpoint_url: 'https://f8de4764a973ce6156967ec64aab41f3.r2.cloudflarestorage.com'
+  account_id: 'f8de4764a973ce6156967ec64aab41f3'
 
 input:
   # Years to collect input data. Each year will download
@@ -61,6 +67,10 @@ input:
     - 'wv'
     - 'wi'
     - 'wy'
+
+  census:
+    geography:
+      - tract
 
 output:
   # Compression type and level to use for final output Parquet files

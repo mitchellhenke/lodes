@@ -912,3 +912,10 @@ stages:
       hash: md5
       md5: 8a0f45070fc3de207031f70ab517c113
       size: 281526
+  fetch_cb@2023-tract:
+    cmd: python ./src/fetch_cb.py --year 2023 --geography tract
+    outs:
+    - path: ./input/cb/year=2023/geography=tract/tract.geojson
+      hash: md5
+      md5: 50c10186bdf4aa5fc89173bce9ab64b8
+      size: 130682978

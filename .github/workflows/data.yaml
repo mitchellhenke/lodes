@@ -30,5 +30,8 @@ jobs:
       - name: Install DVC
         uses: ./.github/actions/setup-dvc
 
+      - name: Install R
+        uses: r-lib/actions/setup-r@v2
+
       - name: Fetch lodes data
         uses: ./.github/actions/fetch-lodes

@@ -2,6 +2,8 @@
 
 [LODESMap](https://lodesmap.com/) builds an interactive map for exploring the United States Census Bureau's [Longitudinal Employer-Household Dynamics](https://lehd.ces.census.gov/data/) (LEHD) data. The LEHD Origin-Destination Employment Statistics (LODES) dataset shows where people live and work on the very granular Census block level.
 
+A significant portion of this work is based on [OpenTimes](https://github.com/dfsnow/opentimes) by Dan Snow.
+
 As an example from the raw data, the below table shows two rows of the data for Census blocks near one another in downtown Milwaukee. `w_geocode` represents the Census block where the job is and `h_geocode` represents the home Census block. `S000` is the total number of jobs. In the first row, there is one person that lives in Census block `550791874002040` and they work in Census block `550790144001016`. The second row shows that one person lives and works in Census block `550790144002007`.
 
 |w_geocode      |h_geocode      |S000|SA01|SA02|SA03|SE01|SE02|SE03|SI01|SI02|SI03|createdate|

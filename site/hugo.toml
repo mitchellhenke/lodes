@@ -1,4 +1,4 @@
-baseURL = "https://openlodes.org/"
+baseURL = "https://lodesmap.com/"
 languageCode = "en-us"
 title = "OpenLodes"
 disableKinds = ["taxonomy", "term"]

@@ -152,7 +152,7 @@ class ColorScale {
     this.scaleContainer = this.createScaleContainer();
     this.toggleButton = this.createToggleButton();
     this.modeDropdown = this.createDropdown(
-      "mode", LODES_MODE, LODES_MODES, "Travel mode"
+      "mode", LODES_MODE, LODES_MODES, "Origin"
     );
     this.geographyDropdown = this.createDropdown(
       "geography", LODES_GEOGRAPHY, LODES_GEOGRAPHIES, "Geography"
@@ -213,7 +213,7 @@ class ColorScale {
   draw(map) {
     const legendTitle = document.createElement("div");
     legendTitle.id = "legend-title";
-    legendTitle.innerHTML = "<h2>Travel time</h2>";
+    legendTitle.innerHTML = "<h2>Number of People</h2>";
 
     this.scaleContainer.append(legendTitle);
     this.colors.forEach(({ color, label }) => {

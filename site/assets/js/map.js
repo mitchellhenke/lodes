@@ -14,8 +14,8 @@ const
   LODES_GEOGRAPHIES = ["tract", "block_group"];
 
 const
-  URL_TILES = `https://pub-098e72dd2e634043b49076fc48cdc2ad.r2.dev/tiles`,
-  URL_LODES = `https://pub-098e72dd2e634043b49076fc48cdc2ad.r2.dev/lodes`;
+  URL_TILES = `https://data.lodesmap.com/tiles`,
+  URL_LODES = `https://data.lodesmap.com/lodes`;
 
 const FIPS_TO_TIGER_GEO_STATE_ABBR = {
   "02": "ak",

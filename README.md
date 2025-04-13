@@ -28,11 +28,11 @@ Input and intermediate data is stored using [dvc](https://dvc.org/). Both Python
 
 The data is managed within the `data` directory and related sub-directories.
 
-1. [Install uv](https://docs.astral.sh/uv/getting-started/installation/)
-1. [Install R](https://www.r-project.org)
-1. Run `uv run dvc exp run data/dvc.yaml`
-  1. This will prepare all of the input and intermediate data, including LODES data and the data necessary to build [Protomaps](https://protomaps.com) tiles.
-  1. (Optional) Upload data to public bucket for a given dataset, geography and year with `uv run src/upload_aggregate_lodes.py --dataset lodes --geography tract --year 2022`
+- [Install uv](https://docs.astral.sh/uv/getting-started/installation/)
+- [Install R](https://www.r-project.org)
+- Run `uv run dvc exp run data/dvc.yaml`
+  - This will prepare all of the input and intermediate data, including LODES data and the data necessary to build [Protomaps](https://protomaps.com) tiles.
+  - (Optional) Upload data to public bucket for a given dataset, geography and year with `uv run src/upload_aggregate_lodes.py --dataset lodes --geography tract --year 2022`
 
 
 ### Tiles
@@ -41,8 +41,8 @@ LODES Version 8.3 is based on 2023 TIGER/Line shapefiles and 2020 Census blocks.
 
 To build the tilesets:
 
-1. [Install tippecanoe](https://github.com/felt/tippecanoe#installation)
-1. Run `./src/create_tiles.sh 2023 block_group`
-  1. (Optional) Upload the tiles to S3/R2 with `./src/upload_tiles.sh 2023 block_group`
-1. Run `./src/create_tiles.sh 2023 tract`
-  1. (Optional) Upload the tiles to S3/R2 with `./src/upload_tiles.sh 2023 tract`
+- [Install tippecanoe](https://github.com/felt/tippecanoe#installation)
+- Run `./src/create_tiles.sh 2023 block_group`
+  - (Optional) Upload the tiles to S3/R2 with `./src/upload_tiles.sh 2023 block_group`
+- Run `./src/create_tiles.sh 2023 tract`
+  - (Optional) Upload the tiles to S3/R2 with `./src/upload_tiles.sh 2023 tract`

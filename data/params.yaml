@@ -12,9 +12,6 @@ input:
   year:
     - '2022'
 
-  part:
-    - 'aux'
-    - 'main'
   state:
     - 'al'
     # - 'ak'

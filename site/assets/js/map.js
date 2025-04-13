@@ -180,7 +180,7 @@ class ColorScale {
       "mode", LODES_MODE, LODES_MODES, {}, "Origin"
     );
     this.jobTypeDropdown = this.createDropdown(
-      "job_type", LODES_JOB_TYPE, LODES_JOB_TYPES, CONST_LODES_JOB_TYPES_LABELS, "job_type"
+      "job_type", LODES_JOB_TYPE, LODES_JOB_TYPES, CONST_LODES_JOB_TYPES_LABELS, "Job Type"
     );
     this.geographyDropdown = this.createDropdown(
       "geography", LODES_GEOGRAPHY, LODES_GEOGRAPHIES, {}, "Geography"

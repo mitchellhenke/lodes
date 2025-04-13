@@ -40,14 +40,17 @@ def main() -> None:
     parser.add_argument("--dataset", required=True, type=str)
     parser.add_argument("--year", required=True, type=str)
     parser.add_argument("--geography", required=True, type=str)
-    parser.add_argument("--state", required=True, type=str)
     args = parser.parse_args()
-    create_public_files(
-        args.dataset,
-        args.year,
-        args.geography,
-        args.state,
-    )
+    with open("params.yaml") as file:
+        params = yaml.safe_load(file)
+
+    for state in params['input']['state']:
+        create_public_files(
+            args.dataset,
+            args.year,
+            args.geography,
+            state
+        )
 
 
 if __name__ == "__main__":

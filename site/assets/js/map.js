@@ -5,13 +5,28 @@ import maplibregl from "maplibre-gl";
 
 const
   LODES_MODE = "home",
+  LODES_JOB_TYPE = "S000",
   LODES_YEAR = "2022",
   LODES_GEOGRAPHY = "tract";
 
 const
   LODES_MODES = ["home", "work"],
+  LODES_JOB_TYPES = ["S000", "SA01", "SA02", "SA03", "SE01", "SE02", "SE03", "SI01", "SI02", "SI03"],
   LODES_YEARS = ["2022"],
   LODES_GEOGRAPHIES = ["tract", "block_group"];
+
+const CONST_LODES_JOB_TYPES_LABELS = {
+  "S000": "Total jobs",
+  "SA01": "Jobs for workers age 29 or younger",
+  "SA02": "Jobs for workers age 30 to 54",
+  "SA03": "Jobs for workers age 55 or older",
+  "SE01": "Jobs with earnings $1250/month or less",
+  "SE02": "Jobs with earnings $1251/month to $3333/month",
+  "SE03": "Jobs with earnings greater than $3333/month",
+  "SI01": "Jobs in Goods Producing industry",
+  "SI02": "Jobs in Trade, Transportation, and Utilities industry",
+  "SI03": "Jobs in All Other Services industry"
+};
 
 const
   URL_TILES = `https://data.lodesmap.com/tiles`,
@@ -84,11 +99,13 @@ const
 
 // Parameters that get updated by query string or clicking the map
 let modeParam = LODES_MODE,
+  jobTypeParam = LODES_JOB_TYPE,
   yearParam = LODES_YEAR,
   geographyParam = LODES_GEOGRAPHY,
   idParam = null;
 
 let validMode = true,
+  validJobType = true,
   validYear = true,
   validGeography = true,
   validId = true;
@@ -123,6 +140,12 @@ const setUrlParam = function setUrlParam(name, value) {
   window.history.replaceState({}, "", `?${urlParams}${window.location.hash}`);
 };
 
+const validJobTypeInput = function validJobTypeInput(jobType) {
+  if (LODES_JOB_TYPES.includes(jobType) && jobType) { return true; }
+  console.warn(`Invalid mode ${jobType}. Must be one of: ${LODES_JOB_TYPES.join(", ")}.`);
+  return false;
+};
+
 const validModeInput = function validModeInput(mode) {
   if (LODES_MODES.includes(mode) && mode) { return true; }
   console.warn(`Invalid mode ${mode}. Must be one of: ${LODES_MODES.join(", ")}.`);
@@ -154,17 +177,20 @@ class ColorScale {
     this.scaleContainer = this.createScaleContainer();
     this.toggleButton = this.createToggleButton();
     this.modeDropdown = this.createDropdown(
-      "mode", LODES_MODE, LODES_MODES, "Origin"
+      "mode", LODES_MODE, LODES_MODES, {}, "Origin"
+    );
+    this.jobTypeDropdown = this.createDropdown(
+      "job_type", LODES_JOB_TYPE, LODES_JOB_TYPES, CONST_LODES_JOB_TYPES_LABELS, "job_type"
     );
     this.geographyDropdown = this.createDropdown(
-      "geography", LODES_GEOGRAPHY, LODES_GEOGRAPHIES, "Geography"
+      "geography", LODES_GEOGRAPHY, LODES_GEOGRAPHIES, {}, "Geography"
     );
     this.colors = this.getColors();
     this.zoomLower = null;
     this.zoomUpper = null;
   }
 
-  createDropdown(param, defaultParam, possibleParams, labelText) {
+  createDropdown(param, defaultParam, possibleParams, paramLabels, labelText) {
     const container = document.createElement("div"),
       dropdown = document.createElement("select"),
       label = document.createElement("label");
@@ -176,9 +202,14 @@ class ColorScale {
     possibleParams.forEach(opt => {
       const option = document.createElement("option");
       option.value = opt;
-      option.textContent = opt.split("_").
-        map(word => word.charAt(0).toUpperCase() +
-          word.slice(1).toLowerCase()).join(" ");
+
+      if(paramLabels[opt]) {
+        option.textContent = paramLabels[opt]
+      } else {
+        option.textContent = opt.split("_").
+          map(word => word.charAt(0).toUpperCase() +
+            word.slice(1).toLowerCase()).join(" ");
+      }
       if (opt === defaultParam) {
         option.selected = true;
       }
@@ -230,6 +261,7 @@ class ColorScale {
 
     this.scaleContainer.append(this.modeDropdown);
     this.scaleContainer.append(this.geographyDropdown);
+    this.scaleContainer.append(this.jobTypeDropdown);
     this.scaleContainer.append(this.toggleButton);
     map.getContainer().append(this.scaleContainer);
   }
@@ -475,7 +507,7 @@ class Map {
         if (idParam && validId) {
           setUrlParam("id", idParam);
           await this.processor.runQuery(
-            this, modeParam, yearParam, geographyParam,
+            this, modeParam, jobTypeParam, yearParam, geographyParam,
             idParam.substring(0, 2), idParam
           );
         }
@@ -696,7 +728,7 @@ class ParquetProcessor {
     return id;
   }
 
-  async runQuery(map, mode, year, geography, state, id) {
+  async runQuery(map, mode, job_type, year, geography, state, id) {
     map.isProcessing = true;
     map.spinner.show();
     const tilesUrl = getTilesUrl({ geography }),
@@ -704,16 +736,16 @@ class ParquetProcessor {
       truncId = this.truncateId(geography, id);
 
     // Get the count of files given the geography, mode, and state
-    const results = await this.updateMapOnQuery(map, queryUrl, truncId, geography, mode);
+    const results = await this.updateMapOnQuery(map, queryUrl, truncId, geography, job_type, mode);
     this.saveResultState(map, results, geography);
     map.isProcessing = false;
     map.spinner.hide();
   }
 
-  async readAndUpdateMap(map, id, geography, file, metadata, rowGroup, results, mode) {
+  async readAndUpdateMap(map, id, geography, file, metadata, rowGroup, results, job_type, mode) {
     await parquetRead(
       {
-        columns: ["w_tract", "h_tract", "S000"],
+        columns: ["w_tract", "h_tract", job_type],
         compressors,
         file,
         metadata,
@@ -724,7 +756,7 @@ class ParquetProcessor {
     );
   }
 
-  async updateMapOnQuery(map, url, id, geography, mode) {
+  async updateMapOnQuery(map, url, id, geography, job_type, mode) {
     const urls = [url]
     const results = [];
     let totalGroups = 0;
@@ -777,7 +809,7 @@ class ParquetProcessor {
     let processedGroups = 0,
       progress = 10;
     await Promise.all(rowGroupItems.map(async (rg) => {
-      await this.readAndUpdateMap(map, rg.id, geography, rg.file, rg.metadata, rg.rowGroup, results, mode);
+      await this.readAndUpdateMap(map, rg.id, geography, rg.file, rg.metadata, rg.rowGroup, results, job_type, mode);
       processedGroups += 1;
       progress = Math.ceil((processedGroups / totalGroups) * 100);
       map.spinner.updateProgress(progress);
@@ -813,7 +845,28 @@ class ParquetProcessor {
 
       if (idParam && validId) {
         await processor.runQuery(
-          map, modeParam, yearParam, geographyParam,
+          map, modeParam, jobTypeParam, yearParam, geographyParam,
+          idParam.substring(0, 2), idParam
+        );
+      }
+    }
+  });
+
+  colorScale.jobTypeDropdown.addEventListener("change", async (event) => {
+    const urlParams = new URLSearchParams(window.location.search);
+
+    jobTypeParam = event.target.value;
+    validJobType = validJobTypeInput(jobTypeParam);
+
+    if (validJobType) {
+      setUrlParam("jobType", jobTypeParam);
+
+      idParam = urlParams.get("id");
+      validId = validIdInput(idParam);
+
+      if (idParam && validId) {
+        await processor.runQuery(
+          map, modeParam, jobTypeParam, yearParam, geographyParam,
           idParam.substring(0, 2), idParam
         );
       }
@@ -835,7 +888,7 @@ class ParquetProcessor {
 
       if (idParam && validId) {
         await processor.runQuery(
-          map, modeParam, yearParam, geographyParam,
+          map, modeParam, jobTypeParam, yearParam, geographyParam,
           idParam.substring(0, 2), idParam
         );
       }
@@ -875,7 +928,7 @@ class ParquetProcessor {
 
       if (idParam && validId) {
         await processor.runQuery(
-          map, modeParam, yearParam, geographyParam,
+          map, modeParam, jobTypeParam, yearParam, geographyParam,
           idParam.substring(0, 2), idParam
         );
       }

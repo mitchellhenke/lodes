@@ -1,0 +1,10 @@
+{{- define "scripts" -}}
+{{- $details := resources.Get "js/details.js" | minify | fingerprint -}}
+<script src="{{- $details.RelPermalink -}}"></script>
+{{- end -}}
+
+{{- define "main" -}}
+<article>
+    {{- partial "header-link.html" .Content -}}
+</article>
+{{- end -}}

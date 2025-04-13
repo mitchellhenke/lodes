@@ -1,0 +1,13 @@
+{{- define "styles" -}}
+{{- $maplibrecss := resources.Get "vendor/maplibre-gl-4.7.0.min.css" | fingerprint -}}
+<link href="{{- $maplibrecss.RelPermalink -}}" rel="stylesheet" />
+{{- end -}}
+
+{{- define "scripts" -}}
+{{- $map := resources.Get "js/map.js" | js.Build (dict "format" "esm" "sourceMap" "inline") | minify | fingerprint -}}
+<script type="module" src="{{- $map.RelPermalink -}}"></script>
+{{- end -}}
+
+{{- define "main" -}}
+<div id="map"></div>
+{{- end -}}

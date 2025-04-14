@@ -26,12 +26,36 @@ The Census Bureau also publishes this data from previous years, allowing us to s
 
 Input and intermediate data is stored using [dvc](https://dvc.org/). Both Python and R are needed. Python is managed with [uv](https://github.com/astral-sh/uv).
 
-The data is managed within the `data` directory and related sub-directories.
+The data is managed within the `data` directory and related sub-directories with data/dvc.yaml defining the dependencies between them.
+
+<details>
+  <summary>Folder Structure</summary>
+
+- data/
+  - input/
+    - cb/
+      - year=YYYY/
+        - geography=GEOGRAPHY/
+          - GEOGRAPHY.geojson
+    - lodes/
+      - year=YYYY/
+        - state=XX/
+          - XX.csv.gz
+  - intermediate/
+    - od\_lodes/
+      - year=YYYY/
+        - geography=GEOGRAPHY/
+          - state=XX/
+            - XX.parquet
+
+</details>
+
+### Tooling
 
 - [Install uv](https://docs.astral.sh/uv/getting-started/installation/)
 - [Install R](https://www.r-project.org)
 - Run `uv run dvc exp run data/dvc.yaml`
-  - This will prepare all of the input and intermediate data, including LODES data and the data necessary to build [Protomaps](https://protomaps.com) tiles.
+  - This will download and process all of the input and intermediate data, including LODES data and the data necessary to build [Protomaps](https://protomaps.com) tiles.
   - (Optional) Upload data to public bucket for a given dataset, geography and year with `uv run src/upload_aggregate_lodes.py --dataset lodes --geography tract --year 2022`
 
 

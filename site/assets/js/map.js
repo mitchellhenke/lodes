@@ -745,7 +745,7 @@ class ParquetProcessor {
   async readAndUpdateMap(map, id, geography, file, metadata, rowGroup, results, job_segment, mode) {
     await parquetRead(
       {
-        columns: ["w_tract", "h_tract", job_segment],
+        columns: ["w_geo", "h_geo", job_segment],
         compressors,
         file,
         metadata,
@@ -773,7 +773,7 @@ class ParquetProcessor {
       let rowStart = 0;
       for (const rowGroup of metadata.row_groups) {
         for (const column of rowGroup.columns) {
-          if (column.meta_data.path_in_schema.includes("w_tract")) {
+          if (column.meta_data.path_in_schema.includes("w_geo")) {
             const
               endRow = rowStart + Number(rowGroup.num_rows) - 1,
               maxValue = column.meta_data.statistics.max_value,

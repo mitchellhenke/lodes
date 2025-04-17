@@ -17,18 +17,18 @@ state <- args[2]
 geography <- args[3]
 
 # aggregate the supplied LODES data (created by download_lodes) to the
-#   specified aggregation level (currently only tract supported)
+#   specified aggregation level (tract, block group, or county)
 aggregate_lodes <- function(year, state, geography = "tract", save = T){
-  stopifnot(geography %in% c("tract", "block_group"))
+  stopifnot(geography %in% c("tract", "block_group", "county"))
 
   lodes <- readr::read_csv(paste0("input/lodes/year=", year, "/state=", state,
                                   "/", state, ".csv.gz"))
 
   if(geography == "tract"){
     lodes.agg <- lodes |>
-      mutate(w_tract = str_sub(w_geocode, 1, 11),
-             h_tract = str_sub(h_geocode, 1, 11)) |>
-      group_by(w_tract, h_tract) |>
+      mutate(w_geo = str_sub(w_geocode, 1, 11),
+             h_geo = str_sub(h_geocode, 1, 11)) |>
+      group_by(w_geo, h_geo) |>
       summarise(across(.cols = starts_with("S", ignore.case = F), .fns = sum),
                 .groups = "drop") |>
       mutate(across(where(is.numeric), as.integer))
@@ -36,9 +36,19 @@ aggregate_lodes <- function(year, state, geography = "tract", save = T){
 
   if(geography == "block_group"){
     lodes.agg <- lodes |>
-      mutate(w_tract = str_sub(w_geocode, 1, 12),
-             h_tract = str_sub(h_geocode, 1, 12)) |>
-      group_by(w_tract, h_tract) |>
+      mutate(w_geo = str_sub(w_geocode, 1, 12),
+             h_geo = str_sub(h_geocode, 1, 12)) |>
+      group_by(w_geo, h_geo) |>
+      summarise(across(.cols = starts_with("S", ignore.case = F), .fns = sum),
+                .groups = "drop") |>
+      mutate(across(where(is.numeric), as.integer))
+  }
+  
+  if(geography == "county"){
+    lodes.agg <- lodes |>
+      mutate(w_geo = str_sub(w_geocode, 1, 5),
+             h_geo = str_sub(h_geocode, 1, 5)) |>
+      group_by(w_geo, h_geo) |>
       summarise(across(.cols = starts_with("S", ignore.case = F), .fns = sum),
                 .groups = "drop") |>
       mutate(across(where(is.numeric), as.integer))

@@ -18,13 +18,15 @@ download_lodes <- function(year, state, save = T){
                      state, "/od/", state, "_od_", "main", "_JT00_", year, ".csv.gz")
   aux.df <- readr::read_csv(aux.url, col_types = "ccnnnnnnnnnnc")
   main.df <- readr::read_csv(main.url, col_types = "ccnnnnnnnnnnc")
-  df <- rbind(aux.df, main.df)
+  #df <- rbind(aux.df, main.df)
   if(save == T){
-
+    
     dir.create(path = paste0("input/lodes/year=", year, "/state=", state),
                showWarnings = F, recursive = T)
-    readr::write_csv(df, paste0("input/lodes/year=", year, "/state=", state,
-                                "/", state, ".csv.gz"))
+    readr::write_csv(aux.df, paste0("input/lodes/year=", year, "/state=", state,
+                                    "/", state, "-aux.csv.gz"))
+    readr::write_csv(main.df, paste0("input/lodes/year=", year, "/state=", state,
+                                     "/", state, "-main.csv.gz"))
   }
   df
 }

@@ -21,8 +21,21 @@ geography <- args[3]
 aggregate_lodes <- function(year, state, geography = "tract", save = T){
   stopifnot(geography %in% c("tract", "block_group", "county"))
 
-  lodes <- readr::read_csv(paste0("input/lodes/year=", year, "/state=", state,
-                                  "/", state, ".csv.gz"))
+  # the main, i.e., within-state flows
+  lodes.main <- readr::read_csv(paste0("input/lodes/year=", year, "/state=", state,
+                                       "/", state, "-main.csv.gz"),
+                                col_types = "ccnnnnnnnnnnc")
+  st.fips <- str_sub(lodes.main$w_geocode[1], 1, 2)
+  
+  # find all between state flows involving this state
+  #   as either the origin or destination
+  lodes.aux <- readr::read_csv(paste0("input/lodes/year=", year, "/all-aux.csv.gz"),
+                               col_types = "ccnnnnnnnnnnc") |>
+    filter(str_sub(w_geocode, 1, 2) == st.fips |
+             str_sub(h_geocode, 1, 2) == st.fips)
+  
+  # combine the main and auxillary files
+  lodes <- bind_rows(lodes.main, lodes.aux)
 
   if(geography == "tract"){
     lodes.agg <- lodes |>

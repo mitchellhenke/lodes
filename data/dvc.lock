@@ -3,339 +3,531 @@ stages:
   fetch_lodes_by_state@2022-al:
     cmd: Rscript ./src/download_lodes.R 2022 al
     outs:
-    - path: ./input/lodes/year=2022/state=al/al.csv.gz
+    - path: ./input/lodes/year=2022/state=al/al-aux.csv.gz
       hash: md5
-      md5: 11f33b136a7dcb5df94dd681c40618e5
-      size: 11050220
+      md5: 739b4de5d55f302bd95bbd3b204968b2
+      size: 695632
+    - path: ./input/lodes/year=2022/state=al/al-main.csv.gz
+      hash: md5
+      md5: c3481a6c8ff6cbc0831387a3db877565
+      size: 10353896
   fetch_lodes_by_state@2022-az:
     cmd: Rscript ./src/download_lodes.R 2022 az
     outs:
-    - path: ./input/lodes/year=2022/state=az/az.csv.gz
+    - path: ./input/lodes/year=2022/state=az/az-aux.csv.gz
       hash: md5
-      md5: 5bed06081e8989ecfcac13ab409e1caf
-      size: 15999100
+      md5: d293dde418fe7f8650dabf8a546c89ed
+      size: 414831
+    - path: ./input/lodes/year=2022/state=az/az-main.csv.gz
+      hash: md5
+      md5: 2077ea78acf888c703368a44455c9fca
+      size: 15585348
   fetch_lodes_by_state@2022-ar:
     cmd: Rscript ./src/download_lodes.R 2022 ar
     outs:
-    - path: ./input/lodes/year=2022/state=ar/ar.csv.gz
+    - path: ./input/lodes/year=2022/state=ar/ar-aux.csv.gz
       hash: md5
-      md5: 4d095e6d29243953e784c0fe6ae97e91
-      size: 6579296
+      md5: 286c6fd5f7c4a1ba1acdd206fe1f1ddd
+      size: 585635
+    - path: ./input/lodes/year=2022/state=ar/ar-main.csv.gz
+      hash: md5
+      md5: d4d62056edcb514efc4523764bda5dee
+      size: 5994353
   fetch_lodes_by_state@2022-ca:
     cmd: Rscript ./src/download_lodes.R 2022 ca
     outs:
-    - path: ./input/lodes/year=2022/state=ca/ca.csv.gz
+    - path: ./input/lodes/year=2022/state=ca/ca-aux.csv.gz
       hash: md5
-      md5: f197ea4eb56666eecfdd92c0e203e600
-      size: 98337840
+      md5: 251340cb38ab2c80d7f65fcbe2172c4c
+      size: 1905035
+    - path: ./input/lodes/year=2022/state=ca/ca-main.csv.gz
+      hash: md5
+      md5: 3e10441eba168f675b79599cf5d303a3
+      size: 96433064
   fetch_lodes_by_state@2022-co:
     cmd: Rscript ./src/download_lodes.R 2022 co
     outs:
-    - path: ./input/lodes/year=2022/state=co/co.csv.gz
+    - path: ./input/lodes/year=2022/state=co/co-aux.csv.gz
       hash: md5
-      md5: 410d6c243b6010c194e34b0b7ea09849
-      size: 14921788
+      md5: 6a209782d9e724ddba842c6422d04117
+      size: 455835
+    - path: ./input/lodes/year=2022/state=co/co-main.csv.gz
+      hash: md5
+      md5: d6e47aef109a739dbc7280199c5a6a67
+      size: 14464795
   fetch_lodes_by_state@2022-ct:
     cmd: Rscript ./src/download_lodes.R 2022 ct
     outs:
-    - path: ./input/lodes/year=2022/state=ct/ct.csv.gz
+    - path: ./input/lodes/year=2022/state=ct/ct-aux.csv.gz
       hash: md5
-      md5: 26ccff17eaf182b9c2fd28bdf090eecd
-      size: 8532274
+      md5: d1ebdddef9363ffdfb9edd60ed9fd3fd
+      size: 977409
+    - path: ./input/lodes/year=2022/state=ct/ct-main.csv.gz
+      hash: md5
+      md5: 60f6eda025b57b456fa63d936353b330
+      size: 7555763
   fetch_lodes_by_state@2022-dc:
     cmd: Rscript ./src/download_lodes.R 2022 dc
     outs:
-    - path: ./input/lodes/year=2022/state=dc/dc.csv.gz
+    - path: ./input/lodes/year=2022/state=dc/dc-aux.csv.gz
       hash: md5
-      md5: 085b3c697856a332e295fd95a39ae332
-      size: 3241098
+      md5: 1a7ba73e161000f439c69a69d3d3853b
+      size: 2359439
+    - path: ./input/lodes/year=2022/state=dc/dc-main.csv.gz
+      hash: md5
+      md5: 06e1f6e73d8f860e6c988a486e618b0b
+      size: 881943
   fetch_lodes_by_state@2022-de:
     cmd: Rscript ./src/download_lodes.R 2022 de
     outs:
-    - path: ./input/lodes/year=2022/state=de/de.csv.gz
+    - path: ./input/lodes/year=2022/state=de/de-aux.csv.gz
       hash: md5
-      md5: 015854795622fd8831499ced57c46f42
-      size: 2275900
+      md5: fbfb4b3f005bfb148b58be96ed905799
+      size: 573272
+    - path: ./input/lodes/year=2022/state=de/de-main.csv.gz
+      hash: md5
+      md5: 6d78f80aa9ed30da831d010c91b90bdc
+      size: 1702404
   fetch_lodes_by_state@2022-fl:
     cmd: Rscript ./src/download_lodes.R 2022 fl
     outs:
-    - path: ./input/lodes/year=2022/state=fl/fl.csv.gz
+    - path: ./input/lodes/year=2022/state=fl/fl-aux.csv.gz
       hash: md5
-      md5: 5312351ec6c2ffaf28884650c1589931
-      size: 50644267
+      md5: 105316a322e81627e1ff6ec4966bbbeb
+      size: 1069729
+    - path: ./input/lodes/year=2022/state=fl/fl-main.csv.gz
+      hash: md5
+      md5: 9684856e59e56fd5ae74266b7c03001f
+      size: 49576455
   fetch_lodes_by_state@2022-ga:
     cmd: Rscript ./src/download_lodes.R 2022 ga
     outs:
-    - path: ./input/lodes/year=2022/state=ga/ga.csv.gz
+    - path: ./input/lodes/year=2022/state=ga/ga-aux.csv.gz
       hash: md5
-      md5: 0d5a890fab89c8165eff86392835807c
-      size: 24787693
+      md5: e8dcd5c8fe33e1f43c01c00358ea0863
+      size: 1424902
+    - path: ./input/lodes/year=2022/state=ga/ga-main.csv.gz
+      hash: md5
+      md5: 1916cf30e387cb806ed3d440c6b67fb9
+      size: 23362610
   fetch_lodes_by_state@2022-hi:
     cmd: Rscript ./src/download_lodes.R 2022 hi
     outs:
-    - path: ./input/lodes/year=2022/state=hi/hi.csv.gz
+    - path: ./input/lodes/year=2022/state=hi/hi-aux.csv.gz
       hash: md5
-      md5: 9443e78891eb9f2c19c634eb905b5ac2
-      size: 2376147
+      md5: 2fe64d9c0cf174122ce7f1a33e45c0cb
+      size: 142838
+    - path: ./input/lodes/year=2022/state=hi/hi-main.csv.gz
+      hash: md5
+      md5: d0c02a1b6e3ffb3eb116f1a2eba8d063
+      size: 2233405
   fetch_lodes_by_state@2022-id:
     cmd: Rscript ./src/download_lodes.R 2022 id
     outs:
-    - path: ./input/lodes/year=2022/state=id/id.csv.gz
+    - path: ./input/lodes/year=2022/state=id/id-aux.csv.gz
       hash: md5
-      md5: d656228b4e8f8d2c97626ede3ebc52fb
-      size: 4293245
+      md5: e42e60387c48d7b9c6cf0c2f35b09c75
+      size: 363206
+    - path: ./input/lodes/year=2022/state=id/id-main.csv.gz
+      hash: md5
+      md5: 5a28e7be0c852905acf9f6cc0532f8ea
+      size: 3930035
   fetch_lodes_by_state@2022-il:
     cmd: Rscript ./src/download_lodes.R 2022 il
     outs:
-    - path: ./input/lodes/year=2022/state=il/il.csv.gz
+    - path: ./input/lodes/year=2022/state=il/il-aux.csv.gz
       hash: md5
-      md5: 56bba605dc41073b0df7bd109dad83f7
-      size: 32787254
+      md5: d0629387c5c27061888dc9417cdca447
+      size: 2218882
+    - path: ./input/lodes/year=2022/state=il/il-main.csv.gz
+      hash: md5
+      md5: 5dea81dea92c9a3f23dbcf0189580677
+      size: 30568805
   fetch_lodes_by_state@2022-in:
     cmd: Rscript ./src/download_lodes.R 2022 in
     outs:
-    - path: ./input/lodes/year=2022/state=in/in.csv.gz
+    - path: ./input/lodes/year=2022/state=in/in-aux.csv.gz
       hash: md5
-      md5: c0970b054577b4decd67c4c6b489a78b
-      size: 16857945
+      md5: 925cc14b737820564c629b6f00f2ae9a
+      size: 1425230
+    - path: ./input/lodes/year=2022/state=in/in-main.csv.gz
+      hash: md5
+      md5: 59f5fdcd589e399de1f2f49416b81664
+      size: 15432694
   fetch_lodes_by_state@2022-ia:
     cmd: Rscript ./src/download_lodes.R 2022 ia
     outs:
-    - path: ./input/lodes/year=2022/state=ia/ia.csv.gz
+    - path: ./input/lodes/year=2022/state=ia/ia-aux.csv.gz
       hash: md5
-      md5: 07fc1abe8a2fb45df2a37d800bfd92b0
-      size: 8301625
+      md5: 0e315a449e5015f6712e93d4592f9c81
+      size: 767573
+    - path: ./input/lodes/year=2022/state=ia/ia-main.csv.gz
+      hash: md5
+      md5: e12867926c3f63f99e2b1cdeb185e6c7
+      size: 7534646
   fetch_lodes_by_state@2022-ks:
     cmd: Rscript ./src/download_lodes.R 2022 ks
     outs:
-    - path: ./input/lodes/year=2022/state=ks/ks.csv.gz
+    - path: ./input/lodes/year=2022/state=ks/ks-aux.csv.gz
       hash: md5
-      md5: 55b607a97d1fefd10b8dbc236261a87e
-      size: 7496316
+      md5: 5fe0a16c9b9a8c134af4a162b2a388b3
+      size: 1074575
+    - path: ./input/lodes/year=2022/state=ks/ks-main.csv.gz
+      hash: md5
+      md5: 063f63de2aa8ee677739c0023c7d9dfd
+      size: 6422479
   fetch_lodes_by_state@2022-ky:
     cmd: Rscript ./src/download_lodes.R 2022 ky
     outs:
-    - path: ./input/lodes/year=2022/state=ky/ky.csv.gz
+    - path: ./input/lodes/year=2022/state=ky/ky-aux.csv.gz
       hash: md5
-      md5: 19bb61cf19ad1fecb79b2d956c3202c8
-      size: 10002565
+      md5: 14d4168afe0ddb77a3abaf1d7c4e3250
+      size: 1204289
+    - path: ./input/lodes/year=2022/state=ky/ky-main.csv.gz
+      hash: md5
+      md5: 54cf3375220cea6f7fdf9ad66b15aa6e
+      size: 8798682
   fetch_lodes_by_state@2022-la:
     cmd: Rscript ./src/download_lodes.R 2022 la
     outs:
-    - path: ./input/lodes/year=2022/state=la/la.csv.gz
+    - path: ./input/lodes/year=2022/state=la/la-aux.csv.gz
       hash: md5
-      md5: bb7818b6cc397ad48ece719c655b2cb7
-      size: 10155799
+      md5: 445af82d6040ce5541867a7a0a3d5076
+      size: 640391
+    - path: ./input/lodes/year=2022/state=la/la-main.csv.gz
+      hash: md5
+      md5: b071e1bc6f3400d4555724c3fb8bdb96
+      size: 9515644
   fetch_lodes_by_state@2022-me:
     cmd: Rscript ./src/download_lodes.R 2022 me
     outs:
-    - path: ./input/lodes/year=2022/state=me/me.csv.gz
+    - path: ./input/lodes/year=2022/state=me/me-aux.csv.gz
       hash: md5
-      md5: b21b84e5b883256efe028dc689a7c1db
-      size: 3165866
+      md5: 6e72beae4932d0e3089eb454ef979d64
+      size: 169452
+    - path: ./input/lodes/year=2022/state=me/me-main.csv.gz
+      hash: md5
+      md5: e1fda6286a966ba3465527ad4f919d8f
+      size: 2996051
   fetch_lodes_by_state@2022-md:
     cmd: Rscript ./src/download_lodes.R 2022 md
     outs:
-    - path: ./input/lodes/year=2022/state=md/md.csv.gz
+    - path: ./input/lodes/year=2022/state=md/md-aux.csv.gz
       hash: md5
-      md5: 4c721621b8a99a918b64d3dae02abda6
-      size: 13692003
+      md5: 65a7f6b5a9aeb020432bc7f6d20f37b7
+      size: 2134717
+    - path: ./input/lodes/year=2022/state=md/md-main.csv.gz
+      hash: md5
+      md5: d876e4f3eb5ee4c0ba5702e895c536cb
+      size: 11556563
   fetch_lodes_by_state@2022-ma:
     cmd: Rscript ./src/download_lodes.R 2022 ma
     outs:
-    - path: ./input/lodes/year=2022/state=ma/ma.csv.gz
+    - path: ./input/lodes/year=2022/state=ma/ma-aux.csv.gz
       hash: md5
-      md5: 966025a737a87482c66b47e49d87c380
-      size: 19333160
+      md5: ce6629052acc685f42cd3418314454cc
+      size: 2150112
+    - path: ./input/lodes/year=2022/state=ma/ma-main.csv.gz
+      hash: md5
+      md5: 5af65466b9a8505aea9dc859c3b4a016
+      size: 17182716
   fetch_lodes_by_state@2022-mn:
     cmd: Rscript ./src/download_lodes.R 2022 mn
     outs:
-    - path: ./input/lodes/year=2022/state=mn/mn.csv.gz
+    - path: ./input/lodes/year=2022/state=mn/mn-aux.csv.gz
       hash: md5
-      md5: 63cdca9f92db82b3e7b257735ea41345
-      size: 14743561
+      md5: 27b61ddb5cf4edf567b97e5be0b453cc
+      size: 793552
+    - path: ./input/lodes/year=2022/state=mn/mn-main.csv.gz
+      hash: md5
+      md5: 32056b1d9e2f3d3b9b171577a413f114
+      size: 13949718
   fetch_lodes_by_state@2022-mo:
     cmd: Rscript ./src/download_lodes.R 2022 mo
     outs:
-    - path: ./input/lodes/year=2022/state=mo/mo.csv.gz
+    - path: ./input/lodes/year=2022/state=mo/mo-aux.csv.gz
       hash: md5
-      md5: 59acaa8c7d9283dac673f5f170bc7a02
-      size: 15685872
+      md5: 717f668cb841d4332968b25cdef1ae38
+      size: 1637868
+    - path: ./input/lodes/year=2022/state=mo/mo-main.csv.gz
+      hash: md5
+      md5: 2b949e6a0d931eac44443c62f109ade6
+      size: 14048285
   fetch_lodes_by_state@2022-mt:
     cmd: Rscript ./src/download_lodes.R 2022 mt
     outs:
-    - path: ./input/lodes/year=2022/state=mt/mt.csv.gz
+    - path: ./input/lodes/year=2022/state=mt/mt-aux.csv.gz
       hash: md5
-      md5: 8397ad2b5cb566e90b03fb27d141dfc5
-      size: 2617061
+      md5: e8d7ca5e8a56af71e428928644180188
+      size: 144294
+    - path: ./input/lodes/year=2022/state=mt/mt-main.csv.gz
+      hash: md5
+      md5: 02314112d856eb0c0a4aa635d9bdbf62
+      size: 2472484
   fetch_lodes_by_state@2022-ne:
     cmd: Rscript ./src/download_lodes.R 2022 ne
     outs:
-    - path: ./input/lodes/year=2022/state=ne/ne.csv.gz
+    - path: ./input/lodes/year=2022/state=ne/ne-aux.csv.gz
       hash: md5
-      md5: 60ae3e6bd6eb677d1821b89608474d99
-      size: 5228870
+      md5: 4702146b603a34ace1eb0187643f6535
+      size: 487608
+    - path: ./input/lodes/year=2022/state=ne/ne-main.csv.gz
+      hash: md5
+      md5: 6914f13d872015cd7110b57e123d3baf
+      size: 4741655
   fetch_lodes_by_state@2022-nv:
     cmd: Rscript ./src/download_lodes.R 2022 nv
     outs:
-    - path: ./input/lodes/year=2022/state=nv/nv.csv.gz
+    - path: ./input/lodes/year=2022/state=nv/nv-aux.csv.gz
       hash: md5
-      md5: 36f312f8189fdf86d1a21a8bb68f333d
-      size: 6822055
+      md5: b962a3c56dc5549a85903ff225f3ca6d
+      size: 552708
+    - path: ./input/lodes/year=2022/state=nv/nv-main.csv.gz
+      hash: md5
+      md5: b939c1e38832dbe089cbfe8d46c72b0d
+      size: 6269546
   fetch_lodes_by_state@2022-nh:
     cmd: Rscript ./src/download_lodes.R 2022 nh
     outs:
-    - path: ./input/lodes/year=2022/state=nh/nh.csv.gz
+    - path: ./input/lodes/year=2022/state=nh/nh-aux.csv.gz
       hash: md5
-      md5: 1cf2c318670949aa762eee2cac7ad453
-      size: 3512083
+      md5: 8e8c29950ddbad5f1aa40a38d8d70532
+      size: 627125
+    - path: ./input/lodes/year=2022/state=nh/nh-main.csv.gz
+      hash: md5
+      md5: 116bc333e06a61b4396b31bae5ee940b
+      size: 2885200
   fetch_lodes_by_state@2022-nj:
     cmd: Rscript ./src/download_lodes.R 2022 nj
     outs:
-    - path: ./input/lodes/year=2022/state=nj/nj.csv.gz
+    - path: ./input/lodes/year=2022/state=nj/nj-aux.csv.gz
       hash: md5
-      md5: 3e611a7a7a80d6206755f79490cb3db5
-      size: 23231990
+      md5: 0796a6bc855c1603541d4ea0c77d4c08
+      size: 3025898
+    - path: ./input/lodes/year=2022/state=nj/nj-main.csv.gz
+      hash: md5
+      md5: a043440787dc8116cbde84d793f34746
+      size: 20204767
   fetch_lodes_by_state@2022-nm:
     cmd: Rscript ./src/download_lodes.R 2022 nm
     outs:
-    - path: ./input/lodes/year=2022/state=nm/nm.csv.gz
+    - path: ./input/lodes/year=2022/state=nm/nm-aux.csv.gz
       hash: md5
-      md5: c0109bac519b3faefd5a19234cac1ffd
-      size: 4284893
+      md5: 694071c5ac9f0c6913197e1b81b0157f
+      size: 349147
+    - path: ./input/lodes/year=2022/state=nm/nm-main.csv.gz
+      hash: md5
+      md5: 6bc9c212781ae47d43daeeb21a5e62a4
+      size: 3934820
   fetch_lodes_by_state@2022-ny:
     cmd: Rscript ./src/download_lodes.R 2022 ny
     outs:
-    - path: ./input/lodes/year=2022/state=ny/ny.csv.gz
+    - path: ./input/lodes/year=2022/state=ny/ny-aux.csv.gz
       hash: md5
-      md5: ddbed8be17d99e882d12b544ed736e5b
-      size: 49751937
+      md5: dcd85cb5ab057fce68b207f52cc8ab84
+      size: 5519357
+    - path: ./input/lodes/year=2022/state=ny/ny-main.csv.gz
+      hash: md5
+      md5: 2cff010b9a2d5565fc9fb81cf93fc018
+      size: 44232691
   fetch_lodes_by_state@2022-nc:
     cmd: Rscript ./src/download_lodes.R 2022 nc
     outs:
-    - path: ./input/lodes/year=2022/state=nc/nc.csv.gz
+    - path: ./input/lodes/year=2022/state=nc/nc-aux.csv.gz
       hash: md5
-      md5: d5d822655afd9a1d14f4b238d021e87a
-      size: 25620723
+      md5: 932eedf37a12f0d12e438d2e6253b216
+      size: 1657565
+    - path: ./input/lodes/year=2022/state=nc/nc-main.csv.gz
+      hash: md5
+      md5: ca7f833a9dc1776c1059d9aa8ce13b92
+      size: 23962182
   fetch_lodes_by_state@2022-nd:
     cmd: Rscript ./src/download_lodes.R 2022 nd
     outs:
-    - path: ./input/lodes/year=2022/state=nd/nd.csv.gz
+    - path: ./input/lodes/year=2022/state=nd/nd-aux.csv.gz
       hash: md5
-      md5: 638b72c2f2a3933d448ef713615588a9
-      size: 2119188
+      md5: daf02f484396d31110cbc86b550c4c37
+      size: 349943
+    - path: ./input/lodes/year=2022/state=nd/nd-main.csv.gz
+      hash: md5
+      md5: d0f395391b66b39a73f35ffdfaacda1d
+      size: 1769131
   fetch_lodes_by_state@2022-oh:
     cmd: Rscript ./src/download_lodes.R 2022 oh
     outs:
-    - path: ./input/lodes/year=2022/state=oh/oh.csv.gz
+    - path: ./input/lodes/year=2022/state=oh/oh-aux.csv.gz
       hash: md5
-      md5: 224ae2dd515a056bbc9fd384d01d6399
-      size: 29305222
+      md5: 6e92a569a2e2303024e1e5b99c32096e
+      size: 1600548
+    - path: ./input/lodes/year=2022/state=oh/oh-main.csv.gz
+      hash: md5
+      md5: 9680db8452c39f66c893e3b515345990
+      size: 27705324
   fetch_lodes_by_state@2022-ok:
     cmd: Rscript ./src/download_lodes.R 2022 ok
     outs:
-    - path: ./input/lodes/year=2022/state=ok/ok.csv.gz
+    - path: ./input/lodes/year=2022/state=ok/ok-aux.csv.gz
       hash: md5
-      md5: ab3ab3c68ba9e79a0937c0553600caf3
-      size: 8903642
+      md5: 7ca722167b0e975ab9cbb04515e16612
+      size: 429240
+    - path: ./input/lodes/year=2022/state=ok/ok-main.csv.gz
+      hash: md5
+      md5: 0448ed076317bf185d827e5bfc3f3bad
+      size: 8474542
   fetch_lodes_by_state@2022-or:
     cmd: Rscript ./src/download_lodes.R 2022 or
     outs:
-    - path: ./input/lodes/year=2022/state=or/or.csv.gz
+    - path: ./input/lodes/year=2022/state=or/or-aux.csv.gz
       hash: md5
-      md5: 18de01ed79d3d2a689fa59bd75f27a5b
-      size: 10612522
+      md5: f41258efdb3d6ce643bc6cdb5b4f6967
+      size: 930067
+    - path: ./input/lodes/year=2022/state=or/or-main.csv.gz
+      hash: md5
+      md5: 5ce51ace8f126c4800a4bb53162e9dcf
+      size: 9683293
   fetch_lodes_by_state@2022-pa:
     cmd: Rscript ./src/download_lodes.R 2022 pa
     outs:
-    - path: ./input/lodes/year=2022/state=pa/pa.csv.gz
+    - path: ./input/lodes/year=2022/state=pa/pa-aux.csv.gz
       hash: md5
-      md5: 7ed97f3517c43808fb8f22f8c1087888
-      size: 32799462
+      md5: 438a1f984d5f707b71ccdd386981c7ea
+      size: 2626113
+    - path: ./input/lodes/year=2022/state=pa/pa-main.csv.gz
+      hash: md5
+      md5: dce3092b2928cad664e3ac967bf38771
+      size: 30172033
   fetch_lodes_by_state@2022-ri:
     cmd: Rscript ./src/download_lodes.R 2022 ri
     outs:
-    - path: ./input/lodes/year=2022/state=ri/ri.csv.gz
+    - path: ./input/lodes/year=2022/state=ri/ri-aux.csv.gz
       hash: md5
-      md5: dbbc1b0926607fc25a9dc874c5ddafc8
-      size: 2615842
+      md5: ac3fc820d9373916c325190d5928809c
+      size: 480024
+    - path: ./input/lodes/year=2022/state=ri/ri-main.csv.gz
+      hash: md5
+      md5: 2c8012873a8df339c97a890c0d4123fc
+      size: 2136087
   fetch_lodes_by_state@2022-sc:
     cmd: Rscript ./src/download_lodes.R 2022 sc
     outs:
-    - path: ./input/lodes/year=2022/state=sc/sc.csv.gz
+    - path: ./input/lodes/year=2022/state=sc/sc-aux.csv.gz
       hash: md5
-      md5: ad6f6022d310d33ad80e2c054029ca30
-      size: 11699902
+      md5: e5c34243e657d54806ea84173996a9f9
+      size: 918505
+    - path: ./input/lodes/year=2022/state=sc/sc-main.csv.gz
+      hash: md5
+      md5: de23cad4d2dbc7203eff78d9d51cd120
+      size: 10780790
   fetch_lodes_by_state@2022-sd:
     cmd: Rscript ./src/download_lodes.R 2022 sd
     outs:
-    - path: ./input/lodes/year=2022/state=sd/sd.csv.gz
+    - path: ./input/lodes/year=2022/state=sd/sd-aux.csv.gz
       hash: md5
-      md5: 8a505a7e93f26bea3eb908c39e87ddd4
-      size: 2240714
+      md5: 4534fb1f60b4cfa4a63b589fa1973b44
+      size: 232621
+    - path: ./input/lodes/year=2022/state=sd/sd-main.csv.gz
+      hash: md5
+      md5: f501b2268ae54e84fc6b6bdd1ed9b700
+      size: 2008243
   fetch_lodes_by_state@2022-tn:
     cmd: Rscript ./src/download_lodes.R 2022 tn
     outs:
-    - path: ./input/lodes/year=2022/state=tn/tn.csv.gz
+    - path: ./input/lodes/year=2022/state=tn/tn-aux.csv.gz
       hash: md5
-      md5: 3130ee86114dd22767132daed8484bcb
-      size: 16485437
+      md5: ca423fecf59dcbf0cf589f8274ac73c3
+      size: 1625462
+    - path: ./input/lodes/year=2022/state=tn/tn-main.csv.gz
+      hash: md5
+      md5: 729750ac25349d997d3ac238de11c6f0
+      size: 14859759
   fetch_lodes_by_state@2022-tx:
     cmd: Rscript ./src/download_lodes.R 2022 tx
     outs:
-    - path: ./input/lodes/year=2022/state=tx/tx.csv.gz
+    - path: ./input/lodes/year=2022/state=tx/tx-aux.csv.gz
       hash: md5
-      md5: fbb6a5c5b75756f80732ed7efe0a0966
-      size: 72041100
+      md5: 25735b738458c7220aa2bf04e8a57025
+      size: 1717073
+    - path: ./input/lodes/year=2022/state=tx/tx-main.csv.gz
+      hash: md5
+      md5: 2752ee5c41fda8b1b346899c6f5d10bb
+      size: 70318637
   fetch_lodes_by_state@2022-ut:
     cmd: Rscript ./src/download_lodes.R 2022 ut
     outs:
-    - path: ./input/lodes/year=2022/state=ut/ut.csv.gz
+    - path: ./input/lodes/year=2022/state=ut/ut-aux.csv.gz
       hash: md5
-      md5: e69c59dbc84d1542cb441b7934e25951
-      size: 8621702
+      md5: 8be8227988ffedc776cb6fdc4bee0f1c
+      size: 406840
+    - path: ./input/lodes/year=2022/state=ut/ut-main.csv.gz
+      hash: md5
+      md5: 51adf7f42c417b5302cceb307d247767
+      size: 8214897
   fetch_lodes_by_state@2022-vt:
     cmd: Rscript ./src/download_lodes.R 2022 vt
     outs:
-    - path: ./input/lodes/year=2022/state=vt/vt.csv.gz
+    - path: ./input/lodes/year=2022/state=vt/vt-aux.csv.gz
       hash: md5
-      md5: a79f8f013e514c57aa1feee98a0fb7bd
-      size: 1508643
+      md5: 18a10e907193bb0e77a397434a6a9fb9
+      size: 231676
+    - path: ./input/lodes/year=2022/state=vt/vt-main.csv.gz
+      hash: md5
+      md5: adc77806a6411b6b54d9f3c50680312c
+      size: 1276943
   fetch_lodes_by_state@2022-va:
     cmd: Rscript ./src/download_lodes.R 2022 va
     outs:
-    - path: ./input/lodes/year=2022/state=va/va.csv.gz
+    - path: ./input/lodes/year=2022/state=va/va-aux.csv.gz
       hash: md5
-      md5: c1ba90a7b5d095bb5c4b123930b21286
-      size: 20220856
+      md5: dffe67d1de31a32f62cc5b5995377d5a
+      size: 2368038
+    - path: ./input/lodes/year=2022/state=va/va-main.csv.gz
+      hash: md5
+      md5: 12bb6239abffcd95a6d4c923dcc75fe7
+      size: 17853371
   fetch_lodes_by_state@2022-wa:
     cmd: Rscript ./src/download_lodes.R 2022 wa
     outs:
-    - path: ./input/lodes/year=2022/state=wa/wa.csv.gz
+    - path: ./input/lodes/year=2022/state=wa/wa-aux.csv.gz
       hash: md5
-      md5: 29af658704f8f79605943aca366962db
-      size: 17836838
+      md5: 819f6bad86e716d79c4f40a5f2fded08
+      size: 857713
+    - path: ./input/lodes/year=2022/state=wa/wa-main.csv.gz
+      hash: md5
+      md5: 82b4d2de9a5fc92e06806bae26a82935
+      size: 16978709
   fetch_lodes_by_state@2022-wv:
     cmd: Rscript ./src/download_lodes.R 2022 wv
     outs:
-    - path: ./input/lodes/year=2022/state=wv/wv.csv.gz
+    - path: ./input/lodes/year=2022/state=wv/wv-aux.csv.gz
       hash: md5
-      md5: 967dfa9151954ff27b2f602451216d4f
-      size: 3613600
+      md5: 3d645e79c46f9a4ef2beb6420d122c9a
+      size: 600210
+    - path: ./input/lodes/year=2022/state=wv/wv-main.csv.gz
+      hash: md5
+      md5: 4c63c8e72be400b9dc74c884ca5ba523
+      size: 3013661
   fetch_lodes_by_state@2022-wi:
     cmd: Rscript ./src/download_lodes.R 2022 wi
     outs:
-    - path: ./input/lodes/year=2022/state=wi/wi.csv.gz
+    - path: ./input/lodes/year=2022/state=wi/wi-aux.csv.gz
       hash: md5
-      md5: 7e0f1a075c577481b554b0fea43676a6
-      size: 15655204
+      md5: 5bf4c59b14ee1325e65a3c7855ea1677
+      size: 902691
+    - path: ./input/lodes/year=2022/state=wi/wi-main.csv.gz
+      hash: md5
+      md5: d5c3d55365741e6cdb9de5abf5834cb0
+      size: 14752223
   fetch_lodes_by_state@2022-wy:
     cmd: Rscript ./src/download_lodes.R 2022 wy
     outs:
-    - path: ./input/lodes/year=2022/state=wy/wy.csv.gz
+    - path: ./input/lodes/year=2022/state=wy/wy-aux.csv.gz
       hash: md5
-      md5: 69f704c88b4731aba1490d878662afcb
-      size: 1383758
+      md5: bf5bc50ee6601329e4685a591b500b11
+      size: 196043
+    - path: ./input/lodes/year=2022/state=wy/wy-main.csv.gz
+      hash: md5
+      md5: f3d6df57cec42ac52abca68c95b6e25a
+      size: 1187916
   fetch_cb@2023-tract:
     cmd: python ./src/fetch_cb.py --year 2023 --geography tract
     outs:
@@ -353,627 +545,835 @@ stages:
   build_lodes_by_geography@2022-al-tract:
     cmd: Rscript ./src/aggregate_lodes.R 2022 al tract
     deps:
-    - path: ./input/lodes/year=2022/state=al/al.csv.gz
+    - path: ./input/lodes/year=2022/all-aux.csv.gz
       hash: md5
-      md5: 11f33b136a7dcb5df94dd681c40618e5
-      size: 11050220
+      md5: bb0e4378b94545906e51e7dbddf85fa9
+      size: 54012286
+    - path: ./input/lodes/year=2022/state=al/al-main.csv.gz
+      hash: md5
+      md5: c3481a6c8ff6cbc0831387a3db877565
+      size: 10353896
     outs:
     - path: ./intermediate/od_lodes/year=2022/geography=tract/state=al/al.parquet
       hash: md5
-      md5: d5322689455e804cbb0554997fb6c096
-      size: 3379681
+      md5: 88d7578d263fa2b9813191cbb8669419
+      size: 3899502
   build_lodes_by_geography@2022-al-block_group:
     cmd: Rscript ./src/aggregate_lodes.R 2022 al block_group
     deps:
-    - path: ./input/lodes/year=2022/state=al/al.csv.gz
+    - path: ./input/lodes/year=2022/all-aux.csv.gz
       hash: md5
-      md5: 11f33b136a7dcb5df94dd681c40618e5
-      size: 11050220
+      md5: bb0e4378b94545906e51e7dbddf85fa9
+      size: 54012286
+    - path: ./input/lodes/year=2022/state=al/al-main.csv.gz
+      hash: md5
+      md5: c3481a6c8ff6cbc0831387a3db877565
+      size: 10353896
     outs:
     - path: ./intermediate/od_lodes/year=2022/geography=block_group/state=al/al.parquet
       hash: md5
-      md5: 2da24715a530fed4c88b57f552a4bc15
-      size: 5418067
+      md5: 548b7f0d61685a4ad50930562c534d1e
+      size: 6011200
   build_lodes_by_geography@2022-az-tract:
     cmd: Rscript ./src/aggregate_lodes.R 2022 az tract
     deps:
-    - path: ./input/lodes/year=2022/state=az/az.csv.gz
+    - path: ./input/lodes/year=2022/all-aux.csv.gz
       hash: md5
-      md5: 5bed06081e8989ecfcac13ab409e1caf
-      size: 15999100
+      md5: bb0e4378b94545906e51e7dbddf85fa9
+      size: 54012286
+    - path: ./input/lodes/year=2022/state=az/az-main.csv.gz
+      hash: md5
+      md5: 2077ea78acf888c703368a44455c9fca
+      size: 15585348
     outs:
     - path: ./intermediate/od_lodes/year=2022/geography=tract/state=az/az.parquet
       hash: md5
-      md5: 771a0f469a7f345882edc28c6aa4c013
-      size: 5588110
+      md5: 18982deecf600f03b90f5f4b9b49a888
+      size: 6063003
   build_lodes_by_geography@2022-az-block_group:
     cmd: Rscript ./src/aggregate_lodes.R 2022 az block_group
     deps:
-    - path: ./input/lodes/year=2022/state=az/az.csv.gz
+    - path: ./input/lodes/year=2022/all-aux.csv.gz
       hash: md5
-      md5: 5bed06081e8989ecfcac13ab409e1caf
-      size: 15999100
+      md5: bb0e4378b94545906e51e7dbddf85fa9
+      size: 54012286
+    - path: ./input/lodes/year=2022/state=az/az-main.csv.gz
+      hash: md5
+      md5: 2077ea78acf888c703368a44455c9fca
+      size: 15585348
     outs:
     - path: ./intermediate/od_lodes/year=2022/geography=block_group/state=az/az.parquet
       hash: md5
-      md5: 8c44359fcb0ac259d5134350086cb445
-      size: 13056542
+      md5: 8ff20418854f6bbc068b532e023c6a89
+      size: 13931641
   build_lodes_by_geography@2022-ar-tract:
     cmd: Rscript ./src/aggregate_lodes.R 2022 ar tract
     deps:
-    - path: ./input/lodes/year=2022/state=ar/ar.csv.gz
+    - path: ./input/lodes/year=2022/all-aux.csv.gz
       hash: md5
-      md5: 4d095e6d29243953e784c0fe6ae97e91
-      size: 6579296
+      md5: bb0e4378b94545906e51e7dbddf85fa9
+      size: 54012286
+    - path: ./input/lodes/year=2022/state=ar/ar-main.csv.gz
+      hash: md5
+      md5: d4d62056edcb514efc4523764bda5dee
+      size: 5994353
     outs:
     - path: ./intermediate/od_lodes/year=2022/geography=tract/state=ar/ar.parquet
       hash: md5
-      md5: c56f8b1553faa85975045c9bf467b69d
-      size: 1749269
+      md5: 17787f5d2b2c7b26c80ff084dbedbe59
+      size: 2070620
   build_lodes_by_geography@2022-ar-block_group:
     cmd: Rscript ./src/aggregate_lodes.R 2022 ar block_group
     deps:
-    - path: ./input/lodes/year=2022/state=ar/ar.csv.gz
+    - path: ./input/lodes/year=2022/all-aux.csv.gz
       hash: md5
-      md5: 4d095e6d29243953e784c0fe6ae97e91
-      size: 6579296
+      md5: bb0e4378b94545906e51e7dbddf85fa9
+      size: 54012286
+    - path: ./input/lodes/year=2022/state=ar/ar-main.csv.gz
+      hash: md5
+      md5: d4d62056edcb514efc4523764bda5dee
+      size: 5994353
     outs:
     - path: ./intermediate/od_lodes/year=2022/geography=block_group/state=ar/ar.parquet
       hash: md5
-      md5: 10c0636d7a85fac276a333e2267bf4d6
-      size: 2960590
+      md5: 17a125f8084d85a1844c26a231a5761a
+      size: 3326509
   build_lodes_by_geography@2022-ca-tract:
     cmd: Rscript ./src/aggregate_lodes.R 2022 ca tract
     deps:
-    - path: ./input/lodes/year=2022/state=ca/ca.csv.gz
+    - path: ./input/lodes/year=2022/all-aux.csv.gz
       hash: md5
-      md5: f197ea4eb56666eecfdd92c0e203e600
-      size: 98337840
+      md5: bb0e4378b94545906e51e7dbddf85fa9
+      size: 54012286
+    - path: ./input/lodes/year=2022/state=ca/ca-main.csv.gz
+      hash: md5
+      md5: 3e10441eba168f675b79599cf5d303a3
+      size: 96433064
     outs:
     - path: ./intermediate/od_lodes/year=2022/geography=tract/state=ca/ca.parquet
       hash: md5
-      md5: 66527d548b1167bb3de5d90fc8b7b372
-      size: 41468089
+      md5: 661592097ef8db28772b0d7b96ce4c1e
+      size: 60538886
   build_lodes_by_geography@2022-ca-block_group:
     cmd: Rscript ./src/aggregate_lodes.R 2022 ca block_group
     deps:
-    - path: ./input/lodes/year=2022/state=ca/ca.csv.gz
+    - path: ./input/lodes/year=2022/all-aux.csv.gz
       hash: md5
-      md5: f197ea4eb56666eecfdd92c0e203e600
-      size: 98337840
+      md5: bb0e4378b94545906e51e7dbddf85fa9
+      size: 54012286
+    - path: ./input/lodes/year=2022/state=ca/ca-main.csv.gz
+      hash: md5
+      md5: 3e10441eba168f675b79599cf5d303a3
+      size: 96433064
     outs:
     - path: ./intermediate/od_lodes/year=2022/geography=block_group/state=ca/ca.parquet
       hash: md5
-      md5: 4c4d37d714ea56c8dbd0b0f9bebf645e
-      size: 91172604
+      md5: 4d76f2c68f1d8fd520700455b441087e
+      size: 92995915
   build_lodes_by_geography@2022-co-tract:
     cmd: Rscript ./src/aggregate_lodes.R 2022 co tract
     deps:
-    - path: ./input/lodes/year=2022/state=co/co.csv.gz
+    - path: ./input/lodes/year=2022/all-aux.csv.gz
       hash: md5
-      md5: 410d6c243b6010c194e34b0b7ea09849
-      size: 14921788
+      md5: bb0e4378b94545906e51e7dbddf85fa9
+      size: 54012286
+    - path: ./input/lodes/year=2022/state=co/co-main.csv.gz
+      hash: md5
+      md5: d6e47aef109a739dbc7280199c5a6a67
+      size: 14464795
     outs:
     - path: ./intermediate/od_lodes/year=2022/geography=tract/state=co/co.parquet
       hash: md5
-      md5: 94a2a98e8fdd3fcaff064e42b373da47
-      size: 4879267
+      md5: 66409853e5ae6af5ec1fdabee05401f3
+      size: 5186754
   build_lodes_by_geography@2022-co-block_group:
     cmd: Rscript ./src/aggregate_lodes.R 2022 co block_group
     deps:
-    - path: ./input/lodes/year=2022/state=co/co.csv.gz
+    - path: ./input/lodes/year=2022/all-aux.csv.gz
       hash: md5
-      md5: 410d6c243b6010c194e34b0b7ea09849
-      size: 14921788
+      md5: bb0e4378b94545906e51e7dbddf85fa9
+      size: 54012286
+    - path: ./input/lodes/year=2022/state=co/co-main.csv.gz
+      hash: md5
+      md5: d6e47aef109a739dbc7280199c5a6a67
+      size: 14464795
     outs:
     - path: ./intermediate/od_lodes/year=2022/geography=block_group/state=co/co.parquet
       hash: md5
-      md5: 951007e4e0dcb08916fa1e5b9d577085
-      size: 11566087
+      md5: 28c4b36ea8398232bf934a59506982fe
+      size: 12088281
   build_lodes_by_geography@2022-ct-tract:
     cmd: Rscript ./src/aggregate_lodes.R 2022 ct tract
     deps:
-    - path: ./input/lodes/year=2022/state=ct/ct.csv.gz
+    - path: ./input/lodes/year=2022/all-aux.csv.gz
       hash: md5
-      md5: 26ccff17eaf182b9c2fd28bdf090eecd
-      size: 8532274
+      md5: bb0e4378b94545906e51e7dbddf85fa9
+      size: 54012286
+    - path: ./input/lodes/year=2022/state=ct/ct-main.csv.gz
+      hash: md5
+      md5: 60f6eda025b57b456fa63d936353b330
+      size: 7555763
     outs:
     - path: ./intermediate/od_lodes/year=2022/geography=tract/state=ct/ct.parquet
       hash: md5
-      md5: 027e63f392b8318f14b545b77dc2585a
-      size: 3707798
+      md5: cab11e5a1ed1aa1335e644ee7df314c6
+      size: 4778908
   build_lodes_by_geography@2022-ct-block_group:
     cmd: Rscript ./src/aggregate_lodes.R 2022 ct block_group
     deps:
-    - path: ./input/lodes/year=2022/state=ct/ct.csv.gz
+    - path: ./input/lodes/year=2022/all-aux.csv.gz
       hash: md5
-      md5: 26ccff17eaf182b9c2fd28bdf090eecd
-      size: 8532274
+      md5: bb0e4378b94545906e51e7dbddf85fa9
+      size: 54012286
+    - path: ./input/lodes/year=2022/state=ct/ct-main.csv.gz
+      hash: md5
+      md5: 60f6eda025b57b456fa63d936353b330
+      size: 7555763
     outs:
     - path: ./intermediate/od_lodes/year=2022/geography=block_group/state=ct/ct.parquet
       hash: md5
-      md5: 6451ae74e06d5e2a61b2fb464167093a
-      size: 7367273
+      md5: c2174f0621c2e017dcdc9eb2f0b4e6b1
+      size: 8820479
   build_lodes_by_geography@2022-dc-tract:
     cmd: Rscript ./src/aggregate_lodes.R 2022 dc tract
     deps:
-    - path: ./input/lodes/year=2022/state=dc/dc.csv.gz
+    - path: ./input/lodes/year=2022/all-aux.csv.gz
       hash: md5
-      md5: 085b3c697856a332e295fd95a39ae332
-      size: 3241098
+      md5: bb0e4378b94545906e51e7dbddf85fa9
+      size: 54012286
+    - path: ./input/lodes/year=2022/state=dc/dc-main.csv.gz
+      hash: md5
+      md5: 06e1f6e73d8f860e6c988a486e618b0b
+      size: 881943
     outs:
     - path: ./intermediate/od_lodes/year=2022/geography=tract/state=dc/dc.parquet
       hash: md5
-      md5: e6ef3a1064fe20c0efea86dca36500e6
-      size: 1355253
+      md5: 53716a3d70d26113351491a5aac34d82
+      size: 1781108
   build_lodes_by_geography@2022-dc-block_group:
     cmd: Rscript ./src/aggregate_lodes.R 2022 dc block_group
     deps:
-    - path: ./input/lodes/year=2022/state=dc/dc.csv.gz
+    - path: ./input/lodes/year=2022/all-aux.csv.gz
       hash: md5
-      md5: 085b3c697856a332e295fd95a39ae332
-      size: 3241098
+      md5: bb0e4378b94545906e51e7dbddf85fa9
+      size: 54012286
+    - path: ./input/lodes/year=2022/state=dc/dc-main.csv.gz
+      hash: md5
+      md5: 06e1f6e73d8f860e6c988a486e618b0b
+      size: 881943
     outs:
     - path: ./intermediate/od_lodes/year=2022/geography=block_group/state=dc/dc.parquet
       hash: md5
-      md5: 68990783a28bab08a81dc4256fa32020
-      size: 2638485
+      md5: a66d3a4ad1fc649d82db70430427e09b
+      size: 3284709
   build_lodes_by_geography@2022-de-tract:
     cmd: Rscript ./src/aggregate_lodes.R 2022 de tract
     deps:
-    - path: ./input/lodes/year=2022/state=de/de.csv.gz
+    - path: ./input/lodes/year=2022/all-aux.csv.gz
       hash: md5
-      md5: 015854795622fd8831499ced57c46f42
-      size: 2275900
+      md5: bb0e4378b94545906e51e7dbddf85fa9
+      size: 54012286
+    - path: ./input/lodes/year=2022/state=de/de-main.csv.gz
+      hash: md5
+      md5: 6d78f80aa9ed30da831d010c91b90bdc
+      size: 1702404
     outs:
     - path: ./intermediate/od_lodes/year=2022/geography=tract/state=de/de.parquet
       hash: md5
-      md5: 42512e9815aee72f8e415a481bec458c
-      size: 653418
+      md5: d2ae54ec539a009095cd5bae62fb7ee9
+      size: 1026766
   build_lodes_by_geography@2022-de-block_group:
     cmd: Rscript ./src/aggregate_lodes.R 2022 de block_group
     deps:
-    - path: ./input/lodes/year=2022/state=de/de.csv.gz
+    - path: ./input/lodes/year=2022/all-aux.csv.gz
       hash: md5
-      md5: 015854795622fd8831499ced57c46f42
-      size: 2275900
+      md5: bb0e4378b94545906e51e7dbddf85fa9
+      size: 54012286
+    - path: ./input/lodes/year=2022/state=de/de-main.csv.gz
+      hash: md5
+      md5: 6d78f80aa9ed30da831d010c91b90bdc
+      size: 1702404
     outs:
     - path: ./intermediate/od_lodes/year=2022/geography=block_group/state=de/de.parquet
       hash: md5
-      md5: b3c5a76488245e98f19c94c3b7f0029a
-      size: 1240673
+      md5: 391feab2048efc322937f1b7ae7e9b79
+      size: 1689470
   build_lodes_by_geography@2022-fl-tract:
     cmd: Rscript ./src/aggregate_lodes.R 2022 fl tract
     deps:
-    - path: ./input/lodes/year=2022/state=fl/fl.csv.gz
+    - path: ./input/lodes/year=2022/all-aux.csv.gz
       hash: md5
-      md5: 5312351ec6c2ffaf28884650c1589931
-      size: 50644267
+      md5: bb0e4378b94545906e51e7dbddf85fa9
+      size: 54012286
+    - path: ./input/lodes/year=2022/state=fl/fl-main.csv.gz
+      hash: md5
+      md5: 9684856e59e56fd5ae74266b7c03001f
+      size: 49576455
     outs:
     - path: ./intermediate/od_lodes/year=2022/geography=tract/state=fl/fl.parquet
       hash: md5
-      md5: 673908a2fd2bc3b2f223f42cc15e172d
-      size: 27225181
+      md5: 4a97e95eac05addf834402953cb27cf4
+      size: 20043311
   build_lodes_by_geography@2022-fl-block_group:
     cmd: Rscript ./src/aggregate_lodes.R 2022 fl block_group
     deps:
-    - path: ./input/lodes/year=2022/state=fl/fl.csv.gz
+    - path: ./input/lodes/year=2022/all-aux.csv.gz
       hash: md5
-      md5: 5312351ec6c2ffaf28884650c1589931
-      size: 50644267
+      md5: bb0e4378b94545906e51e7dbddf85fa9
+      size: 54012286
+    - path: ./input/lodes/year=2022/state=fl/fl-main.csv.gz
+      hash: md5
+      md5: 9684856e59e56fd5ae74266b7c03001f
+      size: 49576455
     outs:
     - path: ./intermediate/od_lodes/year=2022/geography=block_group/state=fl/fl.parquet
       hash: md5
-      md5: d312ac7f81769b3902efab9aa1860e49
-      size: 43525207
+      md5: 33199b8ef0b1913290f0793cab880c59
+      size: 30853129
   build_lodes_by_geography@2022-ga-tract:
     cmd: Rscript ./src/aggregate_lodes.R 2022 ga tract
     deps:
-    - path: ./input/lodes/year=2022/state=ga/ga.csv.gz
+    - path: ./input/lodes/year=2022/all-aux.csv.gz
       hash: md5
-      md5: 0d5a890fab89c8165eff86392835807c
-      size: 24787693
+      md5: bb0e4378b94545906e51e7dbddf85fa9
+      size: 54012286
+    - path: ./input/lodes/year=2022/state=ga/ga-main.csv.gz
+      hash: md5
+      md5: 1916cf30e387cb806ed3d440c6b67fb9
+      size: 23362610
     outs:
     - path: ./intermediate/od_lodes/year=2022/geography=tract/state=ga/ga.parquet
       hash: md5
-      md5: 350d4194a1883138b7c1abe8f0b92a8d
-      size: 9454025
+      md5: 98dddf1bbb1a485357e46acac7ab15a6
+      size: 10299685
   build_lodes_by_geography@2022-ga-block_group:
     cmd: Rscript ./src/aggregate_lodes.R 2022 ga block_group
     deps:
-    - path: ./input/lodes/year=2022/state=ga/ga.csv.gz
+    - path: ./input/lodes/year=2022/all-aux.csv.gz
       hash: md5
-      md5: 0d5a890fab89c8165eff86392835807c
-      size: 24787693
+      md5: bb0e4378b94545906e51e7dbddf85fa9
+      size: 54012286
+    - path: ./input/lodes/year=2022/state=ga/ga-main.csv.gz
+      hash: md5
+      md5: 1916cf30e387cb806ed3d440c6b67fb9
+      size: 23362610
     outs:
     - path: ./intermediate/od_lodes/year=2022/geography=block_group/state=ga/ga.parquet
       hash: md5
-      md5: c56f62d88630bc4791b461ae6cfbcb01
-      size: 21273778
+      md5: bdb469bdf5c74bc92a4fde13afe44688
+      size: 22798964
   build_lodes_by_geography@2022-hi-tract:
     cmd: Rscript ./src/aggregate_lodes.R 2022 hi tract
     deps:
-    - path: ./input/lodes/year=2022/state=hi/hi.csv.gz
+    - path: ./input/lodes/year=2022/all-aux.csv.gz
       hash: md5
-      md5: 9443e78891eb9f2c19c634eb905b5ac2
-      size: 2376147
+      md5: bb0e4378b94545906e51e7dbddf85fa9
+      size: 54012286
+    - path: ./input/lodes/year=2022/state=hi/hi-main.csv.gz
+      hash: md5
+      md5: d0c02a1b6e3ffb3eb116f1a2eba8d063
+      size: 2233405
     outs:
     - path: ./intermediate/od_lodes/year=2022/geography=tract/state=hi/hi.parquet
       hash: md5
-      md5: a16aebed8366cf26b30cce52a3905727
-      size: 785539
+      md5: caba00c35eb077b824cb463c6e77a6db
+      size: 822771
   build_lodes_by_geography@2022-hi-block_group:
     cmd: Rscript ./src/aggregate_lodes.R 2022 hi block_group
     deps:
-    - path: ./input/lodes/year=2022/state=hi/hi.csv.gz
+    - path: ./input/lodes/year=2022/all-aux.csv.gz
       hash: md5
-      md5: 9443e78891eb9f2c19c634eb905b5ac2
-      size: 2376147
+      md5: bb0e4378b94545906e51e7dbddf85fa9
+      size: 54012286
+    - path: ./input/lodes/year=2022/state=hi/hi-main.csv.gz
+      hash: md5
+      md5: d0c02a1b6e3ffb3eb116f1a2eba8d063
+      size: 2233405
     outs:
     - path: ./intermediate/od_lodes/year=2022/geography=block_group/state=hi/hi.parquet
       hash: md5
-      md5: 4429ffe480b46ea324f9c40ff9767c00
-      size: 1119811
+      md5: f54099be791379d4099414cb5a94512d
+      size: 1151015
   build_lodes_by_geography@2022-id-tract:
     cmd: Rscript ./src/aggregate_lodes.R 2022 id tract
     deps:
-    - path: ./input/lodes/year=2022/state=id/id.csv.gz
+    - path: ./input/lodes/year=2022/all-aux.csv.gz
       hash: md5
-      md5: d656228b4e8f8d2c97626ede3ebc52fb
-      size: 4293245
+      md5: bb0e4378b94545906e51e7dbddf85fa9
+      size: 54012286
+    - path: ./input/lodes/year=2022/state=id/id-main.csv.gz
+      hash: md5
+      md5: 5a28e7be0c852905acf9f6cc0532f8ea
+      size: 3930035
     outs:
     - path: ./intermediate/od_lodes/year=2022/geography=tract/state=id/id.parquet
       hash: md5
-      md5: 6c027c73269b416d8b1fe67959b02d3b
-      size: 908942
+      md5: 6c77dcdb3378634f55fcb41f9790e458
+      size: 1182879
   build_lodes_by_geography@2022-id-block_group:
     cmd: Rscript ./src/aggregate_lodes.R 2022 id block_group
     deps:
-    - path: ./input/lodes/year=2022/state=id/id.csv.gz
+    - path: ./input/lodes/year=2022/all-aux.csv.gz
       hash: md5
-      md5: d656228b4e8f8d2c97626ede3ebc52fb
-      size: 4293245
+      md5: bb0e4378b94545906e51e7dbddf85fa9
+      size: 54012286
+    - path: ./input/lodes/year=2022/state=id/id-main.csv.gz
+      hash: md5
+      md5: 5a28e7be0c852905acf9f6cc0532f8ea
+      size: 3930035
     outs:
     - path: ./intermediate/od_lodes/year=2022/geography=block_group/state=id/id.parquet
       hash: md5
-      md5: db751c1ffdf7e82c9e612613ca99963f
-      size: 1764303
+      md5: 5c2ad7689d74420306b33283303ae259
+      size: 2088261
   build_lodes_by_geography@2022-il-tract:
     cmd: Rscript ./src/aggregate_lodes.R 2022 il tract
     deps:
-    - path: ./input/lodes/year=2022/state=il/il.csv.gz
+    - path: ./input/lodes/year=2022/all-aux.csv.gz
       hash: md5
-      md5: 56bba605dc41073b0df7bd109dad83f7
-      size: 32787254
+      md5: bb0e4378b94545906e51e7dbddf85fa9
+      size: 54012286
+    - path: ./input/lodes/year=2022/state=il/il-main.csv.gz
+      hash: md5
+      md5: 5dea81dea92c9a3f23dbcf0189580677
+      size: 30568805
     outs:
     - path: ./intermediate/od_lodes/year=2022/geography=tract/state=il/il.parquet
       hash: md5
-      md5: b8b05eba9142ece27787c8e42d9cb128
-      size: 16512201
+      md5: 2c82a0560530100b5d8391c59f168e5d
+      size: 14195810
   build_lodes_by_geography@2022-il-block_group:
     cmd: Rscript ./src/aggregate_lodes.R 2022 il block_group
     deps:
-    - path: ./input/lodes/year=2022/state=il/il.csv.gz
+    - path: ./input/lodes/year=2022/all-aux.csv.gz
       hash: md5
-      md5: 56bba605dc41073b0df7bd109dad83f7
-      size: 32787254
+      md5: bb0e4378b94545906e51e7dbddf85fa9
+      size: 54012286
+    - path: ./input/lodes/year=2022/state=il/il-main.csv.gz
+      hash: md5
+      md5: 5dea81dea92c9a3f23dbcf0189580677
+      size: 30568805
     outs:
     - path: ./intermediate/od_lodes/year=2022/geography=block_group/state=il/il.parquet
       hash: md5
-      md5: a6bb46937b96ee26a4392cadc7b1b888
-      size: 27901792
+      md5: fda4f833163fd5d9dfa5ef92a68e3c4e
+      size: 32356436
   build_lodes_by_geography@2022-in-tract:
     cmd: Rscript ./src/aggregate_lodes.R 2022 in tract
     deps:
-    - path: ./input/lodes/year=2022/state=in/in.csv.gz
+    - path: ./input/lodes/year=2022/all-aux.csv.gz
       hash: md5
-      md5: c0970b054577b4decd67c4c6b489a78b
-      size: 16857945
+      md5: bb0e4378b94545906e51e7dbddf85fa9
+      size: 54012286
+    - path: ./input/lodes/year=2022/state=in/in-main.csv.gz
+      hash: md5
+      md5: 59f5fdcd589e399de1f2f49416b81664
+      size: 15432694
     outs:
     - path: ./intermediate/od_lodes/year=2022/geography=tract/state=in/in.parquet
       hash: md5
-      md5: 13fccbfe333926f0d7f5d123bc2064a4
-      size: 5143956
+      md5: 4c0f41dcae93289f9725a924a78d1bd0
+      size: 6005023
   build_lodes_by_geography@2022-in-block_group:
     cmd: Rscript ./src/aggregate_lodes.R 2022 in block_group
     deps:
-    - path: ./input/lodes/year=2022/state=in/in.csv.gz
+    - path: ./input/lodes/year=2022/all-aux.csv.gz
       hash: md5
-      md5: c0970b054577b4decd67c4c6b489a78b
-      size: 16857945
+      md5: bb0e4378b94545906e51e7dbddf85fa9
+      size: 54012286
+    - path: ./input/lodes/year=2022/state=in/in-main.csv.gz
+      hash: md5
+      md5: 59f5fdcd589e399de1f2f49416b81664
+      size: 15432694
     outs:
     - path: ./intermediate/od_lodes/year=2022/geography=block_group/state=in/in.parquet
       hash: md5
-      md5: 6edfebf357f849d01c544478a22513f0
-      size: 8306604
+      md5: bb82e6f6fdae5af42c2316f09d7bdfec
+      size: 14906428
   build_lodes_by_geography@2022-ia-tract:
     cmd: Rscript ./src/aggregate_lodes.R 2022 ia tract
     deps:
-    - path: ./input/lodes/year=2022/state=ia/ia.csv.gz
+    - path: ./input/lodes/year=2022/all-aux.csv.gz
       hash: md5
-      md5: 07fc1abe8a2fb45df2a37d800bfd92b0
-      size: 8301625
+      md5: bb0e4378b94545906e51e7dbddf85fa9
+      size: 54012286
+    - path: ./input/lodes/year=2022/state=ia/ia-main.csv.gz
+      hash: md5
+      md5: e12867926c3f63f99e2b1cdeb185e6c7
+      size: 7534646
     outs:
     - path: ./intermediate/od_lodes/year=2022/geography=tract/state=ia/ia.parquet
       hash: md5
-      md5: 00f24b3a031346f0d5fc7528f71df398
-      size: 2152034
+      md5: eead72c8c31420dd220314ede1e0aafe
+      size: 2487789
   build_lodes_by_geography@2022-ia-block_group:
     cmd: Rscript ./src/aggregate_lodes.R 2022 ia block_group
     deps:
-    - path: ./input/lodes/year=2022/state=ia/ia.csv.gz
+    - path: ./input/lodes/year=2022/all-aux.csv.gz
       hash: md5
-      md5: 07fc1abe8a2fb45df2a37d800bfd92b0
-      size: 8301625
+      md5: bb0e4378b94545906e51e7dbddf85fa9
+      size: 54012286
+    - path: ./input/lodes/year=2022/state=ia/ia-main.csv.gz
+      hash: md5
+      md5: e12867926c3f63f99e2b1cdeb185e6c7
+      size: 7534646
     outs:
     - path: ./intermediate/od_lodes/year=2022/geography=block_group/state=ia/ia.parquet
       hash: md5
-      md5: 466e8df5b1662672314548a5f5da4805
-      size: 3705336
+      md5: a0724e81945f64b437fd5c7ec1a4adca
+      size: 4167242
   build_lodes_by_geography@2022-ks-tract:
     cmd: Rscript ./src/aggregate_lodes.R 2022 ks tract
     deps:
-    - path: ./input/lodes/year=2022/state=ks/ks.csv.gz
+    - path: ./input/lodes/year=2022/all-aux.csv.gz
       hash: md5
-      md5: 55b607a97d1fefd10b8dbc236261a87e
-      size: 7496316
+      md5: bb0e4378b94545906e51e7dbddf85fa9
+      size: 54012286
+    - path: ./input/lodes/year=2022/state=ks/ks-main.csv.gz
+      hash: md5
+      md5: 063f63de2aa8ee677739c0023c7d9dfd
+      size: 6422479
     outs:
     - path: ./intermediate/od_lodes/year=2022/geography=tract/state=ks/ks.parquet
       hash: md5
-      md5: 7bf00c8c9ef2cb822778e1cc7890d9ff
-      size: 2036255
+      md5: 36316a77c0b0218bd113a8ebb3e5f0aa
+      size: 2448982
   build_lodes_by_geography@2022-ks-block_group:
     cmd: Rscript ./src/aggregate_lodes.R 2022 ks block_group
     deps:
-    - path: ./input/lodes/year=2022/state=ks/ks.csv.gz
+    - path: ./input/lodes/year=2022/all-aux.csv.gz
       hash: md5
-      md5: 55b607a97d1fefd10b8dbc236261a87e
-      size: 7496316
+      md5: bb0e4378b94545906e51e7dbddf85fa9
+      size: 54012286
+    - path: ./input/lodes/year=2022/state=ks/ks-main.csv.gz
+      hash: md5
+      md5: 063f63de2aa8ee677739c0023c7d9dfd
+      size: 6422479
     outs:
     - path: ./intermediate/od_lodes/year=2022/geography=block_group/state=ks/ks.parquet
       hash: md5
-      md5: 35141e821f9c342ac5f7513cfa275c25
-      size: 5017934
+      md5: 8583af6d087429d91ee40eb61a07ce8b
+      size: 4103235
   build_lodes_by_geography@2022-ky-tract:
     cmd: Rscript ./src/aggregate_lodes.R 2022 ky tract
     deps:
-    - path: ./input/lodes/year=2022/state=ky/ky.csv.gz
+    - path: ./input/lodes/year=2022/all-aux.csv.gz
       hash: md5
-      md5: 19bb61cf19ad1fecb79b2d956c3202c8
-      size: 10002565
+      md5: bb0e4378b94545906e51e7dbddf85fa9
+      size: 54012286
+    - path: ./input/lodes/year=2022/state=ky/ky-main.csv.gz
+      hash: md5
+      md5: 54cf3375220cea6f7fdf9ad66b15aa6e
+      size: 8798682
     outs:
     - path: ./intermediate/od_lodes/year=2022/geography=tract/state=ky/ky.parquet
       hash: md5
-      md5: f0936811799733ba4e8945762a8ecda6
-      size: 3078164
+      md5: a4d43e601a75dc88d9582ff75d62902f
+      size: 3698307
   build_lodes_by_geography@2022-ky-block_group:
     cmd: Rscript ./src/aggregate_lodes.R 2022 ky block_group
     deps:
-    - path: ./input/lodes/year=2022/state=ky/ky.csv.gz
+    - path: ./input/lodes/year=2022/all-aux.csv.gz
       hash: md5
-      md5: 19bb61cf19ad1fecb79b2d956c3202c8
-      size: 10002565
+      md5: bb0e4378b94545906e51e7dbddf85fa9
+      size: 54012286
+    - path: ./input/lodes/year=2022/state=ky/ky-main.csv.gz
+      hash: md5
+      md5: 54cf3375220cea6f7fdf9ad66b15aa6e
+      size: 8798682
     outs:
     - path: ./intermediate/od_lodes/year=2022/geography=block_group/state=ky/ky.parquet
       hash: md5
-      md5: f5309478f575b5accad5ca7a0001ccb3
-      size: 4932060
+      md5: 7295b3294215b1dac2a84d87a3187c27
+      size: 6315002
   build_lodes_by_geography@2022-la-tract:
     cmd: Rscript ./src/aggregate_lodes.R 2022 la tract
     deps:
-    - path: ./input/lodes/year=2022/state=la/la.csv.gz
+    - path: ./input/lodes/year=2022/all-aux.csv.gz
       hash: md5
-      md5: bb7818b6cc397ad48ece719c655b2cb7
-      size: 10155799
+      md5: bb0e4378b94545906e51e7dbddf85fa9
+      size: 54012286
+    - path: ./input/lodes/year=2022/state=la/la-main.csv.gz
+      hash: md5
+      md5: b071e1bc6f3400d4555724c3fb8bdb96
+      size: 9515644
     outs:
     - path: ./intermediate/od_lodes/year=2022/geography=tract/state=la/la.parquet
       hash: md5
-      md5: a7cadc5b9bfb800f35aff4b5128b3867
-      size: 3192713
+      md5: 36ed43109cce2046b85e79bca803e0f9
+      size: 3509108
   build_lodes_by_geography@2022-al-county:
     cmd: Rscript ./src/aggregate_lodes.R 2022 al county
     deps:
-    - path: ./input/lodes/year=2022/state=al/al.csv.gz
+    - path: ./input/lodes/year=2022/all-aux.csv.gz
       hash: md5
-      md5: 11f33b136a7dcb5df94dd681c40618e5
-      size: 11050220
+      md5: bb0e4378b94545906e51e7dbddf85fa9
+      size: 54012286
+    - path: ./input/lodes/year=2022/state=al/al-main.csv.gz
+      hash: md5
+      md5: c3481a6c8ff6cbc0831387a3db877565
+      size: 10353896
     outs:
     - path: ./intermediate/od_lodes/year=2022/geography=county/state=al/al.parquet
       hash: md5
-      md5: 4959791e86b3a98365ac46612c402966
-      size: 204553
+      md5: 643c231c5ba72021bb2b1f08c875d693
+      size: 329621
   build_lodes_by_geography@2022-az-county:
     cmd: Rscript ./src/aggregate_lodes.R 2022 az county
     deps:
-    - path: ./input/lodes/year=2022/state=az/az.csv.gz
+    - path: ./input/lodes/year=2022/all-aux.csv.gz
       hash: md5
-      md5: 5bed06081e8989ecfcac13ab409e1caf
-      size: 15999100
+      md5: bb0e4378b94545906e51e7dbddf85fa9
+      size: 54012286
+    - path: ./input/lodes/year=2022/state=az/az-main.csv.gz
+      hash: md5
+      md5: 2077ea78acf888c703368a44455c9fca
+      size: 15585348
     outs:
     - path: ./intermediate/od_lodes/year=2022/geography=county/state=az/az.parquet
       hash: md5
-      md5: 56cd36b0b3d9b672eb0739d320888c12
-      size: 62559
+      md5: 80cf78265c588ad6ef7506b66d904cb6
+      size: 112529
   build_lodes_by_geography@2022-ar-county:
     cmd: Rscript ./src/aggregate_lodes.R 2022 ar county
     deps:
-    - path: ./input/lodes/year=2022/state=ar/ar.csv.gz
+    - path: ./input/lodes/year=2022/all-aux.csv.gz
       hash: md5
-      md5: 4d095e6d29243953e784c0fe6ae97e91
-      size: 6579296
+      md5: bb0e4378b94545906e51e7dbddf85fa9
+      size: 54012286
+    - path: ./input/lodes/year=2022/state=ar/ar-main.csv.gz
+      hash: md5
+      md5: d4d62056edcb514efc4523764bda5dee
+      size: 5994353
     outs:
     - path: ./intermediate/od_lodes/year=2022/geography=county/state=ar/ar.parquet
       hash: md5
-      md5: bd317257014034cdc972c17c885b5746
-      size: 184519
+      md5: c7dd04453b3d6676aabe1b94afc53a54
+      size: 277655
   build_lodes_by_geography@2022-ca-county:
     cmd: Rscript ./src/aggregate_lodes.R 2022 ca county
     deps:
-    - path: ./input/lodes/year=2022/state=ca/ca.csv.gz
+    - path: ./input/lodes/year=2022/all-aux.csv.gz
       hash: md5
-      md5: f197ea4eb56666eecfdd92c0e203e600
-      size: 98337840
+      md5: bb0e4378b94545906e51e7dbddf85fa9
+      size: 54012286
+    - path: ./input/lodes/year=2022/state=ca/ca-main.csv.gz
+      hash: md5
+      md5: 3e10441eba168f675b79599cf5d303a3
+      size: 96433064
     outs:
     - path: ./intermediate/od_lodes/year=2022/geography=county/state=ca/ca.parquet
       hash: md5
-      md5: b12b7ebd0d470c3b3ed5f7ba9cf91a1b
-      size: 314944
+      md5: dcbfeb5bbef7987048e6336f4d6a5322
+      size: 488062
   build_lodes_by_geography@2022-co-county:
     cmd: Rscript ./src/aggregate_lodes.R 2022 co county
     deps:
-    - path: ./input/lodes/year=2022/state=co/co.csv.gz
+    - path: ./input/lodes/year=2022/all-aux.csv.gz
       hash: md5
-      md5: 410d6c243b6010c194e34b0b7ea09849
-      size: 14921788
+      md5: bb0e4378b94545906e51e7dbddf85fa9
+      size: 54012286
+    - path: ./input/lodes/year=2022/state=co/co-main.csv.gz
+      hash: md5
+      md5: d6e47aef109a739dbc7280199c5a6a67
+      size: 14464795
     outs:
     - path: ./intermediate/od_lodes/year=2022/geography=county/state=co/co.parquet
       hash: md5
-      md5: 27fde7d9f05c2af2470658d1f4c81ecb
-      size: 169644
+      md5: 4cc41403c89f84606c8893ff9f64e17a
+      size: 256981
   build_lodes_by_geography@2022-ct-county:
     cmd: Rscript ./src/aggregate_lodes.R 2022 ct county
     deps:
-    - path: ./input/lodes/year=2022/state=ct/ct.csv.gz
+    - path: ./input/lodes/year=2022/all-aux.csv.gz
       hash: md5
-      md5: 26ccff17eaf182b9c2fd28bdf090eecd
-      size: 8532274
+      md5: bb0e4378b94545906e51e7dbddf85fa9
+      size: 54012286
+    - path: ./input/lodes/year=2022/state=ct/ct-main.csv.gz
+      hash: md5
+      md5: 60f6eda025b57b456fa63d936353b330
+      size: 7555763
     outs:
     - path: ./intermediate/od_lodes/year=2022/geography=county/state=ct/ct.parquet
       hash: md5
-      md5: 011d8a0c027ff607404995b6d057a687
-      size: 48511
+      md5: 4d9eb8e9b52b2afdcd8b1e84763a7870
+      size: 89922
   build_lodes_by_geography@2022-dc-county:
     cmd: Rscript ./src/aggregate_lodes.R 2022 dc county
     deps:
-    - path: ./input/lodes/year=2022/state=dc/dc.csv.gz
+    - path: ./input/lodes/year=2022/all-aux.csv.gz
       hash: md5
-      md5: 085b3c697856a332e295fd95a39ae332
-      size: 3241098
+      md5: bb0e4378b94545906e51e7dbddf85fa9
+      size: 54012286
+    - path: ./input/lodes/year=2022/state=dc/dc-main.csv.gz
+      hash: md5
+      md5: 06e1f6e73d8f860e6c988a486e618b0b
+      size: 881943
     outs:
     - path: ./intermediate/od_lodes/year=2022/geography=county/state=dc/dc.parquet
       hash: md5
-      md5: 564b7946c06d8af98a8d9f819b18697a
-      size: 24097
+      md5: 3eaaf19dbe79b69ce8a04cb6eab1645e
+      size: 35113
   build_lodes_by_geography@2022-de-county:
     cmd: Rscript ./src/aggregate_lodes.R 2022 de county
     deps:
-    - path: ./input/lodes/year=2022/state=de/de.csv.gz
+    - path: ./input/lodes/year=2022/all-aux.csv.gz
       hash: md5
-      md5: 015854795622fd8831499ced57c46f42
-      size: 2275900
+      md5: bb0e4378b94545906e51e7dbddf85fa9
+      size: 54012286
+    - path: ./input/lodes/year=2022/state=de/de-main.csv.gz
+      hash: md5
+      md5: 6d78f80aa9ed30da831d010c91b90bdc
+      size: 1702404
     outs:
     - path: ./intermediate/od_lodes/year=2022/geography=county/state=de/de.parquet
       hash: md5
-      md5: 97f051d937a3914e86659f5ec2a832d2
-      size: 24883
+      md5: 962b7fc1bab45c93c0aed8b1c662b7d5
+      size: 42818
   build_lodes_by_geography@2022-fl-county:
     cmd: Rscript ./src/aggregate_lodes.R 2022 fl county
     deps:
-    - path: ./input/lodes/year=2022/state=fl/fl.csv.gz
+    - path: ./input/lodes/year=2022/all-aux.csv.gz
       hash: md5
-      md5: 5312351ec6c2ffaf28884650c1589931
-      size: 50644267
+      md5: bb0e4378b94545906e51e7dbddf85fa9
+      size: 54012286
+    - path: ./input/lodes/year=2022/state=fl/fl-main.csv.gz
+      hash: md5
+      md5: 9684856e59e56fd5ae74266b7c03001f
+      size: 49576455
     outs:
     - path: ./intermediate/od_lodes/year=2022/geography=county/state=fl/fl.parquet
       hash: md5
-      md5: 42c0b9b2815142759a62b578800cef43
-      size: 308628
+      md5: 2830480d664a92d7ce7ded02e1275cfe
+      size: 492148
   build_lodes_by_geography@2022-ga-county:
     cmd: Rscript ./src/aggregate_lodes.R 2022 ga county
     deps:
-    - path: ./input/lodes/year=2022/state=ga/ga.csv.gz
+    - path: ./input/lodes/year=2022/all-aux.csv.gz
       hash: md5
-      md5: 0d5a890fab89c8165eff86392835807c
-      size: 24787693
+      md5: bb0e4378b94545906e51e7dbddf85fa9
+      size: 54012286
+    - path: ./input/lodes/year=2022/state=ga/ga-main.csv.gz
+      hash: md5
+      md5: 1916cf30e387cb806ed3d440c6b67fb9
+      size: 23362610
     outs:
     - path: ./intermediate/od_lodes/year=2022/geography=county/state=ga/ga.parquet
       hash: md5
-      md5: cf1637ac0c798c123870caa61dc95b5c
-      size: 466478
+      md5: ea1a25e3739389685b13684782d9725f
+      size: 696573
   build_lodes_by_geography@2022-hi-county:
     cmd: Rscript ./src/aggregate_lodes.R 2022 hi county
     deps:
-    - path: ./input/lodes/year=2022/state=hi/hi.csv.gz
+    - path: ./input/lodes/year=2022/all-aux.csv.gz
       hash: md5
-      md5: 9443e78891eb9f2c19c634eb905b5ac2
-      size: 2376147
+      md5: bb0e4378b94545906e51e7dbddf85fa9
+      size: 54012286
+    - path: ./input/lodes/year=2022/state=hi/hi-main.csv.gz
+      hash: md5
+      md5: d0c02a1b6e3ffb3eb116f1a2eba8d063
+      size: 2233405
     outs:
     - path: ./intermediate/od_lodes/year=2022/geography=county/state=hi/hi.parquet
       hash: md5
-      md5: 15a2d9e24c40cabe06377a974daf24db
-      size: 35243
+      md5: 8f33fc98c2a20cdb2db00ca3f395d68a
+      size: 45984
   build_lodes_by_geography@2022-id-county:
     cmd: Rscript ./src/aggregate_lodes.R 2022 id county
     deps:
-    - path: ./input/lodes/year=2022/state=id/id.csv.gz
+    - path: ./input/lodes/year=2022/all-aux.csv.gz
       hash: md5
-      md5: d656228b4e8f8d2c97626ede3ebc52fb
-      size: 4293245
+      md5: bb0e4378b94545906e51e7dbddf85fa9
+      size: 54012286
+    - path: ./input/lodes/year=2022/state=id/id-main.csv.gz
+      hash: md5
+      md5: 5a28e7be0c852905acf9f6cc0532f8ea
+      size: 3930035
     outs:
     - path: ./intermediate/od_lodes/year=2022/geography=county/state=id/id.parquet
       hash: md5
-      md5: 797176f3d38d02cf6d169b93e74bdab9
-      size: 86063
+      md5: 819ab69619be358073f3987f805b69d3
+      size: 132813
   build_lodes_by_geography@2022-il-county:
     cmd: Rscript ./src/aggregate_lodes.R 2022 il county
     deps:
-    - path: ./input/lodes/year=2022/state=il/il.csv.gz
+    - path: ./input/lodes/year=2022/all-aux.csv.gz
       hash: md5
-      md5: 56bba605dc41073b0df7bd109dad83f7
-      size: 32787254
+      md5: bb0e4378b94545906e51e7dbddf85fa9
+      size: 54012286
+    - path: ./input/lodes/year=2022/state=il/il-main.csv.gz
+      hash: md5
+      md5: 5dea81dea92c9a3f23dbcf0189580677
+      size: 30568805
     outs:
     - path: ./intermediate/od_lodes/year=2022/geography=county/state=il/il.parquet
       hash: md5
-      md5: 1248a0ddb9a5944308f4b0229f0ad1e5
-      size: 315956
+      md5: 2b2fe2e23256ff9e22c5e9612ea56197
+      size: 499457
   build_lodes_by_geography@2022-in-county:
     cmd: Rscript ./src/aggregate_lodes.R 2022 in county
     deps:
-    - path: ./input/lodes/year=2022/state=in/in.csv.gz
+    - path: ./input/lodes/year=2022/all-aux.csv.gz
       hash: md5
-      md5: c0970b054577b4decd67c4c6b489a78b
-      size: 16857945
+      md5: bb0e4378b94545906e51e7dbddf85fa9
+      size: 54012286
+    - path: ./input/lodes/year=2022/state=in/in-main.csv.gz
+      hash: md5
+      md5: 59f5fdcd589e399de1f2f49416b81664
+      size: 15432694
     outs:
     - path: ./intermediate/od_lodes/year=2022/geography=county/state=in/in.parquet
       hash: md5
-      md5: c25e45a6adad21cfa8405cf8d25fdd4b
-      size: 314532
+      md5: bad44354ce08eabc695bfda4e85881d9
+      size: 470119
   build_lodes_by_geography@2022-ia-county:
     cmd: Rscript ./src/aggregate_lodes.R 2022 ia county
     deps:
-    - path: ./input/lodes/year=2022/state=ia/ia.csv.gz
+    - path: ./input/lodes/year=2022/all-aux.csv.gz
       hash: md5
-      md5: 07fc1abe8a2fb45df2a37d800bfd92b0
-      size: 8301625
+      md5: bb0e4378b94545906e51e7dbddf85fa9
+      size: 54012286
+    - path: ./input/lodes/year=2022/state=ia/ia-main.csv.gz
+      hash: md5
+      md5: e12867926c3f63f99e2b1cdeb185e6c7
+      size: 7534646
     outs:
     - path: ./intermediate/od_lodes/year=2022/geography=county/state=ia/ia.parquet
       hash: md5
-      md5: 093a4b85c9c5c91b15ea271c2cffe49e
-      size: 242753
+      md5: 725e0f9229e405758873d17be387918e
+      size: 342054
   build_lodes_by_geography@2022-ks-county:
     cmd: Rscript ./src/aggregate_lodes.R 2022 ks county
     deps:
-    - path: ./input/lodes/year=2022/state=ks/ks.csv.gz
+    - path: ./input/lodes/year=2022/all-aux.csv.gz
       hash: md5
-      md5: 55b607a97d1fefd10b8dbc236261a87e
-      size: 7496316
+      md5: bb0e4378b94545906e51e7dbddf85fa9
+      size: 54012286
+    - path: ./input/lodes/year=2022/state=ks/ks-main.csv.gz
+      hash: md5
+      md5: 063f63de2aa8ee677739c0023c7d9dfd
+      size: 6422479
     outs:
     - path: ./intermediate/od_lodes/year=2022/geography=county/state=ks/ks.parquet
       hash: md5
-      md5: 8750f3d220b5100562ec9b0dad87421b
-      size: 201652
+      md5: 03001bac17fb7ce701ba730aa96e8b39
+      size: 289750
   build_lodes_by_geography@2022-ky-county:
     cmd: Rscript ./src/aggregate_lodes.R 2022 ky county
     deps:
-    - path: ./input/lodes/year=2022/state=ky/ky.csv.gz
+    - path: ./input/lodes/year=2022/all-aux.csv.gz
       hash: md5
-      md5: 19bb61cf19ad1fecb79b2d956c3202c8
-      size: 10002565
+      md5: bb0e4378b94545906e51e7dbddf85fa9
+      size: 54012286
+    - path: ./input/lodes/year=2022/state=ky/ky-main.csv.gz
+      hash: md5
+      md5: 54cf3375220cea6f7fdf9ad66b15aa6e
+      size: 8798682
     outs:
     - path: ./intermediate/od_lodes/year=2022/geography=county/state=ky/ky.parquet
       hash: md5
-      md5: 470a7d34006f65ee96063bcb8afbcbc8
-      size: 300542
+      md5: a36060010b10e973dae9aac73c2a9756
+      size: 455652
   fetch_cb@2023-county:
     cmd: python ./src/fetch_cb.py --year 2023 --geography county
     outs:
@@ -984,1107 +1384,1475 @@ stages:
   build_lodes_by_geography@2022-la-block_group:
     cmd: Rscript ./src/aggregate_lodes.R 2022 la block_group
     deps:
-    - path: ./input/lodes/year=2022/state=la/la.csv.gz
+    - path: ./input/lodes/year=2022/all-aux.csv.gz
       hash: md5
-      md5: bb7818b6cc397ad48ece719c655b2cb7
-      size: 10155799
+      md5: bb0e4378b94545906e51e7dbddf85fa9
+      size: 54012286
+    - path: ./input/lodes/year=2022/state=la/la-main.csv.gz
+      hash: md5
+      md5: b071e1bc6f3400d4555724c3fb8bdb96
+      size: 9515644
     outs:
     - path: ./intermediate/od_lodes/year=2022/geography=block_group/state=la/la.parquet
       hash: md5
-      md5: 35907a8e8c06fbfecfc2c82ad52e2859
-      size: 5384703
+      md5: 2cbd75f653a9a8b95899d462c4c0e677
+      size: 5732642
   build_lodes_by_geography@2022-la-county:
     cmd: Rscript ./src/aggregate_lodes.R 2022 la county
     deps:
-    - path: ./input/lodes/year=2022/state=la/la.csv.gz
+    - path: ./input/lodes/year=2022/all-aux.csv.gz
       hash: md5
-      md5: bb7818b6cc397ad48ece719c655b2cb7
-      size: 10155799
+      md5: bb0e4378b94545906e51e7dbddf85fa9
+      size: 54012286
+    - path: ./input/lodes/year=2022/state=la/la-main.csv.gz
+      hash: md5
+      md5: b071e1bc6f3400d4555724c3fb8bdb96
+      size: 9515644
     outs:
     - path: ./intermediate/od_lodes/year=2022/geography=county/state=la/la.parquet
       hash: md5
-      md5: 6f72c136c9c427e22ead4498b70cee95
-      size: 178520
+      md5: 9e369d00b80cc99a7a88e7409371c457
+      size: 268022
   build_lodes_by_geography@2022-me-tract:
     cmd: Rscript ./src/aggregate_lodes.R 2022 me tract
     deps:
-    - path: ./input/lodes/year=2022/state=me/me.csv.gz
+    - path: ./input/lodes/year=2022/all-aux.csv.gz
       hash: md5
-      md5: b21b84e5b883256efe028dc689a7c1db
-      size: 3165866
+      md5: bb0e4378b94545906e51e7dbddf85fa9
+      size: 54012286
+    - path: ./input/lodes/year=2022/state=me/me-main.csv.gz
+      hash: md5
+      md5: e1fda6286a966ba3465527ad4f919d8f
+      size: 2996051
     outs:
     - path: ./intermediate/od_lodes/year=2022/geography=tract/state=me/me.parquet
       hash: md5
-      md5: 81c3e5da169b3c4ea7010f7f61f44549
-      size: 657784
+      md5: 95b391cad3f98f1a81345fcfa0c35a73
+      size: 831267
   build_lodes_by_geography@2022-me-block_group:
     cmd: Rscript ./src/aggregate_lodes.R 2022 me block_group
     deps:
-    - path: ./input/lodes/year=2022/state=me/me.csv.gz
+    - path: ./input/lodes/year=2022/all-aux.csv.gz
       hash: md5
-      md5: b21b84e5b883256efe028dc689a7c1db
-      size: 3165866
+      md5: bb0e4378b94545906e51e7dbddf85fa9
+      size: 54012286
+    - path: ./input/lodes/year=2022/state=me/me-main.csv.gz
+      hash: md5
+      md5: e1fda6286a966ba3465527ad4f919d8f
+      size: 2996051
     outs:
     - path: ./intermediate/od_lodes/year=2022/geography=block_group/state=me/me.parquet
       hash: md5
-      md5: af19e3ce980854260682510beacd1de3
-      size: 1342835
+      md5: 8462fbac37ef4c368cad5def15197502
+      size: 1550974
   build_lodes_by_geography@2022-me-county:
     cmd: Rscript ./src/aggregate_lodes.R 2022 me county
     deps:
-    - path: ./input/lodes/year=2022/state=me/me.csv.gz
+    - path: ./input/lodes/year=2022/all-aux.csv.gz
       hash: md5
-      md5: b21b84e5b883256efe028dc689a7c1db
-      size: 3165866
+      md5: bb0e4378b94545906e51e7dbddf85fa9
+      size: 54012286
+    - path: ./input/lodes/year=2022/state=me/me-main.csv.gz
+      hash: md5
+      md5: e1fda6286a966ba3465527ad4f919d8f
+      size: 2996051
     outs:
     - path: ./intermediate/od_lodes/year=2022/geography=county/state=me/me.parquet
       hash: md5
-      md5: 8a5218809401d8090dd702238b3e8d65
-      size: 39154
+      md5: b7798351139e909abe0015a0f40e1dab
+      size: 62696
   build_lodes_by_geography@2022-md-tract:
     cmd: Rscript ./src/aggregate_lodes.R 2022 md tract
     deps:
-    - path: ./input/lodes/year=2022/state=md/md.csv.gz
+    - path: ./input/lodes/year=2022/all-aux.csv.gz
       hash: md5
-      md5: 4c721621b8a99a918b64d3dae02abda6
-      size: 13692003
+      md5: bb0e4378b94545906e51e7dbddf85fa9
+      size: 54012286
+    - path: ./input/lodes/year=2022/state=md/md-main.csv.gz
+      hash: md5
+      md5: d876e4f3eb5ee4c0ba5702e895c536cb
+      size: 11556563
     outs:
     - path: ./intermediate/od_lodes/year=2022/geography=tract/state=md/md.parquet
       hash: md5
-      md5: bc1b0e0b24cfa0b32539f94892330ba2
-      size: 5261824
+      md5: bf3ed046825ac38105b9c378e4fde3c6
+      size: 6675773
   build_lodes_by_geography@2022-md-block_group:
     cmd: Rscript ./src/aggregate_lodes.R 2022 md block_group
     deps:
-    - path: ./input/lodes/year=2022/state=md/md.csv.gz
+    - path: ./input/lodes/year=2022/all-aux.csv.gz
       hash: md5
-      md5: 4c721621b8a99a918b64d3dae02abda6
-      size: 13692003
+      md5: bb0e4378b94545906e51e7dbddf85fa9
+      size: 54012286
+    - path: ./input/lodes/year=2022/state=md/md-main.csv.gz
+      hash: md5
+      md5: d876e4f3eb5ee4c0ba5702e895c536cb
+      size: 11556563
     outs:
     - path: ./intermediate/od_lodes/year=2022/geography=block_group/state=md/md.parquet
       hash: md5
-      md5: 2ad3889c0fce2923ba046e8c872fb34c
-      size: 12195468
+      md5: b75b447a51f99c644a0579353c8315ff
+      size: 9970698
   build_lodes_by_geography@2022-md-county:
     cmd: Rscript ./src/aggregate_lodes.R 2022 md county
     deps:
-    - path: ./input/lodes/year=2022/state=md/md.csv.gz
+    - path: ./input/lodes/year=2022/all-aux.csv.gz
       hash: md5
-      md5: 4c721621b8a99a918b64d3dae02abda6
-      size: 13692003
+      md5: bb0e4378b94545906e51e7dbddf85fa9
+      size: 54012286
+    - path: ./input/lodes/year=2022/state=md/md-main.csv.gz
+      hash: md5
+      md5: d876e4f3eb5ee4c0ba5702e895c536cb
+      size: 11556563
     outs:
     - path: ./intermediate/od_lodes/year=2022/geography=county/state=md/md.parquet
       hash: md5
-      md5: 9d726645e3f156f477e7413da38d607b
-      size: 133289
+      md5: 7617104615a1c1069960c4091b51518b
+      size: 230399
   build_lodes_by_geography@2022-ma-tract:
     cmd: Rscript ./src/aggregate_lodes.R 2022 ma tract
     deps:
-    - path: ./input/lodes/year=2022/state=ma/ma.csv.gz
+    - path: ./input/lodes/year=2022/all-aux.csv.gz
       hash: md5
-      md5: 966025a737a87482c66b47e49d87c380
-      size: 19333160
+      md5: bb0e4378b94545906e51e7dbddf85fa9
+      size: 54012286
+    - path: ./input/lodes/year=2022/state=ma/ma-main.csv.gz
+      hash: md5
+      md5: 5af65466b9a8505aea9dc859c3b4a016
+      size: 17182716
     outs:
     - path: ./intermediate/od_lodes/year=2022/geography=tract/state=ma/ma.parquet
       hash: md5
-      md5: aff1ba1094ef8515fb93c53109cda4dc
-      size: 6620461
+      md5: 0e98db1baaa35c780d12b93146efc50b
+      size: 7413275
   build_lodes_by_geography@2022-ma-block_group:
     cmd: Rscript ./src/aggregate_lodes.R 2022 ma block_group
     deps:
-    - path: ./input/lodes/year=2022/state=ma/ma.csv.gz
+    - path: ./input/lodes/year=2022/all-aux.csv.gz
       hash: md5
-      md5: 966025a737a87482c66b47e49d87c380
-      size: 19333160
+      md5: bb0e4378b94545906e51e7dbddf85fa9
+      size: 54012286
+    - path: ./input/lodes/year=2022/state=ma/ma-main.csv.gz
+      hash: md5
+      md5: 5af65466b9a8505aea9dc859c3b4a016
+      size: 17182716
     outs:
     - path: ./intermediate/od_lodes/year=2022/geography=block_group/state=ma/ma.parquet
       hash: md5
-      md5: a26d207f696da2bb492c87d525af6de6
-      size: 10883077
+      md5: 5a43b150cd722bd9a125e0292935f432
+      size: 18372114
   build_lodes_by_geography@2022-ma-county:
     cmd: Rscript ./src/aggregate_lodes.R 2022 ma county
     deps:
-    - path: ./input/lodes/year=2022/state=ma/ma.csv.gz
+    - path: ./input/lodes/year=2022/all-aux.csv.gz
       hash: md5
-      md5: 966025a737a87482c66b47e49d87c380
-      size: 19333160
+      md5: bb0e4378b94545906e51e7dbddf85fa9
+      size: 54012286
+    - path: ./input/lodes/year=2022/state=ma/ma-main.csv.gz
+      hash: md5
+      md5: 5af65466b9a8505aea9dc859c3b4a016
+      size: 17182716
     outs:
     - path: ./intermediate/od_lodes/year=2022/geography=county/state=ma/ma.parquet
       hash: md5
-      md5: 2fbc03a272e773df027d46bb3d900f27
-      size: 87847
+      md5: 10b936df48ee55a82333451f9dad0c10
+      size: 151830
   build_lodes_by_geography@2022-mn-tract:
     cmd: Rscript ./src/aggregate_lodes.R 2022 mn tract
     deps:
-    - path: ./input/lodes/year=2022/state=mn/mn.csv.gz
+    - path: ./input/lodes/year=2022/all-aux.csv.gz
       hash: md5
-      md5: 63cdca9f92db82b3e7b257735ea41345
-      size: 14743561
+      md5: bb0e4378b94545906e51e7dbddf85fa9
+      size: 54012286
+    - path: ./input/lodes/year=2022/state=mn/mn-main.csv.gz
+      hash: md5
+      md5: 32056b1d9e2f3d3b9b171577a413f114
+      size: 13949718
     outs:
     - path: ./intermediate/od_lodes/year=2022/geography=tract/state=mn/mn.parquet
       hash: md5
-      md5: 5b591ef817b481a7c3566120529d337d
-      size: 4331930
+      md5: 25d1d81630132f24ced7dbc074f40426
+      size: 4703590
   build_lodes_by_geography@2022-mn-block_group:
     cmd: Rscript ./src/aggregate_lodes.R 2022 mn block_group
     deps:
-    - path: ./input/lodes/year=2022/state=mn/mn.csv.gz
+    - path: ./input/lodes/year=2022/all-aux.csv.gz
       hash: md5
-      md5: 63cdca9f92db82b3e7b257735ea41345
-      size: 14743561
+      md5: bb0e4378b94545906e51e7dbddf85fa9
+      size: 54012286
+    - path: ./input/lodes/year=2022/state=mn/mn-main.csv.gz
+      hash: md5
+      md5: 32056b1d9e2f3d3b9b171577a413f114
+      size: 13949718
     outs:
     - path: ./intermediate/od_lodes/year=2022/geography=block_group/state=mn/mn.parquet
       hash: md5
-      md5: f0ab32074e482345c580c57265ca0d2a
-      size: 7851349
+      md5: fea80c21a704fca004db573352dbce32
+      size: 13125144
   build_lodes_by_geography@2022-mn-county:
     cmd: Rscript ./src/aggregate_lodes.R 2022 mn county
     deps:
-    - path: ./input/lodes/year=2022/state=mn/mn.csv.gz
+    - path: ./input/lodes/year=2022/all-aux.csv.gz
       hash: md5
-      md5: 63cdca9f92db82b3e7b257735ea41345
-      size: 14743561
+      md5: bb0e4378b94545906e51e7dbddf85fa9
+      size: 54012286
+    - path: ./input/lodes/year=2022/state=mn/mn-main.csv.gz
+      hash: md5
+      md5: 32056b1d9e2f3d3b9b171577a413f114
+      size: 13949718
     outs:
     - path: ./intermediate/od_lodes/year=2022/geography=county/state=mn/mn.parquet
       hash: md5
-      md5: e024e0f71eb9252fcf1aa07003f8367b
-      size: 205227
+      md5: 02e232edcb930d2dc8cb4da49dab9759
+      size: 309413
   build_lodes_by_geography@2022-mo-tract:
     cmd: Rscript ./src/aggregate_lodes.R 2022 mo tract
     deps:
-    - path: ./input/lodes/year=2022/state=mo/mo.csv.gz
+    - path: ./input/lodes/year=2022/all-aux.csv.gz
       hash: md5
-      md5: 59acaa8c7d9283dac673f5f170bc7a02
-      size: 15685872
+      md5: bb0e4378b94545906e51e7dbddf85fa9
+      size: 54012286
+    - path: ./input/lodes/year=2022/state=mo/mo-main.csv.gz
+      hash: md5
+      md5: 2b949e6a0d931eac44443c62f109ade6
+      size: 14048285
     outs:
     - path: ./intermediate/od_lodes/year=2022/geography=tract/state=mo/mo.parquet
       hash: md5
-      md5: 50bf9eb3d788e1579bdd1fec08f60e86
-      size: 4644144
+      md5: 12ee52513fa10760307a936f2426a88e
+      size: 5430485
   build_lodes_by_geography@2022-mo-block_group:
     cmd: Rscript ./src/aggregate_lodes.R 2022 mo block_group
     deps:
-    - path: ./input/lodes/year=2022/state=mo/mo.csv.gz
+    - path: ./input/lodes/year=2022/all-aux.csv.gz
       hash: md5
-      md5: 59acaa8c7d9283dac673f5f170bc7a02
-      size: 15685872
+      md5: bb0e4378b94545906e51e7dbddf85fa9
+      size: 54012286
+    - path: ./input/lodes/year=2022/state=mo/mo-main.csv.gz
+      hash: md5
+      md5: 2b949e6a0d931eac44443c62f109ade6
+      size: 14048285
     outs:
     - path: ./intermediate/od_lodes/year=2022/geography=block_group/state=mo/mo.parquet
       hash: md5
-      md5: c39364e60ae6993787f25503ad2d2f3f
-      size: 11623167
+      md5: 08c82a2839858ae5fd318d743d5bca9b
+      size: 8804585
   build_lodes_by_geography@2022-mo-county:
     cmd: Rscript ./src/aggregate_lodes.R 2022 mo county
     deps:
-    - path: ./input/lodes/year=2022/state=mo/mo.csv.gz
+    - path: ./input/lodes/year=2022/all-aux.csv.gz
       hash: md5
-      md5: 59acaa8c7d9283dac673f5f170bc7a02
-      size: 15685872
+      md5: bb0e4378b94545906e51e7dbddf85fa9
+      size: 54012286
+    - path: ./input/lodes/year=2022/state=mo/mo-main.csv.gz
+      hash: md5
+      md5: 2b949e6a0d931eac44443c62f109ade6
+      size: 14048285
     outs:
     - path: ./intermediate/od_lodes/year=2022/geography=county/state=mo/mo.parquet
       hash: md5
-      md5: 70a099fa78d866d6dca98b77e3a6d5c9
-      size: 286761
+      md5: 61d85641c7efddc7f75999442ed9c2ec
+      size: 437246
   build_lodes_by_geography@2022-mt-tract:
     cmd: Rscript ./src/aggregate_lodes.R 2022 mt tract
     deps:
-    - path: ./input/lodes/year=2022/state=mt/mt.csv.gz
+    - path: ./input/lodes/year=2022/all-aux.csv.gz
       hash: md5
-      md5: 8397ad2b5cb566e90b03fb27d141dfc5
-      size: 2617061
+      md5: bb0e4378b94545906e51e7dbddf85fa9
+      size: 54012286
+    - path: ./input/lodes/year=2022/state=mt/mt-main.csv.gz
+      hash: md5
+      md5: 02314112d856eb0c0a4aa635d9bdbf62
+      size: 2472484
     outs:
     - path: ./intermediate/od_lodes/year=2022/geography=tract/state=mt/mt.parquet
       hash: md5
-      md5: 22358f2c323c7d1c0ea5599c44684539
-      size: 471462
+      md5: 768328e200872d901016f077e1008590
+      size: 567110
   build_lodes_by_geography@2022-mt-block_group:
     cmd: Rscript ./src/aggregate_lodes.R 2022 mt block_group
     deps:
-    - path: ./input/lodes/year=2022/state=mt/mt.csv.gz
+    - path: ./input/lodes/year=2022/all-aux.csv.gz
       hash: md5
-      md5: 8397ad2b5cb566e90b03fb27d141dfc5
-      size: 2617061
+      md5: bb0e4378b94545906e51e7dbddf85fa9
+      size: 54012286
+    - path: ./input/lodes/year=2022/state=mt/mt-main.csv.gz
+      hash: md5
+      md5: 02314112d856eb0c0a4aa635d9bdbf62
+      size: 2472484
     outs:
     - path: ./intermediate/od_lodes/year=2022/geography=block_group/state=mt/mt.parquet
       hash: md5
-      md5: e8ecb50f26fe881bcc634151e4b96351
-      size: 892970
+      md5: 791a108d991e7e611898866b22294bce
+      size: 995199
   build_lodes_by_geography@2022-mt-county:
     cmd: Rscript ./src/aggregate_lodes.R 2022 mt county
     deps:
-    - path: ./input/lodes/year=2022/state=mt/mt.csv.gz
+    - path: ./input/lodes/year=2022/all-aux.csv.gz
       hash: md5
-      md5: 8397ad2b5cb566e90b03fb27d141dfc5
-      size: 2617061
+      md5: bb0e4378b94545906e51e7dbddf85fa9
+      size: 54012286
+    - path: ./input/lodes/year=2022/state=mt/mt-main.csv.gz
+      hash: md5
+      md5: 02314112d856eb0c0a4aa635d9bdbf62
+      size: 2472484
     outs:
     - path: ./intermediate/od_lodes/year=2022/geography=county/state=mt/mt.parquet
       hash: md5
-      md5: c6d376081945fa015b3352f78ef813a9
-      size: 75719
+      md5: c0ff8124d38ede4642e4a411fb886d29
+      size: 107643
   build_lodes_by_geography@2022-ne-tract:
     cmd: Rscript ./src/aggregate_lodes.R 2022 ne tract
     deps:
-    - path: ./input/lodes/year=2022/state=ne/ne.csv.gz
+    - path: ./input/lodes/year=2022/all-aux.csv.gz
       hash: md5
-      md5: 60ae3e6bd6eb677d1821b89608474d99
-      size: 5228870
+      md5: bb0e4378b94545906e51e7dbddf85fa9
+      size: 54012286
+    - path: ./input/lodes/year=2022/state=ne/ne-main.csv.gz
+      hash: md5
+      md5: 6914f13d872015cd7110b57e123d3baf
+      size: 4741655
     outs:
     - path: ./intermediate/od_lodes/year=2022/geography=tract/state=ne/ne.parquet
       hash: md5
-      md5: 0c31b5ad3e6a0793501f38122e5e7856
-      size: 1214777
+      md5: da925b6ae38ef51d1421621f06b4d468
+      size: 1405045
   build_lodes_by_geography@2022-ne-block_group:
     cmd: Rscript ./src/aggregate_lodes.R 2022 ne block_group
     deps:
-    - path: ./input/lodes/year=2022/state=ne/ne.csv.gz
+    - path: ./input/lodes/year=2022/all-aux.csv.gz
       hash: md5
-      md5: 60ae3e6bd6eb677d1821b89608474d99
-      size: 5228870
+      md5: bb0e4378b94545906e51e7dbddf85fa9
+      size: 54012286
+    - path: ./input/lodes/year=2022/state=ne/ne-main.csv.gz
+      hash: md5
+      md5: 6914f13d872015cd7110b57e123d3baf
+      size: 4741655
     outs:
     - path: ./intermediate/od_lodes/year=2022/geography=block_group/state=ne/ne.parquet
       hash: md5
-      md5: 09b97dd166e89aa7845be7f043f39b59
-      size: 2334679
+      md5: 4852119fefaa87ffb6a427c4905538a6
+      size: 2564035
   build_lodes_by_geography@2022-ne-county:
     cmd: Rscript ./src/aggregate_lodes.R 2022 ne county
     deps:
-    - path: ./input/lodes/year=2022/state=ne/ne.csv.gz
+    - path: ./input/lodes/year=2022/all-aux.csv.gz
       hash: md5
-      md5: 60ae3e6bd6eb677d1821b89608474d99
-      size: 5228870
+      md5: bb0e4378b94545906e51e7dbddf85fa9
+      size: 54012286
+    - path: ./input/lodes/year=2022/state=ne/ne-main.csv.gz
+      hash: md5
+      md5: 6914f13d872015cd7110b57e123d3baf
+      size: 4741655
     outs:
     - path: ./intermediate/od_lodes/year=2022/geography=county/state=ne/ne.parquet
       hash: md5
-      md5: a153678e1ba6ec1a41674085474b83d6
-      size: 156624
+      md5: 0534331d4c3c19d6fcea8894f5f8b094
+      size: 214464
   build_lodes_by_geography@2022-nv-tract:
     cmd: Rscript ./src/aggregate_lodes.R 2022 nv tract
     deps:
-    - path: ./input/lodes/year=2022/state=nv/nv.csv.gz
+    - path: ./input/lodes/year=2022/all-aux.csv.gz
       hash: md5
-      md5: 36f312f8189fdf86d1a21a8bb68f333d
-      size: 6822055
+      md5: bb0e4378b94545906e51e7dbddf85fa9
+      size: 54012286
+    - path: ./input/lodes/year=2022/state=nv/nv-main.csv.gz
+      hash: md5
+      md5: b939c1e38832dbe089cbfe8d46c72b0d
+      size: 6269546
     outs:
     - path: ./intermediate/od_lodes/year=2022/geography=tract/state=nv/nv.parquet
       hash: md5
-      md5: 908810608092ada3338e7a92a7fcc73f
-      size: 2061252
+      md5: 9db482c5359f4bb97f5b97dc056003fb
+      size: 2431968
   build_lodes_by_geography@2022-nv-block_group:
     cmd: Rscript ./src/aggregate_lodes.R 2022 nv block_group
     deps:
-    - path: ./input/lodes/year=2022/state=nv/nv.csv.gz
+    - path: ./input/lodes/year=2022/all-aux.csv.gz
       hash: md5
-      md5: 36f312f8189fdf86d1a21a8bb68f333d
-      size: 6822055
+      md5: bb0e4378b94545906e51e7dbddf85fa9
+      size: 54012286
+    - path: ./input/lodes/year=2022/state=nv/nv-main.csv.gz
+      hash: md5
+      md5: b939c1e38832dbe089cbfe8d46c72b0d
+      size: 6269546
     outs:
     - path: ./intermediate/od_lodes/year=2022/geography=block_group/state=nv/nv.parquet
       hash: md5
-      md5: c16efcc2714c9b2052ee3d19684403da
-      size: 3130437
+      md5: 353fadd09618ae157ef47c9673b051e6
+      size: 3625674
   build_lodes_by_geography@2022-nv-county:
     cmd: Rscript ./src/aggregate_lodes.R 2022 nv county
     deps:
-    - path: ./input/lodes/year=2022/state=nv/nv.csv.gz
+    - path: ./input/lodes/year=2022/all-aux.csv.gz
       hash: md5
-      md5: 36f312f8189fdf86d1a21a8bb68f333d
-      size: 6822055
+      md5: bb0e4378b94545906e51e7dbddf85fa9
+      size: 54012286
+    - path: ./input/lodes/year=2022/state=nv/nv-main.csv.gz
+      hash: md5
+      md5: b939c1e38832dbe089cbfe8d46c72b0d
+      size: 6269546
     outs:
     - path: ./intermediate/od_lodes/year=2022/geography=county/state=nv/nv.parquet
       hash: md5
-      md5: 24f66d41d05872b7323c862921cf6c41
-      size: 52908
+      md5: ea55866d9e2d781bc8f71450fff8cbb1
+      size: 83544
   build_lodes_by_geography@2022-nh-tract:
     cmd: Rscript ./src/aggregate_lodes.R 2022 nh tract
     deps:
-    - path: ./input/lodes/year=2022/state=nh/nh.csv.gz
+    - path: ./input/lodes/year=2022/all-aux.csv.gz
       hash: md5
-      md5: 1cf2c318670949aa762eee2cac7ad453
-      size: 3512083
+      md5: bb0e4378b94545906e51e7dbddf85fa9
+      size: 54012286
+    - path: ./input/lodes/year=2022/state=nh/nh-main.csv.gz
+      hash: md5
+      md5: 116bc333e06a61b4396b31bae5ee940b
+      size: 2885200
     outs:
     - path: ./intermediate/od_lodes/year=2022/geography=tract/state=nh/nh.parquet
       hash: md5
-      md5: 7e6a17573e7c3ef9b7ffc52400882ff2
-      size: 863887
+      md5: 62213ee16af5aacd8fbfa350138af088
+      size: 1331973
   build_lodes_by_geography@2022-nh-block_group:
     cmd: Rscript ./src/aggregate_lodes.R 2022 nh block_group
     deps:
-    - path: ./input/lodes/year=2022/state=nh/nh.csv.gz
+    - path: ./input/lodes/year=2022/all-aux.csv.gz
       hash: md5
-      md5: 1cf2c318670949aa762eee2cac7ad453
-      size: 3512083
+      md5: bb0e4378b94545906e51e7dbddf85fa9
+      size: 54012286
+    - path: ./input/lodes/year=2022/state=nh/nh-main.csv.gz
+      hash: md5
+      md5: 116bc333e06a61b4396b31bae5ee940b
+      size: 2885200
     outs:
     - path: ./intermediate/od_lodes/year=2022/geography=block_group/state=nh/nh.parquet
       hash: md5
-      md5: 16766364af0b836842631ac3e3adda29
-      size: 1644555
+      md5: e4a45c4b6babc5f5bf67f0ce48c279c1
+      size: 2260181
   build_lodes_by_geography@2022-nh-county:
     cmd: Rscript ./src/aggregate_lodes.R 2022 nh county
     deps:
-    - path: ./input/lodes/year=2022/state=nh/nh.csv.gz
+    - path: ./input/lodes/year=2022/all-aux.csv.gz
       hash: md5
-      md5: 1cf2c318670949aa762eee2cac7ad453
-      size: 3512083
+      md5: bb0e4378b94545906e51e7dbddf85fa9
+      size: 54012286
+    - path: ./input/lodes/year=2022/state=nh/nh-main.csv.gz
+      hash: md5
+      md5: 116bc333e06a61b4396b31bae5ee940b
+      size: 2885200
     outs:
     - path: ./intermediate/od_lodes/year=2022/geography=county/state=nh/nh.parquet
       hash: md5
-      md5: 72edf58253aad01adef704a6bdb5ee04
-      size: 35611
+      md5: 88d4eefbac57b25224bc9581617d1f85
+      size: 62064
   build_lodes_by_geography@2022-nj-tract:
     cmd: Rscript ./src/aggregate_lodes.R 2022 nj tract
     deps:
-    - path: ./input/lodes/year=2022/state=nj/nj.csv.gz
+    - path: ./input/lodes/year=2022/all-aux.csv.gz
       hash: md5
-      md5: 3e611a7a7a80d6206755f79490cb3db5
-      size: 23231990
+      md5: bb0e4378b94545906e51e7dbddf85fa9
+      size: 54012286
+    - path: ./input/lodes/year=2022/state=nj/nj-main.csv.gz
+      hash: md5
+      md5: a043440787dc8116cbde84d793f34746
+      size: 20204767
     outs:
     - path: ./intermediate/od_lodes/year=2022/geography=tract/state=nj/nj.parquet
       hash: md5
-      md5: 51e688452a7f2128a2e6da123d9c45ae
-      size: 13143575
+      md5: 9c55d3a1f47f48a34b1605699cc210e1
+      size: 11938371
   build_lodes_by_geography@2022-nj-block_group:
     cmd: Rscript ./src/aggregate_lodes.R 2022 nj block_group
     deps:
-    - path: ./input/lodes/year=2022/state=nj/nj.csv.gz
+    - path: ./input/lodes/year=2022/all-aux.csv.gz
       hash: md5
-      md5: 3e611a7a7a80d6206755f79490cb3db5
-      size: 23231990
+      md5: bb0e4378b94545906e51e7dbddf85fa9
+      size: 54012286
+    - path: ./input/lodes/year=2022/state=nj/nj-main.csv.gz
+      hash: md5
+      md5: a043440787dc8116cbde84d793f34746
+      size: 20204767
     outs:
     - path: ./intermediate/od_lodes/year=2022/geography=block_group/state=nj/nj.parquet
       hash: md5
-      md5: eb8f28caeef9752d0e4acdb57ce1f955
-      size: 22241013
+      md5: 9537acee515715ad81de1bde92a0ea76
+      size: 27395573
   build_lodes_by_geography@2022-nj-county:
     cmd: Rscript ./src/aggregate_lodes.R 2022 nj county
     deps:
-    - path: ./input/lodes/year=2022/state=nj/nj.csv.gz
+    - path: ./input/lodes/year=2022/all-aux.csv.gz
       hash: md5
-      md5: 3e611a7a7a80d6206755f79490cb3db5
-      size: 23231990
+      md5: bb0e4378b94545906e51e7dbddf85fa9
+      size: 54012286
+    - path: ./input/lodes/year=2022/state=nj/nj-main.csv.gz
+      hash: md5
+      md5: a043440787dc8116cbde84d793f34746
+      size: 20204767
     outs:
     - path: ./intermediate/od_lodes/year=2022/geography=county/state=nj/nj.parquet
       hash: md5
-      md5: 5f89d46407874dc4603033d05dc79f72
-      size: 137307
+      md5: 7461299db41484d1fd3d3e1abce20551
+      size: 235616
   build_lodes_by_geography@2022-nm-tract:
     cmd: Rscript ./src/aggregate_lodes.R 2022 nm tract
     deps:
-    - path: ./input/lodes/year=2022/state=nm/nm.csv.gz
+    - path: ./input/lodes/year=2022/all-aux.csv.gz
       hash: md5
-      md5: c0109bac519b3faefd5a19234cac1ffd
-      size: 4284893
+      md5: bb0e4378b94545906e51e7dbddf85fa9
+      size: 54012286
+    - path: ./input/lodes/year=2022/state=nm/nm-main.csv.gz
+      hash: md5
+      md5: 6bc9c212781ae47d43daeeb21a5e62a4
+      size: 3934820
     outs:
     - path: ./intermediate/od_lodes/year=2022/geography=tract/state=nm/nm.parquet
       hash: md5
-      md5: 7f154a3e0cee51086fddac6541e13370
-      size: 1072547
+      md5: 39ce39b88e92e5b94105851cb2f8ffa9
+      size: 1310022
   build_lodes_by_geography@2022-nm-block_group:
     cmd: Rscript ./src/aggregate_lodes.R 2022 nm block_group
     deps:
-    - path: ./input/lodes/year=2022/state=nm/nm.csv.gz
+    - path: ./input/lodes/year=2022/all-aux.csv.gz
       hash: md5
-      md5: c0109bac519b3faefd5a19234cac1ffd
-      size: 4284893
+      md5: bb0e4378b94545906e51e7dbddf85fa9
+      size: 54012286
+    - path: ./input/lodes/year=2022/state=nm/nm-main.csv.gz
+      hash: md5
+      md5: 6bc9c212781ae47d43daeeb21a5e62a4
+      size: 3934820
     outs:
     - path: ./intermediate/od_lodes/year=2022/geography=block_group/state=nm/nm.parquet
       hash: md5
-      md5: 943a8c45d6371225527553b7a7043357
-      size: 1946281
+      md5: 8890910626959dcb02723c609830d311
+      size: 2220881
   build_lodes_by_geography@2022-nm-county:
     cmd: Rscript ./src/aggregate_lodes.R 2022 nm county
     deps:
-    - path: ./input/lodes/year=2022/state=nm/nm.csv.gz
+    - path: ./input/lodes/year=2022/all-aux.csv.gz
       hash: md5
-      md5: c0109bac519b3faefd5a19234cac1ffd
-      size: 4284893
+      md5: bb0e4378b94545906e51e7dbddf85fa9
+      size: 54012286
+    - path: ./input/lodes/year=2022/state=nm/nm-main.csv.gz
+      hash: md5
+      md5: 6bc9c212781ae47d43daeeb21a5e62a4
+      size: 3934820
     outs:
     - path: ./intermediate/od_lodes/year=2022/geography=county/state=nm/nm.parquet
       hash: md5
-      md5: 5a909897bb42e52b0e78b5e71855f156
-      size: 79563
+      md5: 0ae9fc960662efe487d0533080132d97
+      size: 122639
   build_lodes_by_geography@2022-ny-tract:
     cmd: Rscript ./src/aggregate_lodes.R 2022 ny tract
     deps:
-    - path: ./input/lodes/year=2022/state=ny/ny.csv.gz
+    - path: ./input/lodes/year=2022/all-aux.csv.gz
       hash: md5
-      md5: ddbed8be17d99e882d12b544ed736e5b
-      size: 49751937
+      md5: bb0e4378b94545906e51e7dbddf85fa9
+      size: 54012286
+    - path: ./input/lodes/year=2022/state=ny/ny-main.csv.gz
+      hash: md5
+      md5: 2cff010b9a2d5565fc9fb81cf93fc018
+      size: 44232691
     outs:
     - path: ./intermediate/od_lodes/year=2022/geography=tract/state=ny/ny.parquet
       hash: md5
-      md5: bfc39f938ef35d5c1ed19f610cefe2ef
-      size: 29899112
+      md5: 131e9d346f586692060342d20febf7c0
+      size: 33020087
   build_lodes_by_geography@2022-ny-block_group:
     cmd: Rscript ./src/aggregate_lodes.R 2022 ny block_group
     deps:
-    - path: ./input/lodes/year=2022/state=ny/ny.csv.gz
+    - path: ./input/lodes/year=2022/all-aux.csv.gz
       hash: md5
-      md5: ddbed8be17d99e882d12b544ed736e5b
-      size: 49751937
+      md5: bb0e4378b94545906e51e7dbddf85fa9
+      size: 54012286
+    - path: ./input/lodes/year=2022/state=ny/ny-main.csv.gz
+      hash: md5
+      md5: 2cff010b9a2d5565fc9fb81cf93fc018
+      size: 44232691
     outs:
     - path: ./intermediate/od_lodes/year=2022/geography=block_group/state=ny/ny.parquet
       hash: md5
-      md5: 1b78dbac345f3b855c5b448a496aae13
-      size: 49171028
+      md5: 2157388c409de110c6ed1699b1f93977
+      size: 52864386
   build_lodes_by_geography@2022-ny-county:
     cmd: Rscript ./src/aggregate_lodes.R 2022 ny county
     deps:
-    - path: ./input/lodes/year=2022/state=ny/ny.csv.gz
+    - path: ./input/lodes/year=2022/all-aux.csv.gz
       hash: md5
-      md5: ddbed8be17d99e882d12b544ed736e5b
-      size: 49751937
+      md5: bb0e4378b94545906e51e7dbddf85fa9
+      size: 54012286
+    - path: ./input/lodes/year=2022/state=ny/ny-main.csv.gz
+      hash: md5
+      md5: 2cff010b9a2d5565fc9fb81cf93fc018
+      size: 44232691
     outs:
     - path: ./intermediate/od_lodes/year=2022/geography=county/state=ny/ny.parquet
       hash: md5
-      md5: b78db7e338e3e54e3c06c6885e271c19
-      size: 260395
+      md5: a8554452b1e3c63ee05609685210c469
+      size: 443808
   build_lodes_by_geography@2022-nc-tract:
     cmd: Rscript ./src/aggregate_lodes.R 2022 nc tract
     deps:
-    - path: ./input/lodes/year=2022/state=nc/nc.csv.gz
+    - path: ./input/lodes/year=2022/all-aux.csv.gz
       hash: md5
-      md5: d5d822655afd9a1d14f4b238d021e87a
-      size: 25620723
+      md5: bb0e4378b94545906e51e7dbddf85fa9
+      size: 54012286
+    - path: ./input/lodes/year=2022/state=nc/nc-main.csv.gz
+      hash: md5
+      md5: ca7f833a9dc1776c1059d9aa8ce13b92
+      size: 23962182
     outs:
     - path: ./intermediate/od_lodes/year=2022/geography=tract/state=nc/nc.parquet
       hash: md5
-      md5: 089a6358f7d085d3131cf6f9356bfaf2
-      size: 8867789
+      md5: 285f9f9520ec6103f756fac9e709a558
+      size: 9815782
   build_lodes_by_geography@2022-nc-block_group:
     cmd: Rscript ./src/aggregate_lodes.R 2022 nc block_group
     deps:
-    - path: ./input/lodes/year=2022/state=nc/nc.csv.gz
+    - path: ./input/lodes/year=2022/all-aux.csv.gz
       hash: md5
-      md5: d5d822655afd9a1d14f4b238d021e87a
-      size: 25620723
+      md5: bb0e4378b94545906e51e7dbddf85fa9
+      size: 54012286
+    - path: ./input/lodes/year=2022/state=nc/nc-main.csv.gz
+      hash: md5
+      md5: ca7f833a9dc1776c1059d9aa8ce13b92
+      size: 23962182
     outs:
     - path: ./intermediate/od_lodes/year=2022/geography=block_group/state=nc/nc.parquet
       hash: md5
-      md5: fd5a3dc90c2c311c84dc45e6a9e123bc
-      size: 19998317
+      md5: a4a2913b3a002d649497b339ffbead9f
+      size: 21622276
   build_lodes_by_geography@2022-nc-county:
     cmd: Rscript ./src/aggregate_lodes.R 2022 nc county
     deps:
-    - path: ./input/lodes/year=2022/state=nc/nc.csv.gz
+    - path: ./input/lodes/year=2022/all-aux.csv.gz
       hash: md5
-      md5: d5d822655afd9a1d14f4b238d021e87a
-      size: 25620723
+      md5: bb0e4378b94545906e51e7dbddf85fa9
+      size: 54012286
+    - path: ./input/lodes/year=2022/state=nc/nc-main.csv.gz
+      hash: md5
+      md5: ca7f833a9dc1776c1059d9aa8ce13b92
+      size: 23962182
     outs:
     - path: ./intermediate/od_lodes/year=2022/geography=county/state=nc/nc.parquet
       hash: md5
-      md5: 5b09e5e304375b6f3bb6d83871269d3d
-      size: 369096
+      md5: e02dbb6278342357e2a7ad945a7011d7
+      size: 590712
   build_lodes_by_geography@2022-nd-tract:
     cmd: Rscript ./src/aggregate_lodes.R 2022 nd tract
     deps:
-    - path: ./input/lodes/year=2022/state=nd/nd.csv.gz
+    - path: ./input/lodes/year=2022/all-aux.csv.gz
       hash: md5
-      md5: 638b72c2f2a3933d448ef713615588a9
-      size: 2119188
+      md5: bb0e4378b94545906e51e7dbddf85fa9
+      size: 54012286
+    - path: ./input/lodes/year=2022/state=nd/nd-main.csv.gz
+      hash: md5
+      md5: d0f395391b66b39a73f35ffdfaacda1d
+      size: 1769131
     outs:
     - path: ./intermediate/od_lodes/year=2022/geography=tract/state=nd/nd.parquet
       hash: md5
-      md5: e1b768b2b8cb73415b7115173532bae9
-      size: 417650
+      md5: 336fb00a153c0f636b32d7375d76a83a
+      size: 480545
   build_lodes_by_geography@2022-nd-block_group:
     cmd: Rscript ./src/aggregate_lodes.R 2022 nd block_group
     deps:
-    - path: ./input/lodes/year=2022/state=nd/nd.csv.gz
+    - path: ./input/lodes/year=2022/all-aux.csv.gz
       hash: md5
-      md5: 638b72c2f2a3933d448ef713615588a9
-      size: 2119188
+      md5: bb0e4378b94545906e51e7dbddf85fa9
+      size: 54012286
+    - path: ./input/lodes/year=2022/state=nd/nd-main.csv.gz
+      hash: md5
+      md5: d0f395391b66b39a73f35ffdfaacda1d
+      size: 1769131
     outs:
     - path: ./intermediate/od_lodes/year=2022/geography=block_group/state=nd/nd.parquet
       hash: md5
-      md5: 3ca38230e02dfda40a4e81b0cfbaabde
-      size: 757886
+      md5: d16d5dbd8c515c7fcae0c1677d88f983
+      size: 845466
   build_lodes_by_geography@2022-nd-county:
     cmd: Rscript ./src/aggregate_lodes.R 2022 nd county
     deps:
-    - path: ./input/lodes/year=2022/state=nd/nd.csv.gz
+    - path: ./input/lodes/year=2022/all-aux.csv.gz
       hash: md5
-      md5: 638b72c2f2a3933d448ef713615588a9
-      size: 2119188
+      md5: bb0e4378b94545906e51e7dbddf85fa9
+      size: 54012286
+    - path: ./input/lodes/year=2022/state=nd/nd-main.csv.gz
+      hash: md5
+      md5: d0f395391b66b39a73f35ffdfaacda1d
+      size: 1769131
     outs:
     - path: ./intermediate/od_lodes/year=2022/geography=county/state=nd/nd.parquet
       hash: md5
-      md5: 3393f6aa250a74efb266f96c07160c13
-      size: 76933
+      md5: 5686ee19090236d1f4f5c64168d69d39
+      size: 101927
   build_lodes_by_geography@2022-oh-tract:
     cmd: Rscript ./src/aggregate_lodes.R 2022 oh tract
     deps:
-    - path: ./input/lodes/year=2022/state=oh/oh.csv.gz
+    - path: ./input/lodes/year=2022/all-aux.csv.gz
       hash: md5
-      md5: 224ae2dd515a056bbc9fd384d01d6399
-      size: 29305222
+      md5: bb0e4378b94545906e51e7dbddf85fa9
+      size: 54012286
+    - path: ./input/lodes/year=2022/state=oh/oh-main.csv.gz
+      hash: md5
+      md5: 9680db8452c39f66c893e3b515345990
+      size: 27705324
     outs:
     - path: ./intermediate/od_lodes/year=2022/geography=tract/state=oh/oh.parquet
       hash: md5
-      md5: e385d6546da5c1488f59b3d562c3fec1
-      size: 13514226
+      md5: b353b73957c95aa1a55857fe9009e73c
+      size: 11459638
   build_lodes_by_geography@2022-oh-block_group:
     cmd: Rscript ./src/aggregate_lodes.R 2022 oh block_group
     deps:
-    - path: ./input/lodes/year=2022/state=oh/oh.csv.gz
+    - path: ./input/lodes/year=2022/all-aux.csv.gz
       hash: md5
-      md5: 224ae2dd515a056bbc9fd384d01d6399
-      size: 29305222
+      md5: bb0e4378b94545906e51e7dbddf85fa9
+      size: 54012286
+    - path: ./input/lodes/year=2022/state=oh/oh-main.csv.gz
+      hash: md5
+      md5: 9680db8452c39f66c893e3b515345990
+      size: 27705324
     outs:
     - path: ./intermediate/od_lodes/year=2022/geography=block_group/state=oh/oh.parquet
       hash: md5
-      md5: 24647d1f3f012bffa5a88eb15ff82a99
-      size: 23868539
+      md5: ecf2b8bd0899cd422f82a990d5a34c24
+      size: 27426192
   build_lodes_by_geography@2022-oh-county:
     cmd: Rscript ./src/aggregate_lodes.R 2022 oh county
     deps:
-    - path: ./input/lodes/year=2022/state=oh/oh.csv.gz
+    - path: ./input/lodes/year=2022/all-aux.csv.gz
       hash: md5
-      md5: 224ae2dd515a056bbc9fd384d01d6399
-      size: 29305222
+      md5: bb0e4378b94545906e51e7dbddf85fa9
+      size: 54012286
+    - path: ./input/lodes/year=2022/state=oh/oh-main.csv.gz
+      hash: md5
+      md5: 9680db8452c39f66c893e3b515345990
+      size: 27705324
     outs:
     - path: ./intermediate/od_lodes/year=2022/geography=county/state=oh/oh.parquet
       hash: md5
-      md5: ed358ad6891e8813f892dbb5ac38dd1b
-      size: 340410
+      md5: 29cbaef540674c23725fb7e33ff093e0
+      size: 551668
   build_lodes_by_geography@2022-ok-tract:
     cmd: Rscript ./src/aggregate_lodes.R 2022 ok tract
     deps:
-    - path: ./input/lodes/year=2022/state=ok/ok.csv.gz
+    - path: ./input/lodes/year=2022/all-aux.csv.gz
       hash: md5
-      md5: ab3ab3c68ba9e79a0937c0553600caf3
-      size: 8903642
+      md5: bb0e4378b94545906e51e7dbddf85fa9
+      size: 54012286
+    - path: ./input/lodes/year=2022/state=ok/ok-main.csv.gz
+      hash: md5
+      md5: 0448ed076317bf185d827e5bfc3f3bad
+      size: 8474542
     outs:
     - path: ./intermediate/od_lodes/year=2022/geography=tract/state=ok/ok.parquet
       hash: md5
-      md5: 609bb17a748a6066f68c8e772fad19c0
-      size: 2777945
+      md5: 53dbc2f2b378b6b2a07296a3e90bebd2
+      size: 3148911
   build_lodes_by_geography@2022-ok-block_group:
     cmd: Rscript ./src/aggregate_lodes.R 2022 ok block_group
     deps:
-    - path: ./input/lodes/year=2022/state=ok/ok.csv.gz
+    - path: ./input/lodes/year=2022/all-aux.csv.gz
       hash: md5
-      md5: ab3ab3c68ba9e79a0937c0553600caf3
-      size: 8903642
+      md5: bb0e4378b94545906e51e7dbddf85fa9
+      size: 54012286
+    - path: ./input/lodes/year=2022/state=ok/ok-main.csv.gz
+      hash: md5
+      md5: 0448ed076317bf185d827e5bfc3f3bad
+      size: 8474542
     outs:
     - path: ./intermediate/od_lodes/year=2022/geography=block_group/state=ok/ok.parquet
       hash: md5
-      md5: 62d3f8e2fa51c8ccda7607cdb9c45f12
-      size: 6761421
+      md5: 8537c91cee6ba51d36723d6a3de1e14e
+      size: 5106308
   build_lodes_by_geography@2022-ok-county:
     cmd: Rscript ./src/aggregate_lodes.R 2022 ok county
     deps:
-    - path: ./input/lodes/year=2022/state=ok/ok.csv.gz
+    - path: ./input/lodes/year=2022/all-aux.csv.gz
       hash: md5
-      md5: ab3ab3c68ba9e79a0937c0553600caf3
-      size: 8903642
+      md5: bb0e4378b94545906e51e7dbddf85fa9
+      size: 54012286
+    - path: ./input/lodes/year=2022/state=ok/ok-main.csv.gz
+      hash: md5
+      md5: 0448ed076317bf185d827e5bfc3f3bad
+      size: 8474542
     outs:
     - path: ./intermediate/od_lodes/year=2022/geography=county/state=ok/ok.parquet
       hash: md5
-      md5: 630e21692d3ac0cf613284924b0dbef3
-      size: 176392
+      md5: a4f1ac238ca1dcf0f0476c8a94dd4d74
+      size: 269465
   build_lodes_by_geography@2022-or-tract:
     cmd: Rscript ./src/aggregate_lodes.R 2022 or tract
     deps:
-    - path: ./input/lodes/year=2022/state=or/or.csv.gz
+    - path: ./input/lodes/year=2022/all-aux.csv.gz
       hash: md5
-      md5: 18de01ed79d3d2a689fa59bd75f27a5b
-      size: 10612522
+      md5: bb0e4378b94545906e51e7dbddf85fa9
+      size: 54012286
+    - path: ./input/lodes/year=2022/state=or/or-main.csv.gz
+      hash: md5
+      md5: 5ce51ace8f126c4800a4bb53162e9dcf
+      size: 9683293
     outs:
     - path: ./intermediate/od_lodes/year=2022/geography=tract/state=or/or.parquet
       hash: md5
-      md5: 751684505550d8e04928d004d8b48be7
-      size: 2944339
+      md5: 9e91efd9ec6da809e77a4d6b062ee0cb
+      size: 3327982
   build_lodes_by_geography@2022-or-block_group:
     cmd: Rscript ./src/aggregate_lodes.R 2022 or block_group
     deps:
-    - path: ./input/lodes/year=2022/state=or/or.csv.gz
+    - path: ./input/lodes/year=2022/all-aux.csv.gz
       hash: md5
-      md5: 18de01ed79d3d2a689fa59bd75f27a5b
-      size: 10612522
+      md5: bb0e4378b94545906e51e7dbddf85fa9
+      size: 54012286
+    - path: ./input/lodes/year=2022/state=or/or-main.csv.gz
+      hash: md5
+      md5: 5ce51ace8f126c4800a4bb53162e9dcf
+      size: 9683293
     outs:
     - path: ./intermediate/od_lodes/year=2022/geography=block_group/state=or/or.parquet
       hash: md5
-      md5: a171a43f7ad116aacf99381c7690d01b
-      size: 5175208
+      md5: d5a6ed781bac1572e45cfe52a11ec397
+      size: 5590681
   build_lodes_by_geography@2022-or-county:
     cmd: Rscript ./src/aggregate_lodes.R 2022 or county
     deps:
-    - path: ./input/lodes/year=2022/state=or/or.csv.gz
+    - path: ./input/lodes/year=2022/all-aux.csv.gz
       hash: md5
-      md5: 18de01ed79d3d2a689fa59bd75f27a5b
-      size: 10612522
+      md5: bb0e4378b94545906e51e7dbddf85fa9
+      size: 54012286
+    - path: ./input/lodes/year=2022/state=or/or-main.csv.gz
+      hash: md5
+      md5: 5ce51ace8f126c4800a4bb53162e9dcf
+      size: 9683293
     outs:
     - path: ./intermediate/od_lodes/year=2022/geography=county/state=or/or.parquet
       hash: md5
-      md5: 6c2a91e894fe0247f8f0929a0773c698
-      size: 106621
+      md5: 60b68bfd620ab1b495b21d680f3e5c00
+      size: 168818
   build_lodes_by_geography@2022-pa-tract:
     cmd: Rscript ./src/aggregate_lodes.R 2022 pa tract
     deps:
-    - path: ./input/lodes/year=2022/state=pa/pa.csv.gz
+    - path: ./input/lodes/year=2022/all-aux.csv.gz
       hash: md5
-      md5: 7ed97f3517c43808fb8f22f8c1087888
-      size: 32799462
+      md5: bb0e4378b94545906e51e7dbddf85fa9
+      size: 54012286
+    - path: ./input/lodes/year=2022/state=pa/pa-main.csv.gz
+      hash: md5
+      md5: dce3092b2928cad664e3ac967bf38771
+      size: 30172033
     outs:
     - path: ./intermediate/od_lodes/year=2022/geography=tract/state=pa/pa.parquet
       hash: md5
-      md5: c5041f8057be317220ee99b024f87525
-      size: 15709812
+      md5: dcda6905fc6617b95e81ca04612b6961
+      size: 12970778
   build_lodes_by_geography@2022-pa-block_group:
     cmd: Rscript ./src/aggregate_lodes.R 2022 pa block_group
     deps:
-    - path: ./input/lodes/year=2022/state=pa/pa.csv.gz
+    - path: ./input/lodes/year=2022/all-aux.csv.gz
       hash: md5
-      md5: 7ed97f3517c43808fb8f22f8c1087888
-      size: 32799462
+      md5: bb0e4378b94545906e51e7dbddf85fa9
+      size: 54012286
+    - path: ./input/lodes/year=2022/state=pa/pa-main.csv.gz
+      hash: md5
+      md5: dce3092b2928cad664e3ac967bf38771
+      size: 30172033
     outs:
     - path: ./intermediate/od_lodes/year=2022/geography=block_group/state=pa/pa.parquet
       hash: md5
-      md5: 4082ee59b44c62964f5b28d88e14a43d
-      size: 27650829
+      md5: 0bd50010462c169b73d3925bd6255c8f
+      size: 33526125
   build_lodes_by_geography@2022-pa-county:
     cmd: Rscript ./src/aggregate_lodes.R 2022 pa county
     deps:
-    - path: ./input/lodes/year=2022/state=pa/pa.csv.gz
+    - path: ./input/lodes/year=2022/all-aux.csv.gz
       hash: md5
-      md5: 7ed97f3517c43808fb8f22f8c1087888
-      size: 32799462
+      md5: bb0e4378b94545906e51e7dbddf85fa9
+      size: 54012286
+    - path: ./input/lodes/year=2022/state=pa/pa-main.csv.gz
+      hash: md5
+      md5: dce3092b2928cad664e3ac967bf38771
+      size: 30172033
     outs:
     - path: ./intermediate/od_lodes/year=2022/geography=county/state=pa/pa.parquet
       hash: md5
-      md5: a0ab6001e4f340b0274e4fa0dca73abb
-      size: 265391
+      md5: fce9ed844440f1f77bd81613a89281a9
+      size: 454949
   build_lodes_by_geography@2022-ri-tract:
     cmd: Rscript ./src/aggregate_lodes.R 2022 ri tract
     deps:
-    - path: ./input/lodes/year=2022/state=ri/ri.csv.gz
+    - path: ./input/lodes/year=2022/all-aux.csv.gz
       hash: md5
-      md5: dbbc1b0926607fc25a9dc874c5ddafc8
-      size: 2615842
+      md5: bb0e4378b94545906e51e7dbddf85fa9
+      size: 54012286
+    - path: ./input/lodes/year=2022/state=ri/ri-main.csv.gz
+      hash: md5
+      md5: 2c8012873a8df339c97a890c0d4123fc
+      size: 2136087
     outs:
     - path: ./intermediate/od_lodes/year=2022/geography=tract/state=ri/ri.parquet
       hash: md5
-      md5: f59bf25e56177ff404f388834fa13064
-      size: 625685
+      md5: f3160a5c29d188b9f7276774b84a6ed8
+      size: 1011081
   build_lodes_by_geography@2022-ri-block_group:
     cmd: Rscript ./src/aggregate_lodes.R 2022 ri block_group
     deps:
-    - path: ./input/lodes/year=2022/state=ri/ri.csv.gz
+    - path: ./input/lodes/year=2022/all-aux.csv.gz
       hash: md5
-      md5: dbbc1b0926607fc25a9dc874c5ddafc8
-      size: 2615842
+      md5: bb0e4378b94545906e51e7dbddf85fa9
+      size: 54012286
+    - path: ./input/lodes/year=2022/state=ri/ri-main.csv.gz
+      hash: md5
+      md5: 2c8012873a8df339c97a890c0d4123fc
+      size: 2136087
     outs:
     - path: ./intermediate/od_lodes/year=2022/geography=block_group/state=ri/ri.parquet
       hash: md5
-      md5: 8157a161f0e1869a7336ceb4601f80e5
-      size: 1331568
+      md5: f88cd294422e5b012bb1fbdb7e5ae9fd
+      size: 1840265
   build_lodes_by_geography@2022-ri-county:
     cmd: Rscript ./src/aggregate_lodes.R 2022 ri county
     deps:
-    - path: ./input/lodes/year=2022/state=ri/ri.csv.gz
+    - path: ./input/lodes/year=2022/all-aux.csv.gz
       hash: md5
-      md5: dbbc1b0926607fc25a9dc874c5ddafc8
-      size: 2615842
+      md5: bb0e4378b94545906e51e7dbddf85fa9
+      size: 54012286
+    - path: ./input/lodes/year=2022/state=ri/ri-main.csv.gz
+      hash: md5
+      md5: 2c8012873a8df339c97a890c0d4123fc
+      size: 2136087
     outs:
     - path: ./intermediate/od_lodes/year=2022/geography=county/state=ri/ri.parquet
       hash: md5
-      md5: 6bf838bccf2135f770bca7496d778e80
-      size: 22374
+      md5: 2c36e278a9238e7a11d015cef68116b2
+      size: 40608
   build_lodes_by_geography@2022-sc-tract:
     cmd: Rscript ./src/aggregate_lodes.R 2022 sc tract
     deps:
-    - path: ./input/lodes/year=2022/state=sc/sc.csv.gz
+    - path: ./input/lodes/year=2022/all-aux.csv.gz
       hash: md5
-      md5: ad6f6022d310d33ad80e2c054029ca30
-      size: 11699902
+      md5: bb0e4378b94545906e51e7dbddf85fa9
+      size: 54012286
+    - path: ./input/lodes/year=2022/state=sc/sc-main.csv.gz
+      hash: md5
+      md5: de23cad4d2dbc7203eff78d9d51cd120
+      size: 10780790
     outs:
     - path: ./intermediate/od_lodes/year=2022/geography=tract/state=sc/sc.parquet
       hash: md5
-      md5: 042d2454a722473cc0946edfd212a1c0
-      size: 3599736
+      md5: 9510831b6f1d5ae120d292016e60ee29
+      size: 4379167
   build_lodes_by_geography@2022-sc-block_group:
     cmd: Rscript ./src/aggregate_lodes.R 2022 sc block_group
     deps:
-    - path: ./input/lodes/year=2022/state=sc/sc.csv.gz
+    - path: ./input/lodes/year=2022/all-aux.csv.gz
       hash: md5
-      md5: ad6f6022d310d33ad80e2c054029ca30
-      size: 11699902
+      md5: bb0e4378b94545906e51e7dbddf85fa9
+      size: 54012286
+    - path: ./input/lodes/year=2022/state=sc/sc-main.csv.gz
+      hash: md5
+      md5: de23cad4d2dbc7203eff78d9d51cd120
+      size: 10780790
     outs:
     - path: ./intermediate/od_lodes/year=2022/geography=block_group/state=sc/sc.parquet
       hash: md5
-      md5: 9b44b19798717e196cbb5cde9b42c725
-      size: 5703909
+      md5: b5e03a4d89dbda0113dcd096ee377ac7
+      size: 7336789
   build_lodes_by_geography@2022-sc-county:
     cmd: Rscript ./src/aggregate_lodes.R 2022 sc county
     deps:
-    - path: ./input/lodes/year=2022/state=sc/sc.csv.gz
+    - path: ./input/lodes/year=2022/all-aux.csv.gz
       hash: md5
-      md5: ad6f6022d310d33ad80e2c054029ca30
-      size: 11699902
+      md5: bb0e4378b94545906e51e7dbddf85fa9
+      size: 54012286
+    - path: ./input/lodes/year=2022/state=sc/sc-main.csv.gz
+      hash: md5
+      md5: de23cad4d2dbc7203eff78d9d51cd120
+      size: 10780790
     outs:
     - path: ./intermediate/od_lodes/year=2022/geography=county/state=sc/sc.parquet
       hash: md5
-      md5: 65364692efcc09e9dedcf056d660ff7a
-      size: 164125
+      md5: fca39dd682779c54dc3213bed65bd013
+      size: 291427
   build_lodes_by_geography@2022-sd-tract:
     cmd: Rscript ./src/aggregate_lodes.R 2022 sd tract
     deps:
-    - path: ./input/lodes/year=2022/state=sd/sd.csv.gz
+    - path: ./input/lodes/year=2022/all-aux.csv.gz
       hash: md5
-      md5: 8a505a7e93f26bea3eb908c39e87ddd4
-      size: 2240714
+      md5: bb0e4378b94545906e51e7dbddf85fa9
+      size: 54012286
+    - path: ./input/lodes/year=2022/state=sd/sd-main.csv.gz
+      hash: md5
+      md5: f501b2268ae54e84fc6b6bdd1ed9b700
+      size: 2008243
     outs:
     - path: ./intermediate/od_lodes/year=2022/geography=tract/state=sd/sd.parquet
       hash: md5
-      md5: dfac708bff718ab8fc7a3eee855bf57e
-      size: 401652
+      md5: 9dd87068903fa78d683434b1bbbc068b
+      size: 510264
   build_lodes_by_geography@2022-sd-block_group:
     cmd: Rscript ./src/aggregate_lodes.R 2022 sd block_group
     deps:
-    - path: ./input/lodes/year=2022/state=sd/sd.csv.gz
+    - path: ./input/lodes/year=2022/all-aux.csv.gz
       hash: md5
-      md5: 8a505a7e93f26bea3eb908c39e87ddd4
-      size: 2240714
+      md5: bb0e4378b94545906e51e7dbddf85fa9
+      size: 54012286
+    - path: ./input/lodes/year=2022/state=sd/sd-main.csv.gz
+      hash: md5
+      md5: f501b2268ae54e84fc6b6bdd1ed9b700
+      size: 2008243
     outs:
     - path: ./intermediate/od_lodes/year=2022/geography=block_group/state=sd/sd.parquet
       hash: md5
-      md5: abe08805cbe5063fdd0b81044b1652a9
-      size: 777383
+      md5: 2d5fab9e1ce325a99fc50a0debe65c35
+      size: 901918
   build_lodes_by_geography@2022-sd-county:
     cmd: Rscript ./src/aggregate_lodes.R 2022 sd county
     deps:
-    - path: ./input/lodes/year=2022/state=sd/sd.csv.gz
+    - path: ./input/lodes/year=2022/all-aux.csv.gz
       hash: md5
-      md5: 8a505a7e93f26bea3eb908c39e87ddd4
-      size: 2240714
+      md5: bb0e4378b94545906e51e7dbddf85fa9
+      size: 54012286
+    - path: ./input/lodes/year=2022/state=sd/sd-main.csv.gz
+      hash: md5
+      md5: f501b2268ae54e84fc6b6bdd1ed9b700
+      size: 2008243
     outs:
     - path: ./intermediate/od_lodes/year=2022/geography=county/state=sd/sd.parquet
       hash: md5
-      md5: 380400e312e15372ab1b2fe4e531fa47
-      size: 96169
+      md5: 5ade56ecd2b312ed11cbee3c6b6d3b56
+      size: 135484
   build_lodes_by_geography@2022-tn-tract:
     cmd: Rscript ./src/aggregate_lodes.R 2022 tn tract
     deps:
-    - path: ./input/lodes/year=2022/state=tn/tn.csv.gz
+    - path: ./input/lodes/year=2022/all-aux.csv.gz
       hash: md5
-      md5: 3130ee86114dd22767132daed8484bcb
-      size: 16485437
+      md5: bb0e4378b94545906e51e7dbddf85fa9
+      size: 54012286
+    - path: ./input/lodes/year=2022/state=tn/tn-main.csv.gz
+      hash: md5
+      md5: 729750ac25349d997d3ac238de11c6f0
+      size: 14859759
     outs:
     - path: ./intermediate/od_lodes/year=2022/geography=tract/state=tn/tn.parquet
       hash: md5
-      md5: 7d129b6b01032a45312df4a382587140
-      size: 4714249
+      md5: 48d414bb0a9a529a51a3353b6eab971b
+      size: 5403549
   build_lodes_by_geography@2022-tn-block_group:
     cmd: Rscript ./src/aggregate_lodes.R 2022 tn block_group
     deps:
-    - path: ./input/lodes/year=2022/state=tn/tn.csv.gz
+    - path: ./input/lodes/year=2022/all-aux.csv.gz
       hash: md5
-      md5: 3130ee86114dd22767132daed8484bcb
-      size: 16485437
+      md5: bb0e4378b94545906e51e7dbddf85fa9
+      size: 54012286
+    - path: ./input/lodes/year=2022/state=tn/tn-main.csv.gz
+      hash: md5
+      md5: 729750ac25349d997d3ac238de11c6f0
+      size: 14859759
     outs:
     - path: ./intermediate/od_lodes/year=2022/geography=block_group/state=tn/tn.parquet
       hash: md5
-      md5: f5193d5642f00f1bafa0c6a4c909d5be
-      size: 7799332
+      md5: 0c4b7c55e6aae8c117106abc2de81c36
+      size: 8597274
   build_lodes_by_geography@2022-tn-county:
     cmd: Rscript ./src/aggregate_lodes.R 2022 tn county
     deps:
-    - path: ./input/lodes/year=2022/state=tn/tn.csv.gz
+    - path: ./input/lodes/year=2022/all-aux.csv.gz
       hash: md5
-      md5: 3130ee86114dd22767132daed8484bcb
-      size: 16485437
+      md5: bb0e4378b94545906e51e7dbddf85fa9
+      size: 54012286
+    - path: ./input/lodes/year=2022/state=tn/tn-main.csv.gz
+      hash: md5
+      md5: 729750ac25349d997d3ac238de11c6f0
+      size: 14859759
     outs:
     - path: ./intermediate/od_lodes/year=2022/geography=county/state=tn/tn.parquet
       hash: md5
-      md5: 03aadb04130ec2b045b0e4c252e5578f
-      size: 326475
+      md5: 7d856018afdb06e232932025f1351a58
+      size: 506196
   build_lodes_by_geography@2022-tx-tract:
     cmd: Rscript ./src/aggregate_lodes.R 2022 tx tract
     deps:
-    - path: ./input/lodes/year=2022/state=tx/tx.csv.gz
+    - path: ./input/lodes/year=2022/all-aux.csv.gz
       hash: md5
-      md5: fbb6a5c5b75756f80732ed7efe0a0966
-      size: 72041100
+      md5: bb0e4378b94545906e51e7dbddf85fa9
+      size: 54012286
+    - path: ./input/lodes/year=2022/state=tx/tx-main.csv.gz
+      hash: md5
+      md5: 2752ee5c41fda8b1b346899c6f5d10bb
+      size: 70318637
     outs:
     - path: ./intermediate/od_lodes/year=2022/geography=tract/state=tx/tx.parquet
       hash: md5
-      md5: 938d3730a6a0694f89e33b7c7003f851
-      size: 38813524
+      md5: 4f8cd58e34e5239c07334f9bcca13404
+      size: 40454810
   build_lodes_by_geography@2022-tx-block_group:
     cmd: Rscript ./src/aggregate_lodes.R 2022 tx block_group
     deps:
-    - path: ./input/lodes/year=2022/state=tx/tx.csv.gz
+    - path: ./input/lodes/year=2022/all-aux.csv.gz
       hash: md5
-      md5: fbb6a5c5b75756f80732ed7efe0a0966
-      size: 72041100
+      md5: bb0e4378b94545906e51e7dbddf85fa9
+      size: 54012286
+    - path: ./input/lodes/year=2022/state=tx/tx-main.csv.gz
+      hash: md5
+      md5: 2752ee5c41fda8b1b346899c6f5d10bb
+      size: 70318637
     outs:
     - path: ./intermediate/od_lodes/year=2022/geography=block_group/state=tx/tx.parquet
       hash: md5
-      md5: 4a08fa6d9326aa952c560b02c4f338ef
-      size: 61126917
+      md5: 28e389e84221b4d8d5992583b4b49388
+      size: 63160396
   build_lodes_by_geography@2022-tx-county:
     cmd: Rscript ./src/aggregate_lodes.R 2022 tx county
     deps:
-    - path: ./input/lodes/year=2022/state=tx/tx.csv.gz
+    - path: ./input/lodes/year=2022/all-aux.csv.gz
       hash: md5
-      md5: fbb6a5c5b75756f80732ed7efe0a0966
-      size: 72041100
+      md5: bb0e4378b94545906e51e7dbddf85fa9
+      size: 54012286
+    - path: ./input/lodes/year=2022/state=tx/tx-main.csv.gz
+      hash: md5
+      md5: 2752ee5c41fda8b1b346899c6f5d10bb
+      size: 70318637
     outs:
     - path: ./intermediate/od_lodes/year=2022/geography=county/state=tx/tx.parquet
       hash: md5
-      md5: 7026b507c675e86e3b468044bfc1d694
-      size: 741071
+      md5: 07a5adad67c66e9c317505bfb4d78d50
+      size: 1034726
   build_lodes_by_geography@2022-ut-tract:
     cmd: Rscript ./src/aggregate_lodes.R 2022 ut tract
     deps:
-    - path: ./input/lodes/year=2022/state=ut/ut.csv.gz
+    - path: ./input/lodes/year=2022/all-aux.csv.gz
       hash: md5
-      md5: e69c59dbc84d1542cb441b7934e25951
-      size: 8621702
+      md5: bb0e4378b94545906e51e7dbddf85fa9
+      size: 54012286
+    - path: ./input/lodes/year=2022/state=ut/ut-main.csv.gz
+      hash: md5
+      md5: 51adf7f42c417b5302cceb307d247767
+      size: 8214897
     outs:
     - path: ./intermediate/od_lodes/year=2022/geography=tract/state=ut/ut.parquet
       hash: md5
-      md5: 76c4a2d8b6b950de8f97fb540a83fe53
-      size: 2172591
+      md5: 0b4a223f638a4f5c9c7e3b0ac2521da2
+      size: 2375813
   build_lodes_by_geography@2022-ut-block_group:
     cmd: Rscript ./src/aggregate_lodes.R 2022 ut block_group
     deps:
-    - path: ./input/lodes/year=2022/state=ut/ut.csv.gz
+    - path: ./input/lodes/year=2022/all-aux.csv.gz
       hash: md5
-      md5: e69c59dbc84d1542cb441b7934e25951
-      size: 8621702
+      md5: bb0e4378b94545906e51e7dbddf85fa9
+      size: 54012286
+    - path: ./input/lodes/year=2022/state=ut/ut-main.csv.gz
+      hash: md5
+      md5: 51adf7f42c417b5302cceb307d247767
+      size: 8214897
     outs:
     - path: ./intermediate/od_lodes/year=2022/geography=block_group/state=ut/ut.parquet
       hash: md5
-      md5: ed251243c7d1fdb8b8fd593c971166f0
-      size: 4077869
+      md5: 12cd2ff146d888d4d9f640e85b345810
+      size: 4299260
   build_lodes_by_geography@2022-ut-county:
     cmd: Rscript ./src/aggregate_lodes.R 2022 ut county
     deps:
-    - path: ./input/lodes/year=2022/state=ut/ut.csv.gz
+    - path: ./input/lodes/year=2022/all-aux.csv.gz
       hash: md5
-      md5: e69c59dbc84d1542cb441b7934e25951
-      size: 8621702
+      md5: bb0e4378b94545906e51e7dbddf85fa9
+      size: 54012286
+    - path: ./input/lodes/year=2022/state=ut/ut-main.csv.gz
+      hash: md5
+      md5: 51adf7f42c417b5302cceb307d247767
+      size: 8214897
     outs:
     - path: ./intermediate/od_lodes/year=2022/geography=county/state=ut/ut.parquet
       hash: md5
-      md5: 5b97bf721f05aa99b75ee71e5b924cfc
-      size: 81282
+      md5: f65d44fa26a8011e1795bfd9e6ed8758
+      size: 124028
   build_lodes_by_geography@2022-vt-tract:
     cmd: Rscript ./src/aggregate_lodes.R 2022 vt tract
     deps:
-    - path: ./input/lodes/year=2022/state=vt/vt.csv.gz
+    - path: ./input/lodes/year=2022/all-aux.csv.gz
       hash: md5
-      md5: a79f8f013e514c57aa1feee98a0fb7bd
-      size: 1508643
+      md5: bb0e4378b94545906e51e7dbddf85fa9
+      size: 54012286
+    - path: ./input/lodes/year=2022/state=vt/vt-main.csv.gz
+      hash: md5
+      md5: adc77806a6411b6b54d9f3c50680312c
+      size: 1276943
     outs:
     - path: ./intermediate/od_lodes/year=2022/geography=tract/state=vt/vt.parquet
       hash: md5
-      md5: 5e8269e1cca27ff0d4700e8a84d7aba3
-      size: 334142
+      md5: a0c618553ba478b836c11b61fab60840
+      size: 458890
   build_lodes_by_geography@2022-vt-block_group:
     cmd: Rscript ./src/aggregate_lodes.R 2022 vt block_group
     deps:
-    - path: ./input/lodes/year=2022/state=vt/vt.csv.gz
+    - path: ./input/lodes/year=2022/all-aux.csv.gz
       hash: md5
-      md5: a79f8f013e514c57aa1feee98a0fb7bd
-      size: 1508643
+      md5: bb0e4378b94545906e51e7dbddf85fa9
+      size: 54012286
+    - path: ./input/lodes/year=2022/state=vt/vt-main.csv.gz
+      hash: md5
+      md5: adc77806a6411b6b54d9f3c50680312c
+      size: 1276943
     outs:
     - path: ./intermediate/od_lodes/year=2022/geography=block_group/state=vt/vt.parquet
       hash: md5
-      md5: c7c119f01b776267f4f4584b8fd46f52
-      size: 613966
+      md5: fefe51c1518dce57b9bd7dd9ed9d794c
+      size: 774961
   build_lodes_by_geography@2022-vt-county:
     cmd: Rscript ./src/aggregate_lodes.R 2022 vt county
     deps:
-    - path: ./input/lodes/year=2022/state=vt/vt.csv.gz
+    - path: ./input/lodes/year=2022/all-aux.csv.gz
       hash: md5
-      md5: a79f8f013e514c57aa1feee98a0fb7bd
-      size: 1508643
+      md5: bb0e4378b94545906e51e7dbddf85fa9
+      size: 54012286
+    - path: ./input/lodes/year=2022/state=vt/vt-main.csv.gz
+      hash: md5
+      md5: adc77806a6411b6b54d9f3c50680312c
+      size: 1276943
     outs:
     - path: ./intermediate/od_lodes/year=2022/geography=county/state=vt/vt.parquet
       hash: md5
-      md5: 1f0804bdadcb2b9f0cced6e6bd8216a7
-      size: 32351
+      md5: fa249a879d3d202578b53f2d5bdacd55
+      size: 51838
   build_lodes_by_geography@2022-va-tract:
     cmd: Rscript ./src/aggregate_lodes.R 2022 va tract
     deps:
-    - path: ./input/lodes/year=2022/state=va/va.csv.gz
+    - path: ./input/lodes/year=2022/all-aux.csv.gz
       hash: md5
-      md5: c1ba90a7b5d095bb5c4b123930b21286
-      size: 20220856
+      md5: bb0e4378b94545906e51e7dbddf85fa9
+      size: 54012286
+    - path: ./input/lodes/year=2022/state=va/va-main.csv.gz
+      hash: md5
+      md5: 12bb6239abffcd95a6d4c923dcc75fe7
+      size: 17853371
     outs:
     - path: ./intermediate/od_lodes/year=2022/geography=tract/state=va/va.parquet
       hash: md5
-      md5: 7d2a1222473498abb80580552c9d3b59
-      size: 9894965
+      md5: 031d5ac554aa7767d13f475c2a99a86d
+      size: 8279924
   build_lodes_by_geography@2022-va-block_group:
     cmd: Rscript ./src/aggregate_lodes.R 2022 va block_group
     deps:
-    - path: ./input/lodes/year=2022/state=va/va.csv.gz
+    - path: ./input/lodes/year=2022/all-aux.csv.gz
       hash: md5
-      md5: c1ba90a7b5d095bb5c4b123930b21286
-      size: 20220856
+      md5: bb0e4378b94545906e51e7dbddf85fa9
+      size: 54012286
+    - path: ./input/lodes/year=2022/state=va/va-main.csv.gz
+      hash: md5
+      md5: 12bb6239abffcd95a6d4c923dcc75fe7
+      size: 17853371
     outs:
     - path: ./intermediate/od_lodes/year=2022/geography=block_group/state=va/va.parquet
       hash: md5
-      md5: b9ad4387e11c42d8e3e00156160a5611
-      size: 16492401
+      md5: fa56687a5b3ed174d2ae4a847648e7fa
+      size: 18925915
   build_lodes_by_geography@2022-va-county:
     cmd: Rscript ./src/aggregate_lodes.R 2022 va county
     deps:
-    - path: ./input/lodes/year=2022/state=va/va.csv.gz
+    - path: ./input/lodes/year=2022/all-aux.csv.gz
       hash: md5
-      md5: c1ba90a7b5d095bb5c4b123930b21286
-      size: 20220856
+      md5: bb0e4378b94545906e51e7dbddf85fa9
+      size: 54012286
+    - path: ./input/lodes/year=2022/state=va/va-main.csv.gz
+      hash: md5
+      md5: 12bb6239abffcd95a6d4c923dcc75fe7
+      size: 17853371
     outs:
     - path: ./intermediate/od_lodes/year=2022/geography=county/state=va/va.parquet
       hash: md5
-      md5: ce4c5bc24a5cbcdd689958a931684aa2
-      size: 435890
+      md5: d57ea9334158d5028c158d9fe8967a69
+      size: 643366
   build_lodes_by_geography@2022-wa-tract:
     cmd: Rscript ./src/aggregate_lodes.R 2022 wa tract
     deps:
-    - path: ./input/lodes/year=2022/state=wa/wa.csv.gz
+    - path: ./input/lodes/year=2022/all-aux.csv.gz
       hash: md5
-      md5: 29af658704f8f79605943aca366962db
-      size: 17836838
+      md5: bb0e4378b94545906e51e7dbddf85fa9
+      size: 54012286
+    - path: ./input/lodes/year=2022/state=wa/wa-main.csv.gz
+      hash: md5
+      md5: 82b4d2de9a5fc92e06806bae26a82935
+      size: 16978709
     outs:
     - path: ./intermediate/od_lodes/year=2022/geography=tract/state=wa/wa.parquet
       hash: md5
-      md5: b99306fccb0a5bad1183ca77343c4199
-      size: 5646314
+      md5: d3a0f42a0236245b2c4a218a91bda305
+      size: 6185912
   build_lodes_by_geography@2022-wa-block_group:
     cmd: Rscript ./src/aggregate_lodes.R 2022 wa block_group
     deps:
-    - path: ./input/lodes/year=2022/state=wa/wa.csv.gz
+    - path: ./input/lodes/year=2022/all-aux.csv.gz
       hash: md5
-      md5: 29af658704f8f79605943aca366962db
-      size: 17836838
+      md5: bb0e4378b94545906e51e7dbddf85fa9
+      size: 54012286
+    - path: ./input/lodes/year=2022/state=wa/wa-main.csv.gz
+      hash: md5
+      md5: 82b4d2de9a5fc92e06806bae26a82935
+      size: 16978709
     outs:
     - path: ./intermediate/od_lodes/year=2022/geography=block_group/state=wa/wa.parquet
       hash: md5
-      md5: 1acc23e1d400585f8acf4b52df2677bc
-      size: 13771994
+      md5: 402afab734fa63fee462a0a73d9928af
+      size: 14785450
   build_lodes_by_geography@2022-wa-county:
     cmd: Rscript ./src/aggregate_lodes.R 2022 wa county
     deps:
-    - path: ./input/lodes/year=2022/state=wa/wa.csv.gz
+    - path: ./input/lodes/year=2022/all-aux.csv.gz
       hash: md5
-      md5: 29af658704f8f79605943aca366962db
-      size: 17836838
+      md5: bb0e4378b94545906e51e7dbddf85fa9
+      size: 54012286
+    - path: ./input/lodes/year=2022/state=wa/wa-main.csv.gz
+      hash: md5
+      md5: 82b4d2de9a5fc92e06806bae26a82935
+      size: 16978709
     outs:
     - path: ./intermediate/od_lodes/year=2022/geography=county/state=wa/wa.parquet
       hash: md5
-      md5: 1ae936cdd97d16b357fb656398c1be80
-      size: 131602
+      md5: 96fa979ce781fe0a95d483aa284f09d0
+      size: 205480
   build_lodes_by_geography@2022-wv-tract:
     cmd: Rscript ./src/aggregate_lodes.R 2022 wv tract
     deps:
-    - path: ./input/lodes/year=2022/state=wv/wv.csv.gz
+    - path: ./input/lodes/year=2022/all-aux.csv.gz
       hash: md5
-      md5: 967dfa9151954ff27b2f602451216d4f
-      size: 3613600
+      md5: bb0e4378b94545906e51e7dbddf85fa9
+      size: 54012286
+    - path: ./input/lodes/year=2022/state=wv/wv-main.csv.gz
+      hash: md5
+      md5: 4c63c8e72be400b9dc74c884ca5ba523
+      size: 3013661
     outs:
     - path: ./intermediate/od_lodes/year=2022/geography=tract/state=wv/wv.parquet
       hash: md5
-      md5: 1ed9c37cfc8c17f33b471d441bddacbf
-      size: 1019687
+      md5: 613a2e0bc30b0d29abd0286a964fcc19
+      size: 1468052
   build_lodes_by_geography@2022-wv-block_group:
     cmd: Rscript ./src/aggregate_lodes.R 2022 wv block_group
     deps:
-    - path: ./input/lodes/year=2022/state=wv/wv.csv.gz
+    - path: ./input/lodes/year=2022/all-aux.csv.gz
       hash: md5
-      md5: 967dfa9151954ff27b2f602451216d4f
-      size: 3613600
+      md5: bb0e4378b94545906e51e7dbddf85fa9
+      size: 54012286
+    - path: ./input/lodes/year=2022/state=wv/wv-main.csv.gz
+      hash: md5
+      md5: 4c63c8e72be400b9dc74c884ca5ba523
+      size: 3013661
     outs:
     - path: ./intermediate/od_lodes/year=2022/geography=block_group/state=wv/wv.parquet
       hash: md5
-      md5: 93c2bc61bd16fbe79c80a908517595de
-      size: 1799319
+      md5: ef039d30a31038ba07f8da59b852c655
+      size: 2417086
   build_lodes_by_geography@2022-wv-county:
     cmd: Rscript ./src/aggregate_lodes.R 2022 wv county
     deps:
-    - path: ./input/lodes/year=2022/state=wv/wv.csv.gz
+    - path: ./input/lodes/year=2022/all-aux.csv.gz
       hash: md5
-      md5: 967dfa9151954ff27b2f602451216d4f
-      size: 3613600
+      md5: bb0e4378b94545906e51e7dbddf85fa9
+      size: 54012286
+    - path: ./input/lodes/year=2022/state=wv/wv-main.csv.gz
+      hash: md5
+      md5: 4c63c8e72be400b9dc74c884ca5ba523
+      size: 3013661
     outs:
     - path: ./intermediate/od_lodes/year=2022/geography=county/state=wv/wv.parquet
       hash: md5
-      md5: 530a084666ebb0056359112fcfc20469
-      size: 119990
+      md5: 5ab2d4ac9e62d05d291a3e7c14c26275
+      size: 226669
   build_lodes_by_geography@2022-wi-tract:
     cmd: Rscript ./src/aggregate_lodes.R 2022 wi tract
     deps:
-    - path: ./input/lodes/year=2022/state=wi/wi.csv.gz
+    - path: ./input/lodes/year=2022/all-aux.csv.gz
       hash: md5
-      md5: 7e0f1a075c577481b554b0fea43676a6
-      size: 15655204
+      md5: bb0e4378b94545906e51e7dbddf85fa9
+      size: 54012286
+    - path: ./input/lodes/year=2022/state=wi/wi-main.csv.gz
+      hash: md5
+      md5: d5c3d55365741e6cdb9de5abf5834cb0
+      size: 14752223
     outs:
     - path: ./intermediate/od_lodes/year=2022/geography=tract/state=wi/wi.parquet
       hash: md5
-      md5: c1353b1e84f67064c8dc265e01f09096
-      size: 4482036
+      md5: 5b78ce0db746d4e73f2aa7c57fc5d8f7
+      size: 5079584
   build_lodes_by_geography@2022-wi-block_group:
     cmd: Rscript ./src/aggregate_lodes.R 2022 wi block_group
     deps:
-    - path: ./input/lodes/year=2022/state=wi/wi.csv.gz
+    - path: ./input/lodes/year=2022/all-aux.csv.gz
       hash: md5
-      md5: 7e0f1a075c577481b554b0fea43676a6
-      size: 15655204
+      md5: bb0e4378b94545906e51e7dbddf85fa9
+      size: 54012286
+    - path: ./input/lodes/year=2022/state=wi/wi-main.csv.gz
+      hash: md5
+      md5: d5c3d55365741e6cdb9de5abf5834cb0
+      size: 14752223
     outs:
     - path: ./intermediate/od_lodes/year=2022/geography=block_group/state=wi/wi.parquet
       hash: md5
-      md5: b68b6142a1c04e0d4840ab6d96e4314a
-      size: 7493400
+      md5: 33b2c2f7ef3264a9e75153fcb6ba17ac
+      size: 12202546
   build_lodes_by_geography@2022-wi-county:
     cmd: Rscript ./src/aggregate_lodes.R 2022 wi county
     deps:
-    - path: ./input/lodes/year=2022/state=wi/wi.csv.gz
+    - path: ./input/lodes/year=2022/all-aux.csv.gz
       hash: md5
-      md5: 7e0f1a075c577481b554b0fea43676a6
-      size: 15655204
+      md5: bb0e4378b94545906e51e7dbddf85fa9
+      size: 54012286
+    - path: ./input/lodes/year=2022/state=wi/wi-main.csv.gz
+      hash: md5
+      md5: d5c3d55365741e6cdb9de5abf5834cb0
+      size: 14752223
     outs:
     - path: ./intermediate/od_lodes/year=2022/geography=county/state=wi/wi.parquet
       hash: md5
-      md5: 2c2a77a29d0ce99c8e5f210ee795f8bd
-      size: 204582
+      md5: 7464601ba71d3651a8efdc5a4bcc09b1
+      size: 305032
   build_lodes_by_geography@2022-wy-tract:
     cmd: Rscript ./src/aggregate_lodes.R 2022 wy tract
     deps:
-    - path: ./input/lodes/year=2022/state=wy/wy.csv.gz
+    - path: ./input/lodes/year=2022/all-aux.csv.gz
       hash: md5
-      md5: 69f704c88b4731aba1490d878662afcb
-      size: 1383758
+      md5: bb0e4378b94545906e51e7dbddf85fa9
+      size: 54012286
+    - path: ./input/lodes/year=2022/state=wy/wy-main.csv.gz
+      hash: md5
+      md5: f3d6df57cec42ac52abca68c95b6e25a
+      size: 1187916
     outs:
     - path: ./intermediate/od_lodes/year=2022/geography=tract/state=wy/wy.parquet
       hash: md5
-      md5: 05350e2093f694508c0f0ae4ec328e05
-      size: 281518
+      md5: b50ff977692f8d9a09e363ecf876726e
+      size: 378618
   build_lodes_by_geography@2022-wy-block_group:
     cmd: Rscript ./src/aggregate_lodes.R 2022 wy block_group
     deps:
-    - path: ./input/lodes/year=2022/state=wy/wy.csv.gz
+    - path: ./input/lodes/year=2022/all-aux.csv.gz
       hash: md5
-      md5: 69f704c88b4731aba1490d878662afcb
-      size: 1383758
+      md5: bb0e4378b94545906e51e7dbddf85fa9
+      size: 54012286
+    - path: ./input/lodes/year=2022/state=wy/wy-main.csv.gz
+      hash: md5
+      md5: f3d6df57cec42ac52abca68c95b6e25a
+      size: 1187916
     outs:
     - path: ./intermediate/od_lodes/year=2022/geography=block_group/state=wy/wy.parquet
       hash: md5
-      md5: e405b695cc7fa586f6bb252f7a0c9d52
-      size: 492880
+      md5: 6f6fa80ec52b050264372c16f251be12
+      size: 588902
   build_lodes_by_geography@2022-wy-county:
     cmd: Rscript ./src/aggregate_lodes.R 2022 wy county
     deps:
-    - path: ./input/lodes/year=2022/state=wy/wy.csv.gz
+    - path: ./input/lodes/year=2022/all-aux.csv.gz
       hash: md5
-      md5: 69f704c88b4731aba1490d878662afcb
-      size: 1383758
+      md5: bb0e4378b94545906e51e7dbddf85fa9
+      size: 54012286
+    - path: ./input/lodes/year=2022/state=wy/wy-main.csv.gz
+      hash: md5
+      md5: f3d6df57cec42ac52abca68c95b6e25a
+      size: 1187916
     outs:
     - path: ./intermediate/od_lodes/year=2022/geography=county/state=wy/wy.parquet
       hash: md5
-      md5: abe1cd355138e121eade4d4c12f42d79
-      size: 53498
+      md5: 61d7868dc190b5705616e8404398bf52
+      size: 78553
   fetch_cb_zcta@2020-zcta:
     cmd: python ./src/fetch_cb.py --year 2020 --geography zcta
     outs:
@@ -2092,3 +2860,10 @@ stages:
       hash: md5
       md5: 066d94a07a83dc9ed919444fa68e401a
       size: 166178249
+  collect_aux@2022:
+    cmd: Rscript ./src/collect_aux.R 2022
+    outs:
+    - path: ./input/lodes/year=2022/all-aux.csv.gz
+      hash: md5
+      md5: bb0e4378b94545906e51e7dbddf85fa9
+      size: 54012286

@@ -11,7 +11,7 @@ stages:
           persist: true
       - ./input/lodes/year=${item.year}/state=${item.state}/${item.state}-aux.csv.gz:
           persist: true
-          
+
   collect_aux:
     matrix:
       year: ${input.year}

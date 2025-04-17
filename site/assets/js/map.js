@@ -13,7 +13,7 @@ const
   LODES_MODES = ["home", "work"],
   LODES_JOB_SEGMENTS = ["S000", "SA01", "SA02", "SA03", "SE01", "SE02", "SE03", "SI01", "SI02", "SI03"],
   LODES_YEARS = ["2022"],
-  LODES_GEOGRAPHIES = ["tract", "block_group"];
+  LODES_GEOGRAPHIES = ["tract", "block_group", "county"];
 
 const CONST_LODES_JOB_SEGMENTS_LABELS = {
   "S000": "Total jobs",
@@ -277,9 +277,9 @@ class ColorScale {
     ];
   }
 
-  getColorScale(count, zoom) {
+  getColorScale(count, geography, zoom) {
     const colors = ["color_1", "color_2", "color_3", "color_4", "color_5", "color_6"],
-      thresholds = this.getThresholdsForZoom(zoom);
+      thresholds = this.getThresholdsForZoom(zoom, geography);
     for (let index = 0; index < thresholds.length; index += 1) {
       if (count < thresholds[index]) {
         return colors[index];
@@ -289,11 +289,11 @@ class ColorScale {
     return "none";
   }
 
-  getLabelsForZoom(zoom) {
+  getLabelsForZoom(zoom, geography) {
     return ["1-5", "6-10", "11-50", "50-75", "75-100", "100+"];
   }
 
-  getThresholdsForZoom(zoom) {
+  getThresholdsForZoom(zoom, geography) {
     return [6, 11, 51, 76, 101, 1000000];
   }
 
@@ -637,7 +637,7 @@ class Map {
           source: `protomap-${geography}`,
           sourceLayer: "geometry"
         },
-        { geoColor: this.colorScale.getColorScale(row.count, this.map.getZoom()) }
+        { geoColor: this.colorScale.getColorScale(row.count, geography, this.map.getZoom()) }
       )
     );
   }

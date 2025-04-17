@@ -291,20 +291,20 @@ class ColorScale {
   getLabelsForZoom(zoom, geography) {
     switch (geography) {
       case "tract":
-        return ["1", "2-5", "6-10", "11-15", "16+"];
+        return ["1", "2-10", "11-20", "21-30", "30+"];
       case "county":
-        return ["1-10", "11-100", "101-1,000", "1,001-10,000", "10,000+"];
+        return ["1", "2-100", "101-1,000", "1,001-10,000", "10,000+"];
       default:
-        return ["1", "2-5", "6-10", "11-15", "16+"];
+        return ["1", "2-10", "11-20", "21-30", "30+"];
     }
 }
 
   getThresholdsForZoom(zoom, geography) {
     switch (geography) {
       case "tract":
-        return [2, 6, 11, 16, 10000000];
+        return [2, 11, 21, 30, 10000000];
       case "county":
-        return [11, 101, 1001, 10001, 100000000];
+        return [2, 101, 1001, 10001, 100000000];
       default:
         return [2, 6, 11, 16, 10000000];
     }

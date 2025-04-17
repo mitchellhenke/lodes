@@ -68,6 +68,7 @@ input:
   census:
     geography:
       - tract
+      - block_group
 
 output:
   # Compression type and level to use for final output Parquet files

@@ -302,11 +302,11 @@ class ColorScale {
   getThresholdsForZoom(zoom, geography) {
     switch (geography) {
       case "tract":
-        return [2, 6, 11, 16, 1000000];
+        return [2, 6, 11, 16, 10000000];
       case "county":
-        return [11, 101, 1001, 10001, 1000000];
+        return [11, 101, 1001, 10001, 100000000];
       default:
-        return [2, 6, 11, 16, 1000000];
+        return [2, 6, 11, 16, 10000000];
     }
   }
 

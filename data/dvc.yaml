@@ -7,7 +7,17 @@ stages:
       state: ${input.state}
     cmd: "Rscript ./src/download_lodes.R ${item.year} ${item.state}"
     outs:
-      - ./input/lodes/year=${item.year}/state=${item.state}/${item.state}.csv.gz:
+      - ./input/lodes/year=${item.year}/state=${item.state}/${item.state}-main.csv.gz:
+          persist: true
+      - ./input/lodes/year=${item.year}/state=${item.state}/${item.state}-aux.csv.gz:
+          persist: true
+          
+  collect_aux:
+    matrix:
+      year: ${input.year}
+    cmd: "Rscript ./src/collect_aux.R ${item.year}"
+    outs:
+      - ./input/lodes/year=${item.year}/all-aux.csv.gz:
           persist: true
 
   fetch_cb:
@@ -30,7 +40,8 @@ stages:
 
   build_lodes_by_geography:
     deps:
-      - ./input/lodes/year=${item.year}/state=${item.state}/${item.state}.csv.gz
+      - ./input/lodes/year=${item.year}/state=${item.state}/${item.state}-main.csv.gz
+      - ./input/lodes/year=${item.year}/all-aux.csv.gz
     matrix:
       year: ${input.year}
       state: ${input.state}

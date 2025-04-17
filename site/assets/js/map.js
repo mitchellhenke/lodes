@@ -273,12 +273,11 @@ class ColorScale {
       { color: "var(--map-color-3)", label: "30-45 min" },
       { color: "var(--map-color-4)", label: "45-60 min" },
       { color: "var(--map-color-5)", label: "60-75 min" },
-      { color: "var(--map-color-6)", label: "75-90 min" },
     ];
   }
 
   getColorScale(count, geography, zoom) {
-    const colors = ["color_1", "color_2", "color_3", "color_4", "color_5", "color_6"],
+    const colors = ["color_1", "color_2", "color_3", "color_4", "color_5"],
       thresholds = this.getThresholdsForZoom(zoom, geography);
     for (let index = 0; index < thresholds.length; index += 1) {
       if (count < thresholds[index]) {
@@ -290,16 +289,30 @@ class ColorScale {
   }
 
   getLabelsForZoom(zoom, geography) {
-    return ["1-5", "6-10", "11-50", "50-75", "75-100", "100+"];
-  }
+    switch (geography) {
+      case "tract":
+        return ["1", "2-5", "6-10", "11-15", "16+"];
+      case "county":
+        return ["1-10", "11-50", "51-75", "76-100", "100+"];
+      default:
+        return ["1", "2-5", "6-10", "11-15", "16+"];
+    }
+}
 
   getThresholdsForZoom(zoom, geography) {
-    return [6, 11, 51, 76, 101, 1000000];
+    switch (geography) {
+      case "tract":
+        return [2, 6, 11, 16, 1000000];
+      case "county":
+        return [11, 51, 76, 101, 1000000];
+      default:
+        return [2, 6, 11, 16, 1000000];
+    }
   }
 
-  updateLabels(zoom) {
+  updateLabels(zoom, geography) {
     const items = this.scaleContainer.querySelectorAll("div > span"),
-      labels = this.getLabelsForZoom(zoom);
+      labels = this.getLabelsForZoom(zoom, geography);
     items.forEach((item, index) => {
       item.textContent = labels[index];
     });
@@ -534,7 +547,7 @@ class Map {
 
         if (crossedModeThreshold && !this.isProcessing) {
           this.updateMapFill(this.processor.previousResults[geographyParam], geographyParam);
-          this.colorScale.updateLabels(currentZoomLevel);
+          this.colorScale.updateLabels(currentZoomLevel, geographyParam);
         };
       }
       this.previousZoomLevel = currentZoomLevel;
@@ -564,7 +577,6 @@ class Map {
             ["==", ["feature-state", "geoColor"], "color_3"], "rgba(34, 168, 132, 0.4)",
             ["==", ["feature-state", "geoColor"], "color_4"], "rgba(42, 120, 142, 0.4)",
             ["==", ["feature-state", "geoColor"], "color_5"], "rgba(65, 68, 135, 0.4)",
-            ["==", ["feature-state", "geoColor"], "color_6"], "rgba(68, 1, 84, 0.4)",
             "rgba(255, 255, 255, 0.0)"
           ],
         },
@@ -702,7 +714,7 @@ class ParquetProcessor {
             source: `protomap-${geography}`,
             sourceLayer: "geometry"
           },
-          { geoColor: map.colorScale.getColorScale(row[2], map.map.getZoom()) }
+          { geoColor: map.colorScale.getColorScale(row[2], geography, map.map.getZoom()) }
         );
         results.push({ count: row[2], id: row[destination] });
       }
@@ -831,13 +843,14 @@ class ParquetProcessor {
 
     modeParam = event.target.value;
     validMode = validModeInput(modeParam);
+    validGeography = validGeographyInput(geographyParam);
 
-    if (validMode) {
+    if (validMode && validGeography) {
       colorScale.updateZoomThresholds(
         ZOOM_THRESHOLDS_MODE[modeParam][0],
         ZOOM_THRESHOLDS_MODE[modeParam][1]
       );
-      colorScale.updateLabels(map.map.getZoom());
+      colorScale.updateLabels(map.map.getZoom(), geographyParam);
       setUrlParam("mode", modeParam);
 
       idParam = urlParams.get("id");
@@ -906,12 +919,12 @@ class ParquetProcessor {
     validYear = validYearInput(yearParam);
     validGeography = validGeographyInput(geographyParam);
 
-    if (validMode) {
+    if (validMode && validGeography) {
       colorScale.updateZoomThresholds(
         ZOOM_THRESHOLDS_MODE[modeParam][0],
         ZOOM_THRESHOLDS_MODE[modeParam][1]
       );
-      colorScale.updateLabels(map.map.getZoom());
+      colorScale.updateLabels(map.map.getZoom(), geographyParam);
       urlParams.set("mode", modeParam);
       document.getElementById("mode").value = modeParam;
     }

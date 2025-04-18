@@ -452,9 +452,7 @@ class Map {
         { layers: [`geo_fill_${geographyParam}`] }
       );
 
-      const geoName = geographyParam.split("_").
-        map(word => word.charAt(0).toUpperCase() +
-          word.slice(1).toLowerCase()).join(" ");
+      const geoName = this.displayGeoName(geographyParam);
 
       if (feature) {
         this.map.getCanvas().style.cursor = "pointer";
@@ -553,6 +551,12 @@ class Map {
       this.previousZoomLevel = currentZoomLevel;
     });
   }
+
+  displayGeoName(geometry) {
+    return geometry.split("_").
+      map(word => word.charAt(0).toUpperCase() +
+        word.slice(1).toLowerCase()).join(" ");
+ }
 
   addMapLayers() {
     const { layers } = this.map.getStyle();

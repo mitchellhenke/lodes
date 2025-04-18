@@ -13,7 +13,7 @@ const
   LODES_MODES = ["home", "work"],
   LODES_JOB_SEGMENTS = ["S000", "SA01", "SA02", "SA03", "SE01", "SE02", "SE03", "SI01", "SI02", "SI03"],
   LODES_YEARS = ["2022"],
-  LODES_GEOGRAPHIES = ["tract", "block_group", "county"];
+  LODES_GEOGRAPHIES = ["block_group", "tract", "county"];
 
 const CONST_LODES_JOB_SEGMENTS_LABELS = {
   "S000": "Total jobs",

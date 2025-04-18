@@ -91,12 +91,6 @@ const
   MAP_ZOOM = 10,
   MAP_ZOOM_LIMITS = [2, 14];
 
-const
-  ZOOM_THRESHOLDS_MODE = {
-    "home": [6, 8],
-    "work": [6, 8],
-  };
-
 // Parameters that get updated by query string or clicking the map
 let modeParam = LODES_MODE,
   jobSegmentParam = LODES_JOB_SEGMENT,
@@ -532,31 +526,14 @@ class Map {
       const urlParams = new URLSearchParams(window.location.search);
       window.history.replaceState({}, "", `${urlParams ? `?${urlParams}` : ""}${window.location.hash}`);
     });
-
-    this.map.on("zoomend", () => {
-      const currentZoomLevel = this.map.getZoom();
-      if (this.previousZoomLevel !== null) {
-        // Update legend and fill based on mode
-        const crossedModeThreshold = ZOOM_THRESHOLDS_MODE[modeParam].some(
-          (threshold) =>
-            (this.previousZoomLevel < threshold && currentZoomLevel >= threshold) ||
-            (this.previousZoomLevel >= threshold && currentZoomLevel < threshold)
-        );
-
-        if (crossedModeThreshold && !this.isProcessing) {
-          this.updateMapFill(this.processor.previousResults[geographyParam], geographyParam);
-          this.colorScale.updateLabels(currentZoomLevel, geographyParam);
-        };
-      }
-      this.previousZoomLevel = currentZoomLevel;
-    });
   }
 
   displayGeoName(geometry) {
     return geometry.split("_").
       map(word => word.charAt(0).toUpperCase() +
         word.slice(1).toLowerCase()).join(" ");
- }
+  }
+
 
   addMapLayers() {
     const { layers } = this.map.getStyle();
@@ -850,10 +827,6 @@ class ParquetProcessor {
     validGeography = validGeographyInput(geographyParam);
 
     if (validMode && validGeography) {
-      colorScale.updateZoomThresholds(
-        ZOOM_THRESHOLDS_MODE[modeParam][0],
-        ZOOM_THRESHOLDS_MODE[modeParam][1]
-      );
       colorScale.updateLabels(map.map.getZoom(), geographyParam);
       setUrlParam("mode", modeParam);
 
@@ -924,10 +897,6 @@ class ParquetProcessor {
     validGeography = validGeographyInput(geographyParam);
 
     if (validMode && validGeography) {
-      colorScale.updateZoomThresholds(
-        ZOOM_THRESHOLDS_MODE[modeParam][0],
-        ZOOM_THRESHOLDS_MODE[modeParam][1]
-      );
       colorScale.updateLabels(map.map.getZoom(), geographyParam);
       urlParams.set("mode", modeParam);
       document.getElementById("mode").value = modeParam;

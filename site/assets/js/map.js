@@ -875,6 +875,7 @@ class ParquetProcessor {
     validGeography = validGeographyInput(geographyParam);
 
     if (validGeography) {
+      colorScale.updateLabels(map.map.getZoom(), geographyParam);
       map.switchLayerVisibility(geographyParam);
       setUrlParam("geography", geographyParam);
 

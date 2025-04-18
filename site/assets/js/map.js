@@ -270,7 +270,7 @@ class ColorScale {
     ];
   }
 
-  getColorScale(count, geography, zoom) {
+  getColorScale(count, geography) {
     const colors = ["color_1", "color_2", "color_3", "color_4", "color_5"],
       thresholds = this.getThresholdsForGeography(geography);
     for (let index = 0; index < thresholds.length; index += 1) {
@@ -699,7 +699,7 @@ class Map {
           source: `protomap-${geography}`,
           sourceLayer: "geometry"
         },
-        { geoColor: this.colorScale.getColorScale(row.count, geography, this.map.getZoom()) }
+        { geoColor: this.colorScale.getColorScale(row.count, geography) }
       )
     );
   }
@@ -764,7 +764,7 @@ class ParquetProcessor {
             source: `protomap-${geography}`,
             sourceLayer: "geometry"
           },
-          { geoColor: map.colorScale.getColorScale(row[2], geography, map.map.getZoom()) }
+          { geoColor: map.colorScale.getColorScale(row[2], geography) }
         );
         results[row[destination]] = { count: row[2], id: row[destination] };
       }

@@ -262,17 +262,17 @@ class ColorScale {
 
   getColors() {
     return [
-      { color: "var(--map-color-1)", label: "< 15 min" },
-      { color: "var(--map-color-2)", label: "15-30 min" },
-      { color: "var(--map-color-3)", label: "30-45 min" },
-      { color: "var(--map-color-4)", label: "45-60 min" },
-      { color: "var(--map-color-5)", label: "60-75 min" },
+      { color: "var(--map-color-1)", label: "1" },
+      { color: "var(--map-color-2)", label: "2-10" },
+      { color: "var(--map-color-3)", label: "11-20" },
+      { color: "var(--map-color-4)", label: "21-30" },
+      { color: "var(--map-color-5)", label: "30+" },
     ];
   }
 
   getColorScale(count, geography, zoom) {
     const colors = ["color_1", "color_2", "color_3", "color_4", "color_5"],
-      thresholds = this.getThresholdsForZoom(zoom, geography);
+      thresholds = this.getThresholdsForGeography(geography);
     for (let index = 0; index < thresholds.length; index += 1) {
       if (count < thresholds[index]) {
         return colors[index];
@@ -282,10 +282,8 @@ class ColorScale {
     return "none";
   }
 
-  getLabelsForZoom(zoom, geography) {
+  getLabelsForGeography(geography) {
     switch (geography) {
-      case "tract":
-        return ["1", "2-10", "11-20", "21-30", "30+"];
       case "county":
         return ["1", "2-100", "101-1,000", "1,001-10,000", "10,000+"];
       default:
@@ -293,10 +291,8 @@ class ColorScale {
     }
 }
 
-  getThresholdsForZoom(zoom, geography) {
+  getThresholdsForGeography(geography) {
     switch (geography) {
-      case "tract":
-        return [2, 11, 21, 30, 10000000];
       case "county":
         return [2, 101, 1001, 10001, 100000000];
       default:
@@ -306,7 +302,7 @@ class ColorScale {
 
   updateLabels(zoom, geography) {
     const items = this.scaleContainer.querySelectorAll("div > span"),
-      labels = this.getLabelsForZoom(zoom, geography);
+      labels = this.getLabelsForGeography(geography);
     items.forEach((item, index) => {
       item.textContent = labels[index];
     });

@@ -289,14 +289,14 @@ class ColorScale {
       default:
         return ["1", "2-10", "11-20", "21-30", "30+"];
     }
-}
+  }
 
   getThresholdsForGeography(geography) {
     switch (geography) {
       case "county":
-        return [2, 101, 1001, 10001, 100000000];
+        return [1, 2, 101, 1001, 10000];
       default:
-        return [2, 6, 11, 16, 10000000];
+        return [1, 2, 11, 21, 30];
     }
   }
 
@@ -588,20 +588,34 @@ class Map {
         break;
       }
     }
+    // getThresholdsForGeography(geography)
     for (const geography of LODES_GEOGRAPHIES) {
+      const thresholds = this.colorScale.getThresholdsForGeography(geography)
+      const colors = [
+        "rgb(253, 231, 37)",
+        "rgb(122, 209, 81)",
+        "rgb(34, 168, 132)",
+        "rgb(42, 120, 142)",
+        "rgb(65, 68, 135)"
+      ]
+
+      const thresholds_colors = thresholds.map((k, i) => [k, colors[i]]).flat();
+
       this.map.addLayer({
         filter: ["==", ["geometry-type"], "Polygon"],
         id: `geo_fill_${geography}`,
         layout: { visibility: "none" },
         paint: {
           "fill-color": [
-            "case",
-            ["==", ["feature-state", "geoColor"], "color_1"], "rgba(253, 231, 37, 0.4)",
-            ["==", ["feature-state", "geoColor"], "color_2"], "rgba(122, 209, 81, 0.4)",
-            ["==", ["feature-state", "geoColor"], "color_3"], "rgba(34, 168, 132, 0.4)",
-            ["==", ["feature-state", "geoColor"], "color_4"], "rgba(42, 120, 142, 0.4)",
-            ["==", ["feature-state", "geoColor"], "color_5"], "rgba(65, 68, 135, 0.4)",
-            "rgba(255, 255, 255, 0.0)"
+            'interpolate',
+            ['linear'],
+            ['feature-state', 'geoValue'],
+            ...thresholds_colors
+          ],
+          "fill-opacity": [
+            'case',
+            ["==", ["feature-state", "geoValue"], null], 0.0,
+            0.4,
           ],
         },
         source: `protomap-${geography}`,
@@ -699,7 +713,7 @@ class Map {
           source: `protomap-${geography}`,
           sourceLayer: "geometry"
         },
-        { geoColor: this.colorScale.getColorScale(row.count, geography) }
+        { geoValue: row.count }
       )
     );
   }
@@ -712,7 +726,7 @@ class Map {
           source: `protomap-${geography}`,
           sourceLayer: "geometry"
         },
-        { geoColor: "none" }
+        { geoValue: null }
       )
     );
   }
@@ -764,7 +778,7 @@ class ParquetProcessor {
             source: `protomap-${geography}`,
             sourceLayer: "geometry"
           },
-          { geoColor: map.colorScale.getColorScale(row[2], geography) }
+          { geoValue: row[2] }
         );
         results[row[destination]] = { count: row[2], id: row[destination] };
       }

@@ -442,12 +442,8 @@ class Map {
         { layers: [`geo_fill_${geographyParam}`] }
       );
 
-      const geoName = this.displayGeoName(geographyParam);
-
       if (feature) {
         this.map.getCanvas().style.cursor = "pointer";
-        this.geoIdDisplay.style.display = "block";
-        this.geoIdDisplay.textContent = `${geoName} ID: ${feature.properties.id}`;
         if (this.hoveredPolygonId[geographyParam] !== null) {
           this.map.setFeatureState(
             {
@@ -467,6 +463,7 @@ class Map {
           },
           { hover: true }
         );
+        this.updateGeoIdDisplay(feature.properties.id)
       } else {
         this.map.getCanvas().style.cursor = "";
         this.geoIdDisplay.style.display = "none";
@@ -511,6 +508,8 @@ class Map {
             this, modeParam, jobSegmentParam, yearParam, geographyParam,
             idParam.substring(0, 2), idParam
           );
+
+          this.updateGeoIdDisplay(this.hoveredPolygonId[geographyParam])
         }
       }
     });
@@ -530,6 +529,17 @@ class Map {
         word.slice(1).toLowerCase()).join(" ");
   }
 
+  updateGeoIdDisplay(id) {
+    this.geoIdDisplay.style.display = "block";
+    const geoName = this.displayGeoName(geographyParam);
+
+    const row = this.processor.previousResults[geographyParam][id]
+    if(row) {
+      this.geoIdDisplay.innerHTML = `${geoName} ID: ${id}<br>${row.count.toLocaleString()} People`;
+    } else {
+      this.geoIdDisplay.innerHTML = `${geoName} ID: ${id}<br>0 People`;
+    }
+  }
 
   addMapLayers() {
     const { layers } = this.map.getStyle();
@@ -631,11 +641,11 @@ class Map {
     );
   }
 
-  wipeMapPreviousState(results, geography) {
-    results.forEach(row =>
+  wipeMapPreviousState(ids, geography) {
+    ids.forEach(id =>
       this.map.setFeatureState(
         {
-          id: row.id,
+          id: id,
           source: `protomap-${geography}`,
           sourceLayer: "geometry"
         },
@@ -648,7 +658,7 @@ class Map {
 class ParquetProcessor {
   constructor() {
     this.previousResults = LODES_GEOGRAPHIES.reduce((acc, geography) => {
-      acc[geography] = [];
+      acc[geography] = {};
       return acc;
     }, {});
     this.byteLengthCache = {};
@@ -693,16 +703,15 @@ class ParquetProcessor {
           },
           { geoColor: map.colorScale.getColorScale(row[2], geography, map.map.getZoom()) }
         );
-        results.push({ count: row[2], id: row[destination] });
+        results[row[destination]] = { count: row[2], id: row[destination] };
       }
     });
   }
 
   saveResultState(map, results, geography) {
-    const resultIds = new Set(results.map(item => item.id));
     const filteredPreviousResults = this.previousResults[geography]
-      .filter(item => !resultIds.has(item.id));
-    map.wipeMapPreviousState(filteredPreviousResults, geography);
+    Object.keys(results).forEach(key => delete(filteredPreviousResults[key]));
+    map.wipeMapPreviousState(Object.keys(filteredPreviousResults), geography);
     this.previousResults[geography] = results;
   }
 
@@ -747,7 +756,7 @@ class ParquetProcessor {
 
   async updateMapOnQuery(map, url, id, geography, job_segment, mode) {
     const urls = [url]
-    const results = [];
+    const results = {};
     let totalGroups = 0;
 
     // Process the metadata for each URL

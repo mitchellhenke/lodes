@@ -386,6 +386,11 @@ class Map {
       acc[geography] = null;
       return acc;
     }, {});
+
+    this.selectedPolygonId = LODES_GEOGRAPHIES.reduce((acc, geography) => {
+      acc[geography] = null;
+      return acc;
+    }, {});
     this.previousZoomLevel = null;
     this.isProcessing = false;
   }
@@ -498,6 +503,15 @@ class Map {
         { layers: ["geo_fill_query"] }
       );
 
+      const [geometryFeature] = this.map.queryRenderedFeatures(
+        feat.point,
+        { layers: [`geo_fill_${geographyParam}`] }
+      );
+
+      if(geometryFeature) {
+        this.updateSelectedFeature(geometryFeature.properties.id)
+      }
+
       if (feature) {
         idParam = feature?.properties.id;
         validId = validIdInput(idParam);
@@ -527,6 +541,29 @@ class Map {
     return geometry.split("_").
       map(word => word.charAt(0).toUpperCase() +
         word.slice(1).toLowerCase()).join(" ");
+  }
+
+  updateSelectedFeature(id) {
+    if (this.selectedPolygonId[geographyParam] !== null) {
+      this.map.setFeatureState(
+        {
+          id: this.selectedPolygonId[geographyParam],
+          source: `protomap-${geographyParam}`,
+          sourceLayer: "geometry"
+        },
+        { selected: false }
+      );
+    }
+    this.selectedPolygonId[geographyParam] = id;
+
+    this.map.setFeatureState(
+      {
+        id: this.selectedPolygonId[geographyParam],
+        source: `protomap-${geographyParam}`,
+        sourceLayer: "geometry"
+      },
+      { selected: true }
+    );
   }
 
   updateGeoIdDisplay(id) {
@@ -581,12 +618,36 @@ class Map {
           "line-opacity": [
             "case",
             ["boolean", ["feature-state", "hover"], false],
-            0.5,
+            0.35,
             0.0
           ],
           "line-width": [
             "case",
             ["boolean", ["feature-state", "hover"], false],
+            3,
+            1
+          ]
+        },
+        source: `protomap-${geography}`,
+        "source-layer": "geometry",
+        type: "line",
+      }, firstSymbolId);
+
+      this.map.addLayer({
+        filter: ["==", ["geometry-type"], "Polygon"],
+        id: `geo_line_selected_${geography}`,
+        layout: { visibility: "none" },
+        paint: {
+          "line-color": "#111",
+          "line-opacity": [
+            "case",
+            ["boolean", ["feature-state", "selected"], false],
+            0.35,
+            0.0
+          ],
+          "line-width": [
+            "case",
+            ["boolean", ["feature-state", "selected"], false],
             5,
             1
           ]
@@ -620,11 +681,13 @@ class Map {
   switchLayerVisibility(geography) {
     this.map.setLayoutProperty(`geo_fill_${geography}`, "visibility", "visible");
     this.map.setLayoutProperty(`geo_line_${geography}`, "visibility", "visible");
+    this.map.setLayoutProperty(`geo_line_selected_${geography}`, "visibility", "visible");
 
     const otherGeographies = LODES_GEOGRAPHIES.filter(geo => geo !== geography);
     for (const geo of otherGeographies) {
       this.map.setLayoutProperty(`geo_fill_${geo}`, "visibility", "none");
       this.map.setLayoutProperty(`geo_line_${geo}`, "visibility", "none");
+      this.map.setLayoutProperty(`geo_line_selected_${geo}`, "visibility", "none");
     }
   }
 
@@ -736,6 +799,7 @@ class ParquetProcessor {
     // Get the count of files given the geography, mode, and state
     const results = await this.updateMapOnQuery(map, queryUrl, truncId, geography, job_segment, mode);
     this.saveResultState(map, results, geography);
+    map.updateSelectedFeature(truncId)
     map.isProcessing = false;
     map.spinner.hide();
   }

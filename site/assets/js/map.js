@@ -87,7 +87,7 @@ const FIPS_TO_TIGER_GEO_STATE_ABBR = {
 }
 
 const
-  MAP_CENTER = [-74.0, 40.75],
+  MAP_CENTER = [-87.967, 43.064],
   MAP_ZOOM = 10,
   MAP_ZOOM_LIMITS = [2, 14];
 

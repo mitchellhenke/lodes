@@ -468,7 +468,7 @@ class Map {
           },
           { hover: true }
         );
-        this.updateGeoIdDisplay(feature.properties.id)
+        this.updateGeoIdDisplay(feature.properties.id, this.processor.previousResults[geographyParam][feature.properties.id].count)
       } else {
         this.map.getCanvas().style.cursor = "";
         this.geoIdDisplay.style.display = "none";
@@ -523,7 +523,7 @@ class Map {
             idParam.substring(0, 2), idParam
           );
 
-          this.updateGeoIdDisplay(this.hoveredPolygonId[geographyParam])
+          this.updateGeoIdDisplay(this.hoveredPolygonId[geographyParam], this.processor.previousResults[geographyParam][geometryFeature.properties.id].count)
         }
       }
     });
@@ -541,6 +541,17 @@ class Map {
     return geometry.split("_").
       map(word => word.charAt(0).toUpperCase() +
         word.slice(1).toLowerCase()).join(" ");
+  }
+
+  truncateId(geography, id) {
+    if (geography === "county") {
+      return id.substring(0, 5);
+    } else if (geography === "tract") {
+      return id.substring(0, 11);
+    } else if (geography === "block_group") {
+      return id;
+    }
+    return id;
   }
 
   updateSelectedFeature(id) {
@@ -566,15 +577,15 @@ class Map {
     );
   }
 
-  updateGeoIdDisplay(id) {
+  updateGeoIdDisplay(id, count) {
     this.geoIdDisplay.style.display = "block";
     const geoName = this.displayGeoName(geographyParam);
+    const truncId = this.truncateId(geographyParam, id);
 
-    const row = this.processor.previousResults[geographyParam][id]
-    if(row) {
-      this.geoIdDisplay.innerHTML = `${geoName} ID: ${id}<br>${row.count.toLocaleString()} People`;
+    if(count) {
+      this.geoIdDisplay.innerHTML = `${geoName} ID: ${truncId}<br>${count.toLocaleString()} People`;
     } else {
-      this.geoIdDisplay.innerHTML = `${geoName} ID: ${id}<br>0 People`;
+      this.geoIdDisplay.innerHTML = `${geoName} ID: ${truncId}<br>0 People`;
     }
   }
 
@@ -792,23 +803,12 @@ class ParquetProcessor {
     this.previousResults[geography] = results;
   }
 
-  truncateId(geography, id) {
-    if (geography === "county") {
-      return id.substring(0, 5);
-    } else if (geography === "tract") {
-      return id.substring(0, 11);
-    } else if (geography === "block_group") {
-      return id;
-    }
-    return id;
-  }
-
   async runQuery(map, mode, job_segment, year, geography, state, id) {
     map.isProcessing = true;
     map.spinner.show();
     const tilesUrl = getTilesUrl({ geography }),
       queryUrl = getLodesUrl({ geography, state, year }),
-      truncId = this.truncateId(geography, id);
+      truncId = map.truncateId(geography, id);
 
     // Get the count of files given the geography, mode, and state
     const results = await this.updateMapOnQuery(map, queryUrl, truncId, geography, job_segment, mode);
@@ -921,6 +921,8 @@ class ParquetProcessor {
           map, modeParam, jobSegmentParam, yearParam, geographyParam,
           idParam.substring(0, 2), idParam
         );
+
+       map.updateGeoIdDisplay(map.hoveredPolygonId[geographyParam], map.processor.previousResults[geographyParam][map.hoveredPolygonId[geographyParam]].count)
       }
     }
   });
@@ -942,6 +944,8 @@ class ParquetProcessor {
           map, modeParam, jobSegmentParam, yearParam, geographyParam,
           idParam.substring(0, 2), idParam
         );
+
+       map.updateGeoIdDisplay(map.hoveredPolygonId[geographyParam], map.processor.previousResults[geographyParam][map.hoveredPolygonId[geographyParam]].count)
       }
     }
   });
@@ -965,6 +969,8 @@ class ParquetProcessor {
           map, modeParam, jobSegmentParam, yearParam, geographyParam,
           idParam.substring(0, 2), idParam
         );
+
+       map.updateGeoIdDisplay(map.hoveredPolygonId[geographyParam], map.processor.previousResults[geographyParam][map.hoveredPolygonId[geographyParam]].count)
       }
     }
   });
@@ -1001,6 +1007,9 @@ class ParquetProcessor {
           map, modeParam, jobSegmentParam, yearParam, geographyParam,
           idParam.substring(0, 2), idParam
         );
+
+        const truncId = map.truncateId(geographyParam, idParam)
+        map.updateGeoIdDisplay(idParam, map.processor.previousResults[geographyParam][truncId].count)
       }
     }
   });

@@ -70,3 +70,13 @@ To build the tilesets:
   - (Optional) Upload the tiles to S3/R2 with `./src/upload_tiles.sh 2023 block_group`
 - Run `./src/create_tiles.sh 2023 tract`
   - (Optional) Upload the tiles to S3/R2 with `./src/upload_tiles.sh 2023 tract`
+
+
+### Static Site
+
+The static site is generated with [Hugo](https://github.com/gohugoio/hugo) and served from GitHub Pages. Local development references the same deployed Parquet files. To build and serve the static site:
+
+- [Install hugo](https://gohugo.io/installation/)
+- Run `cd site`
+- Run `hugo server`
+- Visit [http://localhost:1313](http://localhost:1313)

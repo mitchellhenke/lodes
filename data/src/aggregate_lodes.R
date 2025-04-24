@@ -8,6 +8,7 @@ if(!require(stringr)){
 }
 if(!require(nanoparquet)){
   install.packages("nanoparquet", repos = "http://cran.us.r-project.org")
+  library(nanoparquet)
 }
 
 args <- commandArgs(trailingOnly=T)
@@ -59,8 +60,8 @@ aggregate_lodes <- function(year, state, geography = "tract", save = T){
   
   if(geography == "county"){
     lodes.agg <- lodes |>
-      mutate(w_geo = str_sub(w_geocode, 1, 5),
-             h_geo = str_sub(h_geocode, 1, 5)) |>
+      mutate(w_geo = str_sub(w_geo, 1, 5),
+             h_geo = str_sub(h_geo, 1, 5)) |>
       group_by(w_geo, h_geo) |>
       summarise(across(.cols = starts_with("S", ignore.case = F), .fns = sum),
                 .groups = "drop") |>
@@ -68,12 +69,30 @@ aggregate_lodes <- function(year, state, geography = "tract", save = T){
   }
 
   if(save == T){
-    dir.create(path = paste0("intermediate/od_lodes/year=", year, "/geography=", geography, "/state=", state),
+    dir.create(path = paste0("intermediate/od_lodes/year=", year, "/geography=",
+                             geography, "/state=", state, "/origin=h_geo"),
                showWarnings = F, recursive = T)
-
-    nanoparquet::write_parquet(lodes.agg,
-                               paste0("intermediate/od_lodes/year=", year, "/geography=", geography, "/state=", state,
-                                      "/", state, ".parquet"))
+    dir.create(path = paste0("intermediate/od_lodes/year=", year, "/geography=",
+                             geography, "/state=", state, "/origin=w_geo"),
+               showWarnings = F, recursive = T)
+    
+    # sort by h_geo
+    lodes.agg |>
+      filter(str_sub(h_geo, 1, 2) == st.fips) |>
+      arrange(h_geo) |>
+      write_parquet(paste0("intermediate/od_lodes/year=", year, "/geography=", 
+                           geography, "/state=", state, "/origin=h_geo/",
+                           state, ".parquet"),
+                    options = parquet_options(num_rows_per_row_group = 100000))
+    
+    # sort by w_geo
+    lodes.agg |>
+      filter(str_sub(w_geo, 1, 2) == st.fips) |>
+      arrange(w_geo) |>
+      write_parquet(paste0("intermediate/od_lodes/year=", year, "/geography=", 
+                           geography, "/state=", state, "/origin=w_geo/",
+                           state, ".parquet"),
+                    options = parquet_options(num_rows_per_row_group = 100000))
   }
 }
 

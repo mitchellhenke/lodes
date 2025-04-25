@@ -9,6 +9,7 @@ def create_public_files(
     year: str,
     geography: str,
     state: str,
+    origin: str,
 ) -> None:
 
 
@@ -30,9 +31,9 @@ def create_public_files(
       endpoint_url = params["s3"]["endpoint_url"]
     )
 
-    file_path = f"intermediate/od_lodes/year={year}/geography={geography}/state={state}/{state}.parquet"
-    filename = f"{dataset}-{year}-{geography}-{state}.parquet"
-    s3_path = f"{dataset}/year={year}/geography={geography}/state={state}/{filename}"
+    file_path = f"intermediate/od_lodes/year={year}/geography={geography}/origin={origin}/state={state}/{state}.parquet"
+    filename = f"{dataset}-{year}-{geography}-{origin}-{state}.parquet"
+    s3_path = f"{dataset}/year={year}/geography={geography}/origin={origin}/state={state}/{filename}"
     s3.upload_file(file_path, public_bucket, s3_path)
 
 def main() -> None:
@@ -45,12 +46,14 @@ def main() -> None:
         params = yaml.safe_load(file)
 
     for state in params['input']['state']:
-        create_public_files(
-            args.dataset,
-            args.year,
-            args.geography,
-            state
-        )
+        for origin in params['input']['origin']:
+            create_public_files(
+                args.dataset,
+                args.year,
+                args.geography,
+                state,
+                origin
+            )
 
 
 if __name__ == "__main__":

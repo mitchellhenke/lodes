@@ -4,16 +4,21 @@ import { compressors } from "hyparquet-compressors";
 import maplibregl from "maplibre-gl";
 
 const
-  LODES_MODE = "home",
+  LODES_ORIGIN = "h_geo",
   LODES_JOB_SEGMENT = "S000",
   LODES_YEAR = "2022",
   LODES_GEOGRAPHY = "tract";
 
 const
-  LODES_MODES = ["home", "work"],
+  LODES_ORIGINS = ["h_geo", "w_geo"],
   LODES_JOB_SEGMENTS = ["S000", "SA01", "SA02", "SA03", "SE01", "SE02", "SE03", "SI01", "SI02", "SI03"],
   LODES_YEARS = ["2022"],
   LODES_GEOGRAPHIES = ["block_group", "tract", "county"];
+
+const CONST_LODES_ORIGINS_LABELS = {
+  "w_geo": "Work",
+  "h_geo": "Home"
+};
 
 const CONST_LODES_JOB_SEGMENTS_LABELS = {
   "S000": "Total jobs",
@@ -92,13 +97,13 @@ const
   MAP_ZOOM_LIMITS = [2, 14];
 
 // Parameters that get updated by query string or clicking the map
-let modeParam = LODES_MODE,
+let originParam = LODES_ORIGIN,
   jobSegmentParam = LODES_JOB_SEGMENT,
   yearParam = LODES_YEAR,
   geographyParam = LODES_GEOGRAPHY,
   idParam = null;
 
-let validMode = true,
+let validOrigin = true,
   validJobSegment = true,
   validYear = true,
   validGeography = true,
@@ -117,6 +122,7 @@ const getTilesUrl = function getTilesUrl({
 const getLodesUrl = function getLodesUrl({
   year = LODES_YEAR,
   geography = LODES_GEOGRAPHY,
+  origin = LODES_ORIGIN,
   state = null
 } = {}) {
 
@@ -124,8 +130,8 @@ const getLodesUrl = function getLodesUrl({
     state = FIPS_TO_TIGER_GEO_STATE_ABBR[state]
   }
 
-  return `${URL_LODES}/year=${year}/geography=${geography}/` +
-    `state=${state}/lodes-${year}-${geography}-${state}.parquet`;
+  return `${URL_LODES}/year=${year}/geography=${geography}/origin=${origin}/` +
+    `state=${state}/lodes-${year}-${geography}-${origin}-${state}.parquet`;
 };
 
 const setUrlParam = function setUrlParam(name, value) {
@@ -136,13 +142,13 @@ const setUrlParam = function setUrlParam(name, value) {
 
 const validJobSegmentInput = function validJobSegmentInput(jobSegment) {
   if (LODES_JOB_SEGMENTS.includes(jobSegment) && jobSegment) { return true; }
-  console.warn(`Invalid mode ${jobSegment}. Must be one of: ${LODES_JOB_SEGMENTS.join(", ")}.`);
+  console.warn(`Invalid job segment ${jobSegment}. Must be one of: ${LODES_JOB_SEGMENTS.join(", ")}.`);
   return false;
 };
 
-const validModeInput = function validModeInput(mode) {
-  if (LODES_MODES.includes(mode) && mode) { return true; }
-  console.warn(`Invalid mode ${mode}. Must be one of: ${LODES_MODES.join(", ")}.`);
+const validOriginInput = function validOriginInput(origin) {
+  if (LODES_ORIGINS.includes(origin) && origin) { return true; }
+  console.warn(`Invalid origin ${origin}. Must be one of: ${LODES_ORIGINS.join(", ")}.`);
   return false;
 };
 
@@ -170,8 +176,8 @@ class ColorScale {
   constructor() {
     this.scaleContainer = this.createScaleContainer();
     this.toggleButton = this.createToggleButton();
-    this.modeDropdown = this.createDropdown(
-      "mode", LODES_MODE, LODES_MODES, {}, "Origin"
+    this.originDropdown = this.createDropdown(
+      "origin", LODES_ORIGIN, LODES_ORIGINS, CONST_LODES_ORIGINS_LABELS, "Origin"
     );
     this.jobSegmentDropdown = this.createDropdown(
       "job_segment", LODES_JOB_SEGMENT, LODES_JOB_SEGMENTS, CONST_LODES_JOB_SEGMENTS_LABELS, "Job Segment"
@@ -253,7 +259,7 @@ class ColorScale {
       this.scaleContainer.append(item);
     });
 
-    this.scaleContainer.append(this.modeDropdown);
+    this.scaleContainer.append(this.originDropdown);
     this.scaleContainer.append(this.geographyDropdown);
     this.scaleContainer.append(this.jobSegmentDropdown);
     this.scaleContainer.append(this.toggleButton);
@@ -468,7 +474,8 @@ class Map {
           },
           { hover: true }
         );
-        this.updateGeoIdDisplay(feature.properties.id, this.processor.previousResults[geographyParam][feature.properties.id].count)
+        // debugger;
+        this.updateGeoIdDisplay(feature.properties.id, this.processor.previousResults[geographyParam][feature.properties.id]?.count)
       } else {
         this.map.getCanvas().style.cursor = "";
         this.geoIdDisplay.style.display = "none";
@@ -495,7 +502,7 @@ class Map {
 
     this.map.on("click", async (feat) => {
       if (this.isProcessing) { return; }
-      if (!validMode || !validGeography || !validYear) { return; }
+      if (!validOrigin || !validGeography || !validYear) { return; }
 
       // Query the invisible block group layer to get feature id
       const [feature] = this.map.queryRenderedFeatures(
@@ -519,11 +526,11 @@ class Map {
         if (idParam && validId) {
           setUrlParam("id", idParam);
           await this.processor.runQuery(
-            this, modeParam, jobSegmentParam, yearParam, geographyParam,
+            this, originParam, jobSegmentParam, yearParam, geographyParam,
             idParam.substring(0, 2), idParam
           );
 
-          this.updateGeoIdDisplay(this.hoveredPolygonId[geographyParam], this.processor.previousResults[geographyParam][geometryFeature.properties.id].count)
+          this.updateGeoIdDisplay(this.hoveredPolygonId[geographyParam], this.processor.previousResults[geographyParam][geometryFeature.properties.id]?.count)
         }
       }
     });
@@ -582,6 +589,7 @@ class Map {
     const geoName = this.displayGeoName(geographyParam);
     const truncId = this.truncateId(geographyParam, id);
 
+    // debugger
     if(count) {
       this.geoIdDisplay.innerHTML = `${geoName} ID: ${truncId}<br>${count.toLocaleString()} People`;
     } else {
@@ -776,11 +784,11 @@ class ParquetProcessor {
     return metadata;
   }
 
-  processParquetRowGroup(map, id, geography, data, results, mode) {
+  processParquetRowGroup(map, id, geography, data, results, origin) {
     data.forEach(row => {
       // w_tract, h_tract
-      const source = mode == "work" ? 0 : 1
-      const destination = mode == "work" ? 1 : 0
+      const source = origin == "w_geo" ? 0 : 1
+      const destination = origin == "w_geo" ? 1 : 0
 
       if (row[source] === id) {
         map.map.setFeatureState(
@@ -803,36 +811,36 @@ class ParquetProcessor {
     this.previousResults[geography] = results;
   }
 
-  async runQuery(map, mode, job_segment, year, geography, state, id) {
+  async runQuery(map, origin, job_segment, year, geography, state, id) {
     map.isProcessing = true;
     map.spinner.show();
     const tilesUrl = getTilesUrl({ geography }),
-      queryUrl = getLodesUrl({ geography, state, year }),
+      queryUrl = getLodesUrl({ year, geography, origin, state }),
       truncId = map.truncateId(geography, id);
 
-    // Get the count of files given the geography, mode, and state
-    const results = await this.updateMapOnQuery(map, queryUrl, truncId, geography, job_segment, mode);
+    // Get the count of files given the geography, origin, and state
+    const results = await this.updateMapOnQuery(map, queryUrl, truncId, geography, job_segment, origin);
     this.saveResultState(map, results, geography);
     map.updateSelectedFeature(truncId)
     map.isProcessing = false;
     map.spinner.hide();
   }
 
-  async readAndUpdateMap(map, id, geography, file, metadata, rowGroup, results, job_segment, mode) {
+  async readAndUpdateMap(map, id, geography, file, metadata, rowGroup, results, job_segment, origin) {
     await parquetRead(
       {
         columns: ["w_geo", "h_geo", job_segment],
         compressors,
         file,
         metadata,
-        onComplete: data => this.processParquetRowGroup(map, id, geography, data, results, mode),
+        onComplete: data => this.processParquetRowGroup(map, id, geography, data, results, origin),
         rowEnd: rowGroup.endRow,
         rowStart: rowGroup.startRow
       }
     );
   }
 
-  async updateMapOnQuery(map, url, id, geography, job_segment, mode) {
+  async updateMapOnQuery(map, url, id, geography, job_segment, origin) {
     const urls = [url]
     const results = {};
     let totalGroups = 0;
@@ -885,7 +893,7 @@ class ParquetProcessor {
     let processedGroups = 0,
       progress = 10;
     await Promise.all(rowGroupItems.map(async (rg) => {
-      await this.readAndUpdateMap(map, rg.id, geography, rg.file, rg.metadata, rg.rowGroup, results, job_segment, mode);
+      await this.readAndUpdateMap(map, rg.id, geography, rg.file, rg.metadata, rg.rowGroup, results, job_segment, origin);
       processedGroups += 1;
       progress = Math.ceil((processedGroups / totalGroups) * 100);
       map.spinner.updateProgress(progress);
@@ -902,27 +910,27 @@ class ParquetProcessor {
 
   colorScale.draw(map.map);
 
-  colorScale.modeDropdown.addEventListener("change", async (event) => {
+  colorScale.originDropdown.addEventListener("change", async (event) => {
     const urlParams = new URLSearchParams(window.location.search);
 
-    modeParam = event.target.value;
-    validMode = validModeInput(modeParam);
+    originParam = event.target.value;
+    validOrigin = validOriginInput(originParam);
     validGeography = validGeographyInput(geographyParam);
 
-    if (validMode && validGeography) {
+    if (validOrigin && validGeography) {
       colorScale.updateLabels(map.map.getZoom(), geographyParam);
-      setUrlParam("mode", modeParam);
+      setUrlParam("origin", originParam);
 
       idParam = urlParams.get("id");
       validId = validIdInput(idParam);
 
       if (idParam && validId) {
         await processor.runQuery(
-          map, modeParam, jobSegmentParam, yearParam, geographyParam,
+          map, originParam, jobSegmentParam, yearParam, geographyParam,
           idParam.substring(0, 2), idParam
         );
 
-       map.updateGeoIdDisplay(map.hoveredPolygonId[geographyParam], map.processor.previousResults[geographyParam][map.hoveredPolygonId[geographyParam]].count)
+       map.updateGeoIdDisplay(map.hoveredPolygonId[geographyParam], map.processor.previousResults[geographyParam][map.hoveredPolygonId[geographyParam]]?.count)
       }
     }
   });
@@ -941,11 +949,11 @@ class ParquetProcessor {
 
       if (idParam && validId) {
         await processor.runQuery(
-          map, modeParam, jobSegmentParam, yearParam, geographyParam,
+          map, originParam, jobSegmentParam, yearParam, geographyParam,
           idParam.substring(0, 2), idParam
         );
 
-       map.updateGeoIdDisplay(map.hoveredPolygonId[geographyParam], map.processor.previousResults[geographyParam][map.hoveredPolygonId[geographyParam]].count)
+       map.updateGeoIdDisplay(map.hoveredPolygonId[geographyParam], map.processor.previousResults[geographyParam][map.hoveredPolygonId[geographyParam]]?.count)
       }
     }
   });
@@ -966,11 +974,11 @@ class ParquetProcessor {
 
       if (idParam && validId) {
         await processor.runQuery(
-          map, modeParam, jobSegmentParam, yearParam, geographyParam,
+          map, originParam, jobSegmentParam, yearParam, geographyParam,
           idParam.substring(0, 2), idParam
         );
 
-       map.updateGeoIdDisplay(map.hoveredPolygonId[geographyParam], map.processor.previousResults[geographyParam][map.hoveredPolygonId[geographyParam]].count)
+       map.updateGeoIdDisplay(map.hoveredPolygonId[geographyParam], map.processor.previousResults[geographyParam][map.hoveredPolygonId[geographyParam]]?.count)
       }
     }
   });
@@ -978,18 +986,18 @@ class ParquetProcessor {
   map.map.on("load", async () => {
     const urlParams = new URLSearchParams(window.location.search);
 
-    modeParam = urlParams.get("mode") || LODES_MODE;
+    originParam = urlParams.get("origin") || LODES_ORIGIN;
     geographyParam = urlParams.get("geography") || LODES_GEOGRAPHY;
     yearParam = LODES_YEAR;
 
-    validMode = validModeInput(modeParam);
+    validOrigin = validOriginInput(originParam);
     validYear = validYearInput(yearParam);
     validGeography = validGeographyInput(geographyParam);
 
-    if (validMode && validGeography) {
+    if (validOrigin && validGeography) {
       colorScale.updateLabels(map.map.getZoom(), geographyParam);
-      urlParams.set("mode", modeParam);
-      document.getElementById("mode").value = modeParam;
+      urlParams.set("origin", originParam);
+      document.getElementById("origin").value = originParam;
     }
 
     if (validGeography) {
@@ -998,18 +1006,18 @@ class ParquetProcessor {
       document.getElementById("geography").value = geographyParam;
     }
 
-    if (validMode && validYear && validGeography) {
+    if (validOrigin && validYear && validGeography) {
       idParam = urlParams.get("id");
       validId = validIdInput(idParam);
 
       if (idParam && validId) {
         await processor.runQuery(
-          map, modeParam, jobSegmentParam, yearParam, geographyParam,
+          map, originParam, jobSegmentParam, yearParam, geographyParam,
           idParam.substring(0, 2), idParam
         );
 
         const truncId = map.truncateId(geographyParam, idParam)
-        map.updateGeoIdDisplay(idParam, map.processor.previousResults[geographyParam][truncId].count)
+        map.updateGeoIdDisplay(idParam, map.processor.previousResults[geographyParam][truncId]?.count)
       }
     }
   });

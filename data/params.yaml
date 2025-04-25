@@ -12,6 +12,10 @@ input:
   year:
     - '2022'
 
+  origin:
+    - 'h_geo'
+    - 'w_geo'
+
   state:
     - 'al'
     # - 'ak'

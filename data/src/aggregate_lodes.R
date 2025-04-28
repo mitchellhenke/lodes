@@ -76,8 +76,8 @@ aggregate_lodes <- function(year, state, geography, origin, save = T){
                showWarnings = F, recursive = T)
 
     lodes.agg |>
-      filter(str_sub(lodes.agg[[origin]], 1, 2) == st.fips) |>
-      arrange(across(all_of(origin))) |>
+      filter(str_sub(!!rlang::sym(origin), 1, 2) == st.fips) |>
+      arrange(across(!!rlang::sym(origin))) |>
       write_parquet(paste0("intermediate/od_lodes/year=", year, "/geography=",
                            geography, "/origin=", origin, "/state=", state, "/",
                            state, ".parquet"),

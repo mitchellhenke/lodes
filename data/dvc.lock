@@ -533,15 +533,15 @@ stages:
     outs:
     - path: ./input/cb/year=2023/geography=tract/tract.geojson
       hash: md5
-      md5: a3516deeb0db1ad4d66acc245355094e
-      size: 130682978
+      md5: d8426c6fb6a436b51cacd9c5f2ac3283
+      size: 130682907
   fetch_cb@2023-block_group:
     cmd: python ./src/fetch_cb.py --year 2023 --geography block_group
     outs:
     - path: ./input/cb/year=2023/geography=block_group/block_group.geojson
       hash: md5
-      md5: af0ca5f2a97ef31bef2c6f7a0ed3368c
-      size: 224163146
+      md5: 677a43123b85331c9bb307f670b78ce1
+      size: 224163080
   build_lodes_by_geography@2022-al-tract:
     cmd: Rscript ./src/aggregate_lodes.R 2022 al tract
     deps:
@@ -1379,8 +1379,8 @@ stages:
     outs:
     - path: ./input/cb/year=2023/geography=county/county.geojson
       hash: md5
-      md5: 037bdf89ebc2289087eb6e1c0bf8c710
-      size: 29194910
+      md5: 55acac19348996b10f5dc75d8a24ffc0
+      size: 29194906
   build_lodes_by_geography@2022-la-block_group:
     cmd: Rscript ./src/aggregate_lodes.R 2022 la block_group
     deps:
@@ -2858,8 +2858,8 @@ stages:
     outs:
     - path: ./input/cb/year=2020/geography=zcta/zcta.geojson
       hash: md5
-      md5: 066d94a07a83dc9ed919444fa68e401a
-      size: 166178249
+      md5: d6d39e55b29d9e77cf97f92563f345ee
+      size: 166178234
   collect_aux@2022:
     cmd: Rscript ./src/collect_aux.R 2022
     outs:

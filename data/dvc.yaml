@@ -22,7 +22,7 @@ stages:
 
   fetch_cb:
     matrix:
-      year: ['2023']
+      year: ['2020']
       geography: ['tract', 'block_group', 'county']
     cmd: "python ./src/fetch_cb.py --year ${item.year} --geography ${item.geography}"
     outs:

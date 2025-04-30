@@ -113,10 +113,10 @@ const getTilesUrl = function getTilesUrl({
   year = LODES_YEAR,
   geography = LODES_GEOGRAPHY
 } = {}) {
-  // We always use 2023 tiles as all years of LODES data for Version 8
-  // are based on 2023 TIGER/Lines shapes.
-  return `${URL_TILES}/year=2023/geography=${geography}/` +
-    `tiles-2023-${geography}`;
+  // We always use 2020 tiles as all years of LODES data for Version 8
+  // are based on 2020 TIGER/Lines shapes.
+  return `${URL_TILES}/year=2020/geography=${geography}/` +
+    `tiles-2020-${geography}`;
 };
 
 const getLodesUrl = function getLodesUrl({

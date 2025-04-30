@@ -528,20 +528,6 @@ stages:
       hash: md5
       md5: f3d6df57cec42ac52abca68c95b6e25a
       size: 1187916
-  fetch_cb@2023-tract:
-    cmd: python ./src/fetch_cb.py --year 2023 --geography tract
-    outs:
-    - path: ./input/cb/year=2023/geography=tract/tract.geojson
-      hash: md5
-      md5: d8426c6fb6a436b51cacd9c5f2ac3283
-      size: 130682907
-  fetch_cb@2023-block_group:
-    cmd: python ./src/fetch_cb.py --year 2023 --geography block_group
-    outs:
-    - path: ./input/cb/year=2023/geography=block_group/block_group.geojson
-      hash: md5
-      md5: 677a43123b85331c9bb307f670b78ce1
-      size: 224163080
   build_lodes_by_geography@2022-al-tract:
     cmd: Rscript ./src/aggregate_lodes.R 2022 al tract
     deps:
@@ -1374,13 +1360,6 @@ stages:
       hash: md5
       md5: a36060010b10e973dae9aac73c2a9756
       size: 455652
-  fetch_cb@2023-county:
-    cmd: python ./src/fetch_cb.py --year 2023 --geography county
-    outs:
-    - path: ./input/cb/year=2023/geography=county/county.geojson
-      hash: md5
-      md5: 55acac19348996b10f5dc75d8a24ffc0
-      size: 29194906
   build_lodes_by_geography@2022-la-block_group:
     cmd: Rscript ./src/aggregate_lodes.R 2022 la block_group
     deps:
@@ -7763,3 +7742,24 @@ stages:
       hash: md5
       md5: abe1cd355138e121eade4d4c12f42d79
       size: 53498
+  fetch_cb@2020-tract:
+    cmd: python ./src/fetch_cb.py --year 2020 --geography tract
+    outs:
+    - path: ./input/cb/year=2020/geography=tract/tract.geojson
+      hash: md5
+      md5: 0715951eb7c21557b4fcc516e22520ad
+      size: 141505728
+  fetch_cb@2020-block_group:
+    cmd: python ./src/fetch_cb.py --year 2020 --geography block_group
+    outs:
+    - path: ./input/cb/year=2020/geography=block_group/block_group.geojson
+      hash: md5
+      md5: 1a3b870fffbac3073cbd3d8133f5163e
+      size: 241268909
+  fetch_cb@2020-county:
+    cmd: python ./src/fetch_cb.py --year 2020 --geography county
+    outs:
+    - path: ./input/cb/year=2020/geography=county/county.geojson
+      hash: md5
+      md5: 50f41edb095db108b37d737b94abcc4c
+      size: 31799992

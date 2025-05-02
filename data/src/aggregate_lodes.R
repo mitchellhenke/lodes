@@ -6,9 +6,9 @@ if(!require(stringr)){
   install.packages("stringr", repos = "http://cran.us.r-project.org")
   library(stringr)
 }
-if(!require(nanoparquet)){
-  install.packages("nanoparquet", repos = "http://cran.us.r-project.org")
-  library(nanoparquet)
+if(!require(arrow)){
+  install.packages("arrow", repos = "http://cran.us.r-project.org")
+  library(arrow)
 }
 
 args <- commandArgs(trailingOnly=T)
@@ -69,7 +69,7 @@ aggregate_lodes <- function(year, state, geography, origin, save = T){
       write_parquet(paste0("intermediate/od_lodes/year=", year, "/geography=",
                            geography, "/origin=", origin, "/state=", state, "/",
                            state, ".parquet"),
-                    options = parquet_options(num_rows_per_row_group = 100000))
+                    chunk_size = 100000)
   }
 }
 

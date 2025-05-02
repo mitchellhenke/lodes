@@ -588,7 +588,6 @@ class Map {
     const geoName = this.displayGeoName(geographyParam);
     const truncId = this.truncateId(geographyParam, id);
 
-    // debugger
     if(count) {
       this.geoIdDisplay.innerHTML = `${geoName} ID: ${truncId}<br>${count.toLocaleString()} People`;
     } else {
@@ -813,8 +812,7 @@ class ParquetProcessor {
   async runQuery(map, origin, job_segment, year, geography, state, id) {
     map.isProcessing = true;
     map.spinner.show();
-    const tilesUrl = getTilesUrl({ geography }),
-      queryUrl = getLodesUrl({ year, geography, origin, state }),
+    const queryUrl = getLodesUrl({ year, geography, origin, state }),
       truncId = map.truncateId(geography, id);
 
     // Get the count of files given the geography, origin, and state
@@ -859,8 +857,8 @@ class ParquetProcessor {
           if (column.meta_data.path_in_schema.includes("w_geo")) {
             const
               endRow = rowStart + Number(rowGroup.num_rows) - 1,
-              maxValue = column.meta_data.statistics.max_value,
-              minValue = column.meta_data.statistics.min_value,
+              maxValue = column.meta_data.statistics?.max_value,
+              minValue = column.meta_data.statistics?.min_value,
               startRow = rowStart;
 
             if (id >= minValue && id <= maxValue) {
@@ -929,7 +927,9 @@ class ParquetProcessor {
           idParam.substring(0, 2), idParam
         );
 
-       map.updateGeoIdDisplay(map.hoveredPolygonId[geographyParam], map.processor.previousResults[geographyParam][map.hoveredPolygonId[geographyParam]]?.count)
+        if(map.hoveredPolygonId[geographyParam]) {
+          map.updateGeoIdDisplay(map.hoveredPolygonId[geographyParam], map.processor.previousResults[geographyParam][map.hoveredPolygonId[geographyParam]]?.count)
+        }
       }
     }
   });
@@ -952,7 +952,9 @@ class ParquetProcessor {
           idParam.substring(0, 2), idParam
         );
 
-       map.updateGeoIdDisplay(map.hoveredPolygonId[geographyParam], map.processor.previousResults[geographyParam][map.hoveredPolygonId[geographyParam]]?.count)
+        if(map.hoveredPolygonId[geographyParam]) {
+          map.updateGeoIdDisplay(map.hoveredPolygonId[geographyParam], map.processor.previousResults[geographyParam][map.hoveredPolygonId[geographyParam]]?.count)
+        }
       }
     }
   });
@@ -977,7 +979,9 @@ class ParquetProcessor {
           idParam.substring(0, 2), idParam
         );
 
-       map.updateGeoIdDisplay(map.hoveredPolygonId[geographyParam], map.processor.previousResults[geographyParam][map.hoveredPolygonId[geographyParam]]?.count)
+        if(map.hoveredPolygonId[geographyParam]) {
+          map.updateGeoIdDisplay(map.hoveredPolygonId[geographyParam], map.processor.previousResults[geographyParam][map.hoveredPolygonId[geographyParam]]?.count)
+        }
       }
     }
   });

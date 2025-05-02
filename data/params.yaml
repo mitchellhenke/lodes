@@ -18,7 +18,7 @@ input:
 
   state:
     - 'al'
-    # - 'ak'
+    - 'ak'
     - 'ar'
     - 'az'
     - 'ca'
@@ -39,9 +39,9 @@ input:
     - 'ma'
     - 'md'
     - 'me'
-    # - 'mi'
+    - 'mi'
     - 'mn'
-    # - 'ms'
+    - 'ms'
     - 'mo'
     - 'mt'
     - 'nc'

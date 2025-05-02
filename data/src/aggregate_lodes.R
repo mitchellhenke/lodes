@@ -18,6 +18,12 @@ state <- args[2]
 geography <- args[3]
 origin <- args[4]
 
+fips_code_state_abbreviation <-
+  data.frame(
+    state_abbreviation = c("ak","al","ar","az","ca","co","ct","dc","de","fl","ga","hi","ia","id","il","in","ks","ky","la","ma","md","me","mi","mn","mo","ms","mt","nc","nd","ne","nh","nj","nm","nv","ny","oh","ok","or","pa","ri","sc","sd","tn","tx","ut","va","vt","wa","wi","wv","wy"),
+  fips_code = c("02","01","05","04","06","08","09","11","10","12","13","15","19","16","17","18","20","21","22","25","24","23","26","27","29","28","30","37","38","31","33","34","35","32","36","39","40","41","42","44","45","46","47","48","49","51","50","53","55","54","56")
+  )
+
 # aggregate the supplied LODES data (created by download_lodes) to the
 #   specified aggregation level (tract, block group, or county)
 aggregate_lodes <- function(year, state, geography, origin, save = T){
@@ -28,7 +34,8 @@ aggregate_lodes <- function(year, state, geography, origin, save = T){
   lodes.main <- readr::read_csv(paste0("input/lodes/year=", year, "/state=", state,
                                        "/", state, "-main.csv.gz"),
                                 col_types = "ccnnnnnnnnnnc")
-  st.fips <- str_sub(lodes.main$w_geocode[1], 1, 2)
+  st.fips <- fips_code_state_abbreviation |> filter(state_abbreviation == !!state)
+  st.fips <- st.fips$fips_code[1]
 
   # find all between state flows involving this state
   #   as either the origin or destination

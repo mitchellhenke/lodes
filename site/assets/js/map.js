@@ -474,7 +474,6 @@ class Map {
           },
           { hover: true }
         );
-        // debugger;
         this.updateGeoIdDisplay(feature.properties.id, this.processor.previousResults[geographyParam][feature.properties.id]?.count)
       } else {
         this.map.getCanvas().style.cursor = "";

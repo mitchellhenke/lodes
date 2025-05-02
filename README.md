@@ -46,7 +46,8 @@ The data is managed within the `data` directory and related sub-directories with
       - year=YYYY/
         - geography=GEOGRAPHY/
           - state=XX/
-            - XX.parquet
+            - origin=O_geo/
+              - XX.parquet
 
 </details>
 

@@ -126,8 +126,6 @@ def fetch_cb_shapefile(
     else:
         states = list(map(lambda x: TIGER_GEO_STATE_ABBR_TO_FIPS[x], params["input"]["state"]))
 
-
-
     output_dir = (
         Path.cwd() / "input" / "cb" / f"year={year}" / f"geography={geography}"
     )
@@ -183,8 +181,6 @@ def load_shapefile(path: str | Path) -> gpd.GeoDataFrame:
             r"\d+", "", regex=True
         )
         return gdf
-
-
 
 
 def main() -> None:

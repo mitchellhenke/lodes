@@ -13,7 +13,7 @@ const
   LODES_ORIGINS = ["h_geo", "w_geo"],
   LODES_JOB_SEGMENTS = ["S000", "SA01", "SA02", "SA03", "SE01", "SE02", "SE03", "SI01", "SI02", "SI03"],
   LODES_YEARS = ["2022"],
-  LODES_GEOGRAPHIES = ["block_group", "tract", "county"];
+  LODES_GEOGRAPHIES = ["block_group", "tract", "supertract", "county"];
 
 const CONST_LODES_ORIGINS_LABELS = {
   "w_geo": "Work",
@@ -292,6 +292,8 @@ class ColorScale {
     switch (geography) {
       case "county":
         return ["1", "2-100", "101-1,000", "1,001-10,000", "10,000+"];
+      case "supertract":
+        return ["1", "2-100", "101-1,000", "1,001-10,000", "10,000+"];
       default:
         return ["1", "2-10", "11-20", "21-30", "30+"];
     }
@@ -300,6 +302,8 @@ class ColorScale {
   getThresholdsForGeography(geography) {
     switch (geography) {
       case "county":
+        return [1, 2, 101, 1001, 10000];
+      case "supertract":
         return [1, 2, 101, 1001, 10000];
       default:
         return [1, 2, 11, 21, 30];
@@ -552,6 +556,8 @@ class Map {
   truncateId(geography, id) {
     if (geography === "county") {
       return id.substring(0, 5);
+    } else if (geography === "supertract") {
+      return id.substring(0, 7);
     } else if (geography === "tract") {
       return id.substring(0, 11);
     } else if (geography === "block_group") {

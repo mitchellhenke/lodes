@@ -29,16 +29,6 @@ stages:
       - ./input/cb/year=${item.year}/geography=${item.geography}/${item.geography}.geojson:
           persist: true
 
-  build_supertract:
-    matrix:
-      year: ['2020']
-    cmd: "python ./src/build_supertract.py --year ${item.year}"
-    deps:
-      - ./input/cb/year=${item.year}/geography=tract/tract.geojson
-    outs:
-      - ./input/cb/year=${item.year}/geography=supertract/supertract.geojson:
-          persist: true
-
   fetch_cb_zcta:
     matrix:
       year: ['2020']

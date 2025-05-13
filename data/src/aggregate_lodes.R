@@ -27,7 +27,7 @@ fips_code_state_abbreviation <-
 # aggregate the supplied LODES data (created by download_lodes) to the
 #   specified aggregation level (tract, block group, or county)
 aggregate_lodes <- function(year, state, geography, origin, save = T){
-  stopifnot(geography %in% c("tract", "block_group", "county", "supertract"))
+  stopifnot(geography %in% c("tract", "block_group", "county"))
   stopifnot(origin %in% c("h_geo", "w_geo"))
 
   # the main, i.e., within-state flows
@@ -52,8 +52,7 @@ aggregate_lodes <- function(year, state, geography, origin, save = T){
   fips.length <- case_when(
     geography == "county" ~ 5,
     geography == "tract" ~ 11,
-    geography == "block_group" ~ 12,
-    geography == "supertract" ~ 7
+    geography == "block_group" ~ 12
   )
 
   # aggregate blocks to the specified geography level by truncating the FIPS

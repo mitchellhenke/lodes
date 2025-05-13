@@ -74,7 +74,6 @@ input:
       - tract
       - block_group
       - county
-      - supertract
 
 output:
   # Compression type and level to use for final output Parquet files

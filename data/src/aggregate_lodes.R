@@ -44,7 +44,7 @@ aggregate_lodes <- function(year, state, geography, origin, save = T){
     filter(str_sub(w_geocode, 1, 2) == st.fips |
              str_sub(h_geocode, 1, 2) == st.fips)
 
-  # combine the main and auxillary files
+  # combine the main and auxiliary files
   lodes <- bind_rows(lodes.main, lodes.aux)
   
   # fips codes can be shortened to specify larger geographies

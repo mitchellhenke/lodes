@@ -18,7 +18,7 @@ args <- commandArgs(trailingOnly=T)
 
 year <- args[1]
 
-# this function reads all existing state auxillary files for a given year,
+# this function reads all existing state auxiliary files for a given year,
 #   appends them, and saves them as a single compressed CSV file
 collect_aux <- function(year){
   all.aux <- purrr::map(.x = list.files(paste0("input/lodes/year=", year),

@@ -46,8 +46,9 @@ stages:
       year: ${input.year}
       state: ${input.state}
       geography: ${input.census.geography}
-      origin: ${input.origin}
-    cmd: "Rscript ./src/aggregate_lodes.R ${item.year} ${item.state} ${item.geography} ${item.origin}"
+    cmd: "Rscript ./src/aggregate_lodes.R ${item.year} ${item.state} ${item.geography}"
     outs:
-      - ./intermediate/od_lodes/year=${item.year}/geography=${item.geography}/origin=${item.origin}/state=${item.state}/${item.state}.parquet:
+      - ./intermediate/od_lodes/year=${item.year}/geography=${item.geography}/origin=w_geo/state=${item.state}/${item.state}.parquet:
+          persist: true
+      - ./intermediate/od_lodes/year=${item.year}/geography=${item.geography}/origin=h_geo/state=${item.state}/${item.state}.parquet:
           persist: true

@@ -10,6 +10,7 @@ input:
   # Years to collect input data. Each year will download
   # LODES data
   year:
+    - '2002'
     - '2022'
 
   origin:

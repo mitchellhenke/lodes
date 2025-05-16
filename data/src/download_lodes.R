@@ -7,7 +7,7 @@ if(!require(dplyr)) {
   install.packages("dplyr", repos = "http://cran.us.r-project.org")
 }
 
-df.states_with_no_data <- data.frame(state = c('ak', 'mi', 'ms'), year = c(2022, 2022, 2022))
+df.states_with_no_data <- data.frame(state = c('ak', 'mi', 'ms', 'az', 'dc', 'ms', 'nh'), year = c(2022, 2022, 2022, 2002, 2002, 2002, 2002))
 
 args <- commandArgs(trailingOnly=T)
 

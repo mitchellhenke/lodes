@@ -12,7 +12,7 @@ const
 const
   LODES_ORIGINS = ["h_geo", "w_geo"],
   LODES_JOB_SEGMENTS = ["S000", "SA01", "SA02", "SA03", "SE01", "SE02", "SE03", "SI01", "SI02", "SI03"],
-  LODES_YEARS = ["2022"],
+  LODES_YEARS = ["2002", "2022"],
   LODES_GEOGRAPHIES = ["block_group", "tract", "supertract", "county"];
 
 const CONST_LODES_ORIGINS_LABELS = {
@@ -185,6 +185,9 @@ class ColorScale {
     this.geographyDropdown = this.createDropdown(
       "geography", LODES_GEOGRAPHY, LODES_GEOGRAPHIES, {}, "Geography"
     );
+    this.yearDropdown = this.createDropdown(
+      "year", LODES_YEAR, LODES_YEARS, {}, "Year"
+    );
     this.colors = this.getColors();
     this.zoomLower = null;
     this.zoomUpper = null;
@@ -259,6 +262,7 @@ class ColorScale {
       this.scaleContainer.append(item);
     });
 
+    this.scaleContainer.append(this.yearDropdown);
     this.scaleContainer.append(this.originDropdown);
     this.scaleContainer.append(this.geographyDropdown);
     this.scaleContainer.append(this.jobSegmentDropdown);
@@ -992,12 +996,37 @@ class ParquetProcessor {
     }
   });
 
+  colorScale.yearDropdown.addEventListener("change", async (event) => {
+    const urlParams = new URLSearchParams(window.location.search);
+
+    yearParam = event.target.value;
+    validYear = validYearInput(yearParam);
+
+    if (validYear) {
+      setUrlParam("year", yearParam);
+
+      idParam = urlParams.get("id");
+      validId = validIdInput(idParam);
+
+      if (idParam && validId) {
+        await processor.runQuery(
+          map, originParam, jobSegmentParam, yearParam, geographyParam,
+          idParam.substring(0, 2), idParam
+        );
+
+        if(map.hoveredPolygonId[geographyParam]) {
+          map.updateGeoIdDisplay(map.hoveredPolygonId[geographyParam], map.processor.previousResults[geographyParam][map.hoveredPolygonId[geographyParam]]?.count)
+        }
+      }
+    }
+  });
+
   map.map.on("load", async () => {
     const urlParams = new URLSearchParams(window.location.search);
 
     originParam = urlParams.get("origin") || LODES_ORIGIN;
     geographyParam = urlParams.get("geography") || LODES_GEOGRAPHY;
-    yearParam = LODES_YEAR;
+    yearParam = urlParams.get("year") || LODES_YEAR;
 
     validOrigin = validOriginInput(originParam);
     validYear = validYearInput(yearParam);
@@ -1018,6 +1047,7 @@ class ParquetProcessor {
     if (validOrigin && validYear && validGeography) {
       idParam = urlParams.get("id");
       validId = validIdInput(idParam);
+      document.getElementById("year").value = yearParam;
 
       if (idParam && validId) {
         await processor.runQuery(

@@ -3962,3 +3962,3937 @@ stages:
       hash: md5
       md5: 102ae279d37f5153009bec68f8353245
       size: 52987
+  fetch_lodes_by_state@2002-al:
+    cmd: Rscript ./src/download_lodes.R 2002 al
+    outs:
+    - path: ./input/lodes/year=2002/state=al/al-aux.csv.gz
+      hash: md5
+      md5: 9e63ac6d2f51864ad26f0a29d61426b0
+      size: 313671
+    - path: ./input/lodes/year=2002/state=al/al-main.csv.gz
+      hash: md5
+      md5: f8f4bd40c67af4bf4e3e5d009a7aa9f8
+      size: 8985611
+  fetch_lodes_by_state@2002-ak:
+    cmd: Rscript ./src/download_lodes.R 2002 ak
+    outs:
+    - path: ./input/lodes/year=2002/state=ak/ak-aux.csv.gz
+      hash: md5
+      md5: b1445068bd364853afeb6a474d30a746
+      size: 164910
+    - path: ./input/lodes/year=2002/state=ak/ak-main.csv.gz
+      hash: md5
+      md5: 4a7e29721dfd0eefeb9bf5c67807edd5
+      size: 933179
+  fetch_lodes_by_state@2002-ar:
+    cmd: Rscript ./src/download_lodes.R 2002 ar
+    outs:
+    - path: ./input/lodes/year=2002/state=ar/ar-aux.csv.gz
+      hash: md5
+      md5: 1eba9bfef0e94e0b26e9ac66683cc8f4
+      size: 402
+    - path: ./input/lodes/year=2002/state=ar/ar-main.csv.gz
+      hash: md5
+      md5: 4818208c81113438ea1f15ba104b3228
+      size: 109
+  fetch_lodes_by_state@2002-az:
+    cmd: Rscript ./src/download_lodes.R 2002 az
+    outs:
+    - path: ./input/lodes/year=2002/state=az/az-aux.csv.gz
+      hash: md5
+      md5: a6892f489065b68e9204d758e4737d1b
+      size: 75
+    - path: ./input/lodes/year=2002/state=az/az-main.csv.gz
+      hash: md5
+      md5: a6892f489065b68e9204d758e4737d1b
+      size: 75
+  fetch_lodes_by_state@2002-ca:
+    cmd: Rscript ./src/download_lodes.R 2002 ca
+    outs:
+    - path: ./input/lodes/year=2002/state=ca/ca-aux.csv.gz
+      hash: md5
+      md5: 09d6bc5491d6c0f9e82e1d5c61795dfc
+      size: 402368
+    - path: ./input/lodes/year=2002/state=ca/ca-main.csv.gz
+      hash: md5
+      md5: 071cbe88192cbf4f03d4dfab9bb5a044
+      size: 74947475
+  fetch_lodes_by_state@2002-co:
+    cmd: Rscript ./src/download_lodes.R 2002 co
+    outs:
+    - path: ./input/lodes/year=2002/state=co/co-aux.csv.gz
+      hash: md5
+      md5: be420646e66684d2f05f4edcada772fb
+      size: 142120
+    - path: ./input/lodes/year=2002/state=co/co-main.csv.gz
+      hash: md5
+      md5: 9abdd3507b6662214f7e6dd9ecd66dc5
+      size: 10754479
+  fetch_lodes_by_state@2002-ct:
+    cmd: Rscript ./src/download_lodes.R 2002 ct
+    outs:
+    - path: ./input/lodes/year=2002/state=ct/ct-aux.csv.gz
+      hash: md5
+      md5: aa780929f7266ae56d34e10599cdc12d
+      size: 731341
+    - path: ./input/lodes/year=2002/state=ct/ct-main.csv.gz
+      hash: md5
+      md5: 0fb690ebdabb4cde298ff3b72d0af3e6
+      size: 7493306
+  fetch_lodes_by_state@2002-dc:
+    cmd: Rscript ./src/download_lodes.R 2002 dc
+    outs:
+    - path: ./input/lodes/year=2002/state=dc/dc-aux.csv.gz
+      hash: md5
+      md5: a6892f489065b68e9204d758e4737d1b
+      size: 75
+    - path: ./input/lodes/year=2002/state=dc/dc-main.csv.gz
+      hash: md5
+      md5: a6892f489065b68e9204d758e4737d1b
+      size: 75
+  fetch_lodes_by_state@2002-de:
+    cmd: Rscript ./src/download_lodes.R 2002 de
+    outs:
+    - path: ./input/lodes/year=2002/state=de/de-aux.csv.gz
+      hash: md5
+      md5: a437d760ea856f5a48d4e841550f6804
+      size: 363363
+    - path: ./input/lodes/year=2002/state=de/de-main.csv.gz
+      hash: md5
+      md5: a65e012a0a486b7ef9c880dd283d5a0a
+      size: 1506633
+  fetch_lodes_by_state@2002-fl:
+    cmd: Rscript ./src/download_lodes.R 2002 fl
+    outs:
+    - path: ./input/lodes/year=2002/state=fl/fl-aux.csv.gz
+      hash: md5
+      md5: 75001c4fe505cf5892b8b6e4aa05138c
+      size: 290261
+    - path: ./input/lodes/year=2002/state=fl/fl-main.csv.gz
+      hash: md5
+      md5: 92233367b679596ac9bcd994ba93f815
+      size: 35644061
+  fetch_lodes_by_state@2002-ga:
+    cmd: Rscript ./src/download_lodes.R 2002 ga
+    outs:
+    - path: ./input/lodes/year=2002/state=ga/ga-aux.csv.gz
+      hash: md5
+      md5: ef737670a2bc342b110bf0d8a3bffccf
+      size: 715532
+    - path: ./input/lodes/year=2002/state=ga/ga-main.csv.gz
+      hash: md5
+      md5: e3e3a43368a7fe5ba0b0773992281a56
+      size: 18826138
+  fetch_lodes_by_state@2002-hi:
+    cmd: Rscript ./src/download_lodes.R 2002 hi
+    outs:
+    - path: ./input/lodes/year=2002/state=hi/hi-aux.csv.gz
+      hash: md5
+      md5: d97263d74302f669d3b9883a2a5fc037
+      size: 19086
+    - path: ./input/lodes/year=2002/state=hi/hi-main.csv.gz
+      hash: md5
+      md5: 58d93a5217dc01384f3f5314f9ff8df9
+      size: 1847050
+  fetch_lodes_by_state@2002-ia:
+    cmd: Rscript ./src/download_lodes.R 2002 ia
+    outs:
+    - path: ./input/lodes/year=2002/state=ia/ia-aux.csv.gz
+      hash: md5
+      md5: febf342215340fc3d86345b23a52d8af
+      size: 441549
+    - path: ./input/lodes/year=2002/state=ia/ia-main.csv.gz
+      hash: md5
+      md5: 0ebcd93853dbd03f6ae84ed21ff12010
+      size: 6501309
+  fetch_lodes_by_state@2002-id:
+    cmd: Rscript ./src/download_lodes.R 2002 id
+    outs:
+    - path: ./input/lodes/year=2002/state=id/id-aux.csv.gz
+      hash: md5
+      md5: de9db5028c6c61b46681c19108c7d67a
+      size: 139937
+    - path: ./input/lodes/year=2002/state=id/id-main.csv.gz
+      hash: md5
+      md5: 213ea266748c1f5b9c16265decbb0b52
+      size: 2544013
+  fetch_lodes_by_state@2002-il:
+    cmd: Rscript ./src/download_lodes.R 2002 il
+    outs:
+    - path: ./input/lodes/year=2002/state=il/il-aux.csv.gz
+      hash: md5
+      md5: 99f54c37c7116e3126f15f9a70011abb
+      size: 1267035
+    - path: ./input/lodes/year=2002/state=il/il-main.csv.gz
+      hash: md5
+      md5: 3a7b16eccfeec6c639a727f5f8f03c7a
+      size: 29121204
+  fetch_lodes_by_state@2002-in:
+    cmd: Rscript ./src/download_lodes.R 2002 in
+    outs:
+    - path: ./input/lodes/year=2002/state=in/in-aux.csv.gz
+      hash: md5
+      md5: f46c9a333897abec02248889faa31060
+      size: 784579
+    - path: ./input/lodes/year=2002/state=in/in-main.csv.gz
+      hash: md5
+      md5: 0076fa3a7879b610134162bb66ae5c4b
+      size: 13628366
+  fetch_lodes_by_state@2002-ks:
+    cmd: Rscript ./src/download_lodes.R 2002 ks
+    outs:
+    - path: ./input/lodes/year=2002/state=ks/ks-aux.csv.gz
+      hash: md5
+      md5: 2b78264a00b1a558024ebbf6d49eb18c
+      size: 689546
+    - path: ./input/lodes/year=2002/state=ks/ks-main.csv.gz
+      hash: md5
+      md5: a74db93faa5364ddc6e75f82bfb96674
+      size: 5794646
+  fetch_lodes_by_state@2002-ky:
+    cmd: Rscript ./src/download_lodes.R 2002 ky
+    outs:
+    - path: ./input/lodes/year=2002/state=ky/ky-aux.csv.gz
+      hash: md5
+      md5: 2629fb39e9268aa33603b8d3f16ec977
+      size: 754077
+    - path: ./input/lodes/year=2002/state=ky/ky-main.csv.gz
+      hash: md5
+      md5: 9ce259e9211c41499d39a899c7141c9d
+      size: 7676177
+  fetch_lodes_by_state@2002-la:
+    cmd: Rscript ./src/download_lodes.R 2002 la
+    outs:
+    - path: ./input/lodes/year=2002/state=la/la-aux.csv.gz
+      hash: md5
+      md5: 3b673c3cf249b1457516007a8995ea69
+      size: 274413
+    - path: ./input/lodes/year=2002/state=la/la-main.csv.gz
+      hash: md5
+      md5: 37e7980e53a978a81f2465b4f9f0eabd
+      size: 8815356
+  fetch_lodes_by_state@2002-ma:
+    cmd: Rscript ./src/download_lodes.R 2002 ma
+    outs:
+    - path: ./input/lodes/year=2002/state=ma/ma-aux.csv.gz
+      hash: md5
+      md5: c20a99ebfc3e1f55725b2457d65297e5
+      size: 161
+    - path: ./input/lodes/year=2002/state=ma/ma-main.csv.gz
+      hash: md5
+      md5: 6f1afefcb344bcdc72d810965112e2da
+      size: 128
+  fetch_lodes_by_state@2002-md:
+    cmd: Rscript ./src/download_lodes.R 2002 md
+    outs:
+    - path: ./input/lodes/year=2002/state=md/md-aux.csv.gz
+      hash: md5
+      md5: 19b8598f4090ed8c77f5681074048313
+      size: 1395033
+    - path: ./input/lodes/year=2002/state=md/md-main.csv.gz
+      hash: md5
+      md5: 7aca515ddfd1d145c98cb59fe94de10e
+      size: 10694987
+  fetch_lodes_by_state@2002-me:
+    cmd: Rscript ./src/download_lodes.R 2002 me
+    outs:
+    - path: ./input/lodes/year=2002/state=me/me-aux.csv.gz
+      hash: md5
+      md5: 87d8814ceb45a4364c66f51e52a6fba8
+      size: 72647
+    - path: ./input/lodes/year=2002/state=me/me-main.csv.gz
+      hash: md5
+      md5: a376cf65bb965f9125b9ad2a598c9d23
+      size: 2628691
+  fetch_lodes_by_state@2002-mi:
+    cmd: Rscript ./src/download_lodes.R 2002 mi
+    outs:
+    - path: ./input/lodes/year=2002/state=mi/mi-aux.csv.gz
+      hash: md5
+      md5: a29384b71acc36ddee7d1ab3542fd24a
+      size: 353562
+    - path: ./input/lodes/year=2002/state=mi/mi-main.csv.gz
+      hash: md5
+      md5: 0b42cc599d20c5db233350fe9dc5af4d
+      size: 21791115
+  fetch_lodes_by_state@2002-mn:
+    cmd: Rscript ./src/download_lodes.R 2002 mn
+    outs:
+    - path: ./input/lodes/year=2002/state=mn/mn-aux.csv.gz
+      hash: md5
+      md5: fea57cce1aef8f6a36edd7fd27764ad5
+      size: 441561
+    - path: ./input/lodes/year=2002/state=mn/mn-main.csv.gz
+      hash: md5
+      md5: 1f0d11d593a0a115b2a75ba5981ba658
+      size: 12069724
+  fetch_lodes_by_state@2002-ms:
+    cmd: Rscript ./src/download_lodes.R 2002 ms
+    outs:
+    - path: ./input/lodes/year=2002/state=ms/ms-aux.csv.gz
+      hash: md5
+      md5: a6892f489065b68e9204d758e4737d1b
+      size: 75
+    - path: ./input/lodes/year=2002/state=ms/ms-main.csv.gz
+      hash: md5
+      md5: a6892f489065b68e9204d758e4737d1b
+      size: 75
+  fetch_lodes_by_state@2002-mo:
+    cmd: Rscript ./src/download_lodes.R 2002 mo
+    outs:
+    - path: ./input/lodes/year=2002/state=mo/mo-aux.csv.gz
+      hash: md5
+      md5: cea307558ec02fd5099aa9cd9991ca87
+      size: 1178069
+    - path: ./input/lodes/year=2002/state=mo/mo-main.csv.gz
+      hash: md5
+      md5: 78d21f550aa1810f254faf68b6e4cbc5
+      size: 12233884
+  fetch_lodes_by_state@2002-mt:
+    cmd: Rscript ./src/download_lodes.R 2002 mt
+    outs:
+    - path: ./input/lodes/year=2002/state=mt/mt-aux.csv.gz
+      hash: md5
+      md5: c112799e50a824cffbceedf850a32e20
+      size: 38868
+    - path: ./input/lodes/year=2002/state=mt/mt-main.csv.gz
+      hash: md5
+      md5: edb906d726c7733bb5602430119fa418
+      size: 1758450
+  fetch_lodes_by_state@2002-nc:
+    cmd: Rscript ./src/download_lodes.R 2002 nc
+    outs:
+    - path: ./input/lodes/year=2002/state=nc/nc-aux.csv.gz
+      hash: md5
+      md5: 10ced26839162a59f35a77300982f71b
+      size: 802713
+    - path: ./input/lodes/year=2002/state=nc/nc-main.csv.gz
+      hash: md5
+      md5: db168f5f8814b6bcb72476031df0c414
+      size: 18520158
+  fetch_lodes_by_state@2002-nd:
+    cmd: Rscript ./src/download_lodes.R 2002 nd
+    outs:
+    - path: ./input/lodes/year=2002/state=nd/nd-aux.csv.gz
+      hash: md5
+      md5: 1b2ef5ce885383dc58dec5ef0d6798de
+      size: 171715
+    - path: ./input/lodes/year=2002/state=nd/nd-main.csv.gz
+      hash: md5
+      md5: e8f7a19ecc5dfd989f88e6845d2abd98
+      size: 1261632
+  fetch_lodes_by_state@2002-ne:
+    cmd: Rscript ./src/download_lodes.R 2002 ne
+    outs:
+    - path: ./input/lodes/year=2002/state=ne/ne-aux.csv.gz
+      hash: md5
+      md5: 95aec6ec94c9e90a610e7952392fc25a
+      size: 316581
+    - path: ./input/lodes/year=2002/state=ne/ne-main.csv.gz
+      hash: md5
+      md5: b5e36fe87f790cd640354fba025fdf0f
+      size: 3982774
+  fetch_lodes_by_state@2002-nh:
+    cmd: Rscript ./src/download_lodes.R 2002 nh
+    outs:
+    - path: ./input/lodes/year=2002/state=nh/nh-aux.csv.gz
+      hash: md5
+      md5: a6892f489065b68e9204d758e4737d1b
+      size: 75
+    - path: ./input/lodes/year=2002/state=nh/nh-main.csv.gz
+      hash: md5
+      md5: a6892f489065b68e9204d758e4737d1b
+      size: 75
+  fetch_lodes_by_state@2002-nj:
+    cmd: Rscript ./src/download_lodes.R 2002 nj
+    outs:
+    - path: ./input/lodes/year=2002/state=nj/nj-aux.csv.gz
+      hash: md5
+      md5: dbd9f4fb25fd48351205086b96a98316
+      size: 2109166
+    - path: ./input/lodes/year=2002/state=nj/nj-main.csv.gz
+      hash: md5
+      md5: 943592748a89281551181d0bec18ba75
+      size: 18518448
+  fetch_lodes_by_state@2002-nm:
+    cmd: Rscript ./src/download_lodes.R 2002 nm
+    outs:
+    - path: ./input/lodes/year=2002/state=nm/nm-aux.csv.gz
+      hash: md5
+      md5: 35f5e451272d58e5d4ab4b47e9fabc59
+      size: 111262
+    - path: ./input/lodes/year=2002/state=nm/nm-main.csv.gz
+      hash: md5
+      md5: 29aec9f8c31a33e59d09d879a8dfe87b
+      size: 3227358
+  fetch_lodes_by_state@2002-nv:
+    cmd: Rscript ./src/download_lodes.R 2002 nv
+    outs:
+    - path: ./input/lodes/year=2002/state=nv/nv-aux.csv.gz
+      hash: md5
+      md5: 465e94b9fb00083d04af2877529e66bf
+      size: 190990
+    - path: ./input/lodes/year=2002/state=nv/nv-main.csv.gz
+      hash: md5
+      md5: 66b570ada048c596323b4b542967205a
+      size: 4300770
+  fetch_lodes_by_state@2002-ny:
+    cmd: Rscript ./src/download_lodes.R 2002 ny
+    outs:
+    - path: ./input/lodes/year=2002/state=ny/ny-aux.csv.gz
+      hash: md5
+      md5: b96785c00f3861eae20c4f1442aaa727
+      size: 2814310
+    - path: ./input/lodes/year=2002/state=ny/ny-main.csv.gz
+      hash: md5
+      md5: 8e08e9b5186cf752e15fb0a35601183b
+      size: 38088106
+  fetch_lodes_by_state@2002-oh:
+    cmd: Rscript ./src/download_lodes.R 2002 oh
+    outs:
+    - path: ./input/lodes/year=2002/state=oh/oh-aux.csv.gz
+      hash: md5
+      md5: 54454d0bdc5df472579defea43fd6085
+      size: 1119663
+    - path: ./input/lodes/year=2002/state=oh/oh-main.csv.gz
+      hash: md5
+      md5: d31c26224cea8564fd025010e45db863
+      size: 26919509
+  fetch_lodes_by_state@2002-ok:
+    cmd: Rscript ./src/download_lodes.R 2002 ok
+    outs:
+    - path: ./input/lodes/year=2002/state=ok/ok-aux.csv.gz
+      hash: md5
+      md5: a83203d7daccb68e2ba1542b71318fc4
+      size: 143414
+    - path: ./input/lodes/year=2002/state=ok/ok-main.csv.gz
+      hash: md5
+      md5: c2e3b0b6780779bd2be2163fb0f2e1f9
+      size: 7004131
+  fetch_lodes_by_state@2002-or:
+    cmd: Rscript ./src/download_lodes.R 2002 or
+    outs:
+    - path: ./input/lodes/year=2002/state=or/or-aux.csv.gz
+      hash: md5
+      md5: ce04a65a5c5d186ee2246315f892bbc7
+      size: 484606
+    - path: ./input/lodes/year=2002/state=or/or-main.csv.gz
+      hash: md5
+      md5: 3587a5e60a68f687b472aa70a82c0f5b
+      size: 7545244
+  fetch_lodes_by_state@2002-pa:
+    cmd: Rscript ./src/download_lodes.R 2002 pa
+    outs:
+    - path: ./input/lodes/year=2002/state=pa/pa-aux.csv.gz
+      hash: md5
+      md5: a1e225d0c092a6a153e7df479351f3e1
+      size: 1390948
+    - path: ./input/lodes/year=2002/state=pa/pa-main.csv.gz
+      hash: md5
+      md5: 2e61349130375345c1d0c5b2b5601660
+      size: 26931148
+  fetch_lodes_by_state@2002-ri:
+    cmd: Rscript ./src/download_lodes.R 2002 ri
+    outs:
+    - path: ./input/lodes/year=2002/state=ri/ri-aux.csv.gz
+      hash: md5
+      md5: 67e2f5522aded7d30ffd0c081401549f
+      size: 330621
+    - path: ./input/lodes/year=2002/state=ri/ri-main.csv.gz
+      hash: md5
+      md5: d9bfb0c92d5e60a9a1bd80cc642c6668
+      size: 2062355
+  fetch_lodes_by_state@2002-sc:
+    cmd: Rscript ./src/download_lodes.R 2002 sc
+    outs:
+    - path: ./input/lodes/year=2002/state=sc/sc-aux.csv.gz
+      hash: md5
+      md5: 45b9bab0954921fe83495f46cc0b053c
+      size: 366790
+    - path: ./input/lodes/year=2002/state=sc/sc-main.csv.gz
+      hash: md5
+      md5: 24d8b92727c07491cdfa2d5275adbeac
+      size: 8492978
+  fetch_lodes_by_state@2002-sd:
+    cmd: Rscript ./src/download_lodes.R 2002 sd
+    outs:
+    - path: ./input/lodes/year=2002/state=sd/sd-aux.csv.gz
+      hash: md5
+      md5: e61fb092a3307d8db6a1f11af18b8e51
+      size: 100340
+    - path: ./input/lodes/year=2002/state=sd/sd-main.csv.gz
+      hash: md5
+      md5: 3a25aebfebf1adfdccd4e5c8a1d665ad
+      size: 1534979
+  fetch_lodes_by_state@2002-tn:
+    cmd: Rscript ./src/download_lodes.R 2002 tn
+    outs:
+    - path: ./input/lodes/year=2002/state=tn/tn-aux.csv.gz
+      hash: md5
+      md5: 796d16ed659904fec8008f1c415b09df
+      size: 770634
+    - path: ./input/lodes/year=2002/state=tn/tn-main.csv.gz
+      hash: md5
+      md5: 1fa6de9897ba0af078af376826d10534
+      size: 11821538
+  fetch_lodes_by_state@2002-tx:
+    cmd: Rscript ./src/download_lodes.R 2002 tx
+    outs:
+    - path: ./input/lodes/year=2002/state=tx/tx-aux.csv.gz
+      hash: md5
+      md5: f816970941b94f0088ffd762109650f5
+      size: 557000
+    - path: ./input/lodes/year=2002/state=tx/tx-main.csv.gz
+      hash: md5
+      md5: 8804814245c671f6f9bfe0b60aa8f992
+      size: 47368107
+  fetch_lodes_by_state@2002-ut:
+    cmd: Rscript ./src/download_lodes.R 2002 ut
+    outs:
+    - path: ./input/lodes/year=2002/state=ut/ut-aux.csv.gz
+      hash: md5
+      md5: 04262cbc1528c2d5b7b9b5f8906af6a7
+      size: 81315
+    - path: ./input/lodes/year=2002/state=ut/ut-main.csv.gz
+      hash: md5
+      md5: 05993448acb4bb37b5c8d810fa220153
+      size: 5131012
+  fetch_lodes_by_state@2002-va:
+    cmd: Rscript ./src/download_lodes.R 2002 va
+    outs:
+    - path: ./input/lodes/year=2002/state=va/va-aux.csv.gz
+      hash: md5
+      md5: ffa9c4d93364d6397b08066f2a6d83bb
+      size: 1358457
+    - path: ./input/lodes/year=2002/state=va/va-main.csv.gz
+      hash: md5
+      md5: f373339286a89a5cf7c12c9dad898f71
+      size: 14979206
+  fetch_lodes_by_state@2002-vt:
+    cmd: Rscript ./src/download_lodes.R 2002 vt
+    outs:
+    - path: ./input/lodes/year=2002/state=vt/vt-aux.csv.gz
+      hash: md5
+      md5: dd398b92006905644b57188d6730bc80
+      size: 140064
+    - path: ./input/lodes/year=2002/state=vt/vt-main.csv.gz
+      hash: md5
+      md5: 51be5b0a9322383ece075a316de04b5b
+      size: 1193470
+  fetch_lodes_by_state@2002-wa:
+    cmd: Rscript ./src/download_lodes.R 2002 wa
+    outs:
+    - path: ./input/lodes/year=2002/state=wa/wa-aux.csv.gz
+      hash: md5
+      md5: 08610f7e990a31a661ca3bccded42c2f
+      size: 274863
+    - path: ./input/lodes/year=2002/state=wa/wa-main.csv.gz
+      hash: md5
+      md5: 11947ef0320c49ee58c631cde1fc8a05
+      size: 12602315
+  fetch_lodes_by_state@2002-wi:
+    cmd: Rscript ./src/download_lodes.R 2002 wi
+    outs:
+    - path: ./input/lodes/year=2002/state=wi/wi-aux.csv.gz
+      hash: md5
+      md5: cfe326dd88861b9f7104dfc2b2366cc3
+      size: 368996
+    - path: ./input/lodes/year=2002/state=wi/wi-main.csv.gz
+      hash: md5
+      md5: 26769de32b4dcbb63f5b7fe7cd5e9439
+      size: 12549958
+  fetch_lodes_by_state@2002-wv:
+    cmd: Rscript ./src/download_lodes.R 2002 wv
+    outs:
+    - path: ./input/lodes/year=2002/state=wv/wv-aux.csv.gz
+      hash: md5
+      md5: 67e922b9a59ad15d3a8fe7a3493e5e71
+      size: 384840
+    - path: ./input/lodes/year=2002/state=wv/wv-main.csv.gz
+      hash: md5
+      md5: 04e49338640ef31276183952c5b4ed82
+      size: 2892417
+  fetch_lodes_by_state@2002-wy:
+    cmd: Rscript ./src/download_lodes.R 2002 wy
+    outs:
+    - path: ./input/lodes/year=2002/state=wy/wy-aux.csv.gz
+      hash: md5
+      md5: 2f7ad90849c278e2f71efae1e15c23ae
+      size: 57117
+    - path: ./input/lodes/year=2002/state=wy/wy-main.csv.gz
+      hash: md5
+      md5: b5bc831674b144a34d5e667a3055a326
+      size: 977032
+  collect_aux@2002:
+    cmd: Rscript ./src/collect_aux.R 2002
+    outs:
+    - path: ./input/lodes/year=2002/all-aux.csv.gz
+      hash: md5
+      md5: a69cc0f426b965104b4f54f90c6f73a5
+      size: 25413428
+  build_lodes_by_geography@2002-al-tract:
+    cmd: Rscript ./src/aggregate_lodes.R 2002 al tract
+    deps:
+    - path: ./input/lodes/year=2002/all-aux.csv.gz
+      hash: md5
+      md5: a69cc0f426b965104b4f54f90c6f73a5
+      size: 25413428
+    - path: ./input/lodes/year=2002/state=al/al-main.csv.gz
+      hash: md5
+      md5: f8f4bd40c67af4bf4e3e5d009a7aa9f8
+      size: 8985611
+    outs:
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=tract/origin=h_geo/state=al/al.parquet
+      hash: md5
+      md5: 0c7e40d609b43cca2cb4ac5292a2c372
+      size: 2203703
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=tract/origin=w_geo/state=al/al.parquet
+      hash: md5
+      md5: 08ea710cc6dbd0830d6b3cc61092a1df
+      size: 2222748
+  build_lodes_by_geography@2002-al-block_group:
+    cmd: Rscript ./src/aggregate_lodes.R 2002 al block_group
+    deps:
+    - path: ./input/lodes/year=2002/all-aux.csv.gz
+      hash: md5
+      md5: a69cc0f426b965104b4f54f90c6f73a5
+      size: 25413428
+    - path: ./input/lodes/year=2002/state=al/al-main.csv.gz
+      hash: md5
+      md5: f8f4bd40c67af4bf4e3e5d009a7aa9f8
+      size: 8985611
+    outs:
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=block_group/origin=h_geo/state=al/al.parquet
+      hash: md5
+      md5: a265f67cb6fde16237421526a1e6ced7
+      size: 4220292
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=block_group/origin=w_geo/state=al/al.parquet
+      hash: md5
+      md5: 7021914ad6c18dbef1793670945197bf
+      size: 4015031
+  build_lodes_by_geography@2002-al-county:
+    cmd: Rscript ./src/aggregate_lodes.R 2002 al county
+    deps:
+    - path: ./input/lodes/year=2002/all-aux.csv.gz
+      hash: md5
+      md5: a69cc0f426b965104b4f54f90c6f73a5
+      size: 25413428
+    - path: ./input/lodes/year=2002/state=al/al-main.csv.gz
+      hash: md5
+      md5: f8f4bd40c67af4bf4e3e5d009a7aa9f8
+      size: 8985611
+    outs:
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=county/origin=h_geo/state=al/al.parquet
+      hash: md5
+      md5: 322ab54054cab3987f900d7e9774e123
+      size: 110140
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=county/origin=w_geo/state=al/al.parquet
+      hash: md5
+      md5: 0b5d053257aa165bedce912ce706730d
+      size: 120929
+  build_lodes_by_geography@2002-ak-tract:
+    cmd: Rscript ./src/aggregate_lodes.R 2002 ak tract
+    deps:
+    - path: ./input/lodes/year=2002/all-aux.csv.gz
+      hash: md5
+      md5: a69cc0f426b965104b4f54f90c6f73a5
+      size: 25413428
+    - path: ./input/lodes/year=2002/state=ak/ak-main.csv.gz
+      hash: md5
+      md5: 4a7e29721dfd0eefeb9bf5c67807edd5
+      size: 933179
+    outs:
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=tract/origin=h_geo/state=ak/ak.parquet
+      hash: md5
+      md5: 9134cf700beec1052bacd44a4a5237ef
+      size: 92500
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=tract/origin=w_geo/state=ak/ak.parquet
+      hash: md5
+      md5: ef1fd874f4e2a83a7a081e586a32a32c
+      size: 245743
+  build_lodes_by_geography@2002-ak-block_group:
+    cmd: Rscript ./src/aggregate_lodes.R 2002 ak block_group
+    deps:
+    - path: ./input/lodes/year=2002/all-aux.csv.gz
+      hash: md5
+      md5: a69cc0f426b965104b4f54f90c6f73a5
+      size: 25413428
+    - path: ./input/lodes/year=2002/state=ak/ak-main.csv.gz
+      hash: md5
+      md5: 4a7e29721dfd0eefeb9bf5c67807edd5
+      size: 933179
+    outs:
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=block_group/origin=h_geo/state=ak/ak.parquet
+      hash: md5
+      md5: 1aeb400260c83d9f0beecbce978cdc48
+      size: 268291
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=block_group/origin=w_geo/state=ak/ak.parquet
+      hash: md5
+      md5: 68d14f5bd55cad15b866707365e42d1a
+      size: 460219
+  build_lodes_by_geography@2002-ak-county:
+    cmd: Rscript ./src/aggregate_lodes.R 2002 ak county
+    deps:
+    - path: ./input/lodes/year=2002/all-aux.csv.gz
+      hash: md5
+      md5: a69cc0f426b965104b4f54f90c6f73a5
+      size: 25413428
+    - path: ./input/lodes/year=2002/state=ak/ak-main.csv.gz
+      hash: md5
+      md5: 4a7e29721dfd0eefeb9bf5c67807edd5
+      size: 933179
+    outs:
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=county/origin=h_geo/state=ak/ak.parquet
+      hash: md5
+      md5: a2fc8192678a796da4a088566dc004d4
+      size: 13014
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=county/origin=w_geo/state=ak/ak.parquet
+      hash: md5
+      md5: de9f36ed9d55dd1f1f3421e65e92c7eb
+      size: 35412
+  build_lodes_by_geography@2002-ar-tract:
+    cmd: Rscript ./src/aggregate_lodes.R 2002 ar tract
+    deps:
+    - path: ./input/lodes/year=2002/all-aux.csv.gz
+      hash: md5
+      md5: a69cc0f426b965104b4f54f90c6f73a5
+      size: 25413428
+    - path: ./input/lodes/year=2002/state=ar/ar-main.csv.gz
+      hash: md5
+      md5: 4818208c81113438ea1f15ba104b3228
+      size: 109
+    outs:
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=tract/origin=h_geo/state=ar/ar.parquet
+      hash: md5
+      md5: aabf9758497a743d0da858cffc1c4f40
+      size: 110991
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=tract/origin=w_geo/state=ar/ar.parquet
+      hash: md5
+      md5: c86348e52907fda2ebd54bc82207fe43
+      size: 3435
+  build_lodes_by_geography@2002-ar-block_group:
+    cmd: Rscript ./src/aggregate_lodes.R 2002 ar block_group
+    deps:
+    - path: ./input/lodes/year=2002/all-aux.csv.gz
+      hash: md5
+      md5: a69cc0f426b965104b4f54f90c6f73a5
+      size: 25413428
+    - path: ./input/lodes/year=2002/state=ar/ar-main.csv.gz
+      hash: md5
+      md5: 4818208c81113438ea1f15ba104b3228
+      size: 109
+    outs:
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=block_group/origin=h_geo/state=ar/ar.parquet
+      hash: md5
+      md5: 0aaf985ee1bb40669f1abe171d59c754
+      size: 157146
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=block_group/origin=w_geo/state=ar/ar.parquet
+      hash: md5
+      md5: 7a4191d817cfc94e321efd0d1a797450
+      size: 3491
+  build_lodes_by_geography@2002-ar-county:
+    cmd: Rscript ./src/aggregate_lodes.R 2002 ar county
+    deps:
+    - path: ./input/lodes/year=2002/all-aux.csv.gz
+      hash: md5
+      md5: a69cc0f426b965104b4f54f90c6f73a5
+      size: 25413428
+    - path: ./input/lodes/year=2002/state=ar/ar-main.csv.gz
+      hash: md5
+      md5: 4818208c81113438ea1f15ba104b3228
+      size: 109
+    outs:
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=county/origin=h_geo/state=ar/ar.parquet
+      hash: md5
+      md5: 54b9a251488aa5b1fd925831d5ce54f2
+      size: 33595
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=county/origin=w_geo/state=ar/ar.parquet
+      hash: md5
+      md5: 30db338255b7358adb3dd04fd8d7f9e8
+      size: 3233
+  build_lodes_by_geography@2002-az-tract:
+    cmd: Rscript ./src/aggregate_lodes.R 2002 az tract
+    deps:
+    - path: ./input/lodes/year=2002/all-aux.csv.gz
+      hash: md5
+      md5: a69cc0f426b965104b4f54f90c6f73a5
+      size: 25413428
+    - path: ./input/lodes/year=2002/state=az/az-main.csv.gz
+      hash: md5
+      md5: a6892f489065b68e9204d758e4737d1b
+      size: 75
+    outs:
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=tract/origin=h_geo/state=az/az.parquet
+      hash: md5
+      md5: aff0068d0e6c013323d277fd252664a7
+      size: 107468
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=tract/origin=w_geo/state=az/az.parquet
+      hash: md5
+      md5: e82191f2b1fb57430bae8e2d3a844a60
+      size: 1873
+  build_lodes_by_geography@2002-az-block_group:
+    cmd: Rscript ./src/aggregate_lodes.R 2002 az block_group
+    deps:
+    - path: ./input/lodes/year=2002/all-aux.csv.gz
+      hash: md5
+      md5: a69cc0f426b965104b4f54f90c6f73a5
+      size: 25413428
+    - path: ./input/lodes/year=2002/state=az/az-main.csv.gz
+      hash: md5
+      md5: a6892f489065b68e9204d758e4737d1b
+      size: 75
+    outs:
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=block_group/origin=h_geo/state=az/az.parquet
+      hash: md5
+      md5: 1a2bd59c1d7725a628bd1bf8481b0788
+      size: 142764
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=block_group/origin=w_geo/state=az/az.parquet
+      hash: md5
+      md5: e82191f2b1fb57430bae8e2d3a844a60
+      size: 1873
+  build_lodes_by_geography@2002-az-county:
+    cmd: Rscript ./src/aggregate_lodes.R 2002 az county
+    deps:
+    - path: ./input/lodes/year=2002/all-aux.csv.gz
+      hash: md5
+      md5: a69cc0f426b965104b4f54f90c6f73a5
+      size: 25413428
+    - path: ./input/lodes/year=2002/state=az/az-main.csv.gz
+      hash: md5
+      md5: a6892f489065b68e9204d758e4737d1b
+      size: 75
+    outs:
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=county/origin=h_geo/state=az/az.parquet
+      hash: md5
+      md5: 0234f618ebf6698be565e219c16128c1
+      size: 17508
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=county/origin=w_geo/state=az/az.parquet
+      hash: md5
+      md5: e82191f2b1fb57430bae8e2d3a844a60
+      size: 1873
+  build_lodes_by_geography@2002-ca-tract:
+    cmd: Rscript ./src/aggregate_lodes.R 2002 ca tract
+    deps:
+    - path: ./input/lodes/year=2002/all-aux.csv.gz
+      hash: md5
+      md5: a69cc0f426b965104b4f54f90c6f73a5
+      size: 25413428
+    - path: ./input/lodes/year=2002/state=ca/ca-main.csv.gz
+      hash: md5
+      md5: 071cbe88192cbf4f03d4dfab9bb5a044
+      size: 74947475
+    outs:
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=tract/origin=h_geo/state=ca/ca.parquet
+      hash: md5
+      md5: 16065aa1f0e0111d6aeff70defce4365
+      size: 29113577
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=tract/origin=w_geo/state=ca/ca.parquet
+      hash: md5
+      md5: 535d739ecd80837d74d68eea492c2499
+      size: 27989846
+  build_lodes_by_geography@2002-ca-block_group:
+    cmd: Rscript ./src/aggregate_lodes.R 2002 ca block_group
+    deps:
+    - path: ./input/lodes/year=2002/all-aux.csv.gz
+      hash: md5
+      md5: a69cc0f426b965104b4f54f90c6f73a5
+      size: 25413428
+    - path: ./input/lodes/year=2002/state=ca/ca-main.csv.gz
+      hash: md5
+      md5: 071cbe88192cbf4f03d4dfab9bb5a044
+      size: 74947475
+    outs:
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=block_group/origin=h_geo/state=ca/ca.parquet
+      hash: md5
+      md5: 89e62bc5bfc157129c6c1f4e77225446
+      size: 45309511
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=block_group/origin=w_geo/state=ca/ca.parquet
+      hash: md5
+      md5: 6a281f9272c775a0f1f462b349163201
+      size: 44602190
+  build_lodes_by_geography@2002-ca-county:
+    cmd: Rscript ./src/aggregate_lodes.R 2002 ca county
+    deps:
+    - path: ./input/lodes/year=2002/all-aux.csv.gz
+      hash: md5
+      md5: a69cc0f426b965104b4f54f90c6f73a5
+      size: 25413428
+    - path: ./input/lodes/year=2002/state=ca/ca-main.csv.gz
+      hash: md5
+      md5: 071cbe88192cbf4f03d4dfab9bb5a044
+      size: 74947475
+    outs:
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=county/origin=h_geo/state=ca/ca.parquet
+      hash: md5
+      md5: da0f31b37c8aaf505bcb1e60727640d3
+      size: 110327
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=county/origin=w_geo/state=ca/ca.parquet
+      hash: md5
+      md5: 3e8f0ecf241fd79860ecbe52d55c153e
+      size: 143396
+  build_lodes_by_geography@2002-co-tract:
+    cmd: Rscript ./src/aggregate_lodes.R 2002 co tract
+    deps:
+    - path: ./input/lodes/year=2002/all-aux.csv.gz
+      hash: md5
+      md5: a69cc0f426b965104b4f54f90c6f73a5
+      size: 25413428
+    - path: ./input/lodes/year=2002/state=co/co-main.csv.gz
+      hash: md5
+      md5: 9abdd3507b6662214f7e6dd9ecd66dc5
+      size: 10754479
+    outs:
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=tract/origin=h_geo/state=co/co.parquet
+      hash: md5
+      md5: 41acdebe64cb7c4be57b9d61d70294e0
+      size: 2973639
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=tract/origin=w_geo/state=co/co.parquet
+      hash: md5
+      md5: 9b67c6dcd3c89b28fa69369f8ba15b23
+      size: 2820360
+  build_lodes_by_geography@2002-co-block_group:
+    cmd: Rscript ./src/aggregate_lodes.R 2002 co block_group
+    deps:
+    - path: ./input/lodes/year=2002/all-aux.csv.gz
+      hash: md5
+      md5: a69cc0f426b965104b4f54f90c6f73a5
+      size: 25413428
+    - path: ./input/lodes/year=2002/state=co/co-main.csv.gz
+      hash: md5
+      md5: 9abdd3507b6662214f7e6dd9ecd66dc5
+      size: 10754479
+    outs:
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=block_group/origin=h_geo/state=co/co.parquet
+      hash: md5
+      md5: 7503de41046744cc4778f0682212e8db
+      size: 5377060
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=block_group/origin=w_geo/state=co/co.parquet
+      hash: md5
+      md5: d92494419d3a36ccaf0196653150750b
+      size: 5215445
+  build_lodes_by_geography@2002-co-county:
+    cmd: Rscript ./src/aggregate_lodes.R 2002 co county
+    deps:
+    - path: ./input/lodes/year=2002/all-aux.csv.gz
+      hash: md5
+      md5: a69cc0f426b965104b4f54f90c6f73a5
+      size: 25413428
+    - path: ./input/lodes/year=2002/state=co/co-main.csv.gz
+      hash: md5
+      md5: 9abdd3507b6662214f7e6dd9ecd66dc5
+      size: 10754479
+    outs:
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=county/origin=h_geo/state=co/co.parquet
+      hash: md5
+      md5: ef538134945feaba3c3c2763f7555cb7
+      size: 65667
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=county/origin=w_geo/state=co/co.parquet
+      hash: md5
+      md5: 4318e68ec07a594fa674121da45d2426
+      size: 82836
+  build_lodes_by_geography@2002-ct-tract:
+    cmd: Rscript ./src/aggregate_lodes.R 2002 ct tract
+    deps:
+    - path: ./input/lodes/year=2002/all-aux.csv.gz
+      hash: md5
+      md5: a69cc0f426b965104b4f54f90c6f73a5
+      size: 25413428
+    - path: ./input/lodes/year=2002/state=ct/ct-main.csv.gz
+      hash: md5
+      md5: 0fb690ebdabb4cde298ff3b72d0af3e6
+      size: 7493306
+    outs:
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=tract/origin=h_geo/state=ct/ct.parquet
+      hash: md5
+      md5: b3ecc2a72003e1b6f6f3d300c0175118
+      size: 2118737
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=tract/origin=w_geo/state=ct/ct.parquet
+      hash: md5
+      md5: cec9f02ad2c466cb81190776b845690a
+      size: 2309017
+  build_lodes_by_geography@2002-ct-block_group:
+    cmd: Rscript ./src/aggregate_lodes.R 2002 ct block_group
+    deps:
+    - path: ./input/lodes/year=2002/all-aux.csv.gz
+      hash: md5
+      md5: a69cc0f426b965104b4f54f90c6f73a5
+      size: 25413428
+    - path: ./input/lodes/year=2002/state=ct/ct-main.csv.gz
+      hash: md5
+      md5: 0fb690ebdabb4cde298ff3b72d0af3e6
+      size: 7493306
+    outs:
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=block_group/origin=h_geo/state=ct/ct.parquet
+      hash: md5
+      md5: 793830d45523ee3a6b27cd0305e85582
+      size: 4262975
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=block_group/origin=w_geo/state=ct/ct.parquet
+      hash: md5
+      md5: 9b1df136082ca632935ea7cb8180739f
+      size: 4327054
+  build_lodes_by_geography@2002-ct-county:
+    cmd: Rscript ./src/aggregate_lodes.R 2002 ct county
+    deps:
+    - path: ./input/lodes/year=2002/all-aux.csv.gz
+      hash: md5
+      md5: a69cc0f426b965104b4f54f90c6f73a5
+      size: 25413428
+    - path: ./input/lodes/year=2002/state=ct/ct-main.csv.gz
+      hash: md5
+      md5: 0fb690ebdabb4cde298ff3b72d0af3e6
+      size: 7493306
+    outs:
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=county/origin=h_geo/state=ct/ct.parquet
+      hash: md5
+      md5: 0b53ae307bfb1b5635a8a20ce1ac4beb
+      size: 21438
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=county/origin=w_geo/state=ct/ct.parquet
+      hash: md5
+      md5: 3d85693354024a2a1dda75e0735ca818
+      size: 30839
+  build_lodes_by_geography@2002-dc-tract:
+    cmd: Rscript ./src/aggregate_lodes.R 2002 dc tract
+    deps:
+    - path: ./input/lodes/year=2002/all-aux.csv.gz
+      hash: md5
+      md5: a69cc0f426b965104b4f54f90c6f73a5
+      size: 25413428
+    - path: ./input/lodes/year=2002/state=dc/dc-main.csv.gz
+      hash: md5
+      md5: a6892f489065b68e9204d758e4737d1b
+      size: 75
+    outs:
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=tract/origin=h_geo/state=dc/dc.parquet
+      hash: md5
+      md5: e176b13e5dad34fa4dd0a07ef18e1276
+      size: 251504
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=tract/origin=w_geo/state=dc/dc.parquet
+      hash: md5
+      md5: e82191f2b1fb57430bae8e2d3a844a60
+      size: 1873
+  build_lodes_by_geography@2002-dc-block_group:
+    cmd: Rscript ./src/aggregate_lodes.R 2002 dc block_group
+    deps:
+    - path: ./input/lodes/year=2002/all-aux.csv.gz
+      hash: md5
+      md5: a69cc0f426b965104b4f54f90c6f73a5
+      size: 25413428
+    - path: ./input/lodes/year=2002/state=dc/dc-main.csv.gz
+      hash: md5
+      md5: a6892f489065b68e9204d758e4737d1b
+      size: 75
+    outs:
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=block_group/origin=h_geo/state=dc/dc.parquet
+      hash: md5
+      md5: 9bb311908ded43288d1106e8813620d2
+      size: 313602
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=block_group/origin=w_geo/state=dc/dc.parquet
+      hash: md5
+      md5: e82191f2b1fb57430bae8e2d3a844a60
+      size: 1873
+  build_lodes_by_geography@2002-dc-county:
+    cmd: Rscript ./src/aggregate_lodes.R 2002 dc county
+    deps:
+    - path: ./input/lodes/year=2002/all-aux.csv.gz
+      hash: md5
+      md5: a69cc0f426b965104b4f54f90c6f73a5
+      size: 25413428
+    - path: ./input/lodes/year=2002/state=dc/dc-main.csv.gz
+      hash: md5
+      md5: a6892f489065b68e9204d758e4737d1b
+      size: 75
+    outs:
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=county/origin=h_geo/state=dc/dc.parquet
+      hash: md5
+      md5: 2b7564b93d71238a00f1b9a2000c8b0d
+      size: 8600
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=county/origin=w_geo/state=dc/dc.parquet
+      hash: md5
+      md5: e82191f2b1fb57430bae8e2d3a844a60
+      size: 1873
+  build_lodes_by_geography@2002-de-tract:
+    cmd: Rscript ./src/aggregate_lodes.R 2002 de tract
+    deps:
+    - path: ./input/lodes/year=2002/all-aux.csv.gz
+      hash: md5
+      md5: a69cc0f426b965104b4f54f90c6f73a5
+      size: 25413428
+    - path: ./input/lodes/year=2002/state=de/de-main.csv.gz
+      hash: md5
+      md5: a65e012a0a486b7ef9c880dd283d5a0a
+      size: 1506633
+    outs:
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=tract/origin=h_geo/state=de/de.parquet
+      hash: md5
+      md5: 4877e7cd75bb31cdba52ecceafb45d91
+      size: 459508
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=tract/origin=w_geo/state=de/de.parquet
+      hash: md5
+      md5: c45b10d9dde54b0e09cc6d4bde223921
+      size: 447566
+  build_lodes_by_geography@2002-de-block_group:
+    cmd: Rscript ./src/aggregate_lodes.R 2002 de block_group
+    deps:
+    - path: ./input/lodes/year=2002/all-aux.csv.gz
+      hash: md5
+      md5: a69cc0f426b965104b4f54f90c6f73a5
+      size: 25413428
+    - path: ./input/lodes/year=2002/state=de/de-main.csv.gz
+      hash: md5
+      md5: a65e012a0a486b7ef9c880dd283d5a0a
+      size: 1506633
+    outs:
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=block_group/origin=h_geo/state=de/de.parquet
+      hash: md5
+      md5: 25c9e0810041203a3e546ac6252d67ca
+      size: 909271
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=block_group/origin=w_geo/state=de/de.parquet
+      hash: md5
+      md5: 9aeab2250fd9ba894be5a346312811ce
+      size: 857448
+  build_lodes_by_geography@2002-de-county:
+    cmd: Rscript ./src/aggregate_lodes.R 2002 de county
+    deps:
+    - path: ./input/lodes/year=2002/all-aux.csv.gz
+      hash: md5
+      md5: a69cc0f426b965104b4f54f90c6f73a5
+      size: 25413428
+    - path: ./input/lodes/year=2002/state=de/de-main.csv.gz
+      hash: md5
+      md5: a65e012a0a486b7ef9c880dd283d5a0a
+      size: 1506633
+    outs:
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=county/origin=h_geo/state=de/de.parquet
+      hash: md5
+      md5: 664a7ef04a727a64e5fb1b076f382a1e
+      size: 12786
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=county/origin=w_geo/state=de/de.parquet
+      hash: md5
+      md5: 8e469b9cb6421272c50a5e1d34814ca8
+      size: 14732
+  build_lodes_by_geography@2002-fl-tract:
+    cmd: Rscript ./src/aggregate_lodes.R 2002 fl tract
+    deps:
+    - path: ./input/lodes/year=2002/all-aux.csv.gz
+      hash: md5
+      md5: a69cc0f426b965104b4f54f90c6f73a5
+      size: 25413428
+    - path: ./input/lodes/year=2002/state=fl/fl-main.csv.gz
+      hash: md5
+      md5: 92233367b679596ac9bcd994ba93f815
+      size: 35644061
+    outs:
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=tract/origin=h_geo/state=fl/fl.parquet
+      hash: md5
+      md5: e4d876a87f07db8c7381cc1547f153bf
+      size: 11901480
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=tract/origin=w_geo/state=fl/fl.parquet
+      hash: md5
+      md5: f5420fdff543d4a1d519e1b8d31274d8
+      size: 11427883
+  build_lodes_by_geography@2002-fl-block_group:
+    cmd: Rscript ./src/aggregate_lodes.R 2002 fl block_group
+    deps:
+    - path: ./input/lodes/year=2002/all-aux.csv.gz
+      hash: md5
+      md5: a69cc0f426b965104b4f54f90c6f73a5
+      size: 25413428
+    - path: ./input/lodes/year=2002/state=fl/fl-main.csv.gz
+      hash: md5
+      md5: 92233367b679596ac9bcd994ba93f815
+      size: 35644061
+    outs:
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=block_group/origin=h_geo/state=fl/fl.parquet
+      hash: md5
+      md5: 883b0bc83ee51009812ca584b0f301ce
+      size: 19736295
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=block_group/origin=w_geo/state=fl/fl.parquet
+      hash: md5
+      md5: 7a0f783896e18e396e59a11189c646a9
+      size: 18934085
+  build_lodes_by_geography@2002-fl-county:
+    cmd: Rscript ./src/aggregate_lodes.R 2002 fl county
+    deps:
+    - path: ./input/lodes/year=2002/all-aux.csv.gz
+      hash: md5
+      md5: a69cc0f426b965104b4f54f90c6f73a5
+      size: 25413428
+    - path: ./input/lodes/year=2002/state=fl/fl-main.csv.gz
+      hash: md5
+      md5: 92233367b679596ac9bcd994ba93f815
+      size: 35644061
+    outs:
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=county/origin=h_geo/state=fl/fl.parquet
+      hash: md5
+      md5: 2a75ee2b824cc87449929cd8d8fb46d1
+      size: 123701
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=county/origin=w_geo/state=fl/fl.parquet
+      hash: md5
+      md5: eed1647b2b6e11b1489de3bea62af735
+      size: 148540
+  build_lodes_by_geography@2002-ga-tract:
+    cmd: Rscript ./src/aggregate_lodes.R 2002 ga tract
+    deps:
+    - path: ./input/lodes/year=2002/all-aux.csv.gz
+      hash: md5
+      md5: a69cc0f426b965104b4f54f90c6f73a5
+      size: 25413428
+    - path: ./input/lodes/year=2002/state=ga/ga-main.csv.gz
+      hash: md5
+      md5: e3e3a43368a7fe5ba0b0773992281a56
+      size: 18826138
+    outs:
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=tract/origin=h_geo/state=ga/ga.parquet
+      hash: md5
+      md5: aad8cb0e17db08aba4d3f6c83addbe23
+      size: 6481448
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=tract/origin=w_geo/state=ga/ga.parquet
+      hash: md5
+      md5: 0c07f923eb15f9eaf2319f6379662f35
+      size: 6388841
+  build_lodes_by_geography@2002-ga-block_group:
+    cmd: Rscript ./src/aggregate_lodes.R 2002 ga block_group
+    deps:
+    - path: ./input/lodes/year=2002/all-aux.csv.gz
+      hash: md5
+      md5: a69cc0f426b965104b4f54f90c6f73a5
+      size: 25413428
+    - path: ./input/lodes/year=2002/state=ga/ga-main.csv.gz
+      hash: md5
+      md5: e3e3a43368a7fe5ba0b0773992281a56
+      size: 18826138
+    outs:
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=block_group/origin=h_geo/state=ga/ga.parquet
+      hash: md5
+      md5: 65d37b5a938c220d9457d50017305d78
+      size: 10665493
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=block_group/origin=w_geo/state=ga/ga.parquet
+      hash: md5
+      md5: 84daa66076ac2a5b6bd7547fb37c157f
+      size: 10310982
+  build_lodes_by_geography@2002-ga-county:
+    cmd: Rscript ./src/aggregate_lodes.R 2002 ga county
+    deps:
+    - path: ./input/lodes/year=2002/all-aux.csv.gz
+      hash: md5
+      md5: a69cc0f426b965104b4f54f90c6f73a5
+      size: 25413428
+    - path: ./input/lodes/year=2002/state=ga/ga-main.csv.gz
+      hash: md5
+      md5: e3e3a43368a7fe5ba0b0773992281a56
+      size: 18826138
+    outs:
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=county/origin=h_geo/state=ga/ga.parquet
+      hash: md5
+      md5: a8623b7e6d17e0c3cf58813522e3c05d
+      size: 275844
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=county/origin=w_geo/state=ga/ga.parquet
+      hash: md5
+      md5: ff0ee4daa07fc2243577a56838965b39
+      size: 299202
+  build_lodes_by_geography@2002-hi-tract:
+    cmd: Rscript ./src/aggregate_lodes.R 2002 hi tract
+    deps:
+    - path: ./input/lodes/year=2002/all-aux.csv.gz
+      hash: md5
+      md5: a69cc0f426b965104b4f54f90c6f73a5
+      size: 25413428
+    - path: ./input/lodes/year=2002/state=hi/hi-main.csv.gz
+      hash: md5
+      md5: 58d93a5217dc01384f3f5314f9ff8df9
+      size: 1847050
+    outs:
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=tract/origin=h_geo/state=hi/hi.parquet
+      hash: md5
+      md5: d041ed82441022f54992cd0ac80e6a3c
+      size: 428315
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=tract/origin=w_geo/state=hi/hi.parquet
+      hash: md5
+      md5: fe5a084550a9e5cb08811c0779ebd725
+      size: 402332
+  build_lodes_by_geography@2002-hi-block_group:
+    cmd: Rscript ./src/aggregate_lodes.R 2002 hi block_group
+    deps:
+    - path: ./input/lodes/year=2002/all-aux.csv.gz
+      hash: md5
+      md5: a69cc0f426b965104b4f54f90c6f73a5
+      size: 25413428
+    - path: ./input/lodes/year=2002/state=hi/hi-main.csv.gz
+      hash: md5
+      md5: 58d93a5217dc01384f3f5314f9ff8df9
+      size: 1847050
+    outs:
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=block_group/origin=h_geo/state=hi/hi.parquet
+      hash: md5
+      md5: 6c0ab7dd1705c1bf884f45286674fb86
+      size: 848242
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=block_group/origin=w_geo/state=hi/hi.parquet
+      hash: md5
+      md5: db9083c7f9794bb9506efcb5d5182394
+      size: 800603
+  build_lodes_by_geography@2002-hi-county:
+    cmd: Rscript ./src/aggregate_lodes.R 2002 hi county
+    deps:
+    - path: ./input/lodes/year=2002/all-aux.csv.gz
+      hash: md5
+      md5: a69cc0f426b965104b4f54f90c6f73a5
+      size: 25413428
+    - path: ./input/lodes/year=2002/state=hi/hi-main.csv.gz
+      hash: md5
+      md5: 58d93a5217dc01384f3f5314f9ff8df9
+      size: 1847050
+    outs:
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=county/origin=h_geo/state=hi/hi.parquet
+      hash: md5
+      md5: 04c8cb6b8bc04d037e68e45b078bf380
+      size: 7470
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=county/origin=w_geo/state=hi/hi.parquet
+      hash: md5
+      md5: 88245772e55cb4e0921e5d94f6a2934c
+      size: 10245
+  build_lodes_by_geography@2002-ia-tract:
+    cmd: Rscript ./src/aggregate_lodes.R 2002 ia tract
+    deps:
+    - path: ./input/lodes/year=2002/all-aux.csv.gz
+      hash: md5
+      md5: a69cc0f426b965104b4f54f90c6f73a5
+      size: 25413428
+    - path: ./input/lodes/year=2002/state=ia/ia-main.csv.gz
+      hash: md5
+      md5: 0ebcd93853dbd03f6ae84ed21ff12010
+      size: 6501309
+    outs:
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=tract/origin=h_geo/state=ia/ia.parquet
+      hash: md5
+      md5: 8d319350875a110df26267a02381b80f
+      size: 1154051
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=tract/origin=w_geo/state=ia/ia.parquet
+      hash: md5
+      md5: dfe06e61726a564b11860bb29608b23c
+      size: 1155303
+  build_lodes_by_geography@2002-ia-block_group:
+    cmd: Rscript ./src/aggregate_lodes.R 2002 ia block_group
+    deps:
+    - path: ./input/lodes/year=2002/all-aux.csv.gz
+      hash: md5
+      md5: a69cc0f426b965104b4f54f90c6f73a5
+      size: 25413428
+    - path: ./input/lodes/year=2002/state=ia/ia-main.csv.gz
+      hash: md5
+      md5: 0ebcd93853dbd03f6ae84ed21ff12010
+      size: 6501309
+    outs:
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=block_group/origin=h_geo/state=ia/ia.parquet
+      hash: md5
+      md5: d209dfbae161723bb8351701a148ca58
+      size: 2681287
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=block_group/origin=w_geo/state=ia/ia.parquet
+      hash: md5
+      md5: 7858cb6581d4b28ed84198cb25649d2c
+      size: 2502086
+  build_lodes_by_geography@2002-ia-county:
+    cmd: Rscript ./src/aggregate_lodes.R 2002 ia county
+    deps:
+    - path: ./input/lodes/year=2002/all-aux.csv.gz
+      hash: md5
+      md5: a69cc0f426b965104b4f54f90c6f73a5
+      size: 25413428
+    - path: ./input/lodes/year=2002/state=ia/ia-main.csv.gz
+      hash: md5
+      md5: 0ebcd93853dbd03f6ae84ed21ff12010
+      size: 6501309
+    outs:
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=county/origin=h_geo/state=ia/ia.parquet
+      hash: md5
+      md5: b6d5f956a6474c7163b3bf88079b67b5
+      size: 120916
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=county/origin=w_geo/state=ia/ia.parquet
+      hash: md5
+      md5: c6f4bcb0d48ead40f5f3b1745e4c351f
+      size: 123765
+  build_lodes_by_geography@2002-id-tract:
+    cmd: Rscript ./src/aggregate_lodes.R 2002 id tract
+    deps:
+    - path: ./input/lodes/year=2002/all-aux.csv.gz
+      hash: md5
+      md5: a69cc0f426b965104b4f54f90c6f73a5
+      size: 25413428
+    - path: ./input/lodes/year=2002/state=id/id-main.csv.gz
+      hash: md5
+      md5: 213ea266748c1f5b9c16265decbb0b52
+      size: 2544013
+    outs:
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=tract/origin=h_geo/state=id/id.parquet
+      hash: md5
+      md5: 47c204890ae51fdfebf16c2368a65679
+      size: 400164
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=tract/origin=w_geo/state=id/id.parquet
+      hash: md5
+      md5: 5cfcb46caca9c942cee725a828efb50c
+      size: 376192
+  build_lodes_by_geography@2002-id-block_group:
+    cmd: Rscript ./src/aggregate_lodes.R 2002 id block_group
+    deps:
+    - path: ./input/lodes/year=2002/all-aux.csv.gz
+      hash: md5
+      md5: a69cc0f426b965104b4f54f90c6f73a5
+      size: 25413428
+    - path: ./input/lodes/year=2002/state=id/id-main.csv.gz
+      hash: md5
+      md5: 213ea266748c1f5b9c16265decbb0b52
+      size: 2544013
+    outs:
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=block_group/origin=h_geo/state=id/id.parquet
+      hash: md5
+      md5: 07ad1c26f2d643c03405b97b6c0bd68c
+      size: 930518
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=block_group/origin=w_geo/state=id/id.parquet
+      hash: md5
+      md5: 414f4e0683a155d60487922551a1b9a8
+      size: 839188
+  build_lodes_by_geography@2002-id-county:
+    cmd: Rscript ./src/aggregate_lodes.R 2002 id county
+    deps:
+    - path: ./input/lodes/year=2002/all-aux.csv.gz
+      hash: md5
+      md5: a69cc0f426b965104b4f54f90c6f73a5
+      size: 25413428
+    - path: ./input/lodes/year=2002/state=id/id-main.csv.gz
+      hash: md5
+      md5: 213ea266748c1f5b9c16265decbb0b52
+      size: 2544013
+    outs:
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=county/origin=h_geo/state=id/id.parquet
+      hash: md5
+      md5: 88398e7ced9456d186c3edcd96b9058e
+      size: 32618
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=county/origin=w_geo/state=id/id.parquet
+      hash: md5
+      md5: 3ca6b25343978c54ba4accc68f1f2968
+      size: 30274
+  build_lodes_by_geography@2002-il-tract:
+    cmd: Rscript ./src/aggregate_lodes.R 2002 il tract
+    deps:
+    - path: ./input/lodes/year=2002/all-aux.csv.gz
+      hash: md5
+      md5: a69cc0f426b965104b4f54f90c6f73a5
+      size: 25413428
+    - path: ./input/lodes/year=2002/state=il/il-main.csv.gz
+      hash: md5
+      md5: 3a7b16eccfeec6c639a727f5f8f03c7a
+      size: 29121204
+    outs:
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=tract/origin=h_geo/state=il/il.parquet
+      hash: md5
+      md5: 48e2addef0a8d0962c3934a3c8003500
+      size: 9460644
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=tract/origin=w_geo/state=il/il.parquet
+      hash: md5
+      md5: b3ec7512893f1097004c092b6f443acb
+      size: 9343682
+  build_lodes_by_geography@2002-il-block_group:
+    cmd: Rscript ./src/aggregate_lodes.R 2002 il block_group
+    deps:
+    - path: ./input/lodes/year=2002/all-aux.csv.gz
+      hash: md5
+      md5: a69cc0f426b965104b4f54f90c6f73a5
+      size: 25413428
+    - path: ./input/lodes/year=2002/state=il/il-main.csv.gz
+      hash: md5
+      md5: 3a7b16eccfeec6c639a727f5f8f03c7a
+      size: 29121204
+    outs:
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=block_group/origin=h_geo/state=il/il.parquet
+      hash: md5
+      md5: 5db062066394b6f4aec9a3e7d6df5ee3
+      size: 16614746
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=block_group/origin=w_geo/state=il/il.parquet
+      hash: md5
+      md5: c62a0709d4ef64128b5287118ef01bae
+      size: 15913754
+  build_lodes_by_geography@2002-il-county:
+    cmd: Rscript ./src/aggregate_lodes.R 2002 il county
+    deps:
+    - path: ./input/lodes/year=2002/all-aux.csv.gz
+      hash: md5
+      md5: a69cc0f426b965104b4f54f90c6f73a5
+      size: 25413428
+    - path: ./input/lodes/year=2002/state=il/il-main.csv.gz
+      hash: md5
+      md5: 3a7b16eccfeec6c639a727f5f8f03c7a
+      size: 29121204
+    outs:
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=county/origin=h_geo/state=il/il.parquet
+      hash: md5
+      md5: 90079e7ecff435c4b016a01031e2ed2f
+      size: 185214
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=county/origin=w_geo/state=il/il.parquet
+      hash: md5
+      md5: 1edd2b2b776c8661a622b79a49d8f6d1
+      size: 198499
+  build_lodes_by_geography@2002-in-tract:
+    cmd: Rscript ./src/aggregate_lodes.R 2002 in tract
+    deps:
+    - path: ./input/lodes/year=2002/all-aux.csv.gz
+      hash: md5
+      md5: a69cc0f426b965104b4f54f90c6f73a5
+      size: 25413428
+    - path: ./input/lodes/year=2002/state=in/in-main.csv.gz
+      hash: md5
+      md5: 0076fa3a7879b610134162bb66ae5c4b
+      size: 13628366
+    outs:
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=tract/origin=h_geo/state=in/in.parquet
+      hash: md5
+      md5: 80e8dc19c8f2ac421e9ec6ac3af4d6d8
+      size: 3844527
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=tract/origin=w_geo/state=in/in.parquet
+      hash: md5
+      md5: 5ce93f6a0f556e9898ee2b53b332e473
+      size: 3524544
+  build_lodes_by_geography@2002-in-block_group:
+    cmd: Rscript ./src/aggregate_lodes.R 2002 in block_group
+    deps:
+    - path: ./input/lodes/year=2002/all-aux.csv.gz
+      hash: md5
+      md5: a69cc0f426b965104b4f54f90c6f73a5
+      size: 25413428
+    - path: ./input/lodes/year=2002/state=in/in-main.csv.gz
+      hash: md5
+      md5: 0076fa3a7879b610134162bb66ae5c4b
+      size: 13628366
+    outs:
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=block_group/origin=h_geo/state=in/in.parquet
+      hash: md5
+      md5: e9b755fdb6276958aff1c7935cfdf1e3
+      size: 7249262
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=block_group/origin=w_geo/state=in/in.parquet
+      hash: md5
+      md5: 4f4d822bf16790a7a6ff24172039f126
+      size: 6604845
+  build_lodes_by_geography@2002-in-county:
+    cmd: Rscript ./src/aggregate_lodes.R 2002 in county
+    deps:
+    - path: ./input/lodes/year=2002/all-aux.csv.gz
+      hash: md5
+      md5: a69cc0f426b965104b4f54f90c6f73a5
+      size: 25413428
+    - path: ./input/lodes/year=2002/state=in/in-main.csv.gz
+      hash: md5
+      md5: 0076fa3a7879b610134162bb66ae5c4b
+      size: 13628366
+    outs:
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=county/origin=h_geo/state=in/in.parquet
+      hash: md5
+      md5: 2560043ab1adc1459ac23cf5c880cab0
+      size: 192243
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=county/origin=w_geo/state=in/in.parquet
+      hash: md5
+      md5: 1cd10c14798e696370f3846b78f775bb
+      size: 191510
+  build_lodes_by_geography@2002-ks-tract:
+    cmd: Rscript ./src/aggregate_lodes.R 2002 ks tract
+    deps:
+    - path: ./input/lodes/year=2002/all-aux.csv.gz
+      hash: md5
+      md5: a69cc0f426b965104b4f54f90c6f73a5
+      size: 25413428
+    - path: ./input/lodes/year=2002/state=ks/ks-main.csv.gz
+      hash: md5
+      md5: a74db93faa5364ddc6e75f82bfb96674
+      size: 5794646
+    outs:
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=tract/origin=h_geo/state=ks/ks.parquet
+      hash: md5
+      md5: 4294011d99d1e39607f09fd97106a020
+      size: 1235468
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=tract/origin=w_geo/state=ks/ks.parquet
+      hash: md5
+      md5: f85ac78939f482b6e45dab93a517eb47
+      size: 1262503
+  build_lodes_by_geography@2002-ks-block_group:
+    cmd: Rscript ./src/aggregate_lodes.R 2002 ks block_group
+    deps:
+    - path: ./input/lodes/year=2002/all-aux.csv.gz
+      hash: md5
+      md5: a69cc0f426b965104b4f54f90c6f73a5
+      size: 25413428
+    - path: ./input/lodes/year=2002/state=ks/ks-main.csv.gz
+      hash: md5
+      md5: a74db93faa5364ddc6e75f82bfb96674
+      size: 5794646
+    outs:
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=block_group/origin=h_geo/state=ks/ks.parquet
+      hash: md5
+      md5: 2f567b6555b229eb3fd75b4008cae353
+      size: 2560841
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=block_group/origin=w_geo/state=ks/ks.parquet
+      hash: md5
+      md5: 9cabdb6cdf0f022a645e18fb58994329
+      size: 2522689
+  build_lodes_by_geography@2002-ks-county:
+    cmd: Rscript ./src/aggregate_lodes.R 2002 ks county
+    deps:
+    - path: ./input/lodes/year=2002/all-aux.csv.gz
+      hash: md5
+      md5: a69cc0f426b965104b4f54f90c6f73a5
+      size: 25413428
+    - path: ./input/lodes/year=2002/state=ks/ks-main.csv.gz
+      hash: md5
+      md5: a74db93faa5364ddc6e75f82bfb96674
+      size: 5794646
+    outs:
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=county/origin=h_geo/state=ks/ks.parquet
+      hash: md5
+      md5: 861bb89221cad16cb4e53a8964784c3b
+      size: 101895
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=county/origin=w_geo/state=ks/ks.parquet
+      hash: md5
+      md5: 1d7223dabc6e50de7818255bc7b7a561
+      size: 108270
+  build_lodes_by_geography@2002-ky-tract:
+    cmd: Rscript ./src/aggregate_lodes.R 2002 ky tract
+    deps:
+    - path: ./input/lodes/year=2002/all-aux.csv.gz
+      hash: md5
+      md5: a69cc0f426b965104b4f54f90c6f73a5
+      size: 25413428
+    - path: ./input/lodes/year=2002/state=ky/ky-main.csv.gz
+      hash: md5
+      md5: 9ce259e9211c41499d39a899c7141c9d
+      size: 7676177
+    outs:
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=tract/origin=h_geo/state=ky/ky.parquet
+      hash: md5
+      md5: d1fbf893c1abb39205060de8caaada04
+      size: 2151544
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=tract/origin=w_geo/state=ky/ky.parquet
+      hash: md5
+      md5: 67a2df445c660f585f044f1f9279bb2a
+      size: 2065347
+  build_lodes_by_geography@2002-ky-block_group:
+    cmd: Rscript ./src/aggregate_lodes.R 2002 ky block_group
+    deps:
+    - path: ./input/lodes/year=2002/all-aux.csv.gz
+      hash: md5
+      md5: a69cc0f426b965104b4f54f90c6f73a5
+      size: 25413428
+    - path: ./input/lodes/year=2002/state=ky/ky-main.csv.gz
+      hash: md5
+      md5: 9ce259e9211c41499d39a899c7141c9d
+      size: 7676177
+    outs:
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=block_group/origin=h_geo/state=ky/ky.parquet
+      hash: md5
+      md5: 216a0b42596b9404d39623b74c69ecde
+      size: 3885868
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=block_group/origin=w_geo/state=ky/ky.parquet
+      hash: md5
+      md5: 57748c2e9724255483e5f2fc69c121a8
+      size: 3634684
+  build_lodes_by_geography@2002-ky-county:
+    cmd: Rscript ./src/aggregate_lodes.R 2002 ky county
+    deps:
+    - path: ./input/lodes/year=2002/all-aux.csv.gz
+      hash: md5
+      md5: a69cc0f426b965104b4f54f90c6f73a5
+      size: 25413428
+    - path: ./input/lodes/year=2002/state=ky/ky-main.csv.gz
+      hash: md5
+      md5: 9ce259e9211c41499d39a899c7141c9d
+      size: 7676177
+    outs:
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=county/origin=h_geo/state=ky/ky.parquet
+      hash: md5
+      md5: 7f156626c82da400333219dfd92ab6f9
+      size: 201564
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=county/origin=w_geo/state=ky/ky.parquet
+      hash: md5
+      md5: be1482982e1b96ff9a13ef3262a83e20
+      size: 200112
+  build_lodes_by_geography@2002-la-tract:
+    cmd: Rscript ./src/aggregate_lodes.R 2002 la tract
+    deps:
+    - path: ./input/lodes/year=2002/all-aux.csv.gz
+      hash: md5
+      md5: a69cc0f426b965104b4f54f90c6f73a5
+      size: 25413428
+    - path: ./input/lodes/year=2002/state=la/la-main.csv.gz
+      hash: md5
+      md5: 37e7980e53a978a81f2465b4f9f0eabd
+      size: 8815356
+    outs:
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=tract/origin=h_geo/state=la/la.parquet
+      hash: md5
+      md5: 8dbc8f1bd8d520f80c509b610bcbcdfd
+      size: 2170781
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=tract/origin=w_geo/state=la/la.parquet
+      hash: md5
+      md5: 26786ebb2d54b1eddd33c00dd029b67b
+      size: 2188258
+  build_lodes_by_geography@2002-la-block_group:
+    cmd: Rscript ./src/aggregate_lodes.R 2002 la block_group
+    deps:
+    - path: ./input/lodes/year=2002/all-aux.csv.gz
+      hash: md5
+      md5: a69cc0f426b965104b4f54f90c6f73a5
+      size: 25413428
+    - path: ./input/lodes/year=2002/state=la/la-main.csv.gz
+      hash: md5
+      md5: 37e7980e53a978a81f2465b4f9f0eabd
+      size: 8815356
+    outs:
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=block_group/origin=h_geo/state=la/la.parquet
+      hash: md5
+      md5: accbebd4bc00491b40836b9ab66611cd
+      size: 4361727
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=block_group/origin=w_geo/state=la/la.parquet
+      hash: md5
+      md5: 8c159c1d22426257dad7f05ef61590ac
+      size: 4159824
+  build_lodes_by_geography@2002-la-county:
+    cmd: Rscript ./src/aggregate_lodes.R 2002 la county
+    deps:
+    - path: ./input/lodes/year=2002/all-aux.csv.gz
+      hash: md5
+      md5: a69cc0f426b965104b4f54f90c6f73a5
+      size: 25413428
+    - path: ./input/lodes/year=2002/state=la/la-main.csv.gz
+      hash: md5
+      md5: 37e7980e53a978a81f2465b4f9f0eabd
+      size: 8815356
+    outs:
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=county/origin=h_geo/state=la/la.parquet
+      hash: md5
+      md5: aa876add3b8a0f987c20ed81d40b92d9
+      size: 90977
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=county/origin=w_geo/state=la/la.parquet
+      hash: md5
+      md5: c163875fba0dd796355cf3de3ed20a40
+      size: 107383
+  build_lodes_by_geography@2002-ma-tract:
+    cmd: Rscript ./src/aggregate_lodes.R 2002 ma tract
+    deps:
+    - path: ./input/lodes/year=2002/all-aux.csv.gz
+      hash: md5
+      md5: a69cc0f426b965104b4f54f90c6f73a5
+      size: 25413428
+    - path: ./input/lodes/year=2002/state=ma/ma-main.csv.gz
+      hash: md5
+      md5: 6f1afefcb344bcdc72d810965112e2da
+      size: 128
+    outs:
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=tract/origin=h_geo/state=ma/ma.parquet
+      hash: md5
+      md5: 247771b0535fb640904b80aa2f0cd6f6
+      size: 337204
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=tract/origin=w_geo/state=ma/ma.parquet
+      hash: md5
+      md5: 756e249e0f6c680d7013ff03c0751fcb
+      size: 3181
+  build_lodes_by_geography@2002-ma-block_group:
+    cmd: Rscript ./src/aggregate_lodes.R 2002 ma block_group
+    deps:
+    - path: ./input/lodes/year=2002/all-aux.csv.gz
+      hash: md5
+      md5: a69cc0f426b965104b4f54f90c6f73a5
+      size: 25413428
+    - path: ./input/lodes/year=2002/state=ma/ma-main.csv.gz
+      hash: md5
+      md5: 6f1afefcb344bcdc72d810965112e2da
+      size: 128
+    outs:
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=block_group/origin=h_geo/state=ma/ma.parquet
+      hash: md5
+      md5: 0dc9d5de4b25a9b5cf244fc068cd76a7
+      size: 471268
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=block_group/origin=w_geo/state=ma/ma.parquet
+      hash: md5
+      md5: a9a4bf0043345b890addd1cbe0c0229f
+      size: 3197
+  build_lodes_by_geography@2002-ma-county:
+    cmd: Rscript ./src/aggregate_lodes.R 2002 ma county
+    deps:
+    - path: ./input/lodes/year=2002/all-aux.csv.gz
+      hash: md5
+      md5: a69cc0f426b965104b4f54f90c6f73a5
+      size: 25413428
+    - path: ./input/lodes/year=2002/state=ma/ma-main.csv.gz
+      hash: md5
+      md5: 6f1afefcb344bcdc72d810965112e2da
+      size: 128
+    outs:
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=county/origin=h_geo/state=ma/ma.parquet
+      hash: md5
+      md5: 74142b397340ab5f9a68c9fc7dc8eb35
+      size: 33613
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=county/origin=w_geo/state=ma/ma.parquet
+      hash: md5
+      md5: b1529d111bb4b08a70b82ccc088fbdd4
+      size: 3102
+  build_lodes_by_geography@2002-md-tract:
+    cmd: Rscript ./src/aggregate_lodes.R 2002 md tract
+    deps:
+    - path: ./input/lodes/year=2002/all-aux.csv.gz
+      hash: md5
+      md5: a69cc0f426b965104b4f54f90c6f73a5
+      size: 25413428
+    - path: ./input/lodes/year=2002/state=md/md-main.csv.gz
+      hash: md5
+      md5: 7aca515ddfd1d145c98cb59fe94de10e
+      size: 10694987
+    outs:
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=tract/origin=h_geo/state=md/md.parquet
+      hash: md5
+      md5: cbb648b2ef3d253e13f873b13223963f
+      size: 4084875
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=tract/origin=w_geo/state=md/md.parquet
+      hash: md5
+      md5: 26b876d069f2fe9b3a70d8f62ef7b370
+      size: 4129343
+  build_lodes_by_geography@2002-md-block_group:
+    cmd: Rscript ./src/aggregate_lodes.R 2002 md block_group
+    deps:
+    - path: ./input/lodes/year=2002/all-aux.csv.gz
+      hash: md5
+      md5: a69cc0f426b965104b4f54f90c6f73a5
+      size: 25413428
+    - path: ./input/lodes/year=2002/state=md/md-main.csv.gz
+      hash: md5
+      md5: 7aca515ddfd1d145c98cb59fe94de10e
+      size: 10694987
+    outs:
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=block_group/origin=h_geo/state=md/md.parquet
+      hash: md5
+      md5: b913b8aa913a0b56564fcd6c6583c803
+      size: 6763704
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=block_group/origin=w_geo/state=md/md.parquet
+      hash: md5
+      md5: 2bcbe8b080a678f0c65245100e9b17db
+      size: 6708305
+  build_lodes_by_geography@2002-md-county:
+    cmd: Rscript ./src/aggregate_lodes.R 2002 md county
+    deps:
+    - path: ./input/lodes/year=2002/all-aux.csv.gz
+      hash: md5
+      md5: a69cc0f426b965104b4f54f90c6f73a5
+      size: 25413428
+    - path: ./input/lodes/year=2002/state=md/md-main.csv.gz
+      hash: md5
+      md5: 7aca515ddfd1d145c98cb59fe94de10e
+      size: 10694987
+    outs:
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=county/origin=h_geo/state=md/md.parquet
+      hash: md5
+      md5: f0f4d709c55da9990f7a64732543f119
+      size: 74780
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=county/origin=w_geo/state=md/md.parquet
+      hash: md5
+      md5: 181d41f6386938e017ba4e6309ce969d
+      size: 83855
+  build_lodes_by_geography@2002-me-tract:
+    cmd: Rscript ./src/aggregate_lodes.R 2002 me tract
+    deps:
+    - path: ./input/lodes/year=2002/all-aux.csv.gz
+      hash: md5
+      md5: a69cc0f426b965104b4f54f90c6f73a5
+      size: 25413428
+    - path: ./input/lodes/year=2002/state=me/me-main.csv.gz
+      hash: md5
+      md5: a376cf65bb965f9125b9ad2a598c9d23
+      size: 2628691
+    outs:
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=tract/origin=h_geo/state=me/me.parquet
+      hash: md5
+      md5: dee5fd7f474cfba14465456c9c2ee18b
+      size: 412102
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=tract/origin=w_geo/state=me/me.parquet
+      hash: md5
+      md5: c7a48b56c1675cb2764b661bc7c9f10d
+      size: 420078
+  build_lodes_by_geography@2002-me-block_group:
+    cmd: Rscript ./src/aggregate_lodes.R 2002 me block_group
+    deps:
+    - path: ./input/lodes/year=2002/all-aux.csv.gz
+      hash: md5
+      md5: a69cc0f426b965104b4f54f90c6f73a5
+      size: 25413428
+    - path: ./input/lodes/year=2002/state=me/me-main.csv.gz
+      hash: md5
+      md5: a376cf65bb965f9125b9ad2a598c9d23
+      size: 2628691
+    outs:
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=block_group/origin=h_geo/state=me/me.parquet
+      hash: md5
+      md5: 6573b96128ca3dad61dc908731fb897e
+      size: 1011642
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=block_group/origin=w_geo/state=me/me.parquet
+      hash: md5
+      md5: 8fddaccd95f1a67ebfddecd7f0ed3bdd
+      size: 965001
+  build_lodes_by_geography@2002-me-county:
+    cmd: Rscript ./src/aggregate_lodes.R 2002 me county
+    deps:
+    - path: ./input/lodes/year=2002/all-aux.csv.gz
+      hash: md5
+      md5: a69cc0f426b965104b4f54f90c6f73a5
+      size: 25413428
+    - path: ./input/lodes/year=2002/state=me/me-main.csv.gz
+      hash: md5
+      md5: a376cf65bb965f9125b9ad2a598c9d23
+      size: 2628691
+    outs:
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=county/origin=h_geo/state=me/me.parquet
+      hash: md5
+      md5: ec0b204302301a696abecf771677a8e6
+      size: 20181
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=county/origin=w_geo/state=me/me.parquet
+      hash: md5
+      md5: bdca2703a01e02bc18263ef246a95f39
+      size: 21832
+  build_lodes_by_geography@2002-mi-tract:
+    cmd: Rscript ./src/aggregate_lodes.R 2002 mi tract
+    deps:
+    - path: ./input/lodes/year=2002/all-aux.csv.gz
+      hash: md5
+      md5: a69cc0f426b965104b4f54f90c6f73a5
+      size: 25413428
+    - path: ./input/lodes/year=2002/state=mi/mi-main.csv.gz
+      hash: md5
+      md5: 0b42cc599d20c5db233350fe9dc5af4d
+      size: 21791115
+    outs:
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=tract/origin=h_geo/state=mi/mi.parquet
+      hash: md5
+      md5: b070aa9732086362d2fb97ce66788faf
+      size: 7455847
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=tract/origin=w_geo/state=mi/mi.parquet
+      hash: md5
+      md5: f42e54bd5b5565fc2ff3fa11334c9c49
+      size: 6949254
+  build_lodes_by_geography@2002-mi-block_group:
+    cmd: Rscript ./src/aggregate_lodes.R 2002 mi block_group
+    deps:
+    - path: ./input/lodes/year=2002/all-aux.csv.gz
+      hash: md5
+      md5: a69cc0f426b965104b4f54f90c6f73a5
+      size: 25413428
+    - path: ./input/lodes/year=2002/state=mi/mi-main.csv.gz
+      hash: md5
+      md5: 0b42cc599d20c5db233350fe9dc5af4d
+      size: 21791115
+    outs:
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=block_group/origin=h_geo/state=mi/mi.parquet
+      hash: md5
+      md5: 186ee04df024d067d8ec4547e8949544
+      size: 12621615
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=block_group/origin=w_geo/state=mi/mi.parquet
+      hash: md5
+      md5: 6e5915a76abc1c321e6d7b5d298aa741
+      size: 11791683
+  build_lodes_by_geography@2002-mi-county:
+    cmd: Rscript ./src/aggregate_lodes.R 2002 mi county
+    deps:
+    - path: ./input/lodes/year=2002/all-aux.csv.gz
+      hash: md5
+      md5: a69cc0f426b965104b4f54f90c6f73a5
+      size: 25413428
+    - path: ./input/lodes/year=2002/state=mi/mi-main.csv.gz
+      hash: md5
+      md5: 0b42cc599d20c5db233350fe9dc5af4d
+      size: 21791115
+    outs:
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=county/origin=h_geo/state=mi/mi.parquet
+      hash: md5
+      md5: 9ecf18b37425ffd1cb91c33757170466
+      size: 160078
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=county/origin=w_geo/state=mi/mi.parquet
+      hash: md5
+      md5: 9375f691cb95a2188f91aaf67380e11e
+      size: 148808
+  build_lodes_by_geography@2002-mn-tract:
+    cmd: Rscript ./src/aggregate_lodes.R 2002 mn tract
+    deps:
+    - path: ./input/lodes/year=2002/all-aux.csv.gz
+      hash: md5
+      md5: a69cc0f426b965104b4f54f90c6f73a5
+      size: 25413428
+    - path: ./input/lodes/year=2002/state=mn/mn-main.csv.gz
+      hash: md5
+      md5: 1f0d11d593a0a115b2a75ba5981ba658
+      size: 12069724
+    outs:
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=tract/origin=h_geo/state=mn/mn.parquet
+      hash: md5
+      md5: bb2ac0b24c274df7f0ffb88ab24a6d2c
+      size: 2847536
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=tract/origin=w_geo/state=mn/mn.parquet
+      hash: md5
+      md5: 92f592a84f3a1c0b7086f83e5a3c5c20
+      size: 2793947
+  build_lodes_by_geography@2002-mn-block_group:
+    cmd: Rscript ./src/aggregate_lodes.R 2002 mn block_group
+    deps:
+    - path: ./input/lodes/year=2002/all-aux.csv.gz
+      hash: md5
+      md5: a69cc0f426b965104b4f54f90c6f73a5
+      size: 25413428
+    - path: ./input/lodes/year=2002/state=mn/mn-main.csv.gz
+      hash: md5
+      md5: 1f0d11d593a0a115b2a75ba5981ba658
+      size: 12069724
+    outs:
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=block_group/origin=h_geo/state=mn/mn.parquet
+      hash: md5
+      md5: cae7c691834032bae5b4be8d94e49b20
+      size: 6222990
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=block_group/origin=w_geo/state=mn/mn.parquet
+      hash: md5
+      md5: 4eaad2b1abb8b9c3b9206f185b317fd5
+      size: 5875292
+  build_lodes_by_geography@2002-mn-county:
+    cmd: Rscript ./src/aggregate_lodes.R 2002 mn county
+    deps:
+    - path: ./input/lodes/year=2002/all-aux.csv.gz
+      hash: md5
+      md5: a69cc0f426b965104b4f54f90c6f73a5
+      size: 25413428
+    - path: ./input/lodes/year=2002/state=mn/mn-main.csv.gz
+      hash: md5
+      md5: 1f0d11d593a0a115b2a75ba5981ba658
+      size: 12069724
+    outs:
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=county/origin=h_geo/state=mn/mn.parquet
+      hash: md5
+      md5: 1d33749c8f8e514d1909099aa8aacfc5
+      size: 120757
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=county/origin=w_geo/state=mn/mn.parquet
+      hash: md5
+      md5: f4d7a95ac82b35a003839fe7ec4b35ee
+      size: 126013
+  build_lodes_by_geography@2002-ms-tract:
+    cmd: Rscript ./src/aggregate_lodes.R 2002 ms tract
+    deps:
+    - path: ./input/lodes/year=2002/all-aux.csv.gz
+      hash: md5
+      md5: a69cc0f426b965104b4f54f90c6f73a5
+      size: 25413428
+    - path: ./input/lodes/year=2002/state=ms/ms-main.csv.gz
+      hash: md5
+      md5: a6892f489065b68e9204d758e4737d1b
+      size: 75
+    outs:
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=tract/origin=h_geo/state=ms/ms.parquet
+      hash: md5
+      md5: 141bdf5c3649a575d64a772865d52cfe
+      size: 230002
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=tract/origin=w_geo/state=ms/ms.parquet
+      hash: md5
+      md5: e82191f2b1fb57430bae8e2d3a844a60
+      size: 1873
+  build_lodes_by_geography@2002-ms-block_group:
+    cmd: Rscript ./src/aggregate_lodes.R 2002 ms block_group
+    deps:
+    - path: ./input/lodes/year=2002/all-aux.csv.gz
+      hash: md5
+      md5: a69cc0f426b965104b4f54f90c6f73a5
+      size: 25413428
+    - path: ./input/lodes/year=2002/state=ms/ms-main.csv.gz
+      hash: md5
+      md5: a6892f489065b68e9204d758e4737d1b
+      size: 75
+    outs:
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=block_group/origin=h_geo/state=ms/ms.parquet
+      hash: md5
+      md5: 43fd69df5400c2f4b3ae95831253e2e9
+      size: 315021
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=block_group/origin=w_geo/state=ms/ms.parquet
+      hash: md5
+      md5: e82191f2b1fb57430bae8e2d3a844a60
+      size: 1873
+  build_lodes_by_geography@2002-ms-county:
+    cmd: Rscript ./src/aggregate_lodes.R 2002 ms county
+    deps:
+    - path: ./input/lodes/year=2002/all-aux.csv.gz
+      hash: md5
+      md5: a69cc0f426b965104b4f54f90c6f73a5
+      size: 25413428
+    - path: ./input/lodes/year=2002/state=ms/ms-main.csv.gz
+      hash: md5
+      md5: a6892f489065b68e9204d758e4737d1b
+      size: 75
+    outs:
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=county/origin=h_geo/state=ms/ms.parquet
+      hash: md5
+      md5: 5e599acb6fc3909648a553d9e52092bf
+      size: 51346
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=county/origin=w_geo/state=ms/ms.parquet
+      hash: md5
+      md5: e82191f2b1fb57430bae8e2d3a844a60
+      size: 1873
+  build_lodes_by_geography@2002-mo-tract:
+    cmd: Rscript ./src/aggregate_lodes.R 2002 mo tract
+    deps:
+    - path: ./input/lodes/year=2002/all-aux.csv.gz
+      hash: md5
+      md5: a69cc0f426b965104b4f54f90c6f73a5
+      size: 25413428
+    - path: ./input/lodes/year=2002/state=mo/mo-main.csv.gz
+      hash: md5
+      md5: 78d21f550aa1810f254faf68b6e4cbc5
+      size: 12233884
+    outs:
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=tract/origin=h_geo/state=mo/mo.parquet
+      hash: md5
+      md5: 61ebeeb47cd910d08f3593718b268682
+      size: 2895277
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=tract/origin=w_geo/state=mo/mo.parquet
+      hash: md5
+      md5: dd8c9d84dae7b66448bf532d75605a31
+      size: 2969112
+  build_lodes_by_geography@2002-mo-block_group:
+    cmd: Rscript ./src/aggregate_lodes.R 2002 mo block_group
+    deps:
+    - path: ./input/lodes/year=2002/all-aux.csv.gz
+      hash: md5
+      md5: a69cc0f426b965104b4f54f90c6f73a5
+      size: 25413428
+    - path: ./input/lodes/year=2002/state=mo/mo-main.csv.gz
+      hash: md5
+      md5: 78d21f550aa1810f254faf68b6e4cbc5
+      size: 12233884
+    outs:
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=block_group/origin=h_geo/state=mo/mo.parquet
+      hash: md5
+      md5: 2becc04f7ba07499dbf153d7ac21cabc
+      size: 6167648
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=block_group/origin=w_geo/state=mo/mo.parquet
+      hash: md5
+      md5: a3cf20e972128fc065c13b66c9df3583
+      size: 6016197
+  build_lodes_by_geography@2002-mo-county:
+    cmd: Rscript ./src/aggregate_lodes.R 2002 mo county
+    deps:
+    - path: ./input/lodes/year=2002/all-aux.csv.gz
+      hash: md5
+      md5: a69cc0f426b965104b4f54f90c6f73a5
+      size: 25413428
+    - path: ./input/lodes/year=2002/state=mo/mo-main.csv.gz
+      hash: md5
+      md5: 78d21f550aa1810f254faf68b6e4cbc5
+      size: 12233884
+    outs:
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=county/origin=h_geo/state=mo/mo.parquet
+      hash: md5
+      md5: f49aa0e3fb90e5b93c0de83cd11afb27
+      size: 159146
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=county/origin=w_geo/state=mo/mo.parquet
+      hash: md5
+      md5: b307e83f484e9042fc2e921ae03b8078
+      size: 167931
+  build_lodes_by_geography@2002-mt-tract:
+    cmd: Rscript ./src/aggregate_lodes.R 2002 mt tract
+    deps:
+    - path: ./input/lodes/year=2002/all-aux.csv.gz
+      hash: md5
+      md5: a69cc0f426b965104b4f54f90c6f73a5
+      size: 25413428
+    - path: ./input/lodes/year=2002/state=mt/mt-main.csv.gz
+      hash: md5
+      md5: edb906d726c7733bb5602430119fa418
+      size: 1758450
+    outs:
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=tract/origin=h_geo/state=mt/mt.parquet
+      hash: md5
+      md5: 21972bfe9cf3634c81927380aa13837c
+      size: 193174
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=tract/origin=w_geo/state=mt/mt.parquet
+      hash: md5
+      md5: 2599a52a7aa6c4f0f7c7797ffce68afc
+      size: 187561
+  build_lodes_by_geography@2002-mt-block_group:
+    cmd: Rscript ./src/aggregate_lodes.R 2002 mt block_group
+    deps:
+    - path: ./input/lodes/year=2002/all-aux.csv.gz
+      hash: md5
+      md5: a69cc0f426b965104b4f54f90c6f73a5
+      size: 25413428
+    - path: ./input/lodes/year=2002/state=mt/mt-main.csv.gz
+      hash: md5
+      md5: edb906d726c7733bb5602430119fa418
+      size: 1758450
+    outs:
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=block_group/origin=h_geo/state=mt/mt.parquet
+      hash: md5
+      md5: a5d0c11b70086cd2db044715d8725847
+      size: 490144
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=block_group/origin=w_geo/state=mt/mt.parquet
+      hash: md5
+      md5: 6dce16a5423e0268a2c836850c8ecc6b
+      size: 448516
+  build_lodes_by_geography@2002-mt-county:
+    cmd: Rscript ./src/aggregate_lodes.R 2002 mt county
+    deps:
+    - path: ./input/lodes/year=2002/all-aux.csv.gz
+      hash: md5
+      md5: a69cc0f426b965104b4f54f90c6f73a5
+      size: 25413428
+    - path: ./input/lodes/year=2002/state=mt/mt-main.csv.gz
+      hash: md5
+      md5: edb906d726c7733bb5602430119fa418
+      size: 1758450
+    outs:
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=county/origin=h_geo/state=mt/mt.parquet
+      hash: md5
+      md5: 50b98007551724d391184668d3618311
+      size: 33048
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=county/origin=w_geo/state=mt/mt.parquet
+      hash: md5
+      md5: 7a81c0622f3d971af72d4d812534dc8a
+      size: 28940
+  build_lodes_by_geography@2002-nc-tract:
+    cmd: Rscript ./src/aggregate_lodes.R 2002 nc tract
+    deps:
+    - path: ./input/lodes/year=2002/all-aux.csv.gz
+      hash: md5
+      md5: a69cc0f426b965104b4f54f90c6f73a5
+      size: 25413428
+    - path: ./input/lodes/year=2002/state=nc/nc-main.csv.gz
+      hash: md5
+      md5: db168f5f8814b6bcb72476031df0c414
+      size: 18520158
+    outs:
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=tract/origin=h_geo/state=nc/nc.parquet
+      hash: md5
+      md5: fe3992efa8f0efb81fef6a4813878b46
+      size: 5601357
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=tract/origin=w_geo/state=nc/nc.parquet
+      hash: md5
+      md5: bc070b7c616a6de38154217772d6008f
+      size: 5617682
+  build_lodes_by_geography@2002-nc-block_group:
+    cmd: Rscript ./src/aggregate_lodes.R 2002 nc block_group
+    deps:
+    - path: ./input/lodes/year=2002/all-aux.csv.gz
+      hash: md5
+      md5: a69cc0f426b965104b4f54f90c6f73a5
+      size: 25413428
+    - path: ./input/lodes/year=2002/state=nc/nc-main.csv.gz
+      hash: md5
+      md5: db168f5f8814b6bcb72476031df0c414
+      size: 18520158
+    outs:
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=block_group/origin=h_geo/state=nc/nc.parquet
+      hash: md5
+      md5: 5166a8933e58c93c82ef260ccb3ae465
+      size: 9623151
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=block_group/origin=w_geo/state=nc/nc.parquet
+      hash: md5
+      md5: fce98a5f364cb53a15ffa117b4232b7c
+      size: 9392906
+  build_lodes_by_geography@2002-nc-county:
+    cmd: Rscript ./src/aggregate_lodes.R 2002 nc county
+    deps:
+    - path: ./input/lodes/year=2002/all-aux.csv.gz
+      hash: md5
+      md5: a69cc0f426b965104b4f54f90c6f73a5
+      size: 25413428
+    - path: ./input/lodes/year=2002/state=nc/nc-main.csv.gz
+      hash: md5
+      md5: db168f5f8814b6bcb72476031df0c414
+      size: 18520158
+    outs:
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=county/origin=h_geo/state=nc/nc.parquet
+      hash: md5
+      md5: 1a64b8448477e9bc041567bf1e866657
+      size: 207644
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=county/origin=w_geo/state=nc/nc.parquet
+      hash: md5
+      md5: 9fcc184332f4792d6ef68dadaa20c55c
+      size: 226866
+  build_lodes_by_geography@2002-nd-tract:
+    cmd: Rscript ./src/aggregate_lodes.R 2002 nd tract
+    deps:
+    - path: ./input/lodes/year=2002/all-aux.csv.gz
+      hash: md5
+      md5: a69cc0f426b965104b4f54f90c6f73a5
+      size: 25413428
+    - path: ./input/lodes/year=2002/state=nd/nd-main.csv.gz
+      hash: md5
+      md5: e8f7a19ecc5dfd989f88e6845d2abd98
+      size: 1261632
+    outs:
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=tract/origin=h_geo/state=nd/nd.parquet
+      hash: md5
+      md5: 75703ca11b863c65c7135b7f7a3d4bcc
+      size: 149833
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=tract/origin=w_geo/state=nd/nd.parquet
+      hash: md5
+      md5: da9179bdd88f259d242f1c072a3ea875
+      size: 158855
+  build_lodes_by_geography@2002-nd-block_group:
+    cmd: Rscript ./src/aggregate_lodes.R 2002 nd block_group
+    deps:
+    - path: ./input/lodes/year=2002/all-aux.csv.gz
+      hash: md5
+      md5: a69cc0f426b965104b4f54f90c6f73a5
+      size: 25413428
+    - path: ./input/lodes/year=2002/state=nd/nd-main.csv.gz
+      hash: md5
+      md5: e8f7a19ecc5dfd989f88e6845d2abd98
+      size: 1261632
+    outs:
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=block_group/origin=h_geo/state=nd/nd.parquet
+      hash: md5
+      md5: 7a25f06973220dfaa94f8a31ecfad2ab
+      size: 352642
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=block_group/origin=w_geo/state=nd/nd.parquet
+      hash: md5
+      md5: 5b604b8e0b3662c7f7609e288083bfe7
+      size: 358472
+  build_lodes_by_geography@2002-nd-county:
+    cmd: Rscript ./src/aggregate_lodes.R 2002 nd county
+    deps:
+    - path: ./input/lodes/year=2002/all-aux.csv.gz
+      hash: md5
+      md5: a69cc0f426b965104b4f54f90c6f73a5
+      size: 25413428
+    - path: ./input/lodes/year=2002/state=nd/nd-main.csv.gz
+      hash: md5
+      md5: e8f7a19ecc5dfd989f88e6845d2abd98
+      size: 1261632
+    outs:
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=county/origin=h_geo/state=nd/nd.parquet
+      hash: md5
+      md5: 5d35ff404fba5cc055a2b064897a4740
+      size: 32070
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=county/origin=w_geo/state=nd/nd.parquet
+      hash: md5
+      md5: 4d2e996d13c2c1b2858edacbf103074d
+      size: 33565
+  build_lodes_by_geography@2002-ne-tract:
+    cmd: Rscript ./src/aggregate_lodes.R 2002 ne tract
+    deps:
+    - path: ./input/lodes/year=2002/all-aux.csv.gz
+      hash: md5
+      md5: a69cc0f426b965104b4f54f90c6f73a5
+      size: 25413428
+    - path: ./input/lodes/year=2002/state=ne/ne-main.csv.gz
+      hash: md5
+      md5: b5e36fe87f790cd640354fba025fdf0f
+      size: 3982774
+    outs:
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=tract/origin=h_geo/state=ne/ne.parquet
+      hash: md5
+      md5: 0455247e1d2fa87405ea2c87fd9637ed
+      size: 709033
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=tract/origin=w_geo/state=ne/ne.parquet
+      hash: md5
+      md5: 73793467f68652d033dd7782188f2c70
+      size: 784422
+  build_lodes_by_geography@2002-ne-block_group:
+    cmd: Rscript ./src/aggregate_lodes.R 2002 ne block_group
+    deps:
+    - path: ./input/lodes/year=2002/all-aux.csv.gz
+      hash: md5
+      md5: a69cc0f426b965104b4f54f90c6f73a5
+      size: 25413428
+    - path: ./input/lodes/year=2002/state=ne/ne-main.csv.gz
+      hash: md5
+      md5: b5e36fe87f790cd640354fba025fdf0f
+      size: 3982774
+    outs:
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=block_group/origin=h_geo/state=ne/ne.parquet
+      hash: md5
+      md5: 312deaa52594d58ea5be7bd663074720
+      size: 1545952
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=block_group/origin=w_geo/state=ne/ne.parquet
+      hash: md5
+      md5: 8286105936a163ac395a827fdd1e5346
+      size: 1584375
+  build_lodes_by_geography@2002-ne-county:
+    cmd: Rscript ./src/aggregate_lodes.R 2002 ne county
+    deps:
+    - path: ./input/lodes/year=2002/all-aux.csv.gz
+      hash: md5
+      md5: a69cc0f426b965104b4f54f90c6f73a5
+      size: 25413428
+    - path: ./input/lodes/year=2002/state=ne/ne-main.csv.gz
+      hash: md5
+      md5: b5e36fe87f790cd640354fba025fdf0f
+      size: 3982774
+    outs:
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=county/origin=h_geo/state=ne/ne.parquet
+      hash: md5
+      md5: 29d8555fae2f415537324fa6338deb66
+      size: 72124
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=county/origin=w_geo/state=ne/ne.parquet
+      hash: md5
+      md5: b4d19d068dbfc5ef7a7580e9f09c2d7f
+      size: 96919
+  build_lodes_by_geography@2002-nh-tract:
+    cmd: Rscript ./src/aggregate_lodes.R 2002 nh tract
+    deps:
+    - path: ./input/lodes/year=2002/all-aux.csv.gz
+      hash: md5
+      md5: a69cc0f426b965104b4f54f90c6f73a5
+      size: 25413428
+    - path: ./input/lodes/year=2002/state=nh/nh-main.csv.gz
+      hash: md5
+      md5: a6892f489065b68e9204d758e4737d1b
+      size: 75
+    outs:
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=tract/origin=h_geo/state=nh/nh.parquet
+      hash: md5
+      md5: 0be94297da814dcb16bf6d0a26185f67
+      size: 56905
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=tract/origin=w_geo/state=nh/nh.parquet
+      hash: md5
+      md5: e82191f2b1fb57430bae8e2d3a844a60
+      size: 1873
+  build_lodes_by_geography@2002-nh-block_group:
+    cmd: Rscript ./src/aggregate_lodes.R 2002 nh block_group
+    deps:
+    - path: ./input/lodes/year=2002/all-aux.csv.gz
+      hash: md5
+      md5: a69cc0f426b965104b4f54f90c6f73a5
+      size: 25413428
+    - path: ./input/lodes/year=2002/state=nh/nh-main.csv.gz
+      hash: md5
+      md5: a6892f489065b68e9204d758e4737d1b
+      size: 75
+    outs:
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=block_group/origin=h_geo/state=nh/nh.parquet
+      hash: md5
+      md5: 688d43a153d1d2955098f6df0b95c84f
+      size: 88435
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=block_group/origin=w_geo/state=nh/nh.parquet
+      hash: md5
+      md5: e82191f2b1fb57430bae8e2d3a844a60
+      size: 1873
+  build_lodes_by_geography@2002-nh-county:
+    cmd: Rscript ./src/aggregate_lodes.R 2002 nh county
+    deps:
+    - path: ./input/lodes/year=2002/all-aux.csv.gz
+      hash: md5
+      md5: a69cc0f426b965104b4f54f90c6f73a5
+      size: 25413428
+    - path: ./input/lodes/year=2002/state=nh/nh-main.csv.gz
+      hash: md5
+      md5: a6892f489065b68e9204d758e4737d1b
+      size: 75
+    outs:
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=county/origin=h_geo/state=nh/nh.parquet
+      hash: md5
+      md5: fb0d2a4d58c60f7a1e0c924114ce75e4
+      size: 14914
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=county/origin=w_geo/state=nh/nh.parquet
+      hash: md5
+      md5: e82191f2b1fb57430bae8e2d3a844a60
+      size: 1873
+  build_lodes_by_geography@2002-nj-tract:
+    cmd: Rscript ./src/aggregate_lodes.R 2002 nj tract
+    deps:
+    - path: ./input/lodes/year=2002/all-aux.csv.gz
+      hash: md5
+      md5: a69cc0f426b965104b4f54f90c6f73a5
+      size: 25413428
+    - path: ./input/lodes/year=2002/state=nj/nj-main.csv.gz
+      hash: md5
+      md5: 943592748a89281551181d0bec18ba75
+      size: 18518448
+    outs:
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=tract/origin=h_geo/state=nj/nj.parquet
+      hash: md5
+      md5: 92528c9a5e9333b0e098b7c998460319
+      size: 7861775
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=tract/origin=w_geo/state=nj/nj.parquet
+      hash: md5
+      md5: aec41a1dbb9a10a58d3728d25d97856f
+      size: 7346704
+  build_lodes_by_geography@2002-nj-block_group:
+    cmd: Rscript ./src/aggregate_lodes.R 2002 nj block_group
+    deps:
+    - path: ./input/lodes/year=2002/all-aux.csv.gz
+      hash: md5
+      md5: a69cc0f426b965104b4f54f90c6f73a5
+      size: 25413428
+    - path: ./input/lodes/year=2002/state=nj/nj-main.csv.gz
+      hash: md5
+      md5: 943592748a89281551181d0bec18ba75
+      size: 18518448
+    outs:
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=block_group/origin=h_geo/state=nj/nj.parquet
+      hash: md5
+      md5: 796c33d5f8f0f6c422d63572b6639dc8
+      size: 13133217
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=block_group/origin=w_geo/state=nj/nj.parquet
+      hash: md5
+      md5: 1c692dc53009249a9cc12769a35b9f73
+      size: 12533390
+  build_lodes_by_geography@2002-nj-county:
+    cmd: Rscript ./src/aggregate_lodes.R 2002 nj county
+    deps:
+    - path: ./input/lodes/year=2002/all-aux.csv.gz
+      hash: md5
+      md5: a69cc0f426b965104b4f54f90c6f73a5
+      size: 25413428
+    - path: ./input/lodes/year=2002/state=nj/nj-main.csv.gz
+      hash: md5
+      md5: 943592748a89281551181d0bec18ba75
+      size: 18518448
+    outs:
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=county/origin=h_geo/state=nj/nj.parquet
+      hash: md5
+      md5: 026fc82ca04e9b2ecfa8f345a225e850
+      size: 75951
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=county/origin=w_geo/state=nj/nj.parquet
+      hash: md5
+      md5: f778dedb06a25e5ed9a24f757944a7ed
+      size: 81464
+  build_lodes_by_geography@2002-nm-tract:
+    cmd: Rscript ./src/aggregate_lodes.R 2002 nm tract
+    deps:
+    - path: ./input/lodes/year=2002/all-aux.csv.gz
+      hash: md5
+      md5: a69cc0f426b965104b4f54f90c6f73a5
+      size: 25413428
+    - path: ./input/lodes/year=2002/state=nm/nm-main.csv.gz
+      hash: md5
+      md5: 29aec9f8c31a33e59d09d879a8dfe87b
+      size: 3227358
+    outs:
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=tract/origin=h_geo/state=nm/nm.parquet
+      hash: md5
+      md5: 6a9eb9a91ae5aa3cc7f1c22c767f8825
+      size: 600740
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=tract/origin=w_geo/state=nm/nm.parquet
+      hash: md5
+      md5: b4c3ff482ff79cd8fd023da8d94e4105
+      size: 563170
+  build_lodes_by_geography@2002-nm-block_group:
+    cmd: Rscript ./src/aggregate_lodes.R 2002 nm block_group
+    deps:
+    - path: ./input/lodes/year=2002/all-aux.csv.gz
+      hash: md5
+      md5: a69cc0f426b965104b4f54f90c6f73a5
+      size: 25413428
+    - path: ./input/lodes/year=2002/state=nm/nm-main.csv.gz
+      hash: md5
+      md5: 29aec9f8c31a33e59d09d879a8dfe87b
+      size: 3227358
+    outs:
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=block_group/origin=h_geo/state=nm/nm.parquet
+      hash: md5
+      md5: 8e6c572e52a383f4cc20caa2f472255d
+      size: 1230102
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=block_group/origin=w_geo/state=nm/nm.parquet
+      hash: md5
+      md5: 5475649e1094d8369d79e342c6b1483f
+      size: 1157923
+  build_lodes_by_geography@2002-nm-county:
+    cmd: Rscript ./src/aggregate_lodes.R 2002 nm county
+    deps:
+    - path: ./input/lodes/year=2002/all-aux.csv.gz
+      hash: md5
+      md5: a69cc0f426b965104b4f54f90c6f73a5
+      size: 25413428
+    - path: ./input/lodes/year=2002/state=nm/nm-main.csv.gz
+      hash: md5
+      md5: 29aec9f8c31a33e59d09d879a8dfe87b
+      size: 3227358
+    outs:
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=county/origin=h_geo/state=nm/nm.parquet
+      hash: md5
+      md5: 812e161c84c5b25d586b0611a9edcf85
+      size: 31792
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=county/origin=w_geo/state=nm/nm.parquet
+      hash: md5
+      md5: 5360e5f9f5a7c596e10cb0de6262e894
+      size: 33884
+  build_lodes_by_geography@2002-nv-tract:
+    cmd: Rscript ./src/aggregate_lodes.R 2002 nv tract
+    deps:
+    - path: ./input/lodes/year=2002/all-aux.csv.gz
+      hash: md5
+      md5: a69cc0f426b965104b4f54f90c6f73a5
+      size: 25413428
+    - path: ./input/lodes/year=2002/state=nv/nv-main.csv.gz
+      hash: md5
+      md5: 66b570ada048c596323b4b542967205a
+      size: 4300770
+    outs:
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=tract/origin=h_geo/state=nv/nv.parquet
+      hash: md5
+      md5: 458dc499b29ab06ff98fba98c2ad40df
+      size: 1018139
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=tract/origin=w_geo/state=nv/nv.parquet
+      hash: md5
+      md5: 3e75374820434c84edd9c982bc92a500
+      size: 1010141
+  build_lodes_by_geography@2002-nv-block_group:
+    cmd: Rscript ./src/aggregate_lodes.R 2002 nv block_group
+    deps:
+    - path: ./input/lodes/year=2002/all-aux.csv.gz
+      hash: md5
+      md5: a69cc0f426b965104b4f54f90c6f73a5
+      size: 25413428
+    - path: ./input/lodes/year=2002/state=nv/nv-main.csv.gz
+      hash: md5
+      md5: 66b570ada048c596323b4b542967205a
+      size: 4300770
+    outs:
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=block_group/origin=h_geo/state=nv/nv.parquet
+      hash: md5
+      md5: 373813296603730a7b22b20267f12cbb
+      size: 1933438
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=block_group/origin=w_geo/state=nv/nv.parquet
+      hash: md5
+      md5: 709b427d6c7ad2056d5a7f29ad871d5a
+      size: 1873261
+  build_lodes_by_geography@2002-nv-county:
+    cmd: Rscript ./src/aggregate_lodes.R 2002 nv county
+    deps:
+    - path: ./input/lodes/year=2002/all-aux.csv.gz
+      hash: md5
+      md5: a69cc0f426b965104b4f54f90c6f73a5
+      size: 25413428
+    - path: ./input/lodes/year=2002/state=nv/nv-main.csv.gz
+      hash: md5
+      md5: 66b570ada048c596323b4b542967205a
+      size: 4300770
+    outs:
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=county/origin=h_geo/state=nv/nv.parquet
+      hash: md5
+      md5: 0222f07c378e437d7090beed9b7b4ed6
+      size: 21718
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=county/origin=w_geo/state=nv/nv.parquet
+      hash: md5
+      md5: 710cc6e4a1f223b9e721fc6e22982a99
+      size: 24027
+  build_lodes_by_geography@2002-ny-tract:
+    cmd: Rscript ./src/aggregate_lodes.R 2002 ny tract
+    deps:
+    - path: ./input/lodes/year=2002/all-aux.csv.gz
+      hash: md5
+      md5: a69cc0f426b965104b4f54f90c6f73a5
+      size: 25413428
+    - path: ./input/lodes/year=2002/state=ny/ny-main.csv.gz
+      hash: md5
+      md5: 8e08e9b5186cf752e15fb0a35601183b
+      size: 38088106
+    outs:
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=tract/origin=h_geo/state=ny/ny.parquet
+      hash: md5
+      md5: e9e0cd63274be549c2292451e9ad4244
+      size: 14699840
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=tract/origin=w_geo/state=ny/ny.parquet
+      hash: md5
+      md5: b1a8d6685b0d00d7d8d900081d8b8d09
+      size: 14485399
+  build_lodes_by_geography@2002-ny-block_group:
+    cmd: Rscript ./src/aggregate_lodes.R 2002 ny block_group
+    deps:
+    - path: ./input/lodes/year=2002/all-aux.csv.gz
+      hash: md5
+      md5: a69cc0f426b965104b4f54f90c6f73a5
+      size: 25413428
+    - path: ./input/lodes/year=2002/state=ny/ny-main.csv.gz
+      hash: md5
+      md5: 8e08e9b5186cf752e15fb0a35601183b
+      size: 38088106
+    outs:
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=block_group/origin=h_geo/state=ny/ny.parquet
+      hash: md5
+      md5: 3b66c247f2575daf511dfa11648f3eb8
+      size: 25079131
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=block_group/origin=w_geo/state=ny/ny.parquet
+      hash: md5
+      md5: 7a3cc36e7baa913dbeb744c95fd2ca7b
+      size: 25522984
+  build_lodes_by_geography@2002-ny-county:
+    cmd: Rscript ./src/aggregate_lodes.R 2002 ny county
+    deps:
+    - path: ./input/lodes/year=2002/all-aux.csv.gz
+      hash: md5
+      md5: a69cc0f426b965104b4f54f90c6f73a5
+      size: 25413428
+    - path: ./input/lodes/year=2002/state=ny/ny-main.csv.gz
+      hash: md5
+      md5: 8e08e9b5186cf752e15fb0a35601183b
+      size: 38088106
+    outs:
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=county/origin=h_geo/state=ny/ny.parquet
+      hash: md5
+      md5: d040c2ad5e63ac82acbb9e39ae2fd2d7
+      size: 155210
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=county/origin=w_geo/state=ny/ny.parquet
+      hash: md5
+      md5: dd8b74e5874bb7f347320c45650fa563
+      size: 158339
+  build_lodes_by_geography@2002-oh-tract:
+    cmd: Rscript ./src/aggregate_lodes.R 2002 oh tract
+    deps:
+    - path: ./input/lodes/year=2002/all-aux.csv.gz
+      hash: md5
+      md5: a69cc0f426b965104b4f54f90c6f73a5
+      size: 25413428
+    - path: ./input/lodes/year=2002/state=oh/oh-main.csv.gz
+      hash: md5
+      md5: d31c26224cea8564fd025010e45db863
+      size: 26919509
+    outs:
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=tract/origin=h_geo/state=oh/oh.parquet
+      hash: md5
+      md5: 733667f603ad3cefb29310dc91baee46
+      size: 8567761
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=tract/origin=w_geo/state=oh/oh.parquet
+      hash: md5
+      md5: 4e2019d06968c9945a67827a3e5a9aa8
+      size: 8393049
+  build_lodes_by_geography@2002-oh-block_group:
+    cmd: Rscript ./src/aggregate_lodes.R 2002 oh block_group
+    deps:
+    - path: ./input/lodes/year=2002/all-aux.csv.gz
+      hash: md5
+      md5: a69cc0f426b965104b4f54f90c6f73a5
+      size: 25413428
+    - path: ./input/lodes/year=2002/state=oh/oh-main.csv.gz
+      hash: md5
+      md5: d31c26224cea8564fd025010e45db863
+      size: 26919509
+    outs:
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=block_group/origin=h_geo/state=oh/oh.parquet
+      hash: md5
+      md5: b8ec19c72621038fccbaea4084547cd2
+      size: 15171035
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=block_group/origin=w_geo/state=oh/oh.parquet
+      hash: md5
+      md5: ecf36312265def00fc9360363bb0de02
+      size: 14746253
+  build_lodes_by_geography@2002-oh-county:
+    cmd: Rscript ./src/aggregate_lodes.R 2002 oh county
+    deps:
+    - path: ./input/lodes/year=2002/all-aux.csv.gz
+      hash: md5
+      md5: a69cc0f426b965104b4f54f90c6f73a5
+      size: 25413428
+    - path: ./input/lodes/year=2002/state=oh/oh-main.csv.gz
+      hash: md5
+      md5: d31c26224cea8564fd025010e45db863
+      size: 26919509
+    outs:
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=county/origin=h_geo/state=oh/oh.parquet
+      hash: md5
+      md5: 84c9dbe5161de17744ab7de589e65613
+      size: 215274
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=county/origin=w_geo/state=oh/oh.parquet
+      hash: md5
+      md5: 99b87fe120b4e73b51289de9d76d0524
+      size: 255337
+  build_lodes_by_geography@2002-ok-tract:
+    cmd: Rscript ./src/aggregate_lodes.R 2002 ok tract
+    deps:
+    - path: ./input/lodes/year=2002/all-aux.csv.gz
+      hash: md5
+      md5: a69cc0f426b965104b4f54f90c6f73a5
+      size: 25413428
+    - path: ./input/lodes/year=2002/state=ok/ok-main.csv.gz
+      hash: md5
+      md5: c2e3b0b6780779bd2be2163fb0f2e1f9
+      size: 7004131
+    outs:
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=tract/origin=h_geo/state=ok/ok.parquet
+      hash: md5
+      md5: f5704c7b080120963ff49d68379e4247
+      size: 1780727
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=tract/origin=w_geo/state=ok/ok.parquet
+      hash: md5
+      md5: b464befd3388f568006b0c29b542bcf2
+      size: 1666196
+  build_lodes_by_geography@2002-ok-block_group:
+    cmd: Rscript ./src/aggregate_lodes.R 2002 ok block_group
+    deps:
+    - path: ./input/lodes/year=2002/all-aux.csv.gz
+      hash: md5
+      md5: a69cc0f426b965104b4f54f90c6f73a5
+      size: 25413428
+    - path: ./input/lodes/year=2002/state=ok/ok-main.csv.gz
+      hash: md5
+      md5: c2e3b0b6780779bd2be2163fb0f2e1f9
+      size: 7004131
+    outs:
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=block_group/origin=h_geo/state=ok/ok.parquet
+      hash: md5
+      md5: f580ea4c48360653e8c39548f7bb1d3d
+      size: 3406571
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=block_group/origin=w_geo/state=ok/ok.parquet
+      hash: md5
+      md5: fa303dda55eba69deb8ca94d8af44a9c
+      size: 3194016
+  build_lodes_by_geography@2002-ok-county:
+    cmd: Rscript ./src/aggregate_lodes.R 2002 ok county
+    deps:
+    - path: ./input/lodes/year=2002/all-aux.csv.gz
+      hash: md5
+      md5: a69cc0f426b965104b4f54f90c6f73a5
+      size: 25413428
+    - path: ./input/lodes/year=2002/state=ok/ok-main.csv.gz
+      hash: md5
+      md5: c2e3b0b6780779bd2be2163fb0f2e1f9
+      size: 7004131
+    outs:
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=county/origin=h_geo/state=ok/ok.parquet
+      hash: md5
+      md5: 19e0833d728b724480a3afd1e40c5521
+      size: 92921
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=county/origin=w_geo/state=ok/ok.parquet
+      hash: md5
+      md5: 415e59afdb6255bc8cd754e9f35b1788
+      size: 88620
+  build_lodes_by_geography@2002-or-tract:
+    cmd: Rscript ./src/aggregate_lodes.R 2002 or tract
+    deps:
+    - path: ./input/lodes/year=2002/all-aux.csv.gz
+      hash: md5
+      md5: a69cc0f426b965104b4f54f90c6f73a5
+      size: 25413428
+    - path: ./input/lodes/year=2002/state=or/or-main.csv.gz
+      hash: md5
+      md5: 3587a5e60a68f687b472aa70a82c0f5b
+      size: 7545244
+    outs:
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=tract/origin=h_geo/state=or/or.parquet
+      hash: md5
+      md5: d85ce8cb8749e256b7b3e1cd51f7016d
+      size: 1705959
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=tract/origin=w_geo/state=or/or.parquet
+      hash: md5
+      md5: b6a3a2dcd652d9d7b1f1f0de64bcc1aa
+      size: 1686471
+  build_lodes_by_geography@2002-or-block_group:
+    cmd: Rscript ./src/aggregate_lodes.R 2002 or block_group
+    deps:
+    - path: ./input/lodes/year=2002/all-aux.csv.gz
+      hash: md5
+      md5: a69cc0f426b965104b4f54f90c6f73a5
+      size: 25413428
+    - path: ./input/lodes/year=2002/state=or/or-main.csv.gz
+      hash: md5
+      md5: 3587a5e60a68f687b472aa70a82c0f5b
+      size: 7545244
+    outs:
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=block_group/origin=h_geo/state=or/or.parquet
+      hash: md5
+      md5: 832479aac038fb8ac306d0e02b051db9
+      size: 3477308
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=block_group/origin=w_geo/state=or/or.parquet
+      hash: md5
+      md5: 64a3d71403f9a23f895f0565d8473a29
+      size: 3493929
+  build_lodes_by_geography@2002-or-county:
+    cmd: Rscript ./src/aggregate_lodes.R 2002 or county
+    deps:
+    - path: ./input/lodes/year=2002/all-aux.csv.gz
+      hash: md5
+      md5: a69cc0f426b965104b4f54f90c6f73a5
+      size: 25413428
+    - path: ./input/lodes/year=2002/state=or/or-main.csv.gz
+      hash: md5
+      md5: 3587a5e60a68f687b472aa70a82c0f5b
+      size: 7545244
+    outs:
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=county/origin=h_geo/state=or/or.parquet
+      hash: md5
+      md5: 823648eccb6b99e413b0d2c93249223e
+      size: 48150
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=county/origin=w_geo/state=or/or.parquet
+      hash: md5
+      md5: f71f2d4b6408525f6995694767d0f133
+      size: 46657
+  build_lodes_by_geography@2002-pa-tract:
+    cmd: Rscript ./src/aggregate_lodes.R 2002 pa tract
+    deps:
+    - path: ./input/lodes/year=2002/all-aux.csv.gz
+      hash: md5
+      md5: a69cc0f426b965104b4f54f90c6f73a5
+      size: 25413428
+    - path: ./input/lodes/year=2002/state=pa/pa-main.csv.gz
+      hash: md5
+      md5: 2e61349130375345c1d0c5b2b5601660
+      size: 26931148
+    outs:
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=tract/origin=h_geo/state=pa/pa.parquet
+      hash: md5
+      md5: 4dd467de7fc552f587bd37de32774b03
+      size: 8852668
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=tract/origin=w_geo/state=pa/pa.parquet
+      hash: md5
+      md5: 5511a4fead7ebdc1ff633fd356570568
+      size: 8204408
+  build_lodes_by_geography@2002-pa-block_group:
+    cmd: Rscript ./src/aggregate_lodes.R 2002 pa block_group
+    deps:
+    - path: ./input/lodes/year=2002/all-aux.csv.gz
+      hash: md5
+      md5: a69cc0f426b965104b4f54f90c6f73a5
+      size: 25413428
+    - path: ./input/lodes/year=2002/state=pa/pa-main.csv.gz
+      hash: md5
+      md5: 2e61349130375345c1d0c5b2b5601660
+      size: 26931148
+    outs:
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=block_group/origin=h_geo/state=pa/pa.parquet
+      hash: md5
+      md5: 0ad910d8e9afeedde6c39ebb574d03c4
+      size: 15659908
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=block_group/origin=w_geo/state=pa/pa.parquet
+      hash: md5
+      md5: 61980c1ec02b833710d94848317f9ff2
+      size: 14757023
+  build_lodes_by_geography@2002-pa-county:
+    cmd: Rscript ./src/aggregate_lodes.R 2002 pa county
+    deps:
+    - path: ./input/lodes/year=2002/all-aux.csv.gz
+      hash: md5
+      md5: a69cc0f426b965104b4f54f90c6f73a5
+      size: 25413428
+    - path: ./input/lodes/year=2002/state=pa/pa-main.csv.gz
+      hash: md5
+      md5: 2e61349130375345c1d0c5b2b5601660
+      size: 26931148
+    outs:
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=county/origin=h_geo/state=pa/pa.parquet
+      hash: md5
+      md5: cd1eff05cf3bdc92a39c3ed15a208da6
+      size: 176035
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=county/origin=w_geo/state=pa/pa.parquet
+      hash: md5
+      md5: 2811da5ea26998c5c5ae58fa25e664d0
+      size: 159003
+  build_lodes_by_geography@2002-ri-tract:
+    cmd: Rscript ./src/aggregate_lodes.R 2002 ri tract
+    deps:
+    - path: ./input/lodes/year=2002/all-aux.csv.gz
+      hash: md5
+      md5: a69cc0f426b965104b4f54f90c6f73a5
+      size: 25413428
+    - path: ./input/lodes/year=2002/state=ri/ri-main.csv.gz
+      hash: md5
+      md5: d9bfb0c92d5e60a9a1bd80cc642c6668
+      size: 2062355
+    outs:
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=tract/origin=h_geo/state=ri/ri.parquet
+      hash: md5
+      md5: 2d4525595906bf5549d9ce68e1f5fd1c
+      size: 376887
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=tract/origin=w_geo/state=ri/ri.parquet
+      hash: md5
+      md5: 0c8cbc6451d2c32277a7d8c908564727
+      size: 505268
+  build_lodes_by_geography@2002-ri-block_group:
+    cmd: Rscript ./src/aggregate_lodes.R 2002 ri block_group
+    deps:
+    - path: ./input/lodes/year=2002/all-aux.csv.gz
+      hash: md5
+      md5: a69cc0f426b965104b4f54f90c6f73a5
+      size: 25413428
+    - path: ./input/lodes/year=2002/state=ri/ri-main.csv.gz
+      hash: md5
+      md5: d9bfb0c92d5e60a9a1bd80cc642c6668
+      size: 2062355
+    outs:
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=block_group/origin=h_geo/state=ri/ri.parquet
+      hash: md5
+      md5: d95aaa5e9fa4fe17cb065b02a5f1d9d7
+      size: 926725
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=block_group/origin=w_geo/state=ri/ri.parquet
+      hash: md5
+      md5: 14c4ade62590059e3c959691861442c3
+      size: 1088966
+  build_lodes_by_geography@2002-ri-county:
+    cmd: Rscript ./src/aggregate_lodes.R 2002 ri county
+    deps:
+    - path: ./input/lodes/year=2002/all-aux.csv.gz
+      hash: md5
+      md5: a69cc0f426b965104b4f54f90c6f73a5
+      size: 25413428
+    - path: ./input/lodes/year=2002/state=ri/ri-main.csv.gz
+      hash: md5
+      md5: d9bfb0c92d5e60a9a1bd80cc642c6668
+      size: 2062355
+    outs:
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=county/origin=h_geo/state=ri/ri.parquet
+      hash: md5
+      md5: 9847cd89b0b374b79fa6e30b5c3c7aba
+      size: 11430
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=county/origin=w_geo/state=ri/ri.parquet
+      hash: md5
+      md5: 2f0c8b214ba936b5c3b83a53a2b59b67
+      size: 16626
+  build_lodes_by_geography@2002-sc-tract:
+    cmd: Rscript ./src/aggregate_lodes.R 2002 sc tract
+    deps:
+    - path: ./input/lodes/year=2002/all-aux.csv.gz
+      hash: md5
+      md5: a69cc0f426b965104b4f54f90c6f73a5
+      size: 25413428
+    - path: ./input/lodes/year=2002/state=sc/sc-main.csv.gz
+      hash: md5
+      md5: 24d8b92727c07491cdfa2d5275adbeac
+      size: 8492978
+    outs:
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=tract/origin=h_geo/state=sc/sc.parquet
+      hash: md5
+      md5: 0ea16acccae7811f3c5d802c3671664c
+      size: 2383459
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=tract/origin=w_geo/state=sc/sc.parquet
+      hash: md5
+      md5: fcbc7487c4e0e6b3ac1d9ed5de333bc6
+      size: 2155281
+  build_lodes_by_geography@2002-sc-block_group:
+    cmd: Rscript ./src/aggregate_lodes.R 2002 sc block_group
+    deps:
+    - path: ./input/lodes/year=2002/all-aux.csv.gz
+      hash: md5
+      md5: a69cc0f426b965104b4f54f90c6f73a5
+      size: 25413428
+    - path: ./input/lodes/year=2002/state=sc/sc-main.csv.gz
+      hash: md5
+      md5: 24d8b92727c07491cdfa2d5275adbeac
+      size: 8492978
+    outs:
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=block_group/origin=h_geo/state=sc/sc.parquet
+      hash: md5
+      md5: 1b4b8ddcdb64b33e0a14b5ef010440b1
+      size: 4292842
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=block_group/origin=w_geo/state=sc/sc.parquet
+      hash: md5
+      md5: cc4ee67a7903e86a273394436120282c
+      size: 3812323
+  build_lodes_by_geography@2002-sc-county:
+    cmd: Rscript ./src/aggregate_lodes.R 2002 sc county
+    deps:
+    - path: ./input/lodes/year=2002/all-aux.csv.gz
+      hash: md5
+      md5: a69cc0f426b965104b4f54f90c6f73a5
+      size: 25413428
+    - path: ./input/lodes/year=2002/state=sc/sc-main.csv.gz
+      hash: md5
+      md5: 24d8b92727c07491cdfa2d5275adbeac
+      size: 8492978
+    outs:
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=county/origin=h_geo/state=sc/sc.parquet
+      hash: md5
+      md5: fd7442b068603519cb752c0eed6fb9f9
+      size: 98891
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=county/origin=w_geo/state=sc/sc.parquet
+      hash: md5
+      md5: 87aa7b96bbf915860d7abf543cc96b18
+      size: 93150
+  build_lodes_by_geography@2002-sd-tract:
+    cmd: Rscript ./src/aggregate_lodes.R 2002 sd tract
+    deps:
+    - path: ./input/lodes/year=2002/all-aux.csv.gz
+      hash: md5
+      md5: a69cc0f426b965104b4f54f90c6f73a5
+      size: 25413428
+    - path: ./input/lodes/year=2002/state=sd/sd-main.csv.gz
+      hash: md5
+      md5: 3a25aebfebf1adfdccd4e5c8a1d665ad
+      size: 1534979
+    outs:
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=tract/origin=h_geo/state=sd/sd.parquet
+      hash: md5
+      md5: 85f6d0bd680351bed796876efcd4b528
+      size: 175752
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=tract/origin=w_geo/state=sd/sd.parquet
+      hash: md5
+      md5: 07c6c2272d371f7dd6bfc76a2d1ea424
+      size: 174179
+  build_lodes_by_geography@2002-sd-block_group:
+    cmd: Rscript ./src/aggregate_lodes.R 2002 sd block_group
+    deps:
+    - path: ./input/lodes/year=2002/all-aux.csv.gz
+      hash: md5
+      md5: a69cc0f426b965104b4f54f90c6f73a5
+      size: 25413428
+    - path: ./input/lodes/year=2002/state=sd/sd-main.csv.gz
+      hash: md5
+      md5: 3a25aebfebf1adfdccd4e5c8a1d665ad
+      size: 1534979
+    outs:
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=block_group/origin=h_geo/state=sd/sd.parquet
+      hash: md5
+      md5: 1c029289e03ac44bfea9fe9bce9207c0
+      size: 416081
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=block_group/origin=w_geo/state=sd/sd.parquet
+      hash: md5
+      md5: cda1e1a954c43025bbcb8e25ae7b2190
+      size: 391710
+  build_lodes_by_geography@2002-sd-county:
+    cmd: Rscript ./src/aggregate_lodes.R 2002 sd county
+    deps:
+    - path: ./input/lodes/year=2002/all-aux.csv.gz
+      hash: md5
+      md5: a69cc0f426b965104b4f54f90c6f73a5
+      size: 25413428
+    - path: ./input/lodes/year=2002/state=sd/sd-main.csv.gz
+      hash: md5
+      md5: 3a25aebfebf1adfdccd4e5c8a1d665ad
+      size: 1534979
+    outs:
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=county/origin=h_geo/state=sd/sd.parquet
+      hash: md5
+      md5: 1caa091e4220288b9f3a9210ebd15d61
+      size: 44290
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=county/origin=w_geo/state=sd/sd.parquet
+      hash: md5
+      md5: d295a614ee2a7acb84634d89f0a92015
+      size: 41409
+  build_lodes_by_geography@2002-tn-tract:
+    cmd: Rscript ./src/aggregate_lodes.R 2002 tn tract
+    deps:
+    - path: ./input/lodes/year=2002/all-aux.csv.gz
+      hash: md5
+      md5: a69cc0f426b965104b4f54f90c6f73a5
+      size: 25413428
+    - path: ./input/lodes/year=2002/state=tn/tn-main.csv.gz
+      hash: md5
+      md5: 1fa6de9897ba0af078af376826d10534
+      size: 11821538
+    outs:
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=tract/origin=h_geo/state=tn/tn.parquet
+      hash: md5
+      md5: b343a7f289088b745650347988b5b414
+      size: 2954205
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=tract/origin=w_geo/state=tn/tn.parquet
+      hash: md5
+      md5: 1c550ac3d945f23f23bd9b4111e91107
+      size: 2953583
+  build_lodes_by_geography@2002-tn-block_group:
+    cmd: Rscript ./src/aggregate_lodes.R 2002 tn block_group
+    deps:
+    - path: ./input/lodes/year=2002/all-aux.csv.gz
+      hash: md5
+      md5: a69cc0f426b965104b4f54f90c6f73a5
+      size: 25413428
+    - path: ./input/lodes/year=2002/state=tn/tn-main.csv.gz
+      hash: md5
+      md5: 1fa6de9897ba0af078af376826d10534
+      size: 11821538
+    outs:
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=block_group/origin=h_geo/state=tn/tn.parquet
+      hash: md5
+      md5: 103e7e1581a76854cdda8722d1437b91
+      size: 5550357
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=block_group/origin=w_geo/state=tn/tn.parquet
+      hash: md5
+      md5: d0ddead225ace1088a29a3f11551d7cd
+      size: 5364994
+  build_lodes_by_geography@2002-tn-county:
+    cmd: Rscript ./src/aggregate_lodes.R 2002 tn county
+    deps:
+    - path: ./input/lodes/year=2002/all-aux.csv.gz
+      hash: md5
+      md5: a69cc0f426b965104b4f54f90c6f73a5
+      size: 25413428
+    - path: ./input/lodes/year=2002/state=tn/tn-main.csv.gz
+      hash: md5
+      md5: 1fa6de9897ba0af078af376826d10534
+      size: 11821538
+    outs:
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=county/origin=h_geo/state=tn/tn.parquet
+      hash: md5
+      md5: 82545556feb9f90964fddbb6ab860cc5
+      size: 175106
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=county/origin=w_geo/state=tn/tn.parquet
+      hash: md5
+      md5: 60813a2d33051c63f1ed4c0b2ae358f1
+      size: 173125
+  build_lodes_by_geography@2002-tx-tract:
+    cmd: Rscript ./src/aggregate_lodes.R 2002 tx tract
+    deps:
+    - path: ./input/lodes/year=2002/all-aux.csv.gz
+      hash: md5
+      md5: a69cc0f426b965104b4f54f90c6f73a5
+      size: 25413428
+    - path: ./input/lodes/year=2002/state=tx/tx-main.csv.gz
+      hash: md5
+      md5: 8804814245c671f6f9bfe0b60aa8f992
+      size: 47368107
+    outs:
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=tract/origin=h_geo/state=tx/tx.parquet
+      hash: md5
+      md5: 7c9b96868cc6320226d77ccf7c20b1ae
+      size: 15744370
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=tract/origin=w_geo/state=tx/tx.parquet
+      hash: md5
+      md5: 6f474ed192a833f730986b594f711416
+      size: 15341011
+  build_lodes_by_geography@2002-tx-block_group:
+    cmd: Rscript ./src/aggregate_lodes.R 2002 tx block_group
+    deps:
+    - path: ./input/lodes/year=2002/all-aux.csv.gz
+      hash: md5
+      md5: a69cc0f426b965104b4f54f90c6f73a5
+      size: 25413428
+    - path: ./input/lodes/year=2002/state=tx/tx-main.csv.gz
+      hash: md5
+      md5: 8804814245c671f6f9bfe0b60aa8f992
+      size: 47368107
+    outs:
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=block_group/origin=h_geo/state=tx/tx.parquet
+      hash: md5
+      md5: 6c01ec0b6cbbb10b0444b48ab92533e4
+      size: 26269097
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=block_group/origin=w_geo/state=tx/tx.parquet
+      hash: md5
+      md5: fd9f490d4fec657e6fefdb68aef53ed7
+      size: 25513430
+  build_lodes_by_geography@2002-tx-county:
+    cmd: Rscript ./src/aggregate_lodes.R 2002 tx county
+    deps:
+    - path: ./input/lodes/year=2002/all-aux.csv.gz
+      hash: md5
+      md5: a69cc0f426b965104b4f54f90c6f73a5
+      size: 25413428
+    - path: ./input/lodes/year=2002/state=tx/tx-main.csv.gz
+      hash: md5
+      md5: 8804814245c671f6f9bfe0b60aa8f992
+      size: 47368107
+    outs:
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=county/origin=h_geo/state=tx/tx.parquet
+      hash: md5
+      md5: bde0827fe47fa3e899dea2b057c9fc44
+      size: 353977
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=county/origin=w_geo/state=tx/tx.parquet
+      hash: md5
+      md5: b59bf25bbbfccd400b80ec542e1cdff0
+      size: 360422
+  build_lodes_by_geography@2002-ut-tract:
+    cmd: Rscript ./src/aggregate_lodes.R 2002 ut tract
+    deps:
+    - path: ./input/lodes/year=2002/all-aux.csv.gz
+      hash: md5
+      md5: a69cc0f426b965104b4f54f90c6f73a5
+      size: 25413428
+    - path: ./input/lodes/year=2002/state=ut/ut-main.csv.gz
+      hash: md5
+      md5: 05993448acb4bb37b5c8d810fa220153
+      size: 5131012
+    outs:
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=tract/origin=h_geo/state=ut/ut.parquet
+      hash: md5
+      md5: 3a9b2ade9a19b38c07821599921bab15
+      size: 1149836
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=tract/origin=w_geo/state=ut/ut.parquet
+      hash: md5
+      md5: d88f2f9f56fdc45997602051d80bf8d1
+      size: 1120944
+  build_lodes_by_geography@2002-ut-block_group:
+    cmd: Rscript ./src/aggregate_lodes.R 2002 ut block_group
+    deps:
+    - path: ./input/lodes/year=2002/all-aux.csv.gz
+      hash: md5
+      md5: a69cc0f426b965104b4f54f90c6f73a5
+      size: 25413428
+    - path: ./input/lodes/year=2002/state=ut/ut-main.csv.gz
+      hash: md5
+      md5: 05993448acb4bb37b5c8d810fa220153
+      size: 5131012
+    outs:
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=block_group/origin=h_geo/state=ut/ut.parquet
+      hash: md5
+      md5: eef24732787cf247e9afdeefc258ba82
+      size: 2372786
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=block_group/origin=w_geo/state=ut/ut.parquet
+      hash: md5
+      md5: 86f74682facdaf0e32792026d394ed86
+      size: 2202862
+  build_lodes_by_geography@2002-ut-county:
+    cmd: Rscript ./src/aggregate_lodes.R 2002 ut county
+    deps:
+    - path: ./input/lodes/year=2002/all-aux.csv.gz
+      hash: md5
+      md5: a69cc0f426b965104b4f54f90c6f73a5
+      size: 25413428
+    - path: ./input/lodes/year=2002/state=ut/ut-main.csv.gz
+      hash: md5
+      md5: 05993448acb4bb37b5c8d810fa220153
+      size: 5131012
+    outs:
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=county/origin=h_geo/state=ut/ut.parquet
+      hash: md5
+      md5: 46d61fe1fc74575b1887d2ae9cedd222
+      size: 30911
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=county/origin=w_geo/state=ut/ut.parquet
+      hash: md5
+      md5: 410b7bac5a911bf1d3bdf3da06688e19
+      size: 33784
+  build_lodes_by_geography@2002-va-tract:
+    cmd: Rscript ./src/aggregate_lodes.R 2002 va tract
+    deps:
+    - path: ./input/lodes/year=2002/all-aux.csv.gz
+      hash: md5
+      md5: a69cc0f426b965104b4f54f90c6f73a5
+      size: 25413428
+    - path: ./input/lodes/year=2002/state=va/va-main.csv.gz
+      hash: md5
+      md5: f373339286a89a5cf7c12c9dad898f71
+      size: 14979206
+    outs:
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=tract/origin=h_geo/state=va/va.parquet
+      hash: md5
+      md5: 7ee3063ec5f7bc9acd5109158ff28a1a
+      size: 4733523
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=tract/origin=w_geo/state=va/va.parquet
+      hash: md5
+      md5: 4cf01862b8365cfbed35c16549db2405
+      size: 4827473
+  build_lodes_by_geography@2002-va-block_group:
+    cmd: Rscript ./src/aggregate_lodes.R 2002 va block_group
+    deps:
+    - path: ./input/lodes/year=2002/all-aux.csv.gz
+      hash: md5
+      md5: a69cc0f426b965104b4f54f90c6f73a5
+      size: 25413428
+    - path: ./input/lodes/year=2002/state=va/va-main.csv.gz
+      hash: md5
+      md5: f373339286a89a5cf7c12c9dad898f71
+      size: 14979206
+    outs:
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=block_group/origin=h_geo/state=va/va.parquet
+      hash: md5
+      md5: a2048f47631602a27d6ea18fcc081516
+      size: 8371422
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=block_group/origin=w_geo/state=va/va.parquet
+      hash: md5
+      md5: 93db54bdd69e36fea7d5e239a7e1388f
+      size: 8382646
+  build_lodes_by_geography@2002-va-county:
+    cmd: Rscript ./src/aggregate_lodes.R 2002 va county
+    deps:
+    - path: ./input/lodes/year=2002/all-aux.csv.gz
+      hash: md5
+      md5: a69cc0f426b965104b4f54f90c6f73a5
+      size: 25413428
+    - path: ./input/lodes/year=2002/state=va/va-main.csv.gz
+      hash: md5
+      md5: f373339286a89a5cf7c12c9dad898f71
+      size: 14979206
+    outs:
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=county/origin=h_geo/state=va/va.parquet
+      hash: md5
+      md5: f6b7e00f80147be2d404451b2dd20409
+      size: 264070
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=county/origin=w_geo/state=va/va.parquet
+      hash: md5
+      md5: 985f84c4f1506ec790965618bbb0d5f9
+      size: 271417
+  build_lodes_by_geography@2002-vt-tract:
+    cmd: Rscript ./src/aggregate_lodes.R 2002 vt tract
+    deps:
+    - path: ./input/lodes/year=2002/all-aux.csv.gz
+      hash: md5
+      md5: a69cc0f426b965104b4f54f90c6f73a5
+      size: 25413428
+    - path: ./input/lodes/year=2002/state=vt/vt-main.csv.gz
+      hash: md5
+      md5: 51be5b0a9322383ece075a316de04b5b
+      size: 1193470
+    outs:
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=tract/origin=h_geo/state=vt/vt.parquet
+      hash: md5
+      md5: 3a99aabfd1a5e5e9cb98dde7f87a0147
+      size: 158672
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=tract/origin=w_geo/state=vt/vt.parquet
+      hash: md5
+      md5: cd2227b66f623c3fbd711f1607720339
+      size: 186771
+  build_lodes_by_geography@2002-vt-block_group:
+    cmd: Rscript ./src/aggregate_lodes.R 2002 vt block_group
+    deps:
+    - path: ./input/lodes/year=2002/all-aux.csv.gz
+      hash: md5
+      md5: a69cc0f426b965104b4f54f90c6f73a5
+      size: 25413428
+    - path: ./input/lodes/year=2002/state=vt/vt-main.csv.gz
+      hash: md5
+      md5: 51be5b0a9322383ece075a316de04b5b
+      size: 1193470
+    outs:
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=block_group/origin=h_geo/state=vt/vt.parquet
+      hash: md5
+      md5: 22b8bd80a08789d323d609bdda7290e7
+      size: 391486
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=block_group/origin=w_geo/state=vt/vt.parquet
+      hash: md5
+      md5: c8456b5b5d34e6bc68d6a3be41020ea3
+      size: 441758
+  build_lodes_by_geography@2002-vt-county:
+    cmd: Rscript ./src/aggregate_lodes.R 2002 vt county
+    deps:
+    - path: ./input/lodes/year=2002/all-aux.csv.gz
+      hash: md5
+      md5: a69cc0f426b965104b4f54f90c6f73a5
+      size: 25413428
+    - path: ./input/lodes/year=2002/state=vt/vt-main.csv.gz
+      hash: md5
+      md5: 51be5b0a9322383ece075a316de04b5b
+      size: 1193470
+    outs:
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=county/origin=h_geo/state=vt/vt.parquet
+      hash: md5
+      md5: 9c5ace00bc9d8a50aa8a67b031df7bab
+      size: 17904
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=county/origin=w_geo/state=vt/vt.parquet
+      hash: md5
+      md5: 7602a30398bd3bc776b4d9105d617b33
+      size: 20095
+  build_lodes_by_geography@2002-wa-tract:
+    cmd: Rscript ./src/aggregate_lodes.R 2002 wa tract
+    deps:
+    - path: ./input/lodes/year=2002/all-aux.csv.gz
+      hash: md5
+      md5: a69cc0f426b965104b4f54f90c6f73a5
+      size: 25413428
+    - path: ./input/lodes/year=2002/state=wa/wa-main.csv.gz
+      hash: md5
+      md5: 11947ef0320c49ee58c631cde1fc8a05
+      size: 12602315
+    outs:
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=tract/origin=h_geo/state=wa/wa.parquet
+      hash: md5
+      md5: b0a92ed4fd5136fa69edc315b8b451ac
+      size: 3289925
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=tract/origin=w_geo/state=wa/wa.parquet
+      hash: md5
+      md5: d89e7bed1c50943b716a9b7d63ce5200
+      size: 3016358
+  build_lodes_by_geography@2002-wa-block_group:
+    cmd: Rscript ./src/aggregate_lodes.R 2002 wa block_group
+    deps:
+    - path: ./input/lodes/year=2002/all-aux.csv.gz
+      hash: md5
+      md5: a69cc0f426b965104b4f54f90c6f73a5
+      size: 25413428
+    - path: ./input/lodes/year=2002/state=wa/wa-main.csv.gz
+      hash: md5
+      md5: 11947ef0320c49ee58c631cde1fc8a05
+      size: 12602315
+    outs:
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=block_group/origin=h_geo/state=wa/wa.parquet
+      hash: md5
+      md5: 9156aa5fa1ccb38e02362e9593a2b28c
+      size: 6634492
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=block_group/origin=w_geo/state=wa/wa.parquet
+      hash: md5
+      md5: b96996404e5f392f5e00fddb7beea384
+      size: 6052106
+  build_lodes_by_geography@2002-wa-county:
+    cmd: Rscript ./src/aggregate_lodes.R 2002 wa county
+    deps:
+    - path: ./input/lodes/year=2002/all-aux.csv.gz
+      hash: md5
+      md5: a69cc0f426b965104b4f54f90c6f73a5
+      size: 25413428
+    - path: ./input/lodes/year=2002/state=wa/wa-main.csv.gz
+      hash: md5
+      md5: 11947ef0320c49ee58c631cde1fc8a05
+      size: 12602315
+    outs:
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=county/origin=h_geo/state=wa/wa.parquet
+      hash: md5
+      md5: 007b257c9f6250ab3ee66febe36f9788
+      size: 57721
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=county/origin=w_geo/state=wa/wa.parquet
+      hash: md5
+      md5: a453dcb7b6c833d7910261c9275e114b
+      size: 52688
+  build_lodes_by_geography@2002-wi-tract:
+    cmd: Rscript ./src/aggregate_lodes.R 2002 wi tract
+    deps:
+    - path: ./input/lodes/year=2002/all-aux.csv.gz
+      hash: md5
+      md5: a69cc0f426b965104b4f54f90c6f73a5
+      size: 25413428
+    - path: ./input/lodes/year=2002/state=wi/wi-main.csv.gz
+      hash: md5
+      md5: 26769de32b4dcbb63f5b7fe7cd5e9439
+      size: 12549958
+    outs:
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=tract/origin=h_geo/state=wi/wi.parquet
+      hash: md5
+      md5: 2fe251335d6980b75f067b12da05e376
+      size: 3187485
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=tract/origin=w_geo/state=wi/wi.parquet
+      hash: md5
+      md5: 85227b241256cc071204a869dd309a91
+      size: 2875583
+  build_lodes_by_geography@2002-wi-block_group:
+    cmd: Rscript ./src/aggregate_lodes.R 2002 wi block_group
+    deps:
+    - path: ./input/lodes/year=2002/all-aux.csv.gz
+      hash: md5
+      md5: a69cc0f426b965104b4f54f90c6f73a5
+      size: 25413428
+    - path: ./input/lodes/year=2002/state=wi/wi-main.csv.gz
+      hash: md5
+      md5: 26769de32b4dcbb63f5b7fe7cd5e9439
+      size: 12549958
+    outs:
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=block_group/origin=h_geo/state=wi/wi.parquet
+      hash: md5
+      md5: 2458b7e146fd23432a942f831442df74
+      size: 6301921
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=block_group/origin=w_geo/state=wi/wi.parquet
+      hash: md5
+      md5: 36eae11816a05407fcb1b40a12b268d2
+      size: 5624800
+  build_lodes_by_geography@2002-wi-county:
+    cmd: Rscript ./src/aggregate_lodes.R 2002 wi county
+    deps:
+    - path: ./input/lodes/year=2002/all-aux.csv.gz
+      hash: md5
+      md5: a69cc0f426b965104b4f54f90c6f73a5
+      size: 25413428
+    - path: ./input/lodes/year=2002/state=wi/wi-main.csv.gz
+      hash: md5
+      md5: 26769de32b4dcbb63f5b7fe7cd5e9439
+      size: 12549958
+    outs:
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=county/origin=h_geo/state=wi/wi.parquet
+      hash: md5
+      md5: 04c8bcd020a473db0a229ea0cc90c5dc
+      size: 126031
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=county/origin=w_geo/state=wi/wi.parquet
+      hash: md5
+      md5: a0ce238d7d0a04ee2a80049880a0194a
+      size: 115376
+  build_lodes_by_geography@2002-wv-tract:
+    cmd: Rscript ./src/aggregate_lodes.R 2002 wv tract
+    deps:
+    - path: ./input/lodes/year=2002/all-aux.csv.gz
+      hash: md5
+      md5: a69cc0f426b965104b4f54f90c6f73a5
+      size: 25413428
+    - path: ./input/lodes/year=2002/state=wv/wv-main.csv.gz
+      hash: md5
+      md5: 04e49338640ef31276183952c5b4ed82
+      size: 2892417
+    outs:
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=tract/origin=h_geo/state=wv/wv.parquet
+      hash: md5
+      md5: 22eece65e5ea3f2a6cc20208d6f1fd12
+      size: 756965
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=tract/origin=w_geo/state=wv/wv.parquet
+      hash: md5
+      md5: 4fb4e09405d01c42d930dfcb1a723a2f
+      size: 649317
+  build_lodes_by_geography@2002-wv-block_group:
+    cmd: Rscript ./src/aggregate_lodes.R 2002 wv block_group
+    deps:
+    - path: ./input/lodes/year=2002/all-aux.csv.gz
+      hash: md5
+      md5: a69cc0f426b965104b4f54f90c6f73a5
+      size: 25413428
+    - path: ./input/lodes/year=2002/state=wv/wv-main.csv.gz
+      hash: md5
+      md5: 04e49338640ef31276183952c5b4ed82
+      size: 2892417
+    outs:
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=block_group/origin=h_geo/state=wv/wv.parquet
+      hash: md5
+      md5: 83d3bce5210c61907f570b87342bfa40
+      size: 1540843
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=block_group/origin=w_geo/state=wv/wv.parquet
+      hash: md5
+      md5: 0a85e8a47a9d639a143664181e9f6161
+      size: 1325254
+  build_lodes_by_geography@2002-wv-county:
+    cmd: Rscript ./src/aggregate_lodes.R 2002 wv county
+    deps:
+    - path: ./input/lodes/year=2002/all-aux.csv.gz
+      hash: md5
+      md5: a69cc0f426b965104b4f54f90c6f73a5
+      size: 25413428
+    - path: ./input/lodes/year=2002/state=wv/wv-main.csv.gz
+      hash: md5
+      md5: 04e49338640ef31276183952c5b4ed82
+      size: 2892417
+    outs:
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=county/origin=h_geo/state=wv/wv.parquet
+      hash: md5
+      md5: 3501adaee95e0d73c52911ee4a299527
+      size: 94059
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=county/origin=w_geo/state=wv/wv.parquet
+      hash: md5
+      md5: c672afec79923fac5e9bd55512609826
+      size: 76547
+  build_lodes_by_geography@2002-wy-tract:
+    cmd: Rscript ./src/aggregate_lodes.R 2002 wy tract
+    deps:
+    - path: ./input/lodes/year=2002/all-aux.csv.gz
+      hash: md5
+      md5: a69cc0f426b965104b4f54f90c6f73a5
+      size: 25413428
+    - path: ./input/lodes/year=2002/state=wy/wy-main.csv.gz
+      hash: md5
+      md5: b5bc831674b144a34d5e667a3055a326
+      size: 977032
+    outs:
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=tract/origin=h_geo/state=wy/wy.parquet
+      hash: md5
+      md5: 2d22cc74a6dfd29a75281c011a46bbdc
+      size: 106746
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=tract/origin=w_geo/state=wy/wy.parquet
+      hash: md5
+      md5: 8a943753adae8cd00c67f7e368b00b7a
+      size: 104645
+  build_lodes_by_geography@2002-wy-block_group:
+    cmd: Rscript ./src/aggregate_lodes.R 2002 wy block_group
+    deps:
+    - path: ./input/lodes/year=2002/all-aux.csv.gz
+      hash: md5
+      md5: a69cc0f426b965104b4f54f90c6f73a5
+      size: 25413428
+    - path: ./input/lodes/year=2002/state=wy/wy-main.csv.gz
+      hash: md5
+      md5: b5bc831674b144a34d5e667a3055a326
+      size: 977032
+    outs:
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=block_group/origin=h_geo/state=wy/wy.parquet
+      hash: md5
+      md5: 8347718c0c3d4c4dfa32f9ef6f99dd9f
+      size: 251890
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=block_group/origin=w_geo/state=wy/wy.parquet
+      hash: md5
+      md5: 8a5ed0cb59f75bb65c44fe7d266b61ad
+      size: 231993
+  build_lodes_by_geography@2002-wy-county:
+    cmd: Rscript ./src/aggregate_lodes.R 2002 wy county
+    deps:
+    - path: ./input/lodes/year=2002/all-aux.csv.gz
+      hash: md5
+      md5: a69cc0f426b965104b4f54f90c6f73a5
+      size: 25413428
+    - path: ./input/lodes/year=2002/state=wy/wy-main.csv.gz
+      hash: md5
+      md5: b5bc831674b144a34d5e667a3055a326
+      size: 977032
+    outs:
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=county/origin=h_geo/state=wy/wy.parquet
+      hash: md5
+      md5: e3ac8c5c6bcb6fa2f9ab123d6317fd1e
+      size: 22193
+    - path: 
+        ./intermediate/od_lodes/year=2002/geography=county/origin=w_geo/state=wy/wy.parquet
+      hash: md5
+      md5: ce1cd1b4c12c28482eadc3bcca959347
+      size: 19147

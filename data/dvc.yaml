@@ -45,10 +45,17 @@ stages:
     matrix:
       year: ${input.year}
       state: ${input.state}
-      geography: ${input.census.geography}
-    cmd: "Rscript ./src/aggregate_lodes.R ${item.year} ${item.state} ${item.geography}"
+    cmd: "Rscript ./src/aggregate_lodes.R ${item.year} ${item.state}"
     outs:
-      - ./intermediate/od_lodes/year=${item.year}/geography=${item.geography}/origin=w_geo/state=${item.state}/${item.state}.parquet:
+      - ./intermediate/od_lodes/year=${item.year}/geography=county/origin=w_geo/state=${item.state}/${item.state}.parquet:
           persist: true
-      - ./intermediate/od_lodes/year=${item.year}/geography=${item.geography}/origin=h_geo/state=${item.state}/${item.state}.parquet:
+      - ./intermediate/od_lodes/year=${item.year}/geography=county/origin=h_geo/state=${item.state}/${item.state}.parquet:
+          persist: true
+      - ./intermediate/od_lodes/year=${item.year}/geography=tract/origin=w_geo/state=${item.state}/${item.state}.parquet:
+          persist: true
+      - ./intermediate/od_lodes/year=${item.year}/geography=tract/origin=h_geo/state=${item.state}/${item.state}.parquet:
+          persist: true
+      - ./intermediate/od_lodes/year=${item.year}/geography=block_group/origin=w_geo/state=${item.state}/${item.state}.parquet:
+          persist: true
+      - ./intermediate/od_lodes/year=${item.year}/geography=block_group/origin=h_geo/state=${item.state}/${item.state}.parquet:
           persist: true

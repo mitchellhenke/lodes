@@ -15,7 +15,6 @@ args <- commandArgs(trailingOnly=T)
 
 year <- args[1]
 state <- args[2]
-geography <- args[3]
 
 fips_code_state_abbreviation <-
   data.frame(
@@ -25,8 +24,12 @@ fips_code_state_abbreviation <-
 
 # aggregate the supplied LODES data (created by download_lodes) to the
 #   specified aggregation level (tract, block group, or county)
-aggregate_lodes <- function(year, state, geography, save = T){
+aggregate_lodes <- function(year, state, 
+                            geography = c("tract", "block_group", "county"),
+                            origin = c("h_geo", "w_geo"),
+                            save = T){
   stopifnot(geography %in% c("tract", "block_group", "county"))
+  stopifnot(origin %in% c("h_geo", "w_geo"))
 
   # the main, i.e., within-state flows
   lodes.main <- readr::read_csv(paste0("input/lodes/year=", year, "/state=", state,
@@ -42,45 +45,49 @@ aggregate_lodes <- function(year, state, geography, save = T){
     filter(str_sub(w_geocode, 1, 2) == st.fips |
              str_sub(h_geocode, 1, 2) == st.fips)
 
-  # combine the main and auxillary files
+  # combine the main and auxilary files
   lodes <- bind_rows(lodes.main, lodes.aux)
 
-  # fips codes can be shortened to specify larger geographies
-  #   this records the length of the FIPS code for the specified aggregation geo
-  fips.length <- case_when(
-    geography == "county" ~ 5,
-    geography == "tract" ~ 11,
-    geography == "block_group" ~ 12
-  )
-
-
-  lodes.agg <- lodes |>
-    mutate(w_geo = str_sub(w_geocode, 1, fips.length),
-           h_geo = str_sub(h_geocode, 1, fips.length)) |>
-    group_by(w_geo, h_geo) |>
-    summarise(across(.cols = starts_with("S", ignore.case = F), .fns = sum),
-              .groups = "drop") |>
-    mutate(across(where(is.numeric), as.integer))
-
-  if(save == T) {
-    for(origin in c("w_geo", "h_geo")) {
-      dir.create(path = paste0("intermediate/od_lodes/year=", year, "/geography=",
-                               geography, "/origin=", origin, "/state=", state),
-                 showWarnings = F, recursive = T)
-
-      print(paste("saving", state, year, geography, origin))
-
-      lodes.agg |>
-        filter(str_sub(!!rlang::sym(origin), 1, 2) == st.fips) |>
-        arrange(across(!!rlang::sym(origin))) |>
-        write_parquet(paste0("intermediate/od_lodes/year=", year, "/geography=",
-                             geography, "/origin=", origin, "/state=", state, "/",
-                             state, ".parquet"),
-                      chunk_size = 100000)
+  # aggregate to each supplied geography
+  for(g in seq(geography)){
+    # fips codes can be shortened to specify larger geographies
+    #   this records the length of the FIPS code for the specified aggregation geo
+    fips.length <- case_when(
+      geography[g] == "county" ~ 5,
+      geography[g] == "tract" ~ 11,
+      geography[g] == "block_group" ~ 12
+    )
+    
+    print(paste("aggregating", state, year, geography[g]))
+    
+    lodes.agg <- lodes |>
+      mutate(w_geo = str_sub(w_geocode, 1, fips.length),
+             h_geo = str_sub(h_geocode, 1, fips.length)) |>
+      group_by(w_geo, h_geo) |>
+      summarise(across(.cols = starts_with("S", ignore.case = F), .fns = sum),
+                .groups = "drop") |>
+      mutate(across(where(is.numeric), as.integer))
+    
+    if(save == T) {
+      for(o in seq(origin)) {
+        dir.create(path = paste0("intermediate/od_lodes/year=", year, "/geography=",
+                                 geography[g], "/origin=", origin[o], "/state=", state),
+                   showWarnings = F, recursive = T)
+        
+        print(paste("saving", state, year, geography[g], origin[o]))
+        
+        lodes.agg |>
+          filter(str_sub(!!rlang::sym(origin[o]), 1, 2) == st.fips) |>
+          arrange(across(!!rlang::sym(origin[o]))) |>
+          write_parquet(paste0("intermediate/od_lodes/year=", year, "/geography=",
+                               geography[g], "/origin=", origin[o], "/state=", state, "/",
+                               state, ".parquet"),
+                        chunk_size = 100000)
+      }
+    } else {
+      lodes.agg
     }
-  } else {
-    lodes.agg
   }
 }
 
-x <- aggregate_lodes(year, state, geography)
+x <- aggregate_lodes(year, state)

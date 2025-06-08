@@ -1,8 +1,10 @@
 import argparse
 import re
 import boto3
+import botocore
 import yaml
 import os
+import hashlib
 
 def create_public_files(
     dataset: str,
@@ -34,7 +36,20 @@ def create_public_files(
     file_path = f"intermediate/od_lodes/year={year}/geography={geography}/origin={origin}/state={state}/{state}.parquet"
     filename = f"{dataset}-{year}-{geography}-{origin}-{state}.parquet"
     s3_path = f"{dataset}/year={year}/geography={geography}/origin={origin}/state={state}/{filename}"
-    s3.upload_file(file_path, public_bucket, s3_path)
+    with open(file_path, 'rb') as file:
+        data = file.read()
+        md5 = hashlib.md5(data).hexdigest()
+        try:
+            print(s3_path)
+            s3.head_object(Bucket=public_bucket, Key=s3_path, IfNoneMatch=md5)
+        except botocore.exceptions.ClientError as e:
+            if e.response['Error']['Message'] == 'Not Modified':
+                print('skipping')
+            elif e.response['Error']['Message'] == 'Not Found':
+                s3.put_object(Body=data, Bucket=public_bucket, Key=s3_path, IfNoneMatch=md5)
+            else:
+                print(e.response)
+                raise e
 
 def main() -> None:
     parser = argparse.ArgumentParser()

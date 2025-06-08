@@ -12,7 +12,30 @@ const
 const
   LODES_ORIGINS = ["h_geo", "w_geo"],
   LODES_JOB_SEGMENTS = ["S000", "SA01", "SA02", "SA03", "SE01", "SE02", "SE03", "SI01", "SI02", "SI03"],
-  LODES_YEARS = ["2002", "2012", "2022"],
+  LODES_YEARS = [
+    "2002",
+    "2003",
+    "2004",
+    "2005",
+    "2006",
+    "2007",
+    "2008",
+    "2009",
+    "2010",
+    "2011",
+    "2012",
+    "2012",
+    "2013",
+    "2014",
+    "2015",
+    "2016",
+    "2017",
+    "2018",
+    "2019",
+    "2020",
+    "2021",
+    "2022"
+  ],
   LODES_GEOGRAPHIES = ["block_group", "tract", "county"];
 
 const CONST_LODES_ORIGINS_LABELS = {

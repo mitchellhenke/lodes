@@ -7,7 +7,10 @@ if(!require(dplyr)) {
   install.packages("dplyr", repos = "http://cran.us.r-project.org")
 }
 
-df.states_with_no_data <- data.frame(state = c('ak', 'mi', 'ms', 'az', 'dc', 'ms', 'nh'), year = c(2022, 2022, 2022, 2002, 2002, 2002, 2002))
+df.states_with_no_data <- data.frame(
+  state = c('ak', 'mi', 'ms', 'az', 'dc', 'ms', 'nh', 'az', 'dc', 'ak', 'ak', 'dc', 'dc', 'ak', 'dc', 'ak', 'dc', 'dc', 'ms', 'dc', 'ak', 'ms', 'ms', 'ms', 'ma'),
+  year  = c(2022, 2022, 2022, 2002, 2002, 2002, 2002, 2003, 2003, 2018, 2021, 2005, 2004, 2017, 2009, 2020, 2008, 2006, 2019, 2007, 2019, 2003, 2020, 2021, 2009)
+)
 
 args <- commandArgs(trailingOnly=T)
 

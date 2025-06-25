@@ -23,7 +23,7 @@ stages:
   fetch_cb:
     matrix:
       year: ['2020']
-      geography: ['tract', 'block_group', 'county']
+      geography: ['tract', 'block_group', 'county', 'cousub']
     cmd: "python ./src/fetch_cb.py --year ${item.year} --geography ${item.geography}"
     outs:
       - ./input/cb/year=${item.year}/geography=${item.geography}/${item.geography}.geojson:
@@ -58,4 +58,8 @@ stages:
       - ./intermediate/od_lodes/year=${item.year}/geography=block_group/origin=w_geo/state=${item.state}/${item.state}.parquet:
           persist: true
       - ./intermediate/od_lodes/year=${item.year}/geography=block_group/origin=h_geo/state=${item.state}/${item.state}.parquet:
+          persist: true
+      - ./intermediate/od_lodes/year=${item.year}/geography=cousub/origin=w_geo/state=${item.state}/${item.state}.parquet:
+          persist: true
+      - ./intermediate/od_lodes/year=${item.year}/geography=cousub/origin=h_geo/state=${item.state}/${item.state}.parquet:
           persist: true

@@ -55,7 +55,7 @@ aggregate_lodes <- function(year, state,
     fips.length <- case_when(
       geography[g] == "county" ~ 5,
       geography[g] == "tract" ~ 11,
-      geography[g] == "block_group" ~ 12
+      geography[g] == "block_group" ~ 12,
       geography[g] == "cousub" ~ 10
     )
     

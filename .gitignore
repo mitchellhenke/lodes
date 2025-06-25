@@ -44,3 +44,4 @@ plan
 .Rproj.user
 lodes.Rproj
 .Rhistory
+!data/resources/block-to-cousub_2020.csv.gz

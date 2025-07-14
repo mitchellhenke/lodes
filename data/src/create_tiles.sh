@@ -17,5 +17,5 @@ mkdir -p "$OUT_DIR"
 tippecanoe -f -zg -l geometry -o "${OUT_DIR}""${OUT_FILE}" \
     --coalesce-densest-as-needed --simplify-only-low-zooms \
     --no-simplification-of-shared-nodes \
-    -y id -T id:string \
+    -y id -T id:string -y name -T name:string \
     --extend-zooms-if-still-dropping "${IN_FILE}"

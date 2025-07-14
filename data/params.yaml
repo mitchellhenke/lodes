@@ -94,7 +94,7 @@ input:
       - tract
       - block_group
       - county
-      - cousub
+      - county_subdivision
 
 output:
   # Compression type and level to use for final output Parquet files

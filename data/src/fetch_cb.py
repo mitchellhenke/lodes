@@ -152,7 +152,10 @@ def fetch_cb_shapefile(
 
     gdf_concat = pd.concat(gdf_list, ignore_index=True)
     gdf_concat = gdf_concat.to_crs(epsg=4326)
-    gdf_concat = gdf_concat[["geoid", "geometry"]].rename(
+    columns = ["geoid", "geometry"]
+    if geography in ["county", "county_subdivision"]:
+        columns = ["geoid", "geometry", "name"]
+    gdf_concat = gdf_concat[columns].rename(
         columns={"geoid": "id"}
     )
     gdf_concat.to_file(output_file, layer="geometry")

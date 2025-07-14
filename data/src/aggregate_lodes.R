@@ -2,6 +2,10 @@ if(!require(dplyr)){
   install.packages("dplyr", repos = "http://cran.us.r-project.org")
   library(dplyr)
 }
+if(!require(readr)){
+  install.packages("readr", repos = "http://cran.us.r-project.org")
+  library(readr)
+}
 if(!require(stringr)){
   install.packages("stringr", repos = "http://cran.us.r-project.org")
   library(stringr)
@@ -24,11 +28,11 @@ fips_code_state_abbreviation <-
 
 # aggregate the supplied LODES data (created by download_lodes) to the
 #   specified aggregation level (tract, block group, county subdivision, or county)
-aggregate_lodes <- function(year, state, 
-                            geography = c("tract", "block_group", "cousub", "county"),
+aggregate_lodes <- function(year, state,
+                            geography = c("tract", "block_group", "county_subdivision", "county"),
                             origin = c("h_geo", "w_geo"),
                             save = T){
-  stopifnot(geography %in% c("tract", "block_group", "cousub", "county"))
+  stopifnot(geography %in% c("tract", "block_group", "county_subdivision", "county"))
   stopifnot(origin %in% c("h_geo", "w_geo"))
   
   # the main, i.e., within-state flows
@@ -56,11 +60,11 @@ aggregate_lodes <- function(year, state,
       geography[g] == "county" ~ 5,
       geography[g] == "tract" ~ 11,
       geography[g] == "block_group" ~ 12,
-      geography[g] == "cousub" ~ 10
+      geography[g] == "county_subdivision" ~ 10
     )
     
     # substitute cousub geocodes from crosswalk
-    if(geography[g] == "cousub"){
+    if(geography[g] == "county_subdivision"){
       cousub.crosswalk <- read_csv("resources/block-to-cousub_2020.csv.gz",
                                    col_types = "ccc")
       lodes <- lodes |>
@@ -84,20 +88,10 @@ aggregate_lodes <- function(year, state,
       summarise(across(.cols = starts_with("S", ignore.case = F), .fns = sum),
                 .groups = "drop") |>
       mutate(across(where(is.numeric), as.integer))
-    
-    # if cousub is the geography add text labels
-    if(geography[g] == "cousub"){
-      cousub.names <- cousub.crosswalk |>
-        group_by(cousub_fips, cousub) |>
-        summarise(.groups = "drop")
-      lodes.agg <- lodes.agg |>
-        inner_join(cousub.names |> select(w_geo = cousub_fips, w_name = cousub)) |>
-        inner_join(cousub.names |> select(h_geo = cousub_fips, h_name = cousub))
-    }
-    
+
     if(save == T) {
       for(o in seq(origin)) {
-        dir.create(path = paste0("intermediate/od_lodes/year=", year, "/geography=",
+        dir.create(path = paste0("output/od_lodes/year=", year, "/geography=",
                                  geography[g], "/origin=", origin[o], "/state=", state),
                    showWarnings = F, recursive = T)
         
@@ -106,7 +100,7 @@ aggregate_lodes <- function(year, state,
         lodes.agg |>
           filter(str_sub(!!rlang::sym(origin[o]), 1, 2) == st.fips) |>
           arrange(across(!!rlang::sym(origin[o]))) |>
-          write_parquet(paste0("intermediate/od_lodes/year=", year, "/geography=",
+          write_parquet(paste0("output/od_lodes/year=", year, "/geography=",
                                geography[g], "/origin=", origin[o], "/state=", state, "/",
                                state, ".parquet"),
                         chunk_size = 100000)

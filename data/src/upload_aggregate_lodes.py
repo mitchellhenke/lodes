@@ -33,7 +33,7 @@ def create_public_files(
       endpoint_url = params["s3"]["endpoint_url"]
     )
 
-    file_path = f"intermediate/od_lodes/year={year}/geography={geography}/origin={origin}/state={state}/{state}.parquet"
+    file_path = f"output/od_lodes/year={year}/geography={geography}/origin={origin}/state={state}/{state}.parquet"
     filename = f"{dataset}-{year}-{geography}-{origin}-{state}.parquet"
     s3_path = f"{dataset}/year={year}/geography={geography}/origin={origin}/state={state}/{filename}"
     with open(file_path, 'rb') as file:

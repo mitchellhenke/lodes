@@ -24,7 +24,6 @@ const
     "2010",
     "2011",
     "2012",
-    "2012",
     "2013",
     "2014",
     "2015",
@@ -36,7 +35,7 @@ const
     "2021",
     "2022"
   ],
-  LODES_GEOGRAPHIES = ["block_group", "tract", "county"];
+  LODES_GEOGRAPHIES = ["block_group", "tract", "county_subdivision", "county"];
 
 const CONST_LODES_ORIGINS_LABELS = {
   "w_geo": "Work",
@@ -501,7 +500,8 @@ class Map {
           },
           { hover: true }
         );
-        this.updateGeoIdDisplay(feature.properties.id, this.processor.previousResults[geographyParam][feature.properties.id]?.count)
+        const displayId = feature.properties.name ? feature.properties.name : feature.properties.id
+        this.updateGeoIdDisplay(displayId, this.processor.previousResults[geographyParam][feature.properties.id]?.count)
       } else {
         this.map.getCanvas().style.cursor = "";
         this.geoIdDisplay.style.display = "none";
@@ -545,7 +545,7 @@ class Map {
         this.updateSelectedFeature(geometryFeature.properties.id)
       }
 
-      if (feature) {
+      if (geometryFeature && feature) {
         idParam = feature?.properties.id;
         validId = validIdInput(idParam);
 
@@ -553,10 +553,11 @@ class Map {
           setUrlParam("id", idParam);
           await this.processor.runQuery(
             this, originParam, jobSegmentParam, yearParam, geographyParam,
-            idParam.substring(0, 2), idParam
+            idParam.substring(0, 2), geometryFeature.properties.id
           );
 
-          this.updateGeoIdDisplay(this.hoveredPolygonId[geographyParam], this.processor.previousResults[geographyParam][geometryFeature.properties.id]?.count)
+          const displayId = geometryFeature.properties.name ? geometryFeature.properties.name : geometryFeature.properties.id
+          this.updateGeoIdDisplay(displayId, this.processor.previousResults[geographyParam][geometryFeature.properties.id]?.count)
         }
       }
     });
@@ -579,6 +580,8 @@ class Map {
   truncateId(geography, id) {
     if (geography === "county") {
       return id.substring(0, 5);
+    } else if (geography === "county_subdivision") {
+      return id.substring(0, 10);
     } else if (geography === "tract") {
       return id.substring(0, 11);
     } else if (geography === "block_group") {
@@ -613,12 +616,11 @@ class Map {
   updateGeoIdDisplay(id, count) {
     this.geoIdDisplay.style.display = "block";
     const geoName = this.displayGeoName(geographyParam);
-    const truncId = this.truncateId(geographyParam, id);
 
     if(count) {
-      this.geoIdDisplay.innerHTML = `${geoName} ID: ${truncId}<br>${count.toLocaleString()} People`;
+      this.geoIdDisplay.innerHTML = `${geoName} ID: ${id}<br>${count.toLocaleString()} People`;
     } else {
-      this.geoIdDisplay.innerHTML = `${geoName} ID: ${truncId}<br>0 People`;
+      this.geoIdDisplay.innerHTML = `${geoName} ID: ${id}<br>0 People`;
     }
   }
 

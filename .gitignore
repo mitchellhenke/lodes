@@ -45,3 +45,4 @@ plan
 lodes.Rproj
 .Rhistory
 !data/resources/block-to-cousub_2020.csv.gz
+!data/resources/block-to-cousub_2020.parquet

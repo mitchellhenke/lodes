@@ -327,6 +327,8 @@ class ColorScale {
     switch (geography) {
       case "county":
         return [1, 2, 101, 1001, 10000];
+      case "county_subdivision":
+        return [1, 2, 51, 151, 500];
       default:
         return [1, 2, 11, 21, 30];
     }

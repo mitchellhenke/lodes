@@ -4,6 +4,7 @@ export default [
   js.configs.all,
   {
     rules: {
+      "capitalized-comments": "off",
       "class-methods-use-this": "off",
       "guard-for-in": "off",
       "id-length": "off",
@@ -20,11 +21,12 @@ export default [
       "no-undef": "off",
       "no-underscore-dangle": "off",
       "no-useless-assignment": "off",
+      "object-shorthand": "off",
       "one-var": "off",
       "quotes": ["error", "double"],
       "semi": ["error", "always"],
       "sort-vars": "off",
-      "sort-keys": "off"
+      "sort-keys": "off",
     }
   }
 ];

@@ -1,4 +1,4 @@
-/* eslint-disable no-undef */
+ 
 const openDetailsOnLoad = function openDetailsOnLoad() {
   const target = window.location.hash;
   let qTarget = null;

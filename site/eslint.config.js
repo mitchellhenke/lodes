@@ -23,7 +23,8 @@ export default [
       "one-var": "off",
       "quotes": ["error", "double"],
       "semi": ["error", "always"],
-      "sort-vars": "off"
+      "sort-vars": "off",
+      "sort-keys": "off"
     }
   }
 ];

@@ -56,8 +56,8 @@ const CONST_LODES_JOB_SEGMENTS_LABELS = {
 };
 
 const
-  URL_TILES = `https://data.lodesmap.com/tiles`,
-  URL_LODES = `https://data.lodesmap.com/lodes`;
+  URL_TILES = "https://data.lodesmap.com/tiles",
+  URL_LODES = "https://data.lodesmap.com/lodes";
 
 const FIPS_TO_TIGER_GEO_STATE_ABBR = {
   "02": "ak",
@@ -111,7 +111,7 @@ const FIPS_TO_TIGER_GEO_STATE_ABBR = {
   "55": "wi",
   "54": "wv",
   "56": "wy"
-}
+};
 
 const
   MAP_CENTER = [-87.967, 43.064],
@@ -134,7 +134,6 @@ let validOrigin = true,
   validCountySubdivisionId= true;
 
 const getTilesUrl = function getTilesUrl({
-  year = LODES_YEAR,
   geography = LODES_GEOGRAPHY
 } = {}) {
   // We always use 2020 tiles as all years of LODES data for Version 8
@@ -149,13 +148,10 @@ const getLodesUrl = function getLodesUrl({
   origin = LODES_ORIGIN,
   state = null
 } = {}) {
-
-  if(state !== null) {
-    state = FIPS_TO_TIGER_GEO_STATE_ABBR[state]
-  }
+  const stateParam = state === null ? state : FIPS_TO_TIGER_GEO_STATE_ABBR[state];
 
   return `${URL_LODES}/year=${year}/geography=${geography}/origin=${origin}/` +
-    `state=${state}/lodes-${year}-${geography}-${origin}-${state}.parquet`;
+    `state=${stateParam}/lodes-${year}-${geography}-${origin}-${stateParam}.parquet`;
 };
 
 const setUrlParam = function setUrlParam(name, value) {
@@ -231,7 +227,7 @@ class ColorScale {
       option.value = opt;
 
       if(paramLabels[opt]) {
-        option.textContent = paramLabels[opt]
+        option.textContent = paramLabels[opt];
       } else {
         option.textContent = opt.split("_").
           map(word => word.charAt(0).toUpperCase() +
@@ -318,23 +314,23 @@ class ColorScale {
 
   getLabelsForGeography(geography) {
     switch (geography) {
-      case "county":
-        return ["1", "2-100", "101-1,000", "1,001-9,999", "10,000+"];
-      case "county_subdivision":
-        return ["1", "2-50", "51-150", "150-499", "500+"];
-      default:
-        return ["1", "2-10", "11-20", "21-29", "30+"];
+    case "county":
+      return ["1", "2-100", "101-1,000", "1,001-9,999", "10,000+"];
+    case "county_subdivision":
+      return ["1", "2-50", "51-150", "150-499", "500+"];
+    default:
+      return ["1", "2-10", "11-20", "21-29", "30+"];
     }
   }
 
   getThresholdsForGeography(geography) {
     switch (geography) {
-      case "county":
-        return [1, 2, 101, 1001, 10000];
-      case "county_subdivision":
-        return [1, 2, 51, 151, 500];
-      default:
-        return [1, 2, 11, 21, 30];
+    case "county":
+      return [1, 2, 101, 1001, 10000];
+    case "county_subdivision":
+      return [1, 2, 51, 151, 500];
+    default:
+      return [1, 2, 11, 21, 30];
     }
   }
 
@@ -506,8 +502,8 @@ class Map {
           },
           { hover: true }
         );
-        const displayId = feature.properties.name ? feature.properties.name : feature.properties.id
-        this.updateGeoIdDisplay(displayId, this.processor.previousResults[geographyParam][feature.properties.id]?.count)
+        const displayId = feature.properties.name ? feature.properties.name : feature.properties.id;
+        this.updateGeoIdDisplay(displayId, this.processor.previousResults[geographyParam][feature.properties.id]?.count);
       } else {
         this.map.getCanvas().style.cursor = "";
         this.geoIdDisplay.style.display = "none";
@@ -549,17 +545,18 @@ class Map {
 
       const [couSubFeature] = this.map.queryRenderedFeatures(
         feat.point,
-        { layers: [`geo_fill_county_subdivision`] }
+        { layers: ["geo_fill_county_subdivision"] }
       );
 
+
       if(couSubFeature) {
-        countySubdivisionIdParam = couSubFeature?.properties.id
+        countySubdivisionIdParam = couSubFeature?.properties.id;
         validCountySubdivisionId = validIdInput(countySubdivisionIdParam);
         setUrlParam("countySubdivisionId", countySubdivisionIdParam);
       }
 
       if(geometryFeature) {
-        this.updateSelectedFeature(geometryFeature.properties.id)
+        this.updateSelectedFeature(geometryFeature.properties.id);
       }
 
       if (geometryFeature && feature) {
@@ -573,8 +570,8 @@ class Map {
             idParam.substring(0, 2), geometryFeature.properties.id
           );
 
-          const displayId = geometryFeature.properties.name ? geometryFeature.properties.name : geometryFeature.properties.id
-          this.updateGeoIdDisplay(displayId, this.processor.previousResults[geographyParam][geometryFeature.properties.id]?.count)
+          const displayId = geometryFeature.properties.name ? geometryFeature.properties.name : geometryFeature.properties.id;
+          this.updateGeoIdDisplay(displayId, this.processor.previousResults[geographyParam][geometryFeature.properties.id]?.count);
         }
       }
     });
@@ -653,16 +650,16 @@ class Map {
     }
     // getThresholdsForGeography(geography)
     for (const geography of LODES_GEOGRAPHIES) {
-      const thresholds = this.colorScale.getThresholdsForGeography(geography)
+      const thresholds = this.colorScale.getThresholdsForGeography(geography);
       const colors = [
         "rgb(253, 231, 37)",
         "rgb(122, 209, 81)",
         "rgb(34, 168, 132)",
         "rgb(42, 120, 142)",
         "rgb(65, 68, 135)"
-      ]
+      ];
 
-      const thresholds_colors = thresholds.map((k, i) => [k, colors[i]]).flat();
+      const thresholdsColors = thresholds.map((k, i) => [k, colors[i]]).flat();
 
       this.map.addLayer({
         filter: ["==", ["geometry-type"], "Polygon"],
@@ -670,13 +667,13 @@ class Map {
         layout: { visibility: "none" },
         paint: {
           "fill-color": [
-            'interpolate',
-            ['linear'],
-            ['feature-state', 'geoValue'],
-            ...thresholds_colors
+            "interpolate",
+            ["linear"],
+            ["feature-state", "geoValue"],
+            ...thresholdsColors
           ],
           "fill-opacity": [
-            'case',
+            "case",
             ["==", ["feature-state", "geoValue"], null], 0.0,
             0.4,
           ],
@@ -831,8 +828,8 @@ class ParquetProcessor {
   processParquetRowGroup(map, id, geography, data, results, origin) {
     data.forEach(row => {
       // w_tract, h_tract
-      const source = origin == "w_geo" ? 0 : 1
-      const destination = origin == "w_geo" ? 1 : 0
+      const source = origin === "w_geo" ? 0 : 1;
+      const destination = origin === "w_geo" ? 1 : 0;
 
       if (row[source] === id) {
         map.map.setFeatureState(
@@ -849,30 +846,30 @@ class ParquetProcessor {
   }
 
   saveResultState(map, results, geography) {
-    const filteredPreviousResults = this.previousResults[geography]
+    const filteredPreviousResults = this.previousResults[geography];
     Object.keys(results).forEach(key => delete(filteredPreviousResults[key]));
     map.wipeMapPreviousState(Object.keys(filteredPreviousResults), geography);
     this.previousResults[geography] = results;
   }
 
-  async runQuery(map, origin, job_segment, year, geography, state, id) {
+  async runQuery(map, origin, jobSegment, year, geography, state, id) {
     map.isProcessing = true;
     map.spinner.show();
     const queryUrl = getLodesUrl({ year, geography, origin, state }),
       truncId = map.truncateId(geography, id);
 
     // Get the count of files given the geography, origin, and state
-    const results = await this.updateMapOnQuery(map, queryUrl, truncId, geography, job_segment, origin);
+    const results = await this.updateMapOnQuery(map, queryUrl, truncId, geography, jobSegment, origin);
     this.saveResultState(map, results, geography);
-    map.updateSelectedFeature(truncId)
+    map.updateSelectedFeature(truncId);
     map.isProcessing = false;
     map.spinner.hide();
   }
 
-  async readAndUpdateMap(map, id, geography, file, metadata, rowGroup, results, job_segment, origin) {
+  async readAndUpdateMap(map, id, geography, file, metadata, rowGroup, results, jobSegment, origin) {
     await parquetRead(
       {
-        columns: ["w_geo", "h_geo", job_segment],
+        columns: ["w_geo", "h_geo", jobSegment],
         compressors,
         file,
         metadata,
@@ -883,8 +880,8 @@ class ParquetProcessor {
     );
   }
 
-  async updateMapOnQuery(map, url, id, geography, job_segment, origin) {
-    const urls = [url]
+  async updateMapOnQuery(map, queryUrl, id, geography, jobSegment, origin) {
+    const urls = [queryUrl];
     const results = {};
     let totalGroups = 0;
 
@@ -936,7 +933,7 @@ class ParquetProcessor {
     let processedGroups = 0,
       progress = 10;
     await Promise.all(rowGroupItems.map(async (rg) => {
-      await this.readAndUpdateMap(map, rg.id, geography, rg.file, rg.metadata, rg.rowGroup, results, job_segment, origin);
+      await this.readAndUpdateMap(map, rg.id, geography, rg.file, rg.metadata, rg.rowGroup, results, jobSegment, origin);
       processedGroups += 1;
       progress = Math.ceil((processedGroups / totalGroups) * 100);
       map.spinner.updateProgress(progress);
@@ -969,17 +966,17 @@ class ParquetProcessor {
       validId = validIdInput(idParam);
       validCountySubdivisionId = validIdInput(countySubdivisionIdParam);
 
-      const valid = geographyParam == "county_subdivision" ? countySubdivisionIdParam && validCountySubdivisionId : idParam && validId
+      const valid = geographyParam === "county_subdivision" ? countySubdivisionIdParam && validCountySubdivisionId : idParam && validId;
 
       if (valid) {
-        const id = geographyParam == "county_subdivision" ? countySubdivisionIdParam : idParam
+        const id = geographyParam === "county_subdivision" ? countySubdivisionIdParam : idParam;
         await processor.runQuery(
           map, originParam, jobSegmentParam, yearParam, geographyParam,
           idParam.substring(0, 2), id
         );
 
         if(map.hoveredPolygonId[geographyParam]) {
-          map.updateGeoIdDisplay(map.hoveredPolygonId[geographyParam], map.processor.previousResults[geographyParam][map.hoveredPolygonId[geographyParam]]?.count)
+          map.updateGeoIdDisplay(map.hoveredPolygonId[geographyParam], map.processor.previousResults[geographyParam][map.hoveredPolygonId[geographyParam]]?.count);
         }
       }
     }
@@ -999,17 +996,17 @@ class ParquetProcessor {
       validId = validIdInput(idParam);
       validCountySubdivisionId = validIdInput(countySubdivisionIdParam);
 
-      const valid = geographyParam == "county_subdivision" ? countySubdivisionIdParam && validCountySubdivisionId : idParam && validId
+      const valid = geographyParam === "county_subdivision" ? countySubdivisionIdParam && validCountySubdivisionId : idParam && validId;
 
       if (valid) {
-        const id = geographyParam == "county_subdivision" ? countySubdivisionIdParam : idParam;
+        const id = geographyParam === "county_subdivision" ? countySubdivisionIdParam : idParam;
         await processor.runQuery(
           map, originParam, jobSegmentParam, yearParam, geographyParam,
           idParam.substring(0, 2), id
         );
 
         if(map.hoveredPolygonId[geographyParam]) {
-          map.updateGeoIdDisplay(map.hoveredPolygonId[geographyParam], map.processor.previousResults[geographyParam][map.hoveredPolygonId[geographyParam]]?.count)
+          map.updateGeoIdDisplay(map.hoveredPolygonId[geographyParam], map.processor.previousResults[geographyParam][map.hoveredPolygonId[geographyParam]]?.count);
         }
       }
     }
@@ -1031,17 +1028,17 @@ class ParquetProcessor {
       validId = validIdInput(idParam);
       validCountySubdivisionId = validIdInput(countySubdivisionIdParam);
 
-      const valid = geographyParam == "county_subdivision" ? countySubdivisionIdParam && validCountySubdivisionId : idParam && validId
+      const valid = geographyParam === "county_subdivision" ? countySubdivisionIdParam && validCountySubdivisionId : idParam && validId;
 
       if (valid) {
-        const id = geographyParam == "county_subdivision" ? countySubdivisionIdParam : idParam;
+        const id = geographyParam === "county_subdivision" ? countySubdivisionIdParam : idParam;
         await processor.runQuery(
           map, originParam, jobSegmentParam, yearParam, geographyParam,
           idParam.substring(0, 2), id
         );
 
         if(map.hoveredPolygonId[geographyParam]) {
-          map.updateGeoIdDisplay(map.hoveredPolygonId[geographyParam], map.processor.previousResults[geographyParam][map.hoveredPolygonId[geographyParam]]?.count)
+          map.updateGeoIdDisplay(map.hoveredPolygonId[geographyParam], map.processor.previousResults[geographyParam][map.hoveredPolygonId[geographyParam]]?.count);
         }
       }
     }
@@ -1061,17 +1058,17 @@ class ParquetProcessor {
       validId = validIdInput(idParam);
       validCountySubdivisionId = validIdInput(countySubdivisionIdParam);
 
-      const valid = geographyParam == "county_subdivision" ? countySubdivisionIdParam && validCountySubdivisionId : idParam && validId
+      const valid = geographyParam === "county_subdivision" ? countySubdivisionIdParam && validCountySubdivisionId : idParam && validId;
 
       if (valid) {
-        const id = geographyParam == "county_subdivision" ? countySubdivisionIdParam : idParam;
+        const id = geographyParam === "county_subdivision" ? countySubdivisionIdParam : idParam;
         await processor.runQuery(
           map, originParam, jobSegmentParam, yearParam, geographyParam,
           idParam.substring(0, 2), id
         );
 
         if(map.hoveredPolygonId[geographyParam]) {
-          map.updateGeoIdDisplay(map.hoveredPolygonId[geographyParam], map.processor.previousResults[geographyParam][map.hoveredPolygonId[geographyParam]]?.count)
+          map.updateGeoIdDisplay(map.hoveredPolygonId[geographyParam], map.processor.previousResults[geographyParam][map.hoveredPolygonId[geographyParam]]?.count);
         }
       }
     }
@@ -1108,17 +1105,17 @@ class ParquetProcessor {
 
       document.getElementById("year").value = yearParam;
 
-      const valid = geographyParam == "county_subdivision" ? countySubdivisionIdParam && validCountySubdivisionId : idParam && validId
+      const valid = geographyParam === "county_subdivision" ? countySubdivisionIdParam && validCountySubdivisionId : idParam && validId;
 
       if (valid) {
-        const id = geographyParam == "county_subdivision" ? countySubdivisionIdParam : idParam
+        const id = geographyParam === "county_subdivision" ? countySubdivisionIdParam : idParam;
         await processor.runQuery(
           map, originParam, jobSegmentParam, yearParam, geographyParam,
           idParam.substring(0, 2), id
         );
 
-        const truncId = map.truncateId(geographyParam, id)
-        map.updateGeoIdDisplay(idParam, map.processor.previousResults[geographyParam][truncId]?.count)
+        const truncId = map.truncateId(geographyParam, id);
+        map.updateGeoIdDisplay(idParam, map.processor.previousResults[geographyParam][truncId]?.count);
       }
     }
   });

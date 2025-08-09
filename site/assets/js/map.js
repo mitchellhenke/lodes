@@ -123,13 +123,15 @@ let originParam = LODES_ORIGIN,
   jobSegmentParam = LODES_JOB_SEGMENT,
   yearParam = LODES_YEAR,
   geographyParam = LODES_GEOGRAPHY,
-  idParam = null;
+  idParam = null,
+  countySubdivisionIdParam = null;
 
 let validOrigin = true,
   validJobSegment = true,
   validYear = true,
   validGeography = true,
-  validId = true;
+  validId = true,
+  validCountySubdivisionId= true;
 
 const getTilesUrl = function getTilesUrl({
   year = LODES_YEAR,
@@ -317,9 +319,11 @@ class ColorScale {
   getLabelsForGeography(geography) {
     switch (geography) {
       case "county":
-        return ["1", "2-100", "101-1,000", "1,001-10,000", "10,000+"];
+        return ["1", "2-100", "101-1,000", "1,001-9,999", "10,000+"];
+      case "county_subdivision":
+        return ["1", "2-50", "51-150", "150-499", "500+"];
       default:
-        return ["1", "2-10", "11-20", "21-30", "30+"];
+        return ["1", "2-10", "11-20", "21-29", "30+"];
     }
   }
 
@@ -542,6 +546,17 @@ class Map {
         feat.point,
         { layers: [`geo_fill_${geographyParam}`] }
       );
+
+      const [couSubFeature] = this.map.queryRenderedFeatures(
+        feat.point,
+        { layers: [`geo_fill_county_subdivision`] }
+      );
+
+      if(couSubFeature) {
+        countySubdivisionIdParam = couSubFeature?.properties.id
+        validCountySubdivisionId = validIdInput(countySubdivisionIdParam);
+        setUrlParam("countySubdivisionId", countySubdivisionIdParam);
+      }
 
       if(geometryFeature) {
         this.updateSelectedFeature(geometryFeature.properties.id)
@@ -950,12 +965,17 @@ class ParquetProcessor {
       setUrlParam("origin", originParam);
 
       idParam = urlParams.get("id");
+      countySubdivisionIdParam = urlParams.get("countySubdivisionId");
       validId = validIdInput(idParam);
+      validCountySubdivisionId = validIdInput(countySubdivisionIdParam);
 
-      if (idParam && validId) {
+      const valid = geographyParam == "county_subdivision" ? countySubdivisionIdParam && validCountySubdivisionId : idParam && validId
+
+      if (valid) {
+        const id = geographyParam == "county_subdivision" ? countySubdivisionIdParam : idParam
         await processor.runQuery(
           map, originParam, jobSegmentParam, yearParam, geographyParam,
-          idParam.substring(0, 2), idParam
+          idParam.substring(0, 2), id
         );
 
         if(map.hoveredPolygonId[geographyParam]) {
@@ -975,12 +995,17 @@ class ParquetProcessor {
       setUrlParam("jobSegment", jobSegmentParam);
 
       idParam = urlParams.get("id");
+      countySubdivisionIdParam = urlParams.get("countySubdivisionId");
       validId = validIdInput(idParam);
+      validCountySubdivisionId = validIdInput(countySubdivisionIdParam);
 
-      if (idParam && validId) {
+      const valid = geographyParam == "county_subdivision" ? countySubdivisionIdParam && validCountySubdivisionId : idParam && validId
+
+      if (valid) {
+        const id = geographyParam == "county_subdivision" ? countySubdivisionIdParam : idParam;
         await processor.runQuery(
           map, originParam, jobSegmentParam, yearParam, geographyParam,
-          idParam.substring(0, 2), idParam
+          idParam.substring(0, 2), id
         );
 
         if(map.hoveredPolygonId[geographyParam]) {
@@ -1002,12 +1027,17 @@ class ParquetProcessor {
       setUrlParam("geography", geographyParam);
 
       idParam = urlParams.get("id");
+      countySubdivisionIdParam = urlParams.get("countySubdivisionId");
       validId = validIdInput(idParam);
+      validCountySubdivisionId = validIdInput(countySubdivisionIdParam);
 
-      if (idParam && validId) {
+      const valid = geographyParam == "county_subdivision" ? countySubdivisionIdParam && validCountySubdivisionId : idParam && validId
+
+      if (valid) {
+        const id = geographyParam == "county_subdivision" ? countySubdivisionIdParam : idParam;
         await processor.runQuery(
           map, originParam, jobSegmentParam, yearParam, geographyParam,
-          idParam.substring(0, 2), idParam
+          idParam.substring(0, 2), id
         );
 
         if(map.hoveredPolygonId[geographyParam]) {
@@ -1027,12 +1057,17 @@ class ParquetProcessor {
       setUrlParam("year", yearParam);
 
       idParam = urlParams.get("id");
+      countySubdivisionIdParam = urlParams.get("countySubdivisionId");
       validId = validIdInput(idParam);
+      validCountySubdivisionId = validIdInput(countySubdivisionIdParam);
 
-      if (idParam && validId) {
+      const valid = geographyParam == "county_subdivision" ? countySubdivisionIdParam && validCountySubdivisionId : idParam && validId
+
+      if (valid) {
+        const id = geographyParam == "county_subdivision" ? countySubdivisionIdParam : idParam;
         await processor.runQuery(
           map, originParam, jobSegmentParam, yearParam, geographyParam,
-          idParam.substring(0, 2), idParam
+          idParam.substring(0, 2), id
         );
 
         if(map.hoveredPolygonId[geographyParam]) {
@@ -1067,16 +1102,22 @@ class ParquetProcessor {
 
     if (validOrigin && validYear && validGeography) {
       idParam = urlParams.get("id");
+      countySubdivisionIdParam = urlParams.get("countySubdivisionId");
       validId = validIdInput(idParam);
+      validCountySubdivisionId = validIdInput(countySubdivisionIdParam);
+
       document.getElementById("year").value = yearParam;
 
-      if (idParam && validId) {
+      const valid = geographyParam == "county_subdivision" ? countySubdivisionIdParam && validCountySubdivisionId : idParam && validId
+
+      if (valid) {
+        const id = geographyParam == "county_subdivision" ? countySubdivisionIdParam : idParam
         await processor.runQuery(
           map, originParam, jobSegmentParam, yearParam, geographyParam,
-          idParam.substring(0, 2), idParam
+          idParam.substring(0, 2), id
         );
 
-        const truncId = map.truncateId(geographyParam, idParam)
+        const truncId = map.truncateId(geographyParam, id)
         map.updateGeoIdDisplay(idParam, map.processor.previousResults[geographyParam][truncId]?.count)
       }
     }

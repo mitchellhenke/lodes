@@ -1,6 +1,6 @@
 baseURL = "https://lodesmap.com/"
 languageCode = "en-us"
-title = "LODESMap"
+title = "LODES Map"
 disableKinds = ["taxonomy", "term"]
 enableInlineShortcodes = true
 pygmentsCodeFences = true

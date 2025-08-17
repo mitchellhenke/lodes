@@ -1,15 +1,12 @@
 :root {
   --bg-color: #ffffff;
-  --text-color: #484848;
-  --icon-color: #949494;
-  --gray-accent-1: #636363;
+  --text-color: #1b1b1b;
+  --gray-accent-1: rgba(0,0,0,.5);
   --gray-accent-2: #555555;
   --gray-accent-3: #eeeeee;
   --gray-accent-4: #e1e1e1;
   --notice-color: #a0cefb;
   --warning-color: #d9c98d;
-  --link-color: #2979bc;
-  --visited-link-color: #8f5baa;
   --full-width: 720px;
   --map-color-1: rgba(253, 231, 37, 0.5);
   --map-color-2: rgba(122, 209, 81, 0.5);
@@ -20,7 +17,6 @@
 }
 
 html {
-  font-size: 62.5%;
   height: 100%;
   scroll-padding-top: 2em;
   -webkit-text-size-adjust: 100%;
@@ -29,8 +25,7 @@ html {
 body {
   background-color: var(--bg-color);
   color: var(--text-color);
-  font-size: 1.6rem;
-  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-family: Helvetica Neue,Arial,Helvetica,sans-serif;
   margin: 0 auto;
   line-height: 1.5;
   min-height: 100%;
@@ -40,13 +35,8 @@ body {
 }
 
 a {
-  color: var(--link-color);
   text-underline-offset: 0.15em;
   text-decoration-thickness: 0.05em;
-
-  &:visited {
-    color: var(--visited-link-color);
-  }
 }
 
 table {
@@ -123,16 +113,6 @@ figure {
 ul,
 ol {
   box-sizing: border-box;
-}
-
-.hover-icon {
-  svg {
-    fill: var(--icon-color);
-  }
-
-  svg:hover {
-    fill: var(--text-color);
-  }
 }
 
 .content {
@@ -230,12 +210,10 @@ ol {
   grid-template-columns: min-content 1fr min-content;
   margin: auto;
   padding: 1em 2rem;
-  align-items: baseline;
+  align-items: center;
 
   >.navbar-title {
-    font-size: 1.9rem;
     margin: 0;
-    padding-top: 0.2em;
     white-space: nowrap;
     line-height: 1;
     z-index: 20;
@@ -255,25 +233,6 @@ ol {
     li {
       padding-right: 1em;
     }
-  }
-
-  >.navbar-external-links {
-    display: flex;
-    justify-content: space-between;
-    min-width: calc(1.6em * 2 + 1rem);
-    align-self: center;
-    z-index: 20;
-  }
-}
-
-.navbar-external-links>.navbar-external-link {
-  display: block;
-  width: 1.6em;
-  height: 1.6em;
-
-  >svg {
-    width: 1.6em;
-    height: 1.6em;
   }
 }
 
@@ -358,9 +317,10 @@ blockquote,
   border-radius: 5px;
   box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.1);
   min-width: 94px;
+  max-width: 200px;
 
   span {
-    font-size: 1.1em;
+    font-size: 1.2em;
   }
 
   #legend-title > h2 {

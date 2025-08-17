@@ -43,4 +43,4 @@ User-agent: Webzio-Extended
 User-agent: YouBot
 Disallow: /
 
-Sitemap: https://opentimes.org/sitemap.xml
+Sitemap: https://lodesmap.com/sitemap.xml

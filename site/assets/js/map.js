@@ -7,7 +7,7 @@ const
   LODES_ORIGIN = "h_geo",
   LODES_JOB_SEGMENT = "S000",
   LODES_YEAR = "2022",
-  LODES_GEOGRAPHY = "tract";
+  LODES_GEOGRAPHY = "county_subdivision";
 
 const
   LODES_ORIGINS = ["h_geo", "w_geo"],

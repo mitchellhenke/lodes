@@ -51,7 +51,10 @@ LODESMap currently uses two major data inputs:
   shapefiles, which are used to construct origin and destination geometries.
 1. United States Census Bureau's [Longitudinal Employer-Household Dynamics](https://lehd.ces.census.gov/data/) (LEHD) Origin-Destination Employment Statistics (LODES) data.
 
-The LODES data program collects information on employee addresses and workplaces from state unemployment insurance programs. It includes all workers who are on a normal payroll, but it does not include self-employed people. Every job is paired with a worksite, even if the employee works remotely. In this way, the LODES data can reveal remote workers in distant city-pairs. See the official LODES documentation for further details.
+The LODES data program collects information on employee addresses and workplaces from state unemployment insurance programs. It includes all workers who are on a normal payroll, but it does not include self-employed people. Every job is paired with a worksite, even if the employee works remotely. In this way, the LODES data can reveal remote workers in distant city-pairs.
+
+There are limitations with LODES data that are worth recognizing. These shortcomings are described well in [The US Census Longitudinal Employer-
+Household Dynamics datasets](https://openjournals.wu.ac.at/region/paper_251/251.html) and include the data not covering the entire workforce and complexities in geocoding where jobs are located. See the official LODES documentation for further details.
 
 Input data is built and cached by [DVC](https://dvc.org). The total size of all input and output data is around 50 GB.
 

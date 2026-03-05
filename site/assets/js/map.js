@@ -33,7 +33,8 @@ const
     "2019",
     "2020",
     "2021",
-    "2022"
+    "2022",
+    "2023"
   ],
   LODES_GEOGRAPHIES = ["block_group", "tract", "county_subdivision", "county"];
 

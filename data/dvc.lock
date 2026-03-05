@@ -11933,7 +11933,7 @@ stages:
     outs:
     - path: ./input/cb/year=2020/geography=tract/tract.geojson
       hash: md5
-      md5: ee7e6330bd8205d0a49265417d7693de
+      md5: 669ae04bd8aa6281053666cbe7a9278a
       size: 152501682
   fetch_cb@2020-county:
     cmd: python ./src/fetch_cb.py --year 2020 --geography county
@@ -11947,12 +11947,588 @@ stages:
     outs:
     - path: ./input/cb/year=2020/geography=block_group/block_group.geojson
       hash: md5
-      md5: 0773b509ac458288361dbbb7a32b5c04
+      md5: b7c991f7514d660672cdbcf4ac0d932f
       size: 258440122
   fetch_cb@2020-county_subdivision:
     cmd: python ./src/fetch_cb.py --year 2020 --geography county_subdivision
     outs:
-    - path: ./input/cb/year=2020/geography=county_subdivision/county_subdivision.geojson
+    - path: 
+        ./input/cb/year=2020/geography=county_subdivision/county_subdivision.geojson
       hash: md5
-      md5: a1047ffcfd4882f2877672f52a83bec2
+      md5: 94a929f2df3554a36ddd3a8ce1be7f19
       size: 105172830
+  fetch_lodes_by_state@2023-al:
+    cmd: Rscript ./src/download_lodes.R 2023 al
+    outs:
+    - path: ./input/lodes/year=2023/state=al/al-aux.csv.gz
+      hash: md5
+      md5: c98e4a433ebd1e21894f6d9b5b2c33a1
+      size: 722917
+    - path: ./input/lodes/year=2023/state=al/al-main.csv.gz
+      hash: md5
+      md5: c3f1033251e85c45d638bdf0bc7fdb4a
+      size: 10619708
+  fetch_lodes_by_state@2023-ak:
+    cmd: Rscript ./src/download_lodes.R 2023 ak
+    outs:
+    - path: ./input/lodes/year=2023/state=ak/ak-aux.csv.gz
+      hash: md5
+      md5: a6892f489065b68e9204d758e4737d1b
+      size: 75
+    - path: ./input/lodes/year=2023/state=ak/ak-main.csv.gz
+      hash: md5
+      md5: a6892f489065b68e9204d758e4737d1b
+      size: 75
+  fetch_lodes_by_state@2023-ar:
+    cmd: Rscript ./src/download_lodes.R 2023 ar
+    outs:
+    - path: ./input/lodes/year=2023/state=ar/ar-aux.csv.gz
+      hash: md5
+      md5: 3f1b9b0eb50c7f4a08de37a1c85cebd9
+      size: 607219
+    - path: ./input/lodes/year=2023/state=ar/ar-main.csv.gz
+      hash: md5
+      md5: 63d8190a1dcd9872b876a02db5ab4306
+      size: 6117250
+  fetch_lodes_by_state@2023-az:
+    cmd: Rscript ./src/download_lodes.R 2023 az
+    outs:
+    - path: ./input/lodes/year=2023/state=az/az-aux.csv.gz
+      hash: md5
+      md5: aa772f11c4bdfea9e0af22fd98c7fda1
+      size: 441950
+    - path: ./input/lodes/year=2023/state=az/az-main.csv.gz
+      hash: md5
+      md5: eaa9532423efaf2503fcae934abcfd2b
+      size: 16148522
+  fetch_lodes_by_state@2023-ca:
+    cmd: Rscript ./src/download_lodes.R 2023 ca
+    outs:
+    - path: ./input/lodes/year=2023/state=ca/ca-aux.csv.gz
+      hash: md5
+      md5: 9484d6c29e0512a6f2767db32175cbc8
+      size: 1888347
+    - path: ./input/lodes/year=2023/state=ca/ca-main.csv.gz
+      hash: md5
+      md5: 1b5e55a546d0dbcb30f5334e30b657af
+      size: 97270483
+  fetch_lodes_by_state@2023-co:
+    cmd: Rscript ./src/download_lodes.R 2023 co
+    outs:
+    - path: ./input/lodes/year=2023/state=co/co-aux.csv.gz
+      hash: md5
+      md5: 9649d4f981fec3eba42efd84b8ceaf3a
+      size: 471646
+    - path: ./input/lodes/year=2023/state=co/co-main.csv.gz
+      hash: md5
+      md5: 9918a092a05d07b378999016d3ded52a
+      size: 14827968
+  fetch_lodes_by_state@2023-ct:
+    cmd: Rscript ./src/download_lodes.R 2023 ct
+    outs:
+    - path: ./input/lodes/year=2023/state=ct/ct-aux.csv.gz
+      hash: md5
+      md5: 8afae8c846da842c9897f07ce46fae64
+      size: 987197
+    - path: ./input/lodes/year=2023/state=ct/ct-main.csv.gz
+      hash: md5
+      md5: ccef2f6fff3f5f8d87d2cd392d0e628c
+      size: 7718718
+  fetch_lodes_by_state@2023-dc:
+    cmd: Rscript ./src/download_lodes.R 2023 dc
+    outs:
+    - path: ./input/lodes/year=2023/state=dc/dc-aux.csv.gz
+      hash: md5
+      md5: 37c7ce346b418ea967206e93c4d17b93
+      size: 2383013
+    - path: ./input/lodes/year=2023/state=dc/dc-main.csv.gz
+      hash: md5
+      md5: 7c8a77f0bb1a0fd171b7d0f3a916e343
+      size: 934803
+  fetch_lodes_by_state@2023-de:
+    cmd: Rscript ./src/download_lodes.R 2023 de
+    outs:
+    - path: ./input/lodes/year=2023/state=de/de-aux.csv.gz
+      hash: md5
+      md5: faba1eb79a9bb0f5831ebe03e701ea35
+      size: 581479
+    - path: ./input/lodes/year=2023/state=de/de-main.csv.gz
+      hash: md5
+      md5: b602eb393665b5b350350eb8cd85d131
+      size: 1737784
+  fetch_lodes_by_state@2023-fl:
+    cmd: Rscript ./src/download_lodes.R 2023 fl
+    outs:
+    - path: ./input/lodes/year=2023/state=fl/fl-aux.csv.gz
+      hash: md5
+      md5: 22948734410f1d3ac8ac16745507786f
+      size: 1134520
+    - path: ./input/lodes/year=2023/state=fl/fl-main.csv.gz
+      hash: md5
+      md5: bd34b08704153aefaa7d87268855db38
+      size: 51250447
+  fetch_lodes_by_state@2023-ga:
+    cmd: Rscript ./src/download_lodes.R 2023 ga
+    outs:
+    - path: ./input/lodes/year=2023/state=ga/ga-aux.csv.gz
+      hash: md5
+      md5: c201c17bdbfa26bf42709af29141eae6
+      size: 1459551
+    - path: ./input/lodes/year=2023/state=ga/ga-main.csv.gz
+      hash: md5
+      md5: b0f564db5849c49f195161d7ecd037dc
+      size: 24201033
+  fetch_lodes_by_state@2023-hi:
+    cmd: Rscript ./src/download_lodes.R 2023 hi
+    outs:
+    - path: ./input/lodes/year=2023/state=hi/hi-aux.csv.gz
+      hash: md5
+      md5: cb4abe3fa97012b647a41fed65d309b4
+      size: 168941
+    - path: ./input/lodes/year=2023/state=hi/hi-main.csv.gz
+      hash: md5
+      md5: 1318ad2beb9ed8d5fc0c36217869b3f9
+      size: 2283798
+  fetch_lodes_by_state@2023-ia:
+    cmd: Rscript ./src/download_lodes.R 2023 ia
+    outs:
+    - path: ./input/lodes/year=2023/state=ia/ia-aux.csv.gz
+      hash: md5
+      md5: f7005baade187cfcfbaad0bb4315af8a
+      size: 776306
+    - path: ./input/lodes/year=2023/state=ia/ia-main.csv.gz
+      hash: md5
+      md5: 38c6b35215914fa09eeec704ab76ddb6
+      size: 7600763
+  fetch_lodes_by_state@2023-id:
+    cmd: Rscript ./src/download_lodes.R 2023 id
+    outs:
+    - path: ./input/lodes/year=2023/state=id/id-aux.csv.gz
+      hash: md5
+      md5: 614c88bfbc720825d97f7791214ed4d4
+      size: 365649
+    - path: ./input/lodes/year=2023/state=id/id-main.csv.gz
+      hash: md5
+      md5: 76220a6ee915893280ec7467cc1d71be
+      size: 4026052
+  fetch_lodes_by_state@2023-il:
+    cmd: Rscript ./src/download_lodes.R 2023 il
+    outs:
+    - path: ./input/lodes/year=2023/state=il/il-aux.csv.gz
+      hash: md5
+      md5: dadfb475d9ace9588d3638dd11d46bcb
+      size: 2210801
+    - path: ./input/lodes/year=2023/state=il/il-main.csv.gz
+      hash: md5
+      md5: 0ae90091e0def7590227caf1116399c9
+      size: 31087469
+  fetch_lodes_by_state@2023-in:
+    cmd: Rscript ./src/download_lodes.R 2023 in
+    outs:
+    - path: ./input/lodes/year=2023/state=in/in-aux.csv.gz
+      hash: md5
+      md5: 0df8e22b4a133b31a1a3f18c6e5c85ed
+      size: 1443596
+    - path: ./input/lodes/year=2023/state=in/in-main.csv.gz
+      hash: md5
+      md5: d6a338aa65b140760de3064a9f51e128
+      size: 15739727
+  fetch_lodes_by_state@2023-ks:
+    cmd: Rscript ./src/download_lodes.R 2023 ks
+    outs:
+    - path: ./input/lodes/year=2023/state=ks/ks-aux.csv.gz
+      hash: md5
+      md5: 2855712acc11de7c5af223e91789b9fa
+      size: 1088742
+    - path: ./input/lodes/year=2023/state=ks/ks-main.csv.gz
+      hash: md5
+      md5: aa2226d7cd886f7e9bb4edfbfd6ee223
+      size: 6573860
+  fetch_lodes_by_state@2023-ky:
+    cmd: Rscript ./src/download_lodes.R 2023 ky
+    outs:
+    - path: ./input/lodes/year=2023/state=ky/ky-aux.csv.gz
+      hash: md5
+      md5: 4403fb726849f1d5dcd65414ead766e1
+      size: 1226136
+    - path: ./input/lodes/year=2023/state=ky/ky-main.csv.gz
+      hash: md5
+      md5: 7adfd77fb8d96714c42dcd47dac72f9a
+      size: 9073278
+  fetch_lodes_by_state@2023-la:
+    cmd: Rscript ./src/download_lodes.R 2023 la
+    outs:
+    - path: ./input/lodes/year=2023/state=la/la-aux.csv.gz
+      hash: md5
+      md5: c42f7fbd556dec5e6930c139def9cdab
+      size: 651615
+    - path: ./input/lodes/year=2023/state=la/la-main.csv.gz
+      hash: md5
+      md5: c4e48b66c9f3121dc98ef7ba24668eff
+      size: 9786712
+  fetch_lodes_by_state@2023-ma:
+    cmd: Rscript ./src/download_lodes.R 2023 ma
+    outs:
+    - path: ./input/lodes/year=2023/state=ma/ma-aux.csv.gz
+      hash: md5
+      md5: a781c7a897c60a7a966ee1dc4af5adc1
+      size: 2170534
+    - path: ./input/lodes/year=2023/state=ma/ma-main.csv.gz
+      hash: md5
+      md5: 487a61dba0d5b4c9d9b5faab651dc525
+      size: 17463008
+  fetch_lodes_by_state@2023-md:
+    cmd: Rscript ./src/download_lodes.R 2023 md
+    outs:
+    - path: ./input/lodes/year=2023/state=md/md-aux.csv.gz
+      hash: md5
+      md5: 2aa6b019d59e05ef58441c3011de4a40
+      size: 2140348
+    - path: ./input/lodes/year=2023/state=md/md-main.csv.gz
+      hash: md5
+      md5: be8701aaebf680301543685f47960e6e
+      size: 11982439
+  fetch_lodes_by_state@2023-me:
+    cmd: Rscript ./src/download_lodes.R 2023 me
+    outs:
+    - path: ./input/lodes/year=2023/state=me/me-aux.csv.gz
+      hash: md5
+      md5: ad383ede80d02587a535296f81f2415d
+      size: 171400
+    - path: ./input/lodes/year=2023/state=me/me-main.csv.gz
+      hash: md5
+      md5: 54ae34761ef7cc37d2df504b004e8886
+      size: 3052419
+  fetch_lodes_by_state@2023-mi:
+    cmd: Rscript ./src/download_lodes.R 2023 mi
+    outs:
+    - path: ./input/lodes/year=2023/state=mi/mi-aux.csv.gz
+      hash: md5
+      md5: a6892f489065b68e9204d758e4737d1b
+      size: 75
+    - path: ./input/lodes/year=2023/state=mi/mi-main.csv.gz
+      hash: md5
+      md5: a6892f489065b68e9204d758e4737d1b
+      size: 75
+  fetch_lodes_by_state@2023-mn:
+    cmd: Rscript ./src/download_lodes.R 2023 mn
+    outs:
+    - path: ./input/lodes/year=2023/state=mn/mn-aux.csv.gz
+      hash: md5
+      md5: 56d4ca5599ffab14dfc7cdda32653a92
+      size: 803208
+    - path: ./input/lodes/year=2023/state=mn/mn-main.csv.gz
+      hash: md5
+      md5: b9e418dc9b7816b0628c7d65c2cfa126
+      size: 14232701
+  fetch_lodes_by_state@2023-ms:
+    cmd: Rscript ./src/download_lodes.R 2023 ms
+    outs:
+    - path: ./input/lodes/year=2023/state=ms/ms-aux.csv.gz
+      hash: md5
+      md5: 86bdf1d02c5de8912e2be16d98ceab7c
+      size: 588525
+    - path: ./input/lodes/year=2023/state=ms/ms-main.csv.gz
+      hash: md5
+      md5: 699a5d7fa80f04123b02743c22556276
+      size: 5447311
+  fetch_lodes_by_state@2023-mo:
+    cmd: Rscript ./src/download_lodes.R 2023 mo
+    outs:
+    - path: ./input/lodes/year=2023/state=mo/mo-aux.csv.gz
+      hash: md5
+      md5: 34bd74a47c090de7e0cefbc93111125e
+      size: 1677131
+    - path: ./input/lodes/year=2023/state=mo/mo-main.csv.gz
+      hash: md5
+      md5: 1fe647944319dfce3024ea3837452765
+      size: 14351154
+  fetch_lodes_by_state@2023-mt:
+    cmd: Rscript ./src/download_lodes.R 2023 mt
+    outs:
+    - path: ./input/lodes/year=2023/state=mt/mt-aux.csv.gz
+      hash: md5
+      md5: 53e342216090b9d05a7480b3d4eb53ce
+      size: 148589
+    - path: ./input/lodes/year=2023/state=mt/mt-main.csv.gz
+      hash: md5
+      md5: 8ced45ab8d7792a4a9502aa324800078
+      size: 2530125
+  fetch_lodes_by_state@2023-nc:
+    cmd: Rscript ./src/download_lodes.R 2023 nc
+    outs:
+    - path: ./input/lodes/year=2023/state=nc/nc-aux.csv.gz
+      hash: md5
+      md5: b482eea90dbfb38cdf835160367272d0
+      size: 1706485
+    - path: ./input/lodes/year=2023/state=nc/nc-main.csv.gz
+      hash: md5
+      md5: e360bcf9e067783f5bca906f87e8b49e
+      size: 24704128
+  fetch_lodes_by_state@2023-nd:
+    cmd: Rscript ./src/download_lodes.R 2023 nd
+    outs:
+    - path: ./input/lodes/year=2023/state=nd/nd-aux.csv.gz
+      hash: md5
+      md5: 208b3d99daa905332240c2d8a0f4aeed
+      size: 360505
+    - path: ./input/lodes/year=2023/state=nd/nd-main.csv.gz
+      hash: md5
+      md5: b235f72a48548d04c8da161ac24801f0
+      size: 1812805
+  fetch_lodes_by_state@2023-ne:
+    cmd: Rscript ./src/download_lodes.R 2023 ne
+    outs:
+    - path: ./input/lodes/year=2023/state=ne/ne-aux.csv.gz
+      hash: md5
+      md5: c686f2ddc6d76c6d5df70924009b641a
+      size: 510103
+    - path: ./input/lodes/year=2023/state=ne/ne-main.csv.gz
+      hash: md5
+      md5: 41bb1248d9d94b8986fad454533ca47f
+      size: 4863110
+  fetch_lodes_by_state@2023-nh:
+    cmd: Rscript ./src/download_lodes.R 2023 nh
+    outs:
+    - path: ./input/lodes/year=2023/state=nh/nh-aux.csv.gz
+      hash: md5
+      md5: 3b9214feffe0f4c72c5b64757151f511
+      size: 625125
+    - path: ./input/lodes/year=2023/state=nh/nh-main.csv.gz
+      hash: md5
+      md5: 48184728f934f0a4056cd17decbb3c7f
+      size: 2942518
+  fetch_lodes_by_state@2023-nj:
+    cmd: Rscript ./src/download_lodes.R 2023 nj
+    outs:
+    - path: ./input/lodes/year=2023/state=nj/nj-aux.csv.gz
+      hash: md5
+      md5: 134f21848561f488f43ccc47a7d2fb2d
+      size: 3001794
+    - path: ./input/lodes/year=2023/state=nj/nj-main.csv.gz
+      hash: md5
+      md5: ffe1f0657168fbd1256a01e0dbadf31f
+      size: 20716724
+  fetch_lodes_by_state@2023-nm:
+    cmd: Rscript ./src/download_lodes.R 2023 nm
+    outs:
+    - path: ./input/lodes/year=2023/state=nm/nm-aux.csv.gz
+      hash: md5
+      md5: 55b3707e3f30295b0d23769b958e0903
+      size: 368681
+    - path: ./input/lodes/year=2023/state=nm/nm-main.csv.gz
+      hash: md5
+      md5: 2e4ff13c31ae19309f27587f4e1922f9
+      size: 4037283
+  fetch_lodes_by_state@2023-nv:
+    cmd: Rscript ./src/download_lodes.R 2023 nv
+    outs:
+    - path: ./input/lodes/year=2023/state=nv/nv-aux.csv.gz
+      hash: md5
+      md5: 209d41738054833695deaf4ac7885185
+      size: 574340
+    - path: ./input/lodes/year=2023/state=nv/nv-main.csv.gz
+      hash: md5
+      md5: 617a62cb5c9806760ebd090d2c43db3e
+      size: 6440907
+  fetch_lodes_by_state@2023-ny:
+    cmd: Rscript ./src/download_lodes.R 2023 ny
+    outs:
+    - path: ./input/lodes/year=2023/state=ny/ny-aux.csv.gz
+      hash: md5
+      md5: 48bef55ca9a2f2ff116f907858f472ee
+      size: 5559148
+    - path: ./input/lodes/year=2023/state=ny/ny-main.csv.gz
+      hash: md5
+      md5: b4f31a96e849f6be316a4abf83f8f778
+      size: 44984282
+  fetch_lodes_by_state@2023-oh:
+    cmd: Rscript ./src/download_lodes.R 2023 oh
+    outs:
+    - path: ./input/lodes/year=2023/state=oh/oh-aux.csv.gz
+      hash: md5
+      md5: 832d2020a69eb272be859ee835e9b988
+      size: 1643619
+    - path: ./input/lodes/year=2023/state=oh/oh-main.csv.gz
+      hash: md5
+      md5: c669dee6fae4fca7620e0d94e37ccc6e
+      size: 28295542
+  fetch_lodes_by_state@2023-ok:
+    cmd: Rscript ./src/download_lodes.R 2023 ok
+    outs:
+    - path: ./input/lodes/year=2023/state=ok/ok-aux.csv.gz
+      hash: md5
+      md5: cf8f0adcebacc5590af26cfa65066255
+      size: 440823
+    - path: ./input/lodes/year=2023/state=ok/ok-main.csv.gz
+      hash: md5
+      md5: af24aa2a1ea4ad5d5d791101dca23f9f
+      size: 8746469
+  fetch_lodes_by_state@2023-or:
+    cmd: Rscript ./src/download_lodes.R 2023 or
+    outs:
+    - path: ./input/lodes/year=2023/state=or/or-aux.csv.gz
+      hash: md5
+      md5: 6f2f5de22fb9907c7d152c0bb3b8eb17
+      size: 924762
+    - path: ./input/lodes/year=2023/state=or/or-main.csv.gz
+      hash: md5
+      md5: d04a5d2588735caf7a95098389a9699b
+      size: 9895227
+  fetch_lodes_by_state@2023-pa:
+    cmd: Rscript ./src/download_lodes.R 2023 pa
+    outs:
+    - path: ./input/lodes/year=2023/state=pa/pa-aux.csv.gz
+      hash: md5
+      md5: cfae2e87d310a9cd6c838ea12fc432dd
+      size: 2624521
+    - path: ./input/lodes/year=2023/state=pa/pa-main.csv.gz
+      hash: md5
+      md5: 594e01a950713a7d349fd0eb6f7c513e
+      size: 30724050
+  fetch_lodes_by_state@2023-ri:
+    cmd: Rscript ./src/download_lodes.R 2023 ri
+    outs:
+    - path: ./input/lodes/year=2023/state=ri/ri-aux.csv.gz
+      hash: md5
+      md5: d6bae0af0c9ae57687b6172cf9537dbd
+      size: 473242
+    - path: ./input/lodes/year=2023/state=ri/ri-main.csv.gz
+      hash: md5
+      md5: 85644143531f8156654d773727c3bc82
+      size: 2181587
+  fetch_lodes_by_state@2023-sc:
+    cmd: Rscript ./src/download_lodes.R 2023 sc
+    outs:
+    - path: ./input/lodes/year=2023/state=sc/sc-aux.csv.gz
+      hash: md5
+      md5: 145188e7f53f303590d9949eee7b9476
+      size: 930484
+    - path: ./input/lodes/year=2023/state=sc/sc-main.csv.gz
+      hash: md5
+      md5: 3b78b19a36b87d1c7b3c6f98e8d81781
+      size: 11120532
+  fetch_lodes_by_state@2023-sd:
+    cmd: Rscript ./src/download_lodes.R 2023 sd
+    outs:
+    - path: ./input/lodes/year=2023/state=sd/sd-aux.csv.gz
+      hash: md5
+      md5: 3a26d3f6e9e65ac58bdb9305f3e3cbc2
+      size: 236023
+    - path: ./input/lodes/year=2023/state=sd/sd-main.csv.gz
+      hash: md5
+      md5: f44c8a582feb375c980c8b82c98600e2
+      size: 2049377
+  fetch_lodes_by_state@2023-tn:
+    cmd: Rscript ./src/download_lodes.R 2023 tn
+    outs:
+    - path: ./input/lodes/year=2023/state=tn/tn-aux.csv.gz
+      hash: md5
+      md5: 17fa87b66220041fb7e9594faeaceafc
+      size: 1683164
+    - path: ./input/lodes/year=2023/state=tn/tn-main.csv.gz
+      hash: md5
+      md5: b0dc7bc5c0bc6c870f52f9f3149817f9
+      size: 15218571
+  fetch_lodes_by_state@2023-tx:
+    cmd: Rscript ./src/download_lodes.R 2023 tx
+    outs:
+    - path: ./input/lodes/year=2023/state=tx/tx-aux.csv.gz
+      hash: md5
+      md5: 1d594ea9ed838ec863babc5bceec1ff1
+      size: 1802640
+    - path: ./input/lodes/year=2023/state=tx/tx-main.csv.gz
+      hash: md5
+      md5: ae0490a82a3b1d43fa729601cc6d1424
+      size: 72940770
+  fetch_lodes_by_state@2023-ut:
+    cmd: Rscript ./src/download_lodes.R 2023 ut
+    outs:
+    - path: ./input/lodes/year=2023/state=ut/ut-aux.csv.gz
+      hash: md5
+      md5: 0d1ea1aa91d67c3766ed6ac84d173491
+      size: 415030
+    - path: ./input/lodes/year=2023/state=ut/ut-main.csv.gz
+      hash: md5
+      md5: 750b11d6b0df00a149e58e6230307f13
+      size: 8388146
+  fetch_lodes_by_state@2023-va:
+    cmd: Rscript ./src/download_lodes.R 2023 va
+    outs:
+    - path: ./input/lodes/year=2023/state=va/va-aux.csv.gz
+      hash: md5
+      md5: 67961419cb0355841c2ebf407edc1c02
+      size: 2383989
+    - path: ./input/lodes/year=2023/state=va/va-main.csv.gz
+      hash: md5
+      md5: 5fff18da6b5597a53f739420f0faa51e
+      size: 18285489
+  fetch_lodes_by_state@2023-vt:
+    cmd: Rscript ./src/download_lodes.R 2023 vt
+    outs:
+    - path: ./input/lodes/year=2023/state=vt/vt-aux.csv.gz
+      hash: md5
+      md5: 759cfadf8c39ba82eb5b940c4787394c
+      size: 241383
+    - path: ./input/lodes/year=2023/state=vt/vt-main.csv.gz
+      hash: md5
+      md5: 049faef5e2b6a3a88bc4ae74bc4719b1
+      size: 1298595
+  fetch_lodes_by_state@2023-wa:
+    cmd: Rscript ./src/download_lodes.R 2023 wa
+    outs:
+    - path: ./input/lodes/year=2023/state=wa/wa-aux.csv.gz
+      hash: md5
+      md5: 93417d5437cb0034d3d7ac4e3fa31b12
+      size: 863618
+    - path: ./input/lodes/year=2023/state=wa/wa-main.csv.gz
+      hash: md5
+      md5: debc7f9505286502aa026855224ef793
+      size: 17327837
+  fetch_lodes_by_state@2023-wi:
+    cmd: Rscript ./src/download_lodes.R 2023 wi
+    outs:
+    - path: ./input/lodes/year=2023/state=wi/wi-aux.csv.gz
+      hash: md5
+      md5: 38cdb851f1e29b4da8e19fb202667271
+      size: 934512
+    - path: ./input/lodes/year=2023/state=wi/wi-main.csv.gz
+      hash: md5
+      md5: 702d14e29d8e8c111aa603d716c73d35
+      size: 15016148
+  fetch_lodes_by_state@2023-wv:
+    cmd: Rscript ./src/download_lodes.R 2023 wv
+    outs:
+    - path: ./input/lodes/year=2023/state=wv/wv-aux.csv.gz
+      hash: md5
+      md5: 86c1e229b3d55502c920d72c84f47d63
+      size: 616829
+    - path: ./input/lodes/year=2023/state=wv/wv-main.csv.gz
+      hash: md5
+      md5: 675005b17f6b99f06ca4bbde13f755c1
+      size: 3080790
+  fetch_lodes_by_state@2023-wy:
+    cmd: Rscript ./src/download_lodes.R 2023 wy
+    outs:
+    - path: ./input/lodes/year=2023/state=wy/wy-aux.csv.gz
+      hash: md5
+      md5: 280a9c0961d46b7bb2c04cbf3f701319
+      size: 203534
+    - path: ./input/lodes/year=2023/state=wy/wy-main.csv.gz
+      hash: md5
+      md5: 4bcdf30631c9f4d46b5060d0898f3ef4
+      size: 1212775
+  collect_aux@2023:
+    cmd: Rscript ./src/collect_aux.R 2023
+    outs:
+    - path: ./input/lodes/year=2023/all-aux.csv.gz
+      hash: md5
+      md5: 71a30558558ed70cb34e1407d80134e1
+      size: 55421718
+  fetch_cb_zcta@2020-zcta:
+    cmd: python ./src/fetch_cb.py --year 2020 --geography zcta
+    outs:
+    - path: ./input/cb/year=2020/geography=zcta/zcta.geojson
+      hash: md5
+      md5: 066d94a07a83dc9ed919444fa68e401a
+      size: 166178249

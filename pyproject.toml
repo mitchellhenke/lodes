@@ -3,7 +3,7 @@ name = "lodes"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
-requires-python = ">=3.13"
+requires-python = ">=3.14"
 dependencies = [
   "boto3>=1.37.1",
   "dvc[s3]>=3.59.1",

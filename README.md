@@ -55,9 +55,12 @@ The data is managed within the `data` directory and related sub-directories with
 
 - [Install uv](https://docs.astral.sh/uv/getting-started/installation/)
 - [Install R](https://www.r-project.org)
-- Run `uv run dvc exp run data/dvc.yaml`
-  - This will download and process all of the input and intermediate data, including LODES data and the data necessary to build [Protomaps](https://protomaps.com) tiles.
-  - (Optional) Upload data to public bucket for a given dataset, geography and year with `uv run src/upload_aggregate_lodes.py --dataset lodes --geography tract --year 2022`
+- `uv run dvc exp run data/dvc.yaml`
+  - Downloads all of the input data, including LODES data and the data necessary to build [Protomaps](https://protomaps.com) tiles.
+- `uv run src/aggregate_lodes.py --year 2022`
+  - Aggregates all of the data by each geography for a given year
+- (Optional) `uv run src/upload_aggregate_lodes.py --dataset lodes --geography tract --year 2022`
+  - Uploads data to public bucket for a given dataset, geography and year
 
 
 ### Tiles

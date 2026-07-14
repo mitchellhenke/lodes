@@ -804,8 +804,7 @@ class ParquetProcessor {
   }
 
   async fetchAndCacheMetadata(url) {
-    let contentLength = null,
-      metadata = null;
+    let contentLength, metadata;
     if (this.byteLengthCache[url]) {
       contentLength = this.byteLengthCache[url];
     } else {

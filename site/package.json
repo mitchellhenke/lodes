@@ -1,4 +1,7 @@
 {
+  "scripts": {
+    "lint": "eslint ./assets/js"
+  },
   "dependencies": {
     "hyparquet": "^1.8",
     "hyparquet-compressors": "^1.0",
@@ -6,8 +9,9 @@
     "pmtiles": "^4.3"
   },
   "devDependencies": {
-    "@eslint/js": "^9.33.0",
-    "eslint": "^9.33.0"
+    "@eslint/js": "^10.0.1",
+    "eslint": "^10.0.1",
+    "globals": "^17.7.0"
   },
   "type": "module"
 }

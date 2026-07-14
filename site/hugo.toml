@@ -1,5 +1,5 @@
 baseURL = "https://lodesmap.com/"
-languageCode = "en-us"
+locale = "en-us"
 title = "LODES Map"
 disableKinds = ["taxonomy", "term"]
 enableInlineShortcodes = true
